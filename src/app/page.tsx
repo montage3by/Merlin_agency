@@ -54,18 +54,27 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.15} className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
-              <Image
-                src="https://picsum.photos/seed/merlin-studio-analytics/900/1125"
-                alt="Аналитика конкурентов и рекламы"
-                fill
-                priority
-                className="object-cover grayscale contrast-125"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+            <div className="relative aspect-[4/5]">
+              <div className="absolute left-0 top-0 aspect-[900/1273] w-[62%] -rotate-3 overflow-hidden rounded-2xl border border-border shadow-2xl">
+                <Image
+                  src="/report-preview-1.png"
+                  alt="Обложка примера отчёта Merlin Studio"
+                  fill
+                  priority
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="absolute bottom-0 right-0 aspect-[900/1273] w-[62%] rotate-2 overflow-hidden rounded-2xl border border-border shadow-2xl">
+                <Image
+                  src="/report-preview-2.png"
+                  alt="Страница рекомендаций примера отчёта Merlin Studio"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
             </div>
             <div className="absolute -bottom-6 -left-6 rounded-xl border border-border bg-panel px-5 py-4 shadow-xl md:-left-10">
-              <p className="text-xs uppercase tracking-[0.15em] text-muted">В отчёте</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-muted">Пример отчёта</p>
               <p className="mt-1 font-semibold">SEO · Реклама · Конкуренты</p>
             </div>
           </Reveal>

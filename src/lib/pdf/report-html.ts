@@ -119,16 +119,16 @@ export function renderAuditReportHtml(report: AuditReport): string {
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
-<title>Digital-аудит — ${escapeHtml(business.businessName ?? business.domain)}</title>
+<title>Digital-аудит: ${escapeHtml(business.businessName ?? business.domain)}</title>
 <style>
   :root {
-    --bg: #0b0710;
-    --panel: #16101f;
-    --accent: #8b5cf6;
-    --accent-soft: #c4b5fd;
-    --text: #f2eefb;
-    --muted: #9a91ad;
-    --border: #2a2138;
+    --bg: #0c0c0d;
+    --panel: #171615;
+    --accent: #ef6b3a;
+    --accent-soft: #ffb98f;
+    --text: #f4f2ee;
+    --muted: #9b968d;
+    --border: #2b2926;
   }
   * { box-sizing: border-box; }
   body {
@@ -145,7 +145,7 @@ export function renderAuditReportHtml(report: AuditReport): string {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: radial-gradient(circle at 20% 20%, #251a3a, var(--bg) 60%);
+    background: radial-gradient(circle at 20% 20%, #2a1c12, var(--bg) 60%);
   }
   .cover .eyebrow {
     text-transform: uppercase;
@@ -193,7 +193,7 @@ export function renderAuditReportHtml(report: AuditReport): string {
     font-weight: 600;
   }
   .pill-active { background: #16331f; color: #7ee2a0; }
-  .pill-inactive { background: #2a2138; color: var(--muted); }
+  .pill-inactive { background: var(--border); color: var(--muted); }
   .pill-priority-high { background: #3a1420; color: #f28b9a; }
   .pill-priority-medium { background: #3a2c14; color: #f2c98b; }
   .pill-priority-low { background: #142a3a; color: #8bc2f2; }
@@ -224,7 +224,7 @@ export function renderAuditReportHtml(report: AuditReport): string {
 </head>
 <body>
   <section class="cover page">
-    <div class="eyebrow">Digital-аудит — <span class="brand">Merlin Studio</span></div>
+    <div class="eyebrow">Digital-аудит от <span class="brand">Merlin Studio</span></div>
     <h1>${escapeHtml(business.businessName ?? business.domain)}</h1>
     <div class="sub">${escapeHtml(business.domain)} · ${dateLabel}</div>
   </section>
@@ -244,7 +244,7 @@ export function renderAuditReportHtml(report: AuditReport): string {
     ${
       report.competitors.length
         ? report.competitors.map(competitorCard).join("")
-        : '<p class="muted">Автоматически найти публичных конкурентов не удалось — рекомендуем указать их вручную для более точного отчёта.</p>'
+        : '<p class="muted">Автоматически найти публичных конкурентов не удалось. Рекомендуем указать их вручную для более точного отчёта.</p>'
     }
 
     <h2>Рекомендации Merlin Studio</h2>
@@ -253,7 +253,7 @@ export function renderAuditReportHtml(report: AuditReport): string {
     <p class="disclaimer">${escapeHtml(report.dataSourceDisclaimer)}</p>
 
     <div class="footer">
-      Merlin Studio — «Связки, которые продают» · merlin_studio@gmail.com
+      Merlin Studio. «Связки, которые продают» · merlin_studio@gmail.com
     </div>
   </section>
 </body>

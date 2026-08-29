@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "motion/react";
 import { useState, type FormEvent } from "react";
 
 type Status = "idle" | "loading" | "error" | "done";
@@ -67,7 +68,7 @@ export function AuditForm() {
           name="domain"
           required
           placeholder="mycompany.com"
-          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none focus:border-accent"
+          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
         />
       </div>
 
@@ -80,7 +81,7 @@ export function AuditForm() {
             id="businessName"
             name="businessName"
             placeholder="ООО «Компания»"
-            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
           />
         </div>
         <div>
@@ -91,7 +92,7 @@ export function AuditForm() {
             id="niche"
             name="niche"
             placeholder="кофейни, стоматологии..."
-            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
           />
         </div>
       </div>
@@ -104,7 +105,7 @@ export function AuditForm() {
           id="city"
           name="city"
           placeholder="Батуми"
-          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none focus:border-accent"
+          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
         />
       </div>
 
@@ -116,7 +117,7 @@ export function AuditForm() {
           <input
             id="contactName"
             name="contactName"
-            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
           />
         </div>
         <div>
@@ -129,25 +130,26 @@ export function AuditForm() {
             type="email"
             required
             placeholder="you@company.com"
-            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
           />
         </div>
       </div>
 
-      <button
+      <motion.button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-lg bg-accent px-4 py-3 font-semibold text-white transition-colors hover:bg-accent/90 disabled:opacity-60"
+        whileTap={{ scale: 0.98 }}
+        className="w-full rounded-lg bg-accent px-4 py-3 font-semibold text-accent-ink transition-colors hover:bg-accent/90 disabled:opacity-60"
       >
-        {status === "loading" ? "Собираем данные — 20–40 сек..." : "Получить бесплатный аудит"}
-      </button>
+        {status === "loading" ? "Собираем данные, 20-40 сек" : "Получить бесплатный аудит"}
+      </motion.button>
 
       {status === "error" && (
         <p className="text-sm text-red-400">{errorMessage}</p>
       )}
       {status === "done" && (
         <p className="text-sm text-accent-soft">
-          Готово! PDF-отчёт скачался автоматически. Мы также свяжемся с вами, чтобы обсудить результаты.
+          Готово. PDF-отчёт скачался автоматически. Команда Merlin Studio свяжется с вами, чтобы обсудить результаты.
         </p>
       )}
     </form>

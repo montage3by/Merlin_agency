@@ -1,63 +1,121 @@
+import Image from "next/image";
 import { AuditForm } from "@/components/AuditForm";
+import { Reveal } from "@/components/Reveal";
 
 const STEPS = [
   {
+    number: "01",
     title: "Оставьте сайт",
-    body: "Укажите домен, нишу и город — этого достаточно, чтобы найти релевантных конкурентов.",
+    body: "Домен, ниша и город. Этого достаточно, чтобы найти релевантных конкурентов.",
   },
   {
-    title: "Мы анализируем за минуты, не дни",
-    body: "Автоматически проверяем ваш SEO, находим конкурентов и смотрим, где и как они рекламируются — в Google и Meta.",
+    number: "02",
+    title: "Мы анализируем",
+    body: "Проверяем ваш SEO, находим конкурентов, смотрим их рекламу в Google и Meta.",
   },
   {
-    title: "Готовый PDF-отчёт",
-    body: "Конкретные цифры, находки по конкурентам и приоритизированные рекомендации — без «магии слов».",
+    number: "03",
+    title: "Забираете отчёт",
+    body: "PDF с находками по конкурентам и рекомендациями. Без «магии слов».",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center">
-      <main className="w-full max-w-5xl px-6 py-20 sm:py-28">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent-soft uppercase tracking-[0.2em] text-xs mb-4">
-            Merlin Studio · Связки, которые продают
-          </p>
-          <h1 className="text-3xl sm:text-5xl font-semibold leading-tight mb-6">
-            Бесплатный digital-аудит — автоматически, за минуты
-          </h1>
-          <p className="text-muted text-base sm:text-lg">
-            Раньше на подготовку аудита уходило несколько дней. Теперь наш инструмент сам
-            находит ваших конкурентов, проверяет их SEO и рекламу — и собирает всё
-            в готовый отчёт с рекомендациями, как зарабатывать больше.
-          </p>
-        </div>
+    <div className="flex flex-1 flex-col">
+      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+        <span className="font-semibold tracking-tight">Merlin Studio</span>
+        <a
+          href="https://mrlnstudio.com"
+          className="text-sm text-muted transition-colors hover:text-foreground"
+        >
+          mrlnstudio.com
+        </a>
+      </header>
 
-        <div className="grid gap-6 sm:grid-cols-3 mb-16">
-          {STEPS.map((step, i) => (
-            <div
-              key={step.title}
-              className="rounded-2xl border border-border bg-panel p-6"
+      <main className="mx-auto w-full max-w-6xl px-6">
+        <section className="grid items-center gap-12 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
+          <Reveal>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em] text-accent-soft">
+              Merlin Studio · Бесплатный аудит
+            </p>
+            <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+              Digital-аудит за минуты, не дни
+            </h1>
+            <p className="mt-5 max-w-[46ch] text-base text-muted md:text-lg">
+              Укажите домен, нишу и город, и получите отчёт по конкурентам, SEO и рекламе с рекомендациями.
+            </p>
+            <a
+              href="#audit-form"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
-              <div className="text-accent-soft text-sm font-semibold mb-2">
-                Шаг {i + 1}
-              </div>
-              <h2 className="font-semibold mb-2">{step.title}</h2>
-              <p className="text-muted text-sm">{step.body}</p>
+              Получить бесплатный аудит
+            </a>
+          </Reveal>
+
+          <Reveal delay={0.15} className="relative">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
+              <Image
+                src="https://picsum.photos/seed/merlin-studio-analytics/900/1125"
+                alt="Аналитика конкурентов и рекламы"
+                fill
+                priority
+                className="object-cover grayscale contrast-125"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
             </div>
-          ))}
-        </div>
+            <div className="absolute -bottom-6 -left-6 rounded-xl border border-border bg-panel px-5 py-4 shadow-xl md:-left-10">
+              <p className="text-xs uppercase tracking-[0.15em] text-muted">В отчёте</p>
+              <p className="mt-1 font-semibold">SEO · Реклама · Конкуренты</p>
+            </div>
+          </Reveal>
+        </section>
 
-        <div className="flex justify-center">
-          <AuditForm />
-        </div>
+        <section className="border-t border-border py-16 md:py-24">
+          <Reveal>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Как это работает</h2>
+          </Reveal>
+          <div className="mt-10 divide-y divide-border">
+            {STEPS.map((step, i) => (
+              <Reveal key={step.number} delay={i * 0.08}>
+                <div className="flex flex-col gap-2 py-6 md:flex-row md:items-baseline md:gap-8 md:py-8">
+                  <span className="font-mono text-sm text-accent-soft md:w-12">{step.number}</span>
+                  <h3 className="font-semibold md:w-56">{step.title}</h3>
+                  <p className="max-w-[52ch] text-muted">{step.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
 
-        <p className="text-center text-muted text-xs mt-8 max-w-lg mx-auto">
-          Отчёт собирается из публичных источников: вашего сайта, органической выдачи
-          Google, Google Ads Transparency Center и Meta Ad Library. После получения
-          отчёта команда Merlin Studio свяжется с вами, чтобы обсудить результаты.
-        </p>
+        <section id="audit-form" className="border-t border-border py-16 md:py-24">
+          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+            <Reveal>
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                Получите свой аудит
+              </h2>
+              <p className="mt-4 max-w-[42ch] text-muted">
+                Отчёт собирается из публичных источников: вашего сайта, органической выдачи Google, Google Ads Transparency Center и Meta Ad Library. После этого команда Merlin Studio свяжется с вами, чтобы обсудить результаты.
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <AuditForm />
+            </Reveal>
+          </div>
+        </section>
       </main>
+
+      <footer className="mt-auto border-t border-border">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-muted md:flex-row md:items-center md:justify-between">
+          <span>Merlin Studio. Связки, которые продают.</span>
+          <a
+            href="mailto:merlin_studio@gmail.com"
+            className="transition-colors hover:text-foreground"
+          >
+            merlin_studio@gmail.com
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

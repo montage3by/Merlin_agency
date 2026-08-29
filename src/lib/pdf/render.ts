@@ -1,14 +1,10 @@
-import { chromium } from "playwright";
-import { CHROMIUM_EXECUTABLE_PATH } from "../audit/chromium-path";
+import { launchChromium } from "../audit/chromium-runtime";
 import type { AuditReport } from "../audit/types";
 import { renderAuditReportHtml } from "./report-html";
 
 export async function renderAuditReportPdf(report: AuditReport): Promise<Buffer> {
   const html = renderAuditReportHtml(report);
-  const browser = await chromium.launch({
-    headless: true,
-    executablePath: CHROMIUM_EXECUTABLE_PATH,
-  });
+  const browser = await launchChromium({ headless: true });
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: "networkidle" });

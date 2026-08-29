@@ -1,5 +1,5 @@
-import { chromium, type Browser, type BrowserContext } from "playwright";
-import { CHROMIUM_EXECUTABLE_PATH } from "./chromium-path";
+import type { Browser, BrowserContext } from "playwright-core";
+import { launchChromium } from "./chromium-runtime";
 
 const HUMAN_USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
@@ -21,9 +21,8 @@ function resolveProxyConfig() {
 
 function getBrowser(): Promise<Browser> {
   if (!browserPromise) {
-    browserPromise = chromium.launch({
+    browserPromise = launchChromium({
       headless: true,
-      executablePath: CHROMIUM_EXECUTABLE_PATH,
       proxy: resolveProxyConfig(),
     });
   }

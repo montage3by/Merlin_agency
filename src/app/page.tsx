@@ -1,63 +1,33 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { AuditForm } from "@/components/AuditForm";
 import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-const TRUST_ITEMS = [
-  "Полный цикл: от бренда до рекламы",
-  "Отчётность по цифрам, а не по ощущениям",
-  "Своя команда, без подрядчиков-прослоек",
-];
+export const metadata: Metadata = {
+  title: "Бесплатный digital-аудит от Merlin Studio",
+  description:
+    "Автоматический аудит сайта и конкурентов: SEO, контекстная и таргетированная реклама. Готовый отчёт с рекомендациями за пару минут.",
+};
 
-const PRINCIPLES = [
+const STEPS = [
   {
-    title: "Цифры, а не обещания",
-    body: "Каждое решение подкреплено метриками. Если канал не окупается, мы покажем это в отчёте, а не спрячем.",
+    number: "01",
+    title: "Оставьте сайт",
+    body: "Домен, ниша и город. Этого достаточно, чтобы найти релевантных конкурентов.",
   },
   {
-    title: "Полный цикл, а не один канал",
-    body: "Бренд, сайт, SEO и реклама работают как одна связка вместо набора разрозненных подрядчиков.",
+    number: "02",
+    title: "Мы анализируем",
+    body: "Проверяем ваш SEO, находим конкурентов, смотрим их рекламу в Google и Meta.",
   },
   {
-    title: "Прозрачная отчётность",
-    body: "Вы видите, куда идёт бюджет и какой у него результат, в любой момент, а не раз в квартал.",
-  },
-  {
-    title: "Долгосрочно, а не разово",
-    body: "Настраиваем процессы и аналитику, которые продолжают работать и после сдачи проекта.",
-  },
-];
-
-const SERVICES = [
-  {
-    title: "Контекстная и таргетированная реклама",
-    body: "Google Ads, Яндекс.Директ и соцсети с фокусом на заявки, а не показы.",
-    span: "md:col-span-2",
-  },
-  {
-    title: "Брендинг",
-    body: "Фирменный стиль, логотип и нейминг, с которым не стыдно выйти к клиенту.",
-  },
-  {
-    title: "Веб-разработка",
-    body: "Сайты и чат-боты, которые конвертируют, а не просто существуют.",
-  },
-  {
-    title: "SEO-продвижение",
-    body: "Аудит, техническая оптимизация и контент для органического трафика.",
-  },
-  {
-    title: "SMM",
-    body: "Стратегия, контент и реклама в соцсетях под вашу аудиторию.",
-  },
-  {
-    title: "AI-автоматизация",
-    body: "Обработка заявок, транскрибация и рутина, снятая с команды.",
-    span: "md:col-span-2",
+    number: "03",
+    title: "Забираете отчёт",
+    body: "PDF с находками по конкурентам и рекомендациями. Без «магии слов».",
   },
 ];
-
-const CLIENTS = ["Dodo Pizza", "Azri", "Тюбетей", "Финхак Junior"];
 
 export default function Home() {
   return (
@@ -65,119 +35,83 @@ export default function Home() {
       <SiteHeader />
 
       <main className="mx-auto w-full max-w-6xl px-6">
-        <section className="grid items-center gap-12 py-12 md:grid-cols-[1.05fr_0.95fr] md:py-20">
+        <section className="grid items-center gap-12 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
           <Reveal>
             <p className="mb-4 text-xs uppercase tracking-[0.2em] text-accent-soft">
-              Merlin Studio · Digital-агентство
+              Merlin Studio · Бесплатный аудит
             </p>
             <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-              Связки, которые продают
+              Digital-аудит за минуты, не дни
             </h1>
             <p className="mt-5 max-w-[46ch] text-base text-muted md:text-lg">
-              Реклама, сайты и бренд как одна система. Без «магии слов», только цифры и рост.
+              Укажите домен, нишу и город, и получите отчёт по конкурентам, SEO и рекламе с рекомендациями.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                href="/audit"
-                className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-              >
-                Получить бесплатный аудит
-              </Link>
-              <a
-                href="#cases"
-                className="text-sm font-semibold text-foreground transition-colors hover:text-accent-soft"
-              >
-                Смотреть кейсы
-              </a>
-            </div>
+            <a
+              href="#audit-form"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            >
+              Получить бесплатный аудит
+            </a>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            {/* Слот под графику: сюда встанет маскот (PNG на прозрачном фоне, ~1000x1200).
-                Просто замени содержимое этого div на <Image src="/mascot.png" ... />. */}
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-panel">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,var(--accent)_0%,transparent_60%)] opacity-20" />
+          <Reveal delay={0.15} className="relative">
+            <div className="relative aspect-[4/5]">
+              <div className="absolute left-0 top-0 aspect-[900/1273] w-[62%] -rotate-3 overflow-hidden rounded-2xl border border-border shadow-2xl">
+                <Image
+                  src="/report-preview-1.png"
+                  alt="Обложка примера отчёта Merlin Studio"
+                  fill
+                  priority
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="absolute bottom-0 right-0 aspect-[900/1273] w-[62%] rotate-2 overflow-hidden rounded-2xl border border-border shadow-2xl">
+                <Image
+                  src="/report-preview-2.png"
+                  alt="Страница рекомендаций примера отчёта Merlin Studio"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
             </div>
-          </Reveal>
-        </section>
-
-        <section className="border-t border-border py-10">
-          <Reveal>
-            <div className="flex flex-col gap-4 divide-y divide-border md:flex-row md:divide-x md:divide-y-0">
-              {TRUST_ITEMS.map((item) => (
-                <p key={item} className="pt-4 text-sm text-muted first:pt-0 md:flex-1 md:px-6 md:pt-0 first:md:pl-0">
-                  {item}
-                </p>
-              ))}
+            <div className="absolute -bottom-6 -left-6 rounded-xl border border-border bg-panel px-5 py-4 shadow-xl md:-left-10">
+              <p className="text-xs uppercase tracking-[0.15em] text-muted">Пример отчёта</p>
+              <p className="mt-1 font-semibold">SEO · Реклама · Конкуренты</p>
             </div>
           </Reveal>
         </section>
 
         <section className="border-t border-border py-16 md:py-24">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Как мы работаем</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Как это работает</h2>
           </Reveal>
-          <div className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
-            {PRINCIPLES.map((principle, i) => (
-              <Reveal key={principle.title} delay={i * 0.06}>
-                <h3 className="font-semibold">{principle.title}</h3>
-                <p className="mt-2 max-w-[48ch] text-muted">{principle.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        <section id="services" className="border-t border-border py-16 md:py-24">
-          <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Услуги</h2>
-          </Reveal>
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {SERVICES.map((service, i) => (
-              <Reveal key={service.title} delay={i * 0.05} className={service.span}>
-                <div className="h-full rounded-2xl border border-border bg-panel p-6">
-                  <h3 className="font-semibold">{service.title}</h3>
-                  <p className="mt-2 max-w-[48ch] text-muted">{service.body}</p>
+          <div className="mt-10 divide-y divide-border">
+            {STEPS.map((step, i) => (
+              <Reveal key={step.number} delay={i * 0.08}>
+                <div className="flex flex-col gap-2 py-6 md:flex-row md:items-baseline md:gap-8 md:py-8">
+                  <span className="font-mono text-sm text-accent-soft md:w-12">{step.number}</span>
+                  <h3 className="font-semibold md:w-56">{step.title}</h3>
+                  <p className="max-w-[52ch] text-muted">{step.body}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         </section>
 
-        <section id="cases" className="border-t border-border py-16 md:py-24">
-          <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Нам доверяют</h2>
-            <p className="mt-3 max-w-[52ch] text-muted">
-              Работаем с брендами разного масштаба: от локальных сетей до федеральных франшиз.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
-              {CLIENTS.map((client) => (
-                <span key={client} className="text-xl font-semibold text-muted md:text-2xl">
-                  {client}
-                </span>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
-        <section className="border-t border-border py-16 md:py-24">
-          <Reveal>
-            <div className="rounded-2xl border border-border bg-panel p-8 text-center md:p-16">
-              <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">
-                Узнайте, сколько вы теряете на рекламе
+        <section id="audit-form" className="border-t border-border py-16 md:py-24">
+          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+            <Reveal>
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                Получите свой аудит
               </h2>
-              <p className="mx-auto mt-4 max-w-[46ch] text-muted">
-                Бесплатный аудит покажет, что делают ваши конкуренты и что укрепить у вас.
+              <p className="mt-4 max-w-[42ch] text-muted">
+                Отчёт собирается из публичных источников: вашего сайта, органической выдачи Google, Google Ads Transparency Center и Meta Ad Library. После этого команда Merlin Studio свяжется с вами, чтобы обсудить результаты.
               </p>
-              <Link
-                href="/audit"
-                className="mt-8 inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-              >
-                Получить бесплатный аудит
-              </Link>
-            </div>
-          </Reveal>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <AuditForm />
+            </Reveal>
+          </div>
         </section>
       </main>
 

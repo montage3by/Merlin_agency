@@ -39,8 +39,8 @@ export class FreeAdTransparencyProvider implements AdIntelligenceProvider {
     try {
       const result = await withBrowserContext(async (context) => {
         const page = await context.newPage();
-        await page.goto(checkedUrl, { waitUntil: "domcontentloaded", timeout: 15_000 });
-        await page.waitForTimeout(2500);
+        await page.goto(checkedUrl, { waitUntil: "domcontentloaded", timeout: 10_000 });
+        await page.waitForTimeout(1200);
 
         const creativeCards = page.locator("creative-preview, [class*='creative']");
         const count = await creativeCards.count().catch(() => 0);
@@ -87,8 +87,8 @@ export class FreeAdTransparencyProvider implements AdIntelligenceProvider {
     try {
       const result = await withBrowserContext(async (context) => {
         const page = await context.newPage();
-        await page.goto(checkedUrl, { waitUntil: "domcontentloaded", timeout: 15_000 });
-        await page.waitForTimeout(2500);
+        await page.goto(checkedUrl, { waitUntil: "domcontentloaded", timeout: 10_000 });
+        await page.waitForTimeout(1200);
 
         const bodyText = await page.innerText("body").catch(() => "");
         const noResults = /no results found|ничего не найдено|0 results/i.test(bodyText);

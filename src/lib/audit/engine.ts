@@ -3,7 +3,7 @@ import type { AuditProviders } from "./providers/types";
 import { buildRecommendations } from "./recommendations";
 import type { AuditReport, BusinessInput, CompetitorAnalysis } from "./types";
 
-const MAX_COMPETITORS = 3;
+const MAX_COMPETITORS = 2;
 
 export interface RunAuditOptions {
   providers?: AuditProviders;
@@ -18,19 +18,21 @@ export async function runAudit(
   const maxCompetitors = options.maxCompetitors ?? MAX_COMPETITORS;
 
   // A single shared Chromium instance backs every browser-driven check in
-  // this run (see withBrowserContext). Piling many concurrent navigations
-  // onto it — own ads x2 channels, competitor search, then every
-  // competitor's ads x2 channels all at once — was enough to crash that
-  // process inside a memory-constrained serverless function, which then
-  // surfaced as false "no ads found" results. The SEO fetch is plain HTTP
-  // (no browser) so it can stay parallel; the browser-heavy steps run one
-  // at a time.
-  const ownSeo = await providers.seo.getSeoSnapshot(business.domain);
-  const competitorProfiles = await providers.competitorDiscovery.findCompetitors(
-    business,
-    maxCompetitors,
-  );
-  const ownAds = await providers.ads.getAdIntelligence(business.domain, business.businessName);
+  // this run (see withBrowserContext). Firing every competitor's checks at
+  // once (up to 3 competitors x 2 ad channels, on top of the own-site
+  // checks) piled too many concurrent navigations onto one browser and
+  // crashed it inside the serverless function. Fully serializing every
+  // step instead made a *correct* run blow past the 60s function timeout.
+  // The middle ground: run the two independent single-navigation steps
+  // (own ads, competitor search) together, then process competitors one
+  // at a time so the browser never has more than a handful of contexts
+  // open at once. The SEO fetch is plain HTTP (no browser), so it stays
+  // parallel throughout.
+  const [ownSeo, ownAds, competitorProfiles] = await Promise.all([
+    providers.seo.getSeoSnapshot(business.domain),
+    providers.ads.getAdIntelligence(business.domain, business.businessName),
+    providers.competitorDiscovery.findCompetitors(business, maxCompetitors),
+  ]);
 
   const competitors: CompetitorAnalysis[] = [];
   for (const profile of competitorProfiles) {

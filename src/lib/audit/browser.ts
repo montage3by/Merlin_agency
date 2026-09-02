@@ -44,36 +44,38 @@ async function getBrowser(): Promise<Browser> {
 export async function withBrowserContext<T>(
   fn: (context: BrowserContext) => Promise<T>,
 ): Promise<T> {
+  let lastError: unknown;
   for (let attempt = 0; attempt < 2; attempt++) {
-    const browser = await getBrowser();
-    let context: BrowserContext;
+    let browser: Browser;
+    try {
+      browser = await getBrowser();
+    } catch (error) {
+      browserPromise = null;
+      lastError = error;
+      continue;
+    }
+
+    let context: BrowserContext | undefined;
     try {
       context = await browser.newContext({
         userAgent: HUMAN_USER_AGENT,
         locale: "ru-RU",
         viewport: { width: 1366, height: 900 },
       });
-    } catch (error) {
-      if (attempt === 0 && !browser.isConnected()) {
-        browserPromise = null;
-        continue;
-      }
-      throw error;
-    }
-
-    try {
       return await fn(context);
     } catch (error) {
-      if (attempt === 0 && !browser.isConnected()) {
-        browserPromise = null;
-        continue;
-      }
-      throw error;
+      // `browser.isConnected()` can still report true for a moment after
+      // the underlying process has actually died, so don't gate the retry
+      // on it — any failure here forces a fresh browser on the next
+      // attempt rather than reusing one we now know is bad.
+      browserPromise = null;
+      lastError = error;
+      continue;
     } finally {
-      await context.close().catch(() => {});
+      if (context) await context.close().catch(() => {});
     }
   }
-  throw new Error("withBrowserContext: browser kept disconnecting");
+  throw lastError;
 }
 
 export async function closeSharedBrowser(): Promise<void> {

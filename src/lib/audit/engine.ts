@@ -17,21 +17,29 @@ export async function runAudit(
   const providers = options.providers ?? getDefaultProviders();
   const maxCompetitors = options.maxCompetitors ?? MAX_COMPETITORS;
 
-  const [ownSeo, ownAds, competitorProfiles] = await Promise.all([
-    providers.seo.getSeoSnapshot(business.domain),
-    providers.ads.getAdIntelligence(business.domain, business.businessName),
-    providers.competitorDiscovery.findCompetitors(business, maxCompetitors),
-  ]);
-
-  const competitors: CompetitorAnalysis[] = await Promise.all(
-    competitorProfiles.map(async (profile) => {
-      const [seo, ads] = await Promise.all([
-        providers.seo.getSeoSnapshot(profile.domain),
-        providers.ads.getAdIntelligence(profile.domain, profile.name),
-      ]);
-      return { profile, seo, ads };
-    }),
+  // A single shared Chromium instance backs every browser-driven check in
+  // this run (see withBrowserContext). Piling many concurrent navigations
+  // onto it — own ads x2 channels, competitor search, then every
+  // competitor's ads x2 channels all at once — was enough to crash that
+  // process inside a memory-constrained serverless function, which then
+  // surfaced as false "no ads found" results. The SEO fetch is plain HTTP
+  // (no browser) so it can stay parallel; the browser-heavy steps run one
+  // at a time.
+  const ownSeo = await providers.seo.getSeoSnapshot(business.domain);
+  const competitorProfiles = await providers.competitorDiscovery.findCompetitors(
+    business,
+    maxCompetitors,
   );
+  const ownAds = await providers.ads.getAdIntelligence(business.domain, business.businessName);
+
+  const competitors: CompetitorAnalysis[] = [];
+  for (const profile of competitorProfiles) {
+    const [seo, ads] = await Promise.all([
+      providers.seo.getSeoSnapshot(profile.domain),
+      providers.ads.getAdIntelligence(profile.domain, profile.name),
+    ]);
+    competitors.push({ profile, seo, ads });
+  }
 
   const recommendations = buildRecommendations(ownSeo, ownAds, competitors);
 

@@ -22,9 +22,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Бесплатный digital-аудит от Merlin Studio",
+  title: {
+    default: "Merlin Studio: связки, которые продают",
+    template: "%s · Merlin Studio",
+  },
   description:
-    "Автоматический аудит сайта и конкурентов: SEO, контекстная и таргетированная реклама. Готовый отчёт с рекомендациями за пару минут.",
+    "Digital-агентство полного цикла: реклама, брендинг, сайты, SEO, SMM и AI-автоматизация. Без «магии слов», только цифры и рост.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

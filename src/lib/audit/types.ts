@@ -14,6 +14,14 @@ export interface CompetitorProfile {
   discoverySource: "user-provided" | "search-results";
 }
 
+export interface SeoTrafficSnapshot {
+  monthlyOrganicTraffic: number;
+  organicKeywordsCount: number;
+  visibilityIndex: number | null;
+  topKeywords: { keyword: string; position: number; searchVolume: number | null }[];
+  source: string;
+}
+
 export interface SeoSnapshot {
   domain: string;
   title: string | null;
@@ -22,6 +30,8 @@ export interface SeoSnapshot {
   hasBlog: boolean;
   headingCount: number;
   wordCount: number;
+  /** Only present when a paid traffic/keyword provider (e.g. Serpstat) is configured. */
+  traffic?: SeoTrafficSnapshot;
   notes: string[];
 }
 

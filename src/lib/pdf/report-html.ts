@@ -47,8 +47,36 @@ function seoSection(title: string, seo: SeoSnapshot): string {
         }</td></tr>
         <tr><td>Sitemap.xml</td><td>${seo.hasSitemap ? "есть" : "не найден"}</td></tr>
         <tr><td>Блог/раздел статей</td><td>${seo.hasBlog ? "есть" : "не найден"}</td></tr>
-        <tr><td>Заголовков H1–H3 на главной</td><td>${seo.headingCount}</td></tr>
+        <tr><td>Заголовков H1-H3 на главной</td><td>${seo.headingCount}</td></tr>
+        ${
+          seo.traffic
+            ? `
+        <tr><td>Органический трафик/мес</td><td>${seo.traffic.monthlyOrganicTraffic.toLocaleString("ru-RU")} (${escapeHtml(seo.traffic.source)})</td></tr>
+        <tr><td>Ключевых слов в топе</td><td>${seo.traffic.organicKeywordsCount.toLocaleString("ru-RU")}</td></tr>
+        ${
+          seo.traffic.visibilityIndex !== null
+            ? `<tr><td>Индекс видимости</td><td>${seo.traffic.visibilityIndex}</td></tr>`
+            : ""
+        }`
+            : ""
+        }
       </table>
+      ${
+        seo.traffic && seo.traffic.topKeywords.length
+          ? `
+      <table class="channels">
+        <thead><tr><th>Ключевое слово</th><th>Позиция</th><th>Частотность</th></tr></thead>
+        <tbody>${seo.traffic.topKeywords
+          .map(
+            (kw) =>
+              `<tr><td>${escapeHtml(kw.keyword)}</td><td>${kw.position || "-"}</td><td>${
+                kw.searchVolume !== null ? kw.searchVolume.toLocaleString("ru-RU") : "-"
+              }</td></tr>`,
+          )
+          .join("")}</tbody>
+      </table>`
+          : ""
+      }
       ${
         seo.notes.length
           ? `<ul class="notes">${seo.notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("")}</ul>`

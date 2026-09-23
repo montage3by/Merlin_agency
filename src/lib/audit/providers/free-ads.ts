@@ -51,6 +51,17 @@ export class FreeAdTransparencyProvider implements AdIntelligenceProvider {
         const countMatch = bodyText.match(/([\d][\d,\s]*)\s*(ads?|объявлени\w*)\b/i);
         const count = countMatch ? Number(countMatch[1].replace(/[,\s]/g, "")) : 0;
 
+        // TEMP DEBUG: remove once we've confirmed what Vercel's IP actually
+        // gets back from this page (may differ from what a residential/
+        // sandbox IP sees, e.g. a stricter empty state served to datacenter
+        // IP ranges regardless of browser stealth).
+        console.error(
+          "GAT_DEBUG",
+          domain,
+          "len=" + bodyText.length,
+          JSON.stringify(bodyText.slice(0, 300)),
+        );
+
         return { count, noResults };
       });
 

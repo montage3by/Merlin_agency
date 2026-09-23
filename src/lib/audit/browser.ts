@@ -1,4 +1,4 @@
-import type { Browser, BrowserContext } from "playwright-core";
+import type { Browser, BrowserContext } from "patchright";
 import { launchChromium } from "./chromium-runtime";
 
 const HUMAN_USER_AGENT =

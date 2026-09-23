@@ -1,4 +1,5 @@
-import type { Browser, LaunchOptions } from "playwright-core";
+import type { Browser, LaunchOptions } from "patchright";
+import { chromium as patchrightChromium } from "patchright";
 import { CHROMIUM_EXECUTABLE_PATH } from "./chromium-path";
 
 function isServerlessRuntime(): boolean {
@@ -6,23 +7,25 @@ function isServerlessRuntime(): boolean {
 }
 
 /**
+ * Patchright is a drop-in, stealth-patched Playwright driver (same API,
+ * patches how it talks to Chromium over CDP to avoid automation
+ * fingerprinting — no special browser binary required). Proven live against
+ * Google Ads Transparency Center: our plain playwright-core requests were
+ * silently served an empty/blocked result, patchright got the real page on
+ * the first try. It replaces playwright-core/playwright everywhere in this
+ * project, in both runtime paths below — only the underlying Chromium
+ * *binary* still differs by environment.
+ *
  * On Vercel/Lambda a normal Chromium download is far too big for the
  * function bundle, so we use @sparticuz/chromium there — a build
- * specifically compressed to fit serverless size limits — driven through
- * playwright-core (which has no bundled browser of its own).
- *
- * Locally (and in this sandbox) we use the full `playwright` package,
- * which manages its own downloaded browser via `npx playwright install`.
- * `playwright` is a devDependency only — it is never imported on the
- * serverless path, so it doesn't ship in the production bundle.
+ * compressed to fit serverless size limits — driven through patchright.
+ * Locally (and in this sandbox) patchright drives the same Chromium binary
+ * this environment already has via CHROMIUM_EXECUTABLE_PATH.
  */
 async function launchServerless(baseOptions: LaunchOptions): Promise<Browser> {
-  const [{ default: chromium }, { chromium: playwrightChromium }] = await Promise.all([
-    import("@sparticuz/chromium"),
-    import("playwright-core"),
-  ]);
+  const { default: chromium } = await import("@sparticuz/chromium");
 
-  return playwrightChromium.launch({
+  return patchrightChromium.launch({
     ...baseOptions,
     args: [...chromium.args, ...(baseOptions.args ?? [])],
     executablePath: await chromium.executablePath(),
@@ -30,8 +33,7 @@ async function launchServerless(baseOptions: LaunchOptions): Promise<Browser> {
 }
 
 async function launchLocal(baseOptions: LaunchOptions): Promise<Browser> {
-  const { chromium } = await import("playwright");
-  return chromium.launch({
+  return patchrightChromium.launch({
     ...baseOptions,
     executablePath: CHROMIUM_EXECUTABLE_PATH,
   });

@@ -40,12 +40,16 @@ export class FreeAdTransparencyProvider implements AdIntelligenceProvider {
       const result = await withBrowserContext(async (context) => {
         const page = await context.newPage();
         await page.goto(checkedUrl, { waitUntil: "domcontentloaded", timeout: 10_000 });
-        await page.waitForTimeout(1200);
+        await page.waitForTimeout(1800);
 
-        const creativeCards = page.locator("creative-preview, [class*='creative']");
-        const count = await creativeCards.count().catch(() => 0);
         const bodyText = await page.innerText("body").catch(() => "");
-        const noResults = /no ads|not run any ads|нет объявлений/i.test(bodyText);
+        const noResults = /did.?n.?t run any ads|no ads|нет объявлений|0 (ads|объявлени)/i.test(
+          bodyText,
+        );
+        // The page states the count as visible text ("69 ads" / "69 объявлений"),
+        // not a fixed DOM element/class we can select reliably long-term.
+        const countMatch = bodyText.match(/([\d][\d,\s]*)\s*(ads?|объявлени\w*)\b/i);
+        const count = countMatch ? Number(countMatch[1].replace(/[,\s]/g, "")) : 0;
 
         return { count, noResults };
       });
@@ -57,8 +61,8 @@ export class FreeAdTransparencyProvider implements AdIntelligenceProvider {
         sampleCreatives: [],
         checkedUrl,
         notes:
-          result.count > 0
-            ? [`Найдено элементов объявлений на странице: ${result.count}.`]
+          result.count > 0 && !result.noResults
+            ? [`Google Ads Transparency Center показывает ${result.count} объявлений.`]
             : ["Активных объявлений в Google Ads Transparency Center не обнаружено."],
       };
     } catch (error) {

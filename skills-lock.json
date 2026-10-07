@@ -49,6 +49,18 @@
       "skillPath": "skills/brandkit/SKILL.md",
       "computedHash": "b63012f3c3d21197e0185d3e9cc7ec40c589fb10e0b5a32a561739de31aa3f20"
     },
+    "character-management": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/character-management/SKILL.md",
+      "computedHash": "7db34421b8cb259c27ceb1d7b9a53d360db1dff7d802a8b8245c502c109b516b"
+    },
+    "chekhov-dramaturgy": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/chekhov-dramaturgy/SKILL.md",
+      "computedHash": "cba4b2b0c95ecb03fdeb29907d3a27a9399c9cb72fb05b39fc5d2f0737496a16"
+    },
     "churn-prevention": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -157,6 +169,12 @@
       "skillPath": "skills/output-skill/SKILL.md",
       "computedHash": "26bd29ce4c5e02c7666b2d503609bf466bd32290822e91f0e984147048dbb924"
     },
+    "genre-craft": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/genre-craft/SKILL.md",
+      "computedHash": "e13c1f1d0e7c2d198008b7333f8199e656428116bfe692994df0d43ef661eea3"
+    },
     "gpt-taste": {
       "source": "Leonxlnx/taste-skill",
       "sourceType": "github",
@@ -168,6 +186,12 @@
       "sourceType": "github",
       "skillPath": "skills/soft-skill/SKILL.md",
       "computedHash": "7db385e4c5370e5a7fca9704a1361b056e4504ea6a03924bb86f33a4f00b5c73"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "fa4ffac562a8e7349282f606391ede22d23118e998dc8b5ac931662fa734c1b7"
     },
     "image": {
       "source": "coreyhaines31/marketingskills",
@@ -205,6 +229,12 @@
       "skillPath": "skills/influencer-marketing/SKILL.md",
       "computedHash": "bb3376e9c671d3e8cd6ea26cdefcd5d860e8b65bfc71ed2aeda0282860571bea"
     },
+    "interactive-fiction": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/interactive-fiction/SKILL.md",
+      "computedHash": "d90c0f97e4fea2856f715fcb782229e7d2eeb4c9c40c958fea412e66ae161cda"
+    },
     "launch": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -216,6 +246,12 @@
       "sourceType": "github",
       "skillPath": "skills/lead-magnets/SKILL.md",
       "computedHash": "268c83c38cc49d3e437042f5d4e3c31b822deb6012b9d5d7a1370ae500058018"
+    },
+    "line-editing": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/line-editing/SKILL.md",
+      "computedHash": "d71964924ef75935e3d94199584e2d4039f6569495226c241efa02373ce34477"
     },
     "marketing-council": {
       "source": "coreyhaines31/marketingskills",
@@ -271,11 +307,23 @@
       "skillPath": "skills/paywalls/SKILL.md",
       "computedHash": "1f0b8d15770d2e7737b818408dc5877b2eadc4cab072cdfb3529349ab059815f"
     },
+    "plot-structure": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/plot-structure/SKILL.md",
+      "computedHash": "55ec956e320891760d7c716faad492bf4b71e1fb8916c7158463e3a79a0a13bd"
+    },
     "popups": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/popups/SKILL.md",
       "computedHash": "95c5cb45dcbb05362168255d97ee68d53a5916d8de779bd08f5f70c9b0cabd36"
+    },
+    "premise-workshop": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/premise-workshop/SKILL.md",
+      "computedHash": "764750d64bd0aa47ad4264b273511cb73f3099531096e7ed756ec75e78632a84"
     },
     "pricing": {
       "source": "coreyhaines31/marketingskills",
@@ -307,6 +355,12 @@
       "skillPath": "skills/public-relations/SKILL.md",
       "computedHash": "0c7c5c26c158ea752ab7112503931ba0bc0b4a747058b3027c6785dcb3a464fe"
     },
+    "reader-panel": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/reader-panel/SKILL.md",
+      "computedHash": "87eda25066d6def26191ef34026f07e8aa4194098ab224632474df3a10253f49"
+    },
     "redesign-existing-projects": {
       "source": "Leonxlnx/taste-skill",
       "sourceType": "github",
@@ -319,6 +373,12 @@
       "skillPath": "skills/referrals/SKILL.md",
       "computedHash": "78c724569672e3590fed904ef969575478201dbe424d3bd854e35906a98838ef"
     },
+    "revision-continuity": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/revision-continuity/SKILL.md",
+      "computedHash": "6f51e01c979493ef263780305eb0de09fa03e74454c63026744a8e253f268df9"
+    },
     "revops": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -330,6 +390,12 @@
       "sourceType": "github",
       "skillPath": "skills/sales-enablement/SKILL.md",
       "computedHash": "554e501e3c5926eced49cae2fd3460a61252d8979891e212aad6e39ff999c703"
+    },
+    "scene-craft": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/scene-craft/SKILL.md",
+      "computedHash": "33044a05d748c3f0a82e79b37e2578173452cb7867627d3b07eeeccb176bc7f6"
     },
     "schema": {
       "source": "coreyhaines31/marketingskills",
@@ -373,11 +439,107 @@
       "skillPath": "skills/stitch-skill/SKILL.md",
       "computedHash": "13322f38406cd3abf16ba45e35bdc9b18002d0153a79b4612b97aefc65d5a335"
     },
+    "story-init": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/story-init/SKILL.md",
+      "computedHash": "3a18c1168e567b0c7e2ea55db4010f42264bb83be5be9c626f942101b5dbfbeb"
+    },
+    "sw-character-conflict": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-character-conflict/SKILL.md",
+      "computedHash": "2f624e9f94db5cd838be1a294e5ac2b804275aa25098e86372e14b70907c0d2b"
+    },
+    "sw-dialogue": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-dialogue/SKILL.md",
+      "computedHash": "6ab765e2a5ba562bbfd2c790be5e0926b68a266370f0b82c9dc0be1341f07181"
+    },
+    "sw-format-adaptation": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-format-adaptation/SKILL.md",
+      "computedHash": "32bcdaefe6c0a437433e937c42b01961b5654605871089e567cf9ac54b27bf73"
+    },
+    "sw-genre-anatomy": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-genre-anatomy/SKILL.md",
+      "computedHash": "efd0bfeb97ca42c039cacf9f51aa46a01d111a19f8ec5752b42bd0bb7b1be675"
+    },
+    "sw-premise-theme": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-premise-theme/SKILL.md",
+      "computedHash": "d8a2152018053c9f319f68cf0cd9ca8728d985be9024feb1f92a6497c933881b"
+    },
+    "sw-scene-craft": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-scene-craft/SKILL.md",
+      "computedHash": "4a1bf8616de77ccfd77f58db91601f84ea3fba61e355b4d52d0e8a9ae97e59ca"
+    },
+    "sw-series-engine-bible": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-series-engine-bible/SKILL.md",
+      "computedHash": "e9b484cd03956b42d12a798a674b5d86d1170a30255b73fed627267bbe332763"
+    },
+    "sw-series-structure": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-series-structure/SKILL.md",
+      "computedHash": "2ba1ea76a0e43a50cf40a7bfdfe1e1306c69225540520cde1ce205d67fa06d22"
+    },
+    "sw-story-structure": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-story-structure/SKILL.md",
+      "computedHash": "f4db81059f2144a7eee6e6bd42408ce1baa1757b1fbf430f070dc46b5a7c2df2"
+    },
+    "sw-truby-anatomy": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-truby-anatomy/SKILL.md",
+      "computedHash": "5c6b5302d2c15df742b2b7c4e3b8ec124e21cbd22d49660db0eeba2e0587075f"
+    },
+    "sw-workflow": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-workflow/SKILL.md",
+      "computedHash": "d976a03e88ba19ab12949d4e9d5d123bee4444b85820d009955d8b577a99e9ca"
+    },
+    "sw-writers-room": {
+      "source": "jtydhr88/screenwriting-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/screenwriting/skills/sw-writers-room/SKILL.md",
+      "computedHash": "319fbbf9c4b4b98ddfe3285c2cc3e26cadc4dd0a79bb8c7330cff26808e1fe0a"
+    },
+    "theme-craft": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/theme-craft/SKILL.md",
+      "computedHash": "e6390641dc29ecc2fcf82e2e8104ad8f709ea2876b262de418acc5f432dbcc9c"
+    },
     "video": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/video/SKILL.md",
       "computedHash": "53f7082208785054a33bba07d188a4d1c8054c22b269146f3d3edccbeca7db81"
+    },
+    "voice-style": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/voice-style/SKILL.md",
+      "computedHash": "64fa8173f5601eaca43927a5d6093068a886758a8db3cd753b76a0c94ed1d94b"
+    },
+    "worldbuilding": {
+      "source": "danjdewhurst/story-skills",
+      "sourceType": "github",
+      "skillPath": "skills/worldbuilding/SKILL.md",
+      "computedHash": "561e066a865207a5009290105e8f2dc1fa55543e3d92dc941c4bc74f552d5d11"
     }
   }
 }

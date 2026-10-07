@@ -1,11 +1,14 @@
 "use client";
 
 import { useRef } from "react";
-import { CASES, SHOW_CLIENT_NAMES } from "@/lib/agency-content";
+import { CONTENT, type Locale } from "@/lib/content";
 import { ArrowIcon } from "./Brand";
+import { AGENCY_COPY } from "./copy";
 
-export function CasesCarousel() {
+export function CasesCarousel({ locale }: { locale: Locale }) {
   const track = useRef<HTMLDivElement>(null);
+  const t = AGENCY_COPY[locale];
+  const { CASES, SHOW_CLIENT_NAMES } = CONTENT[locale];
 
   function scroll(dir: 1 | -1) {
     const el = track.current;
@@ -67,13 +70,13 @@ export function CasesCarousel() {
                 </div>
                 {c.task && (
                   <p className="text-[15px] leading-snug">
-                    <span className="text-[var(--a-mute)]">Задача. </span>
+                    <span className="text-[var(--a-mute)]">{t.task}</span>
                     {c.task}
                   </p>
                 )}
                 {c.done && (
                   <p className="text-[15px] leading-snug">
-                    <span className="text-[var(--a-mute)]">Что сделали. </span>
+                    <span className="text-[var(--a-mute)]">{t.done}</span>
                     {c.done}
                   </p>
                 )}
@@ -97,18 +100,18 @@ export function CasesCarousel() {
         <button
           type="button"
           onClick={() => scroll(-1)}
-          aria-label="Предыдущий кейс"
+          aria-label={t.prevCase}
           className="grid size-11 place-items-center rounded-full border border-current transition-colors hover:bg-[var(--a-ink)] hover:text-[var(--a-bg)]"
         >
           <ArrowIcon flip className="size-5" />
         </button>
         <span className="text-[13px] uppercase tracking-[-0.03em]">
-          [ Листайте кейсы ]
+          {t.swipe}
         </span>
         <button
           type="button"
           onClick={() => scroll(1)}
-          aria-label="Следующий кейс"
+          aria-label={t.nextCase}
           className="grid size-11 place-items-center rounded-full border border-current transition-colors hover:bg-[var(--a-ink)] hover:text-[var(--a-bg)]"
         >
           <ArrowIcon className="size-5" />

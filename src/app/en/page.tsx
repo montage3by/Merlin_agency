@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AgencyLanding } from "@/components/agency/AgencyLanding";
 import { AGENCY_COPY } from "@/components/agency/copy";
 
-const t = AGENCY_COPY.ru;
+const t = AGENCY_COPY.en;
 
 export const metadata: Metadata = {
   title: { absolute: t.metaTitle },
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <AgencyLanding locale="ru" />;
+  return <AgencyLanding locale="en" />;
 }

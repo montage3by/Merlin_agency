@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { FlipLanding } from "@/components/flip/FlipLanding";
 import { FLIP_COPY } from "@/components/flip/copy";
 
-const t = FLIP_COPY.ru;
+const t = FLIP_COPY.en;
 
 export const metadata: Metadata = {
   title: { absolute: t.metaTitle },
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <FlipLanding locale="ru" />;
+  return <FlipLanding locale="en" />;
 }

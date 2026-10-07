@@ -1,0 +1,151 @@
+import type { Locale } from "@/lib/content";
+
+// Интерфейсные тексты дизайна в стиле AI Digital. Факты берутся из agency-content.
+const ru = {
+  metaTitle: "Merlin Agency: платный трафик и SEO, которые приводят клиентов",
+  metaDescription:
+    "Контекстная реклама, SEO, таргет, маркетплейсы и аналитика. Больше 10 лет в digital-маркетинге, проекты в 14 странах.",
+  announce: "Бесплатный аудит сайта, SEO и рекламы конкурентов за пару минут.",
+  announceLink: "Получить отчёт",
+  nav: ["Услуги", "Кейсы", "Подход", "Аудит"],
+  contactUs: "Связаться",
+  menu: "Меню",
+  close: "Закрыть",
+  sections: "Разделы",
+  toTop: "Merlin Agency, наверх",
+  langSwitch: "Switch to English",
+  heroTitle: "Performance-маркетинг под ключ",
+  heroText:
+    "Контекстная реклама, SEO, таргет, маркетплейсы и аналитика в одних руках. Больше 10 лет в digital-маркетинге и проекты в 14 странах.",
+  results: {
+    title: "Результаты",
+    subtitle: "Смотрим не на клики, а на клиентов",
+    text: "Регулярные отчёты в понятных цифрах: заявки, стоимость, окупаемость. Кейсы показывают рост конверсии в клиента и оплату, а не только дешёвый клик.",
+    note: "Цифры из реальных проектов.",
+    cases: "Смотреть кейсы",
+    audit: "Бесплатный аудит",
+    panels: [
+      "Заявки, сеть клиник",
+      "CTR, ОАЭ",
+      "Конверсия в оплату, EdTech",
+      "CPL, недвижимость",
+    ],
+  },
+  servicesTitle: "Наши услуги",
+  servicesMore: "Ещё шесть направлений",
+  discuss: "Обсудить",
+  principle: {
+    kicker: "Принцип",
+    title: ["Одна ", "точка", " ответственности"],
+    text: "Человек, который сам руководил отделом маркетинга, закрывает трафик целиком: от стратегии до аналитики. Тексты, сценарии и подача от человека с образованием в телевизионной журналистике.",
+    button: "Как мы работаем",
+  },
+  global: {
+    title: ["14 стран,", "один подход"],
+    remote: "Удалённо",
+    remoteLabel: "база в Батуми",
+    geo: "География проектов",
+  },
+  casesTitle: "Кейсы",
+  casesSub: "Ниша, задача, что сделали и что получилось.",
+  task: "Задача",
+  done: "Что сделали",
+  approachTitle: "Как работаем",
+  traitsTitle: "Почему с нами проще",
+  audit: {
+    title: "Бесплатный аудит",
+    text: "Оставьте домен, нишу и город. Отчёт по конкурентам, SEO и рекламе соберётся из публичных источников за пару минут.",
+    button: "Получить аудит",
+  },
+  cta: {
+    title: ["Обсудим", "проект!"],
+    text: "Расскажите о бизнесе и задаче в Telegram или WhatsApp. Разберём текущую рекламу и сайт и предложим, с чего начать.",
+    button: "Написать в Telegram",
+  },
+  footer: {
+    company: "Агентство",
+    services: "Услуги",
+    cases: "Кейсы",
+    contacts: "Контакты",
+    auditCard: "Бесплатный аудит сайта и конкурентов",
+    auditButton: "Получить",
+    place: "Батуми. Работаем удалённо",
+  },
+};
+
+export type AiCopy = typeof ru;
+
+const en: AiCopy = {
+  metaTitle: "Merlin Agency: paid traffic and SEO that bring in clients",
+  metaDescription:
+    "Search ads, SEO, paid social, marketplaces and analytics. 10+ years in digital marketing, projects in 14 countries.",
+  announce:
+    "A free audit of your website, SEO and competitor ads in a couple of minutes.",
+  announceLink: "Get the report",
+  nav: ["Services", "Cases", "Approach", "Audit"],
+  contactUs: "Contact us",
+  menu: "Menu",
+  close: "Close",
+  sections: "Sections",
+  toTop: "Merlin Agency, back to top",
+  langSwitch: "Перейти на русский",
+  heroTitle: "Performance marketing, end to end",
+  heroText:
+    "Search ads, SEO, paid social, marketplaces and analytics in one pair of hands. 10+ years in digital marketing and projects in 14 countries.",
+  results: {
+    title: "Results",
+    subtitle: "Clients, not clicks",
+    text: "Regular reports in plain numbers: leads, cost, return on spend. Our cases show growth in conversion to client and payment, not just cheap clicks.",
+    note: "Numbers from real projects.",
+    cases: "See our cases",
+    audit: "Free audit",
+    panels: [
+      "Leads, clinic chain",
+      "CTR, UAE",
+      "Lead to payment, EdTech",
+      "CPL, real estate",
+    ],
+  },
+  servicesTitle: "Our services",
+  servicesMore: "Six more services",
+  discuss: "Discuss",
+  principle: {
+    kicker: "Principle",
+    title: ["One ", "point", " of responsibility"],
+    text: "Someone who has run a marketing department handles your traffic end to end: from strategy to analytics. Copy, scripts and storytelling from someone with a degree in television journalism.",
+    button: "How we work",
+  },
+  global: {
+    title: ["14 countries,", "one approach"],
+    remote: "Remote",
+    remoteLabel: "based in Batumi",
+    geo: "Project geography",
+  },
+  casesTitle: "Cases",
+  casesSub: "Niche, task, what we did and what came out of it.",
+  task: "Task",
+  done: "What we did",
+  approachTitle: "How we work",
+  traitsTitle: "Why it is easier with us",
+  audit: {
+    title: "Free audit",
+    text: "Share your domain, niche and city. A report on competitors, SEO and ads is built from public data in a couple of minutes. The report is in Russian.",
+    button: "Get the audit",
+  },
+  cta: {
+    title: ["Let's talk", "business!"],
+    text: "Tell us about your business and goals on Telegram or WhatsApp. We will review your current ads and website and suggest where to start.",
+    button: "Message on Telegram",
+  },
+  footer: {
+    company: "Agency",
+    services: "Services",
+    cases: "Cases",
+    contacts: "Contact",
+    auditCard: "Free audit of your website and competitors",
+    auditButton: "Get it",
+    place: "Batumi. Working remotely",
+  },
+};
+
+export const AI_COPY: Record<Locale, AiCopy> = { ru, en };

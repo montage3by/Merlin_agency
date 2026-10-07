@@ -1,28 +1,40 @@
-// Логотипы рисуются через маску по PNG из public/brand, поэтому цвет задаётся фоном:
-// bg-current берёт цвет текста, .chrome даёт хромированный перелив.
-
+// Логотип пока только текстом: графический знак устарел и в макете не используется.
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span
-      role="img"
-      aria-label="Merlin Agency"
-      className={`mask-wordmark block aspect-[1520/260] bg-current ${className}`}
-    />
+    <span className={`whitespace-nowrap font-bold tracking-[-0.06em] ${className}`}>
+      Merlin Agency
+    </span>
   );
 }
 
-export function WizardMark({
-  className = "",
-  chrome = false,
-}: {
-  className?: string;
-  chrome?: boolean;
-}) {
+// Хромированная четырёхлучевая звезда: замена 3D-объекта референса.
+export function ChromeStar({ id, className = "" }: { id: string; className?: string }) {
   return (
-    <span
-      aria-hidden
-      className={`mask-mark block aspect-[142/253] ${chrome ? "chrome" : "bg-current"} ${className}`}
-    />
+    <svg viewBox="0 0 100 100" aria-hidden className={className}>
+      <defs>
+        <linearGradient id={`${id}-a`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset="0.18" stopColor="#c9cfdd" />
+          <stop offset="0.36" stopColor="#3a4058" />
+          <stop offset="0.5" stopColor="#eef1f8" />
+          <stop offset="0.64" stopColor="#7d88aa" />
+          <stop offset="0.8" stopColor="#1c2a8c" />
+          <stop offset="1" stopColor="#b9c6ff" />
+        </linearGradient>
+        <radialGradient id={`${id}-b`} cx="0.35" cy="0.3" r="0.5">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <path
+        d="M50 0c2.6 27.6 22.4 47.4 50 50-27.6 2.6-47.4 22.4-50 50-2.6-27.6-22.4-47.4-50-50C27.6 47.4 47.4 27.6 50 0Z"
+        fill={`url(#${id}-a)`}
+      />
+      <path
+        d="M50 0c2.6 27.6 22.4 47.4 50 50-27.6 2.6-47.4 22.4-50 50-2.6-27.6-22.4-47.4-50-50C27.6 47.4 47.4 27.6 50 0Z"
+        fill={`url(#${id}-b)`}
+      />
+    </svg>
   );
 }
 

@@ -20,6 +20,7 @@ export const NAV = [
   { href: "#services", label: "Услуги" },
   { href: "#cases", label: "Кейсы" },
   { href: "#approach", label: "Подход" },
+  { href: "#audit", label: "Аудит" },
   { href: "#contact", label: "Контакты" },
 ];
 
@@ -258,4 +259,20 @@ export const TOOLS = [
   "After Effects",
   "Claude",
   "ChatGPT",
+];
+
+// Бесплатный аудит: инструмент живёт на /audit, тексты взяты с его страницы.
+export const AUDIT_STEPS = [
+  {
+    title: "Оставьте сайт",
+    body: "Домен, ниша и город. Этого достаточно, чтобы найти релевантных конкурентов.",
+  },
+  {
+    title: "Мы анализируем",
+    body: "Проверяем ваш SEO, находим конкурентов, смотрим их рекламу в Google и Meta.",
+  },
+  {
+    title: "Забираете отчёт",
+    body: "PDF с находками по конкурентам и рекомендациями.",
+  },
 ];

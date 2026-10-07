@@ -149,7 +149,7 @@ export function AuditForm() {
       )}
       {status === "done" && (
         <p className="text-sm text-accent-soft">
-          Готово. PDF-отчёт скачался автоматически. Команда Merlin Studio свяжется с вами, чтобы обсудить результаты.
+          Готово. PDF-отчёт скачался автоматически. Команда Merlin Agency свяжется с вами, чтобы обсудить результаты.
         </p>
       )}
     </form>

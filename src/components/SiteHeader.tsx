@@ -4,7 +4,7 @@ export function SiteHeader() {
   return (
     <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
       <Link href="/" className="font-semibold tracking-tight">
-        Merlin Studio
+        Merlin Agency
       </Link>
       <Link href="/" className="text-sm text-muted transition-colors hover:text-foreground">
         Услуги агентства

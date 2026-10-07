@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Бесплатный digital-аудит от Merlin Studio",
+  title: "Бесплатный digital-аудит от Merlin Agency",
   description:
     "Автоматический аудит сайта и конкурентов: SEO, контекстная и таргетированная реклама. Готовый отчёт с рекомендациями за пару минут.",
 };
@@ -38,7 +38,7 @@ export default function Home() {
         <section className="grid items-center gap-12 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
           <Reveal>
             <p className="mb-4 text-xs uppercase tracking-[0.2em] text-accent-soft">
-              Merlin Studio · Бесплатный аудит
+              Merlin Agency · Бесплатный аудит
             </p>
             <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
               Digital-аудит за минуты, не дни
@@ -59,7 +59,7 @@ export default function Home() {
               <div className="absolute left-0 top-0 aspect-[900/1273] w-[62%] -rotate-3 overflow-hidden rounded-2xl border border-border shadow-2xl">
                 <Image
                   src="/report-preview-1.png"
-                  alt="Обложка примера отчёта Merlin Studio"
+                  alt="Обложка примера отчёта Merlin Agency"
                   fill
                   priority
                   className="object-cover object-top"
@@ -68,7 +68,7 @@ export default function Home() {
               <div className="absolute bottom-0 right-0 aspect-[900/1273] w-[62%] rotate-2 overflow-hidden rounded-2xl border border-border shadow-2xl">
                 <Image
                   src="/report-preview-2.png"
-                  alt="Страница рекомендаций примера отчёта Merlin Studio"
+                  alt="Страница рекомендаций примера отчёта Merlin Agency"
                   fill
                   className="object-cover object-top"
                 />
@@ -105,7 +105,7 @@ export default function Home() {
                 Получите свой аудит
               </h2>
               <p className="mt-4 max-w-[42ch] text-muted">
-                Отчёт собирается из публичных источников: вашего сайта, органической выдачи Google, Google Ads Transparency Center и Meta Ad Library. После этого команда Merlin Studio свяжется с вами, чтобы обсудить результаты.
+                Отчёт собирается из публичных источников: вашего сайта, органической выдачи Google, Google Ads Transparency Center и Meta Ad Library. После этого команда Merlin Agency свяжется с вами, чтобы обсудить результаты.
               </p>
             </Reveal>
             <Reveal delay={0.1}>

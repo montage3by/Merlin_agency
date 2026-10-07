@@ -4,8 +4,8 @@ import { AgencyHeader } from "@/components/agency/AgencyHeader";
 import {
   Bracket,
   ArrowIcon,
+  ChromeStar,
   Sparkle,
-  WizardMark,
   Wordmark,
 } from "@/components/agency/Brand";
 import { CasesCarousel } from "@/components/agency/CasesCarousel";
@@ -23,6 +23,7 @@ import {
   TICKER,
   TOOLS,
   TRAITS,
+  AUDIT_STEPS,
 } from "@/lib/agency-content";
 
 export const metadata: Metadata = {
@@ -80,7 +81,10 @@ export default function AgencyHome() {
                       руках. Больше 10 лет в digital и проекты в 14 странах.
                     </p>
                   </div>
-                  <a href="#contact" className="pill pill-lg self-start">
+                  <a
+                    href="#contact"
+                    className="pill pill-lg self-start justify-self-start"
+                  >
                     Обсудить
                   </a>
                 </div>
@@ -89,20 +93,20 @@ export default function AgencyHome() {
 
             <Reveal
               delay={0.2}
-              className="relative mx-auto w-full max-w-[520px]"
+              className="relative mx-auto w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px]"
             >
               <div className="relative aspect-square">
                 <div className="absolute inset-[6%] rounded-full bg-[var(--a-blue)]" />
                 <div className="float absolute inset-0 grid place-items-center">
-                  <WizardMark
-                    chrome
-                    className="h-[96%] drop-shadow-[0_30px_40px_rgba(0,0,0,0.35)]"
+                  <ChromeStar
+                    id="hero-star"
+                    className="w-[78%] drop-shadow-[0_30px_40px_rgba(0,0,40,0.35)]"
                   />
                 </div>
                 {HERO_STICKERS.map((s) => (
                   <span
                     key={s.text}
-                    className={`absolute rounded-full border border-[var(--a-ink)] bg-[var(--a-bg)] px-3 py-1.5 text-[13px] font-medium uppercase leading-none tracking-[-0.03em] shadow-sm ${s.className}`}
+                    className={`absolute rounded-full border border-[var(--a-ink)] bg-[var(--a-bg)] px-2.5 py-1 text-[11px] font-medium sm:px-3 sm:py-1.5 sm:text-[13px] uppercase leading-none tracking-[-0.03em] shadow-sm ${s.className}`}
                   >
                     {s.text}
                   </span>
@@ -146,10 +150,10 @@ export default function AgencyHome() {
               </h2>
             </Reveal>
             <div className="relative mx-auto w-[46vw] max-w-[220px] [perspective:900px] lg:w-[220px]">
-              <WizardMark chrome className="coin w-full" />
+              <ChromeStar id="coin-star" className="coin w-full" />
               <a
                 href="#cases"
-                className="pill absolute left-1/2 top-[38%] -translate-x-1/2 bg-[var(--a-bg)]"
+                className="pill absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[var(--a-bg)]"
               >
                 Кейсы
               </a>
@@ -257,7 +261,7 @@ export default function AgencyHome() {
                 <span className="giant px-8 text-[clamp(56px,9vw,150px)]">
                   Клиенты, а не клики
                 </span>
-                <WizardMark className="h-[clamp(56px,8vw,130px)]" />
+                <Sparkle className="size-[clamp(40px,6vw,96px)]" />
               </span>
             ))}
           </Marquee>
@@ -286,7 +290,7 @@ export default function AgencyHome() {
             <p className="mx-auto max-w-[24ch] text-[clamp(26px,3vw,44px)] font-bold uppercase leading-[0.95] tracking-[-0.06em]">
               Merlin Agency закрывает трафик целиком: от стратегии до аналитики
             </p>
-            <WizardMark className="mx-auto mt-8 h-14 text-[var(--a-blue)]" />
+            <Sparkle className="mx-auto mt-8 size-10 text-[var(--a-blue)]" />
             <p className="mx-auto mt-8 max-w-[70ch] text-[13px] uppercase leading-[1.25] tracking-[-0.02em]">
               Яндекс Директ с 2017 года, Google Ads, SEO, таргет и маркетплейсы.
               Руководство отделом маркетинга, найм удалённых специалистов и
@@ -398,6 +402,51 @@ export default function AgencyHome() {
           </Marquee>
         </div>
 
+        {/* ───── Audit ───── */}
+        <section
+          id="audit"
+          className="scroll-mt-16 px-4 py-16 md:px-5 md:py-24"
+        >
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="giant text-[clamp(52px,8vw,128px)]">Аудит</h2>
+            <span className="text-[13px] uppercase tracking-[-0.03em]">
+              ( бесплатно )
+            </span>
+          </div>
+          <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+            <Reveal>
+              <p className="max-w-[22ch] text-[clamp(24px,2.6vw,36px)] font-bold uppercase leading-[0.95] tracking-[-0.06em]">
+                Отчёт по конкурентам, SEO и рекламе за пару минут
+              </p>
+              <p className="mt-5 max-w-[46ch] text-[15px] uppercase leading-[1.15] tracking-[-0.03em]">
+                Данные из публичных источников: ваш сайт, органическая выдача
+                Google, Google Ads Transparency Center и Meta Ad Library.
+              </p>
+              <Link href="/audit" className="pill pill-lg mt-8">
+                Получить аудит
+              </Link>
+            </Reveal>
+            <ol className="grid gap-px overflow-hidden rounded-[22px] border border-[var(--a-line)] bg-[var(--a-line)] sm:grid-cols-3">
+              {AUDIT_STEPS.map((step, i) => (
+                <li
+                  key={step.title}
+                  className="flex flex-col gap-8 bg-[var(--a-bg)] p-5 sm:min-h-[260px] sm:justify-between"
+                >
+                  <span className="giant text-[clamp(48px,4.6vw,72px)] text-[var(--a-blue)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="text-2xl font-medium tracking-[-0.05em]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-[15px] leading-snug">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         {/* ───── CTA ───── */}
         <section
           id="contact"
@@ -411,8 +460,8 @@ export default function AgencyHome() {
             </h2>
             <div className="pointer-events-none absolute inset-0 grid place-items-center">
               <div className="float w-[clamp(90px,14vw,220px)]">
-                <WizardMark
-                  chrome
+                <ChromeStar
+                  id="cta-star"
                   className="w-full drop-shadow-[0_24px_30px_rgba(0,0,40,0.45)]"
                 />
               </div>
@@ -472,7 +521,7 @@ export default function AgencyHome() {
       <footer className="px-4 pb-6 pt-14 md:px-5 md:pt-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_auto_1fr] lg:items-end">
           <div>
-            <Wordmark className="w-full max-w-[980px] text-[var(--a-blue)]" />
+            <Wordmark className="giant block text-[clamp(56px,12.5vw,200px)] text-[var(--a-blue)]" />
             <div className="mt-6 flex flex-wrap gap-2">
               <a
                 href={CONTACTS.telegram.href}

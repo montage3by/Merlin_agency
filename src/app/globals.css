@@ -128,56 +128,6 @@ html[data-mode="dark"] body:has(.agency) {
   }
 }
 
-/* Wizard / wordmark painted through the logo PNG as a mask */
-.mask-mark,
-.mask-wordmark {
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-}
-
-.mask-mark {
-  mask-image: url("/brand/logo-mark.png");
-  -webkit-mask-image: url("/brand/logo-mark.png");
-}
-
-.mask-wordmark {
-  mask-image: url("/brand/logo-wordmark.png");
-  -webkit-mask-image: url("/brand/logo-wordmark.png");
-}
-
-.chrome {
-  background:
-    radial-gradient(120% 60% at 30% 18%, #ffffff 0%, transparent 42%),
-    linear-gradient(
-      100deg,
-      #4a4f63 0%,
-      #c9cfdd 14%,
-      #ffffff 22%,
-      #8a92a8 34%,
-      #2d3243 46%,
-      #aeb8d6 58%,
-      #ffffff 66%,
-      #5b6aa8 78%,
-      #1c2a8c 90%,
-      #9fb0ff 100%
-    );
-  background-size: 220% 100%;
-  animation: chrome-shine 7s ease-in-out infinite alternate;
-}
-
-@keyframes chrome-shine {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
-}
-
 @keyframes coin-spin {
   from {
     transform: rotateY(0deg);
@@ -234,7 +184,6 @@ html[data-mode="dark"] body:has(.agency) {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .chrome,
   .coin,
   .float,
   .marquee-track {

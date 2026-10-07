@@ -130,7 +130,7 @@ function recommendationCard(rec: Recommendation, index: number): string {
           <span class="pill pill-priority-${rec.priority}">${PRIORITY_LABELS[rec.priority]}</span>
         </div>
         <p class="rec-rationale">${escapeHtml(rec.rationale)}</p>
-        <p class="rec-service">Услуга Merlin Studio: <strong>${SERVICE_LABELS[rec.relatedService]}</strong></p>
+        <p class="rec-service">Услуга Merlin Agency: <strong>${SERVICE_LABELS[rec.relatedService]}</strong></p>
       </div>
     </div>`;
 }
@@ -252,7 +252,7 @@ export function renderAuditReportHtml(report: AuditReport): string {
 </head>
 <body>
   <section class="cover page">
-    <div class="eyebrow">Digital-аудит от <span class="brand">Merlin Studio</span></div>
+    <div class="eyebrow">Digital-аудит от <span class="brand">Merlin Agency</span></div>
     <h1>${escapeHtml(business.businessName ?? business.domain)}</h1>
     <div class="sub">${escapeHtml(business.domain)} · ${dateLabel}</div>
   </section>
@@ -275,13 +275,13 @@ export function renderAuditReportHtml(report: AuditReport): string {
         : '<p class="muted">Автоматически найти публичных конкурентов не удалось. Рекомендуем указать их вручную для более точного отчёта.</p>'
     }
 
-    <h2>Рекомендации Merlin Studio</h2>
+    <h2>Рекомендации Merlin Agency</h2>
     ${report.recommendations.map(recommendationCard).join("")}
 
     <p class="disclaimer">${escapeHtml(report.dataSourceDisclaimer)}</p>
 
     <div class="footer">
-      Merlin Studio. «Связки, которые продают» · merlin_studio@gmail.com
+      Merlin Agency. «Связки, которые продают» · merlin_studio@gmail.com
     </div>
   </section>
 </body>

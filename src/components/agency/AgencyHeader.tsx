@@ -14,7 +14,7 @@ export function AgencyHeader() {
         <a
           href="#top"
           aria-label="Merlin Agency, наверх"
-          className="w-[150px] md:w-[180px]"
+          className="text-[22px] leading-none md:text-[26px]"
         >
           <Wordmark />
         </a>

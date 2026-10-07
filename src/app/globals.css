@@ -49,111 +49,103 @@ p {
   text-wrap: pretty;
 }
 
-/* ───────── Merlin Agency landing (light by default, "Merlin mode" = dark) ───────── */
+/* ───────── Merlin Agency landing, вариант по мотивам onepageflip.com ───────── */
 
-.agency {
-  --a-bg: #ffffff;
-  --a-ink: #0a0a0a;
-  --a-soft: #f3f4f7;
-  --a-line: #0a0a0a;
-  --a-mute: #6b6b6b;
-  --a-blue: #0012ff;
-  --a-on-blue: #ffffff;
-  background: var(--a-bg);
-  color: var(--a-ink);
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease;
+.flip {
+  --f-bg: #ffffff;
+  --f-card: #f7f4ef;
+  --f-ink: #1d2230;
+  --f-mute: #6b7080;
+  --f-line: #ebe7e0;
+  --f-orange: #ff5a1f;
+  --f-orange-2: #ff3d00;
+  --f-tint: #ffeee6;
+  --f-mark: #fff2b8;
+  background: var(--f-bg);
+  color: var(--f-ink);
 }
 
-html[data-mode="dark"] .agency {
-  --a-bg: #0a0a0a;
-  --a-ink: #f2f2f2;
-  --a-soft: #161616;
-  --a-line: #f2f2f2;
-  --a-mute: #8d8d8d;
-}
-
-body:has(.agency) {
-  background: #ffffff;
-}
-
-html[data-mode="dark"] body:has(.agency) {
-  background: #0a0a0a;
-}
-
-.agency ::selection {
-  background: var(--a-blue);
+.flip ::selection {
+  background: var(--f-orange);
   color: #fff;
 }
 
-/* В слое components, чтобы утилиты Tailwind (hidden, leading-*, text-*) их перебивали */
+body:has(.flip) {
+  background: #ffffff;
+}
+
 @layer components {
-  .pill {
+  .accent {
+    font-family: var(--font-accent), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--f-orange);
+  }
+
+  .btn-orange {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid currentColor;
+    gap: 0.5rem;
     border-radius: 999px;
-    padding: 0.28em 0.7em 0.24em;
-    font-size: 13px;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: -0.03em;
-    white-space: nowrap;
-    transition:
-      background-color 0.25s ease,
-      color 0.25s ease,
-      border-color 0.25s ease;
-  }
-
-  .pill:hover {
-    background: var(--a-ink);
-    color: var(--a-bg);
-    border-color: var(--a-ink);
-  }
-
-  .pill-lg {
-    font-size: clamp(17px, 2.2vw, 30px);
-    white-space: normal;
-    text-align: left;
-    padding: 0.2em 0.45em 0.16em;
-    letter-spacing: -0.05em;
-  }
-
-  .giant {
+    background: linear-gradient(180deg, #ff6a2c 0%, var(--f-orange-2) 100%);
+    color: #fff;
     font-weight: 500;
-    letter-spacing: -0.075em;
-    line-height: 0.84;
+    padding: 0.9rem 1.6rem;
+    box-shadow:
+      0 10px 24px -8px rgba(255, 61, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
-}
 
-@keyframes coin-spin {
-  from {
-    transform: rotateY(0deg);
+  .btn-orange:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 16px 30px -10px rgba(255, 61, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35);
   }
-  to {
-    transform: rotateY(360deg);
-  }
-}
 
-.coin {
-  animation: coin-spin 9s linear infinite;
-  transform-style: preserve-3d;
-}
-
-@keyframes float-y {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-2deg);
+  .btn-orange:active {
+    transform: translateY(0) scale(0.98);
   }
-  50% {
-    transform: translateY(-18px) rotate(2deg);
-  }
-}
 
-.float {
-  animation: float-y 8s ease-in-out infinite;
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--f-line);
+    background: #fff;
+    padding: 0.85rem 1.4rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--f-ink);
+  }
+
+  .label {
+    display: inline-flex;
+    border-radius: 999px;
+    background: var(--f-tint);
+    color: var(--f-orange-2);
+    padding: 0.3rem 0.8rem;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .mark {
+    background: var(--f-mark);
+    border-radius: 3px;
+    padding: 0 2px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
 }
 
 @keyframes marquee {
@@ -175,18 +167,28 @@ html[data-mode="dark"] body:has(.agency) {
   animation-direction: reverse;
 }
 
-.no-scrollbar {
-  scrollbar-width: none;
+.marquee-fade {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-8px) rotate(var(--r, 0deg));
+  }
+}
+
+.bob {
+  animation: bob 6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .coin,
-  .float,
-  .marquee-track {
+  .marquee-track,
+  .bob {
     animation: none;
   }
 }

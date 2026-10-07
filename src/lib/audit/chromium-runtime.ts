@@ -6,6 +6,12 @@ function isServerlessRuntime(): boolean {
   return Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
 }
 
+// Railway runs a plain container without a Playwright-downloaded browser,
+// so it uses the same self-contained @sparticuz/chromium build as Vercel.
+function needsBundledChromium(): boolean {
+  return isServerlessRuntime() || Boolean(process.env.RAILWAY_ENVIRONMENT_NAME);
+}
+
 /**
  * Patchright is a drop-in, stealth-patched Playwright driver (same API,
  * patches how it talks to Chromium over CDP to avoid automation
@@ -40,5 +46,5 @@ async function launchLocal(baseOptions: LaunchOptions): Promise<Browser> {
 }
 
 export function launchChromium(baseOptions: LaunchOptions = {}): Promise<Browser> {
-  return isServerlessRuntime() ? launchServerless(baseOptions) : launchLocal(baseOptions);
+  return needsBundledChromium() ? launchServerless(baseOptions) : launchLocal(baseOptions);
 }

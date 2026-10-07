@@ -8,6 +8,9 @@
 | `interview-2026-07-07.md` | Интервью с покупателем 07.07: Александр, научный сотрудник (Москва), CoffeeMaker Classic 4в1 для офиса, выбрал на Ozon, купил в М.Видео |
 | `raw/cjm-shvabry-paroochistiteli.xlsx` | ЦА и путь клиента: паровые швабры и пароочистители |
 | `semantika-vertikalnyj-moyushhij-pylesos.csv` | Семантика «вертикальный моющий пылесос»: 565 запросов, 778 130 показов в сумме |
+| `max-kanaly-posevy-2026-10.xlsx` | Каналы MAX для посевов (07.10.2026): 119 каналов по нишам ЦА, оценка цены поста, охват, ER, продукт под канал |
+| `max-kanaly-raw-2026-10.csv` | Сырые данные парсинга telemetr.me: 170 каналов до фильтрации |
+| `scripts/` | Парсер telemetr.me (`max_parse.py`) и сборка Excel (`build_xlsx.py`) — перезапуск: `python3 -I max_parse.py <out> extra_ids.tsv`, затем `build_xlsx.py <out>/channels_raw.csv <file>.xlsx` |
 
 Интервью проводил Анатолий Коротков; со стороны Luxhomme — директор по бренду и Жанна Талакова, директор по маркетингу. Расшифровка автоматическая: бренд распознан как «Luxco», «Люкс Холм», «Deluxe Home», «Flux Home» и т. п.
 

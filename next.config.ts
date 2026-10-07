@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/api/audit": ["./node_modules/patchright-core/browsers.json"],
   },
+  // Старая страница агентства переехала на главную.
+  redirects() {
+    return [{ source: "/studio", destination: "/", permanent: false }];
+  },
 };
 
 export default nextConfig;

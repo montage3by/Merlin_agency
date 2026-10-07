@@ -48,3 +48,196 @@ h2 {
 p {
   text-wrap: pretty;
 }
+
+/* ───────── Merlin Agency landing (light by default, "Merlin mode" = dark) ───────── */
+
+.agency {
+  --a-bg: #ffffff;
+  --a-ink: #0a0a0a;
+  --a-soft: #f3f4f7;
+  --a-line: #0a0a0a;
+  --a-mute: #6b6b6b;
+  --a-blue: #0012ff;
+  --a-on-blue: #ffffff;
+  background: var(--a-bg);
+  color: var(--a-ink);
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+html[data-mode="dark"] .agency {
+  --a-bg: #0a0a0a;
+  --a-ink: #f2f2f2;
+  --a-soft: #161616;
+  --a-line: #f2f2f2;
+  --a-mute: #8d8d8d;
+}
+
+body:has(.agency) {
+  background: #ffffff;
+}
+
+html[data-mode="dark"] body:has(.agency) {
+  background: #0a0a0a;
+}
+
+.agency ::selection {
+  background: var(--a-blue);
+  color: #fff;
+}
+
+/* В слое components, чтобы утилиты Tailwind (hidden, leading-*, text-*) их перебивали */
+@layer components {
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 0.28em 0.7em 0.24em;
+    font-size: 13px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .pill:hover {
+    background: var(--a-ink);
+    color: var(--a-bg);
+    border-color: var(--a-ink);
+  }
+
+  .pill-lg {
+    font-size: clamp(17px, 2.2vw, 30px);
+    white-space: normal;
+    text-align: left;
+    padding: 0.2em 0.45em 0.16em;
+    letter-spacing: -0.05em;
+  }
+
+  .giant {
+    font-weight: 500;
+    letter-spacing: -0.075em;
+    line-height: 0.84;
+  }
+}
+
+/* Wizard / wordmark painted through the logo PNG as a mask */
+.mask-mark,
+.mask-wordmark {
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.mask-mark {
+  mask-image: url("/brand/logo-mark.png");
+  -webkit-mask-image: url("/brand/logo-mark.png");
+}
+
+.mask-wordmark {
+  mask-image: url("/brand/logo-wordmark.png");
+  -webkit-mask-image: url("/brand/logo-wordmark.png");
+}
+
+.chrome {
+  background:
+    radial-gradient(120% 60% at 30% 18%, #ffffff 0%, transparent 42%),
+    linear-gradient(
+      100deg,
+      #4a4f63 0%,
+      #c9cfdd 14%,
+      #ffffff 22%,
+      #8a92a8 34%,
+      #2d3243 46%,
+      #aeb8d6 58%,
+      #ffffff 66%,
+      #5b6aa8 78%,
+      #1c2a8c 90%,
+      #9fb0ff 100%
+    );
+  background-size: 220% 100%;
+  animation: chrome-shine 7s ease-in-out infinite alternate;
+}
+
+@keyframes chrome-shine {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes coin-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.coin {
+  animation: coin-spin 9s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(2deg);
+  }
+}
+
+.float {
+  animation: float-y 8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chrome,
+  .coin,
+  .float,
+  .marquee-track {
+    animation: none;
+  }
+}

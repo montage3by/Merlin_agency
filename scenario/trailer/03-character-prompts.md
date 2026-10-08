@@ -65,16 +65,16 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and P
 ---
 
 ## 3 · HELM — шлем-голова волка (лицо в открытой пасти)
-*Утверждена форма: голова волка с ушами, лицо в пасти. **Без кольчуги, сзади волчья шкура, нащёчники прямо вниз.** Весь шлем — это голова волка: уши наверху, лоб волка — купол шлема, верхняя челюсть с клыками нависает над бровями, как козырёк. Нижняя челюсть разделена на два нащёчника. **Лицо Вахтанга целиком видно в открытой пасти**, будто волк накрыл его голову сверху.*
+*Утверждена форма: голова волка с ушами, лицо в пасти. **Без кольчуги, сзади волчья шкура, цельнометаллический, без висящих пластин.** Весь шлем — это голова волка: уши наверху, лоб волка — купол шлема, верхняя челюсть с клыками нависает над бровями, как козырёк. Нижняя челюсть разделена на два нащёчника. **Лицо Вахтанга целиком видно в открытой пасти**, будто волк накрыл его голову сверху.*
 
 ```
 Prop reference sheet of a 5th-century Late Antique Caucasian war helmet in the shape of a wolf's head, shown on one image from the front, three-quarter and side, plus one view of the helmet worn by the young man from the attached reference sheet.
 
-The entire helmet is forged from dark blackened steel as a complete wolf's head that the wearer puts on like a hood: two tall pointed wolf ears rise from the top of the helmet; the wolf's forehead and brow ridges form the bowl; the wolf's snout and upper jaw project forward above the wearer's forehead like a short brim, with the upper fangs hanging just above the wearer's eyebrows. The wolf's lower jaw is split into two narrow hinged cheek guards that hang STRAIGHT DOWN from the helmet rim in front of the ears, along the sides of the face to the jawline, like the two halves of the wolf's lower jaw pointing down; they do not curve forward or wrap around the face. The wolf's own eyes are small narrow forged slits on top of the snout.
+The entire helmet is ONE SOLID PIECE of dark blackened forged steel sculpted as a complete wolf's head that the wearer puts on like a hood — no separate dome, no riveted bands, no hinges, nothing dangling. Two tall pointed wolf ears rise from the top; the wolf's forehead and brow ridges form the skull of the helmet, with fur texture engraved over the whole surface; the wolf's snout and upper jaw project forward above the wearer's forehead like a short brim, with the upper fangs hanging just above the wearer's eyebrows. The sides of the same steel shell extend down over the wearer's ears and upper cheeks to the jawline, closely following the shape of the face. The wolf's own eyes are small narrow forged slits on top of the snout.
 
 The wearer's whole face — eyes, nose, mouth, chin — is fully exposed inside the wolf's open jaws, as if the wolf has closed its mouth over his head from above. Nothing covers the face: no face plate, no visor, no mail across the face. NO chainmail anywhere on the helmet. A real grey wolf pelt hangs from the back and sides of the helmet down over the neck and shoulders like a short mantle; the face and throat stay open.
 
-Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side of the skull, traces of rust in the rivets and fur-like engraved texture. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
+Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side of the skull, traces of rust in the engraved fur. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
 
 Prop reference sheet on a neutral mid-grey studio background, soft even light, no text, no watermark.
 
@@ -84,13 +84,16 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures (The 
 
 **Утверждено:** форма (голова волка с ушами, лицо в пасти) и волчья шкура вместо кольчуги.
 
-**Правка нащёчников** (приложить последнюю генерацию):
+**Правки к последней генерации (сделать цельнометаллическим):**
 ```
-Change only the cheek guards: make them two narrow steel plates that hang straight down from the helmet rim in front of the ears, along the sides of the face to the jawline, like the two halves of a wolf's lower jaw pointing down. They must not curve forward or frame the face. Keep the wolf head, ears, fangs, wolf pelt and the face exactly the same.
+Make the helmet one solid piece of forged steel: remove the separate hanging cheek plates. Instead, the sides of the wolf-head helmet itself extend down in one continuous shell over the ears and the upper cheeks to the jawline, closely following the shape of the face, with no hinges and nothing dangling. The face stays open in the wolf's jaws. Keep the wolf head, ears, fangs and the wolf pelt at the back.
 ```
-Если хочется ещё «звериности», следующей правкой:
 ```
-At the bottom tip of each cheek guard add a single small forged wolf fang pointing down. Change nothing else.
+Remove the riveted bands and the separate dome: the whole helmet should be a single sculpted wolf's head forged in steel, with the fur texture engraved over the entire skull. Keep the face opening and the ears.
+```
+Без шкуры, только металл (по желанию):
+```
+Replace the wolf pelt with a short flared steel neck guard forged as part of the same helmet, shaped like the wolf's neck fur. Change nothing else.
 ```
 
 ---
@@ -265,7 +268,7 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 - [ ] V16 одобрен как мастер-лицо (янтарный клинышек в левом глазу, шрам над правой бровью, детский крестик)
 - [ ] V10 узнаётся как тот же человек
 - [ ] MIR3 и MIR9 похожи друг на друга и на брата
-- [ ] Шлем: целиком голова волка с ушами, лицо в открытой пасти, без кольчуги, волчья шкура сзади, нащёчники прямо вниз, тёмная сталь, без золота и льва
+- [ ] Шлем: целиком голова волка с ушами, лицо в открытой пасти, без кольчуги, волчья шкура сзади, цельнометаллический (бока закрывают уши и скулы), тёмная сталь, без золота и льва
 - [ ] Бакатар реально великан (есть масштабная фигура), ночная версия совпадает с дневной
 - [ ] Кони: вороной со звездой и гнедой со шрамом, без стремян
 
@@ -279,6 +282,6 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 |---|---|---|
 | CROSS | ✅ утверждён | эталон крестика |
 | V16 | 🔄 доработка | база — вариант с ламеллярным доспехом; омолодить до 16, заменить крест, глаз (клинышек в левом), убрать шрам на носу |
-| HELM | ✅ форма и волчья шкура утверждены · 🔄 нащёчники | нащёчники — прямо вниз вдоль скул, не обрамлять лицо |
+| HELM | ✅ форма и шкура · 🔄 цельнометаллический | одна кованая форма: бока шлема сами закрывают уши и скулы, без висящих пластин и заклёпочных полос |
 | BAK | 🔄 доработка | костюм ок (чешуя, кафтан, бляшки); убрать «славянско-казачий» вид: иранско-кавказское лицо, ~40 лет, башлык вместо колпака, больше масштаб |
 | V10 | 🔄 мелкая правка | глаз: клинышек вместо целиком янтарной радужки |

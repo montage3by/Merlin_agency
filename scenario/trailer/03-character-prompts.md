@@ -160,7 +160,7 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and P
 > ⚠️ **Чувствительная тема.** У Джуаншера враги — «осы», то есть аланы. Не делать их похожими на славян/казаков/русских и в игре называть **аланами**, а не «осетинами»: иначе грузинский зритель прочитает это как политический намёк.
 
 ## 8 · BAK — Бакатар, богатырь осов (день, финал)
-*Не викинг и не славянин/казак: ираноязычный сармато-аланский степной великан, около 40 лет, иранско-кавказские черты лица, скифский башлык. Чешуйчатый доспех, кафтан, конический войлочный колпак, бляшки в зверином стиле, вытянутый череп. Реальный масштаб: обычный воин ему по грудь.*
+*Не викинг и не славянин/казак: ираноязычный сармато-аланский степной великан, около 40 лет, иранско-кавказские черты лица, скифский башлык. Чешуйчатый доспех, кафтан, бляшки в зверином стиле, вытянутый череп. Реальный масштаб: обычный воин ему по грудь.*
 
 ```
 Character reference sheet of Bakatar, an Alan (Sarmatian) champion of the 5th-century North Caucasus steppe — a true giant, nearly twice the height of a normal man. Views on one image: front full body; three-quarter full body standing next to an ordinary Alan warrior whose head reaches only to the middle of Bakatar's chest, for scale; and a close-up portrait.
@@ -176,15 +176,15 @@ Character reference sheet on a neutral mid-grey studio background, soft even key
 Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers). Realistic skin with pores and scars, worn iron scales and wool, subtle film grain. Historically grounded Late Antique Caucasus and Pontic steppe, 5th century AD. No stirrups, no fantasy elements.
 ```
 
-**Если правкой текущей генерации** (по шагам):
+**Правки к генерации с чешуёй и красным кафтаном** (по шагам):
 ```
-Make him a Sarmatian-Alan steppe warrior, not a Viking: replace the bearskin with a long red wool caftan with a woven geometric border under a coat of iron scale armor, remove the braids from his beard and give him a long drooping moustache, put a tall pointed felt cap on his head.
-```
-```
-Make him a true giant: the warrior standing next to him must reach only to the middle of his chest. Keep his face.
+Make his face less Slavic and more Iranian-Caucasian steppe nomad: deep-set dark eyes, a strong hooked nose, high cheekbones, sun-darkened olive-tan skin, dark ash-brown hair. Trim the beard shorter and close to the jaw, and make the moustache shorter, not Cossack-style. Make him about 40 years old. Keep the armor and costume.
 ```
 ```
-Replace his bow with a colossal composite bow about 2.5 meters long, taller than he is, with long bone ear-plates at both tips.
+Replace the felt cap with a Scythian-style pointed felt hood (bashlyk) whose long side flaps are wrapped around his neck and chin.
+```
+```
+Make him a true giant: the warrior standing next to him must reach only to the middle of his chest. Keep everything else the same.
 ```
 
 ## 9 · BAK-NIGHT — Бакатар-похититель (ночь набега, кадр 5)

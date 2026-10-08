@@ -62,7 +62,7 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige 
 ### Кадр 4 · 0:09 · Мальчик прячется
 **Референсы:** V10
 ```
-Close-up of the 10-year-old boy from the attached sheet lying on his stomach in the mud under a wooden cart at night. His face is streaked with soot, eyes wide with terror, one hand pressed hard over his own mouth. Through the gaps between the cart planks stripes of orange firelight slide across his face; out-of-focus horse legs gallop past in the background. The amber fleck in his left eye catches the firelight. 85mm lens, very shallow depth of field, slight handheld feel.
+Close-up of the 10-year-old boy from the attached sheet lying on his stomach in the mud under a wooden cart at night. His face is streaked with soot, eyes wide with terror, one hand pressed hard over his own mouth. Through the gaps between the cart planks stripes of orange firelight slide across his face; out-of-focus horse legs gallop past in the background. The small amber segment in his left iris catches the firelight. 85mm lens, very shallow depth of field, slight handheld feel.
 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War", anamorphic 2.39:1, subtle film grain, soft halation. 5th-century Kingdom of Iberia. Only warm firelight and deep black. No text, no watermark.
 ```
@@ -106,7 +106,7 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige 
 ### Кадр 9 · 0:25 · Глаз (огонь)
 **Референсы:** V10, кадр 8 (готовый)
 ```
-Extreme macro close-up of the left eye of the 10-year-old boy from the attached sheet, filling the whole frame. Dark brown iris with a small amber-gold fleck right next to the pupil. In the wet surface of the eye, a clear reflection of the burning basilica, dark rider silhouettes and a falling cross. A tear gathers on the lower eyelid. Soot on the skin around the eye, individual lashes visible.
+Extreme macro close-up of the left eye of the 10-year-old boy from the attached sheet, filling the whole frame. Dark brown iris with a small wedge-shaped amber segment in its lower outer part (sectoral heterochromia). In the wet surface of the eye, a clear reflection of the burning basilica, dark rider silhouettes and a falling cross. A tear gathers on the lower eyelid. Soot on the skin around the eye, individual lashes visible.
 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures, anamorphic 2.39:1, macro photography, extreme detail of iris texture and skin pores, subtle film grain. Warm orange firelight only. No text, no watermark.
 ```
@@ -114,13 +114,13 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures, anamorphic 
 ### Кадр 10a · 0:29 · Глаз (переход)
 **Референсы:** кадр 9 (готовый)
 ```
-Edit the attached image: keep exactly the same eye, the same iris pattern and the same amber-gold fleck next to the pupil, but the reflection of fire in the eye fades and turns into cold grey dawn light — now the eye reflects grey granite cliffs and mist. The warm orange light on the skin changes to cool blue-grey morning light. The tear is gone.
+Edit the attached image: keep exactly the same eye, the same iris pattern and the same small amber segment, but the reflection of fire in the eye fades and turns into cold grey dawn light — now the eye reflects grey granite cliffs and mist. The warm orange light on the skin changes to cool blue-grey morning light. The tear is gone.
 ```
 
 ### Кадр 10b · 0:31 · Глаз (16 лет)
 **Референсы:** кадр 10a (готовый), V16
 ```
-Same extreme close-up eye, same iris and the same amber-gold fleck, but now the camera has pulled back slightly to reveal that the skin around it belongs to the 16-year-old young man from the attached sheet: wind-weathered skin, the edge of a thin fresh scar above the right eyebrow visible at the top of frame, a few hairs of dark stubble at the bottom. Cold blue-grey dawn light, mist.
+Same extreme close-up eye, same iris and the same small amber segment, but now the camera has pulled back slightly to reveal that the skin around it belongs to the 16-year-old young man from the attached sheet: wind-weathered skin, the edge of a thin fresh scar above the right eyebrow visible at the top of frame, a few hairs of dark stubble at the bottom. Cold blue-grey dawn light, mist.
 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures, anamorphic 2.39:1, macro photography, extreme skin detail, subtle film grain. No text, no watermark.
 ```
@@ -148,7 +148,7 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige 
 ### Кадр 13 · 0:40 · Шлем
 **Референсы:** V16, HELM
 ```
-Low-angle close-up: the young man from the attached sheet lifts the dark steel wolf-faced helmet from the attached prop sheet with both hands and lowers it onto his head. Capture the moment the wolf face covers his face completely: the mail aventail falls onto his shoulders, and through the narrow eye slits of the wolf only his eyes remain visible — dark brown, with the amber fleck in the left eye. Cold misty dawn behind him, granite cliffs out of focus. 50mm lens.
+Low-angle close-up: the young man from the attached sheet lifts the dark steel wolf-faced helmet from the attached prop sheet with both hands and lowers it onto his head. Capture the moment the wolf face covers his face completely: the mail aventail falls onto his shoulders, and through the narrow eye slits of the wolf only his eyes remain visible — dark brown, with the small amber segment in the left iris. Cold misty dawn behind him, granite cliffs out of focus. 50mm lens.
 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures (The Witcher 3 and Assassin's Creed cinematics), anamorphic 2.39:1, shallow depth of field, physically based forged steel and mail, subtle film grain. No gold, no lion, no glowing eyes, no text, no watermark.
 ```

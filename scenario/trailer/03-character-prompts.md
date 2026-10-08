@@ -24,7 +24,7 @@
 - Формат листов — **16:9**.
 
 ## Якоря (проверять на каждом листе)
-- **Вахтанг:** тёмно-карие глаза, **янтарное пятнышко у зрачка в ЛЕВОМ глазу**, в 16 лет **тонкий шрам над ПРАВОЙ бровью**.
+- **Вахтанг:** тёмно-карие глаза, **янтарный клинышек (секторная гетерохромия) в ЛЕВОМ глазу, остальная радужка карая**, в 16 лет **тонкий шрам над ПРАВОЙ бровью**.
 - **Крестик:** маленький бронзовый, форма болнисского креста.
 - **Шлем:** тёмная сталь, волчья морда, **без золота и без льва**.
 - **Нигде нет стремян, чохи и папахи.**
@@ -36,7 +36,7 @@
 ```
 Character reference sheet of Vakhtang, a 16-year-old prince of the 5th-century Kingdom of Iberia (Kartli, eastern Georgia), shown in four views on one image: front full body, three-quarter full body, side profile full body, and a large close-up portrait of the face.
 
-He is unusually tall and broad-shouldered for his age, athletic, already the size of a grown warrior but with a young face. Olive skin weathered by wind and sun. Dark brown, slightly wavy hair falling to the shoulders. Thick dark eyebrows, straight strong nose, firm jaw, the first sparse dark stubble on the chin and upper lip. Deep-set dark brown eyes; in the LEFT iris a small distinctive amber-gold fleck right next to the pupil, clearly visible in the close-up. A thin fresh scar above the RIGHT eyebrow. Serious, closed, determined expression — grief turned into resolve. He does not smile.
+He is unusually tall and broad-shouldered for his age, athletic, already the size of a grown warrior but with a young face. Olive skin weathered by wind and sun. Dark brown, slightly wavy hair falling to the shoulders. Thick dark eyebrows, straight strong nose, firm jaw, the first sparse dark stubble on the chin and upper lip. Deep-set dark brown eyes; both irises dark brown with no glow; only in the LEFT eye a small wedge-shaped amber segment in the lower outer part of the iris (sectoral heterochromia), clearly visible in the close-up. A thin fresh scar above the RIGHT eyebrow. Serious, closed, determined expression — grief turned into resolve. He does not smile.
 
 Costume: knee-length riveted iron mail shirt over a quilted padded under-tunic; a lamellar breastplate of small dark steel plates laced with leather over the mail; dark wool trousers tucked into soft leather riding boots; a heavy charcoal wool cloak pinned on the right shoulder with a plain bronze fibula; a broad leather belt with small iron plaques and hanging straps carrying a long straight double-edged sword in a dark scabbard; leather riding gloves. Around his neck, on a new leather cord, a tiny worn bronze cross in the Bolnisi style (equal flared arms inside a small circle) — a child's cross, too small for him. No helmet.
 
@@ -51,7 +51,7 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and P
 *Референс: лист V16.*
 
 ```
-Using the attached reference sheet, create a character reference sheet of the SAME person as a 10-year-old boy. Keep the same face structure, the same deep-set dark brown eyes with the same small amber-gold fleck next to the pupil in the LEFT iris, the same thick dark eyebrows and straight nose — but childlike proportions, a slim small body and soft round cheeks. No scar, no stubble. Dark brown hair a little shorter and tangled.
+Using the attached reference sheet, create a character reference sheet of the SAME person as a 10-year-old boy. Keep the same face structure, the same deep-set dark brown eyes with the same small wedge-shaped amber segment in the lower outer part of the LEFT iris (sectoral heterochromia, not the whole iris), the same thick dark eyebrows and straight nose — but childlike proportions, a slim small body and soft round cheeks. No scar, no stubble. Dark brown hair a little shorter and tangled.
 
 Views on one image: front full body, three-quarter full body, and a large close-up of the face with a frightened, wide-eyed expression, one hand pressed over his own mouth to stop himself from crying out.
 
@@ -231,7 +231,7 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 ---
 
 ## Чек-лист перед раскадровкой
-- [ ] V16 одобрен как мастер-лицо (пятнышко в левом глазу, шрам над правой бровью, детский крестик)
+- [ ] V16 одобрен как мастер-лицо (янтарный клинышек в левом глазу, шрам над правой бровью, детский крестик)
 - [ ] V10 узнаётся как тот же человек
 - [ ] MIR3 и MIR9 похожи друг на друга и на брата
 - [ ] Шлем: волк, тёмная сталь, без золота и без льва
@@ -239,3 +239,13 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 - [ ] Кони: вороной со звездой и гнедой со шрамом, без стремян
 
 **Следующий шаг:** промпты на 17 кадров раскадровки с указанием референсов для каждого.
+
+---
+
+## Статус утверждения
+
+| Лист | Статус | Комментарий |
+|---|---|---|
+| CROSS | ✅ утверждён | эталон крестика |
+| V16 | 🔄 доработка | база — вариант с ламеллярным доспехом; омолодить до 16, заменить крест, глаз (клинышек в левом), убрать шрам на носу |
+| V10 | 🔄 мелкая правка | глаз: клинышек вместо целиком янтарной радужки |

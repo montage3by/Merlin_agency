@@ -17,6 +17,7 @@
 | **HORSES** | кони | ✅ с правкой | (не сохранился — `refs/HORSES.jpg`) | **на листе есть стремена** — в каждом кадре пишем «no stirrups»; подписи на листе обрезать |
 | **RAID** | налётчики | ✅ | `refs/RAID.jpg` | подпись в углу обрезать перед загрузкой |
 | **ARMY** | войско | ✅ с правкой | `refs/ARMY.jpg` | у коня тяжёлого всадника **стремя** — пишем «no stirrups» |
+| **EAGLE** | беркут | ⏳ | кадр 1 после генерации | первый кадр пролёта становится референсом для кадров 2–3 |
 | **NURSE** | кадр 6 | ✅ **готовый кадр** | (не сохранился — `refs/SHOT06.jpg`) | это уже финальный кадр 6 |
 
 **Правила:**
@@ -41,6 +42,14 @@ Wide establishing matte painting of the ancient fortified town of Kaspi in the 5
 Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. Only warm firelight and black. No domed churches, no text, no watermark.
 ```
 
+### LOC-KASPI-DUSK (для пролёта орла)
+**Вложения:** LOC-KASPI
+```
+Same town as in the attached image, but at deep dusk just after sunset instead of night: a dark red afterglow on the western horizon, the sky turning to deep blue above, the town and the valley in shadow, a few warm hearth fires in windows. Torches of the raiders flow down from the northern hills toward the walls. Seen from high above, as from a bird's flight.
+
+Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. No domed churches, no text, no watermark.
+```
+
 ### LOC-DARIAL
 ```
 Wide establishing matte painting of the Darial Gorge in the Caucasus at dawn: a narrow canyon of sheer granite walls rising up to 1800 meters, the wild grey-white river Terek roaring over boulders, mist lying over the water, birch and pine clinging to the slopes, snowfields high above. The bottom of the gorge is in deep cold blue shadow; only the highest ridges catch the first pale gold light. A narrow stony track along the river.
@@ -57,24 +66,39 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Dea
 
 ---
 
-## ЧАСТЬ 1 · УЖАС (ночь, Каспи)
+## ЧАСТЬ 1 · УЖАС (закат → ночь, Каспи)
 
-### Кадр 1 · чёрный экран — генерировать не нужно
+> Кадры 1–3 — один непрерывный пролёт за орлом. Для раскадровки это три ключевых кадра. **Сначала сгенерируйте кадр 1, затем прикладывайте его как EAGLE-референс** в кадры 2 и 3, чтобы птица была одной и той же.
 
-### Кадр 2 · Город перед бедой
-**Вложения:** LOC-KASPI
+### Кадр 1 · Орёл над хребтами
+**Вложения:** нет (этот кадр сам становится референсом EAGLE)
 ```
-Using the attached location as the base, create a cinematic wide establishing shot of the town on its hill at night, seen from a low hill opposite. The river of torches from the north has almost reached the town walls; orange glow and smoke over the horizon; the basilica silhouette above the roofs; a few windows still lit. Ominous calm before the attack. Static camera at eye level, 35mm lens.
+Aerial chase shot: the camera flies just behind and slightly above a golden eagle soaring over the Caucasus mountains at sunset. The eagle seen from behind fills the lower third of the frame — golden-brown nape, dark brown wings spread wide, pale patches under the wings, the edges of the feathers glowing crimson in the backlight of the setting sun. Below: a sea of clouds, snowy ridges catching the last red light, deep valleys already sinking into cold blue darkness. Vast scale, wind, solitude. 35mm lens, slight motion blur on the wing tips.
 
-Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. Only firelight and black. No text, no watermark.
+Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. Crimson sunset and deep shadow. No text, no watermark.
 ```
 
-### Кадр 3 · Конница степи
-**Вложения:** RAID (без подписи), LOC-KASPI
+### Кадр 2 · Над аланами
+**Вложения:** кадр 1 (EAGLE), RAID (без подписи), BAK
 ```
-Extreme low-angle shot from ground level in a muddy street of the burning town: galloping horse hooves smash through the mud right in front of the lens, clods of mud flying toward the camera, motion blur. Above them the two raider types from the attached sheet rush past on horseback — the fair-haired Alan in mail with an axe, and the shaven-headed Hunnic rider with a topknot in a sheepskin coat, his helmet on. Their legs hang free — no stirrups. A horse-tail standard sweeps across the top of the frame. Hard orange torchlight, embers, smoke. 24mm lens.
+Low skimming aerial shot following the same golden eagle from the first attached image, now gliding just ten meters above a long column of steppe raiders riding down a dark mountain slope at dusk. The riders are the ones from the attached raider sheet — Alans in mail with axes and Hunnic riders in sheepskin coats — hundreds of them, freshly lit torches, horse-tail standards on poles, composite bows. Their legs hang free, no stirrups. In the foreground one Hunnic rider with an elongated deformed skull lifts his face toward the eagle, torchlight on his face. Further along the column, a giant rider in iron scale armor with a huge bow on his back, from the attached giant sheet, seen only as a dark silhouette. The sky still holds a dark red afterglow; the valley below is dark, lit only by the torches. 24mm lens.
 
-Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War", anamorphic 2.39:1, subtle film grain, soft halation. Only torchlight and black. No stirrups, no text, no watermark.
+Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. No stirrups, no text, no watermark.
+```
+
+### Кадр 3 · Каспи, нырок вниз
+**Вложения:** кадр 1 (EAGLE), LOC-KASPI-DUSK
+```
+High aerial shot over the shoulder of the same golden eagle from the first attached image as it glides over the town from the attached location image at dusk. Below: the fortified hilltop town above the river, rough stone walls, flat roofs, wooden balconies, a few hearth fires in the windows, the gabled roof of the basilica just under the eagle's wings. A river of torches spreads around the walls and the first riders pour through the gate; smoke begins to rise. The eagle banks upward into the darkening sky while the camera tilts down toward a narrow street below. Deep dusk, the last red light on the horizon, warm torchlight below. 24mm lens.
+
+Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. No domed churches, no stirrups, no text, no watermark.
+```
+
+**Конец пролёта** (опционально, если монтажу нужен кадр нырка): возьмите старый промпт копыт у земли.
+```
+Extreme low-angle shot from ground level in a muddy street of the town at dusk: galloping horse hooves smash through the mud right in front of the lens, clods of mud flying toward the camera, motion blur, smoke and embers. Legs of riders hang free — no stirrups. A wooden cart in the background. Hard orange torchlight. 24mm lens.
+
+Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"), anamorphic 2.39:1, subtle film grain, soft halation. Only torchlight and black. No stirrups, no text, no watermark.
 ```
 
 ### Кадр 4 · Мальчик прячется
@@ -227,5 +251,6 @@ Photorealistic CG render, anamorphic 2.39:1, subtle film grain. No other text, n
 - [ ] Глаз с янтарным клинышком совпадает в кадрах 4, 9, 10a, 10b, 13
 - [ ] Крестик: на шее (5) → в грязи (7) → на Вахтанге (11) → нет на сестре (16b)
 - [ ] Бакатар ночью (5) узнаётся в Бакатаре на рассвете (16)
-- [ ] Ни в одном кадре нет стремян (особенно 11, 12, 14b, 15)
-- [ ] Часть 1 только тёплая, часть 3 только холодная (кроме луча на клинке)
+- [ ] Орёл один и тот же в кадрах 1, 2, 3 (кадр 1 приложен как референс)
+- [ ] Ни в одном кадре нет стремян (особенно 2, 11, 12, 14b, 15)
+- [ ] Пролёт (1–3): закат наверху → тьма и факелы внизу; с кадра 4 часть 1 только тёплая, часть 3 только холодная (кроме луча на клинке)

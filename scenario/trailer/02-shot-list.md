@@ -54,6 +54,24 @@ Wide matte painting across a mountain river in the Darial Gorge at dawn: on the 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War", anamorphic 2.39:1, volumetric fog, subtle film grain. No text, no watermark.
 ```
 
+**Правки по присланным локациям:**
+
+LOC-KASPI-DUSK. **Вложения:** `LOC-KASPI.jpg` (ночной город), `LOC-KASPI-DUSK-sky.jpg` (небо). В неудачной генерации европейские фахверковые дома, поэтому от неё берём только небо и свет.
+```
+Keep the town from the first attached image exactly as it is: the same stone walls and towers, flat-roofed houses with wooden balconies, the basilica on the hill, the river, the column of torches and the same camera angle. Change only the time of day: deep dusk just after sunset, with the crimson afterglow on the horizon and the darkening blue sky from the second attached image. The mountains are dark silhouettes against the red sky; the town is in shadow, lit only by hearth fires and torches. No stars. Do not take any buildings from the second image.
+```
+
+LOC-KASPI. Необязательная правка крыши базилики. **Вложения:** `LOC-KASPI.jpg`.
+```
+Change only the roof of the basilica: replace the green metal roof with a roof of grey stone slabs and old reddish clay tiles. Keep everything else exactly the same.
+```
+
+LOC-CAMP. Нужно очистить ближний берег. **Вложения:** `LOC-CAMP.jpg`.
+```
+Remove the yurt, the horses, the banners and the warrior on the right-hand near bank in the foreground, leaving only bare wet rocks and boulders on that side of the river. The camp must be only on the far bank. Keep everything else exactly the same.
+```
+Если хочется больше эпохи, вторая правка (по одной за раз): `Replace the black cloth banners in the camp with horse-tail standards: poles topped with a metal finial and bunches of long horse hair.`
+
 ---
 
 ## ЧАСТЬ 1. УЖАС · 0:00–0:25 · закат → ночь, Каспи

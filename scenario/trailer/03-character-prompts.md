@@ -26,7 +26,7 @@
 ## Якоря (проверять на каждом листе)
 - **Вахтанг:** тёмно-карие глаза, **янтарный клинышек (секторная гетерохромия) в ЛЕВОМ глазу, остальная радужка карая**, в 16 лет **тонкий шрам над ПРАВОЙ бровью**.
 - **Крестик:** маленький бронзовый, форма болнисского креста.
-- **Шлем:** тёмная сталь, волчья морда, **без золота и без льва**.
+- **Шлем:** тёмная сталь, **открытое лицо**, волчья голова на лбу, морда — носовая стрелка, **без золота и без льва**.
 - **Нигде нет стремян, чохи и папахи.**
 
 ---
@@ -64,18 +64,25 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and P
 
 ---
 
-## 3 · HELM — шлем «волчья голова»
+## 3 · HELM — шлем «волчья голова» (открытое лицо)
+*Лицо Вахтанга должно быть видно. Волк сидит на лбу шлема, его морда опускается носовой стрелкой. Маски нет.*
 
 ```
-Prop reference sheet of a 5th-century Late Antique Caucasian war helmet, shown on one image from the front, three-quarter and side, plus a close-up of the wolf face.
+Prop reference sheet of a 5th-century Late Antique Caucasian OPEN-FACED war helmet, shown on one image from the front, three-quarter and side, plus one view of the helmet worn by the young man from the attached reference sheet with his face clearly visible.
 
-A segmented spangenhelm of dark blackened forged steel with a slightly pointed crown and riveted iron bands. The whole front of the helmet is forged into the snarling head of a wolf: the wolf's brow and snout form the face guard, bared iron fangs frame the lower edge, and two narrow eye slits sit exactly where the wolf's eyes would be, so the wearer looks out through the wolf's eyes. Short pointed wolf ears forged at the top of the brow. A riveted iron mail aventail hangs from the back and sides down to the shoulders.
+A segmented spangenhelm of dark blackened forged steel with a slightly pointed crown and riveted iron bands. The face is completely open: NO face mask, NO visor, NO wolf jaw over the face. On the front of the helmet, above the brow, sits a forged steel wolf's head in high relief — snarling, ears laid back, narrow eyes — fixed to the forehead band; its snout extends straight down as a narrow nasal guard over the wearer's nose. Two small narrow hinged cheek guards that leave the eyes, nose and mouth fully visible. A riveted iron mail aventail hangs only from the back and sides of the helmet down to the shoulders and does not cover the face.
 
-Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side, traces of rust around the rivets. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
+Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side of the bowl, traces of rust around the rivets. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
 
 Prop reference sheet on a neutral mid-grey studio background, soft even light, no text, no watermark.
 
 Style: photorealistic AAA game CG cinematic in the style of Digic Pictures (The Witcher 3 and Assassin's Creed cinematics), physically based rendering of forged steel and iron mail, subtle film grain.
+```
+*Референс: утверждённый лист V16 (для вида «на голове»).*
+
+**Если хочется спасти текущую генерацию** (металл и фактура там хорошие), правка к ней:
+```
+Turn this into an open-faced helmet: remove the wolf face mask and jaw completely so a wearer's face would be fully visible. Keep the wolf only as a forged wolf head in relief on the forehead band above the brow, with its snout extending down as a narrow nasal guard. The mail aventail hangs only at the back and sides. Keep the same dark steel, rivets and wear.
 ```
 
 ---
@@ -234,7 +241,7 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 - [ ] V16 одобрен как мастер-лицо (янтарный клинышек в левом глазу, шрам над правой бровью, детский крестик)
 - [ ] V10 узнаётся как тот же человек
 - [ ] MIR3 и MIR9 похожи друг на друга и на брата
-- [ ] Шлем: волк, тёмная сталь, без золота и без льва
+- [ ] Шлем: открытое лицо, волк на лбу + носовая стрелка, тёмная сталь, без золота и льва
 - [ ] Бакатар реально великан (есть масштабная фигура), ночная версия совпадает с дневной
 - [ ] Кони: вороной со звездой и гнедой со шрамом, без стремян
 
@@ -248,4 +255,5 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 |---|---|---|
 | CROSS | ✅ утверждён | эталон крестика |
 | V16 | 🔄 доработка | база — вариант с ламеллярным доспехом; омолодить до 16, заменить крест, глаз (клинышек в левом), убрать шрам на носу |
+| HELM | 🔄 переделка | была глухая маска — нужно открытое лицо, волк на лбу |
 | V10 | 🔄 мелкая правка | глаз: клинышек вместо целиком янтарной радужки |

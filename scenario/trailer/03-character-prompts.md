@@ -65,14 +65,14 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and P
 ---
 
 ## 3 · HELM — шлем-голова волка (лицо в открытой пасти)
-*Весь шлем — это голова волка: уши наверху, лоб волка — купол шлема, верхняя челюсть с клыками нависает над бровями, как козырёк. Нижняя челюсть разделена на два нащёчника. **Лицо Вахтанга целиком видно в открытой пасти**, будто волк накрыл его голову сверху.*
+*Утверждена форма: голова волка с ушами, лицо в пасти. **Без кольчуги.** Весь шлем — это голова волка: уши наверху, лоб волка — купол шлема, верхняя челюсть с клыками нависает над бровями, как козырёк. Нижняя челюсть разделена на два нащёчника. **Лицо Вахтанга целиком видно в открытой пасти**, будто волк накрыл его голову сверху.*
 
 ```
 Prop reference sheet of a 5th-century Late Antique Caucasian war helmet in the shape of a wolf's head, shown on one image from the front, three-quarter and side, plus one view of the helmet worn by the young man from the attached reference sheet.
 
 The entire helmet is forged from dark blackened steel as a complete wolf's head that the wearer puts on like a hood: two tall pointed wolf ears rise from the top of the helmet; the wolf's forehead and brow ridges form the bowl; the wolf's snout and upper jaw project forward above the wearer's forehead like a short brim, with the upper fangs hanging just above the wearer's eyebrows. The wolf's lower jaw is split into two hinged cheek guards that run down along the wearer's cheeks to the jawline. The wolf's own eyes are small narrow forged slits on top of the snout.
 
-The wearer's whole face — eyes, nose, mouth, chin — is fully exposed inside the wolf's open jaws, as if the wolf has closed its mouth over his head from above. Nothing covers the face: no face plate, no visor, no mail across the face. A riveted iron mail aventail hangs only from the back of the helmet over the neck and shoulders.
+The wearer's whole face — eyes, nose, mouth, chin — is fully exposed inside the wolf's open jaws, as if the wolf has closed its mouth over his head from above. Nothing covers the face: no face plate, no visor, no mail across the face. NO chainmail anywhere on the helmet. Instead, a short neck guard of small overlapping dark leather lamellae laced with rawhide hangs only at the back of the neck; the sides of the face and the throat stay open.
 
 Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side of the skull, traces of rust in the rivets and fur-like engraved texture. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
 
@@ -82,9 +82,19 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures (The 
 ```
 *Референс: утверждённый лист V16 (для вида «на голове»).*
 
+**Правка к утверждённой форме (убрать кольчугу)**, приложить последнюю генерацию:
+```
+Remove all the chainmail from the helmet. Replace it with a short neck guard of small overlapping dark leather lamellae laced with rawhide, hanging only at the back of the neck. The sides of the face, the cheeks and the throat must be open. Keep the wolf head, ears, fangs and cheek guards exactly the same.
+```
+**Альтернатива (более «звериная»):**
+```
+Remove all the chainmail from the helmet. Instead, a real grey wolf pelt hangs from the back of the helmet down over the neck and shoulders like a short mantle. The face, cheeks and throat stay open. Keep the steel wolf head exactly the same.
+```
+
+
 **Или правка к первой генерации** (с глухой маской: там красивая голова волка и уши). Приложить её и написать:
 ```
-Open the wolf's jaws so the wearer's face is fully visible: remove the lower half of the wolf face and the face plate completely. Keep the wolf's ears on top and the upper jaw with fangs projecting above the brow like a brim; turn the lower jaw into two narrow cheek guards along the cheeks. Mail aventail only at the back. Keep the same dark steel, rivets and wear.
+Open the wolf's jaws so the wearer's face is fully visible: remove the lower half of the wolf face and the face plate completely. Keep the wolf's ears on top and the upper jaw with fangs projecting above the brow like a brim; turn the lower jaw into two narrow cheek guards along the cheeks. No chainmail; a short leather lamellar neck guard only at the back. Keep the same dark steel, rivets and wear.
 ```
 
 ---
@@ -257,7 +267,7 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 - [ ] V16 одобрен как мастер-лицо (янтарный клинышек в левом глазу, шрам над правой бровью, детский крестик)
 - [ ] V10 узнаётся как тот же человек
 - [ ] MIR3 и MIR9 похожи друг на друга и на брата
-- [ ] Шлем: целиком голова волка с ушами, лицо в открытой пасти, тёмная сталь, без золота и льва
+- [ ] Шлем: целиком голова волка с ушами, лицо в открытой пасти, без кольчуги, тёмная сталь, без золота и льва
 - [ ] Бакатар реально великан (есть масштабная фигура), ночная версия совпадает с дневной
 - [ ] Кони: вороной со звездой и гнедой со шрамом, без стремян
 
@@ -271,6 +281,6 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 |---|---|---|
 | CROSS | ✅ утверждён | эталон крестика |
 | V16 | 🔄 доработка | база — вариант с ламеллярным доспехом; омолодить до 16, заменить крест, глаз (клинышек в левом), убрать шрам на носу |
-| HELM | 🔄 переделка | нужно: целиком голова волка с ушами, лицо видно в открытой пасти |
+| HELM | ✅ форма утверждена · 🔄 убрать кольчугу | голова волка с ушами, лицо в пасти; вместо кольчуги кожаный ламеллярный назатыльник (или волчья шкура) |
 | BAK | 🔄 переделка | вышел викинг и не великан — новый промпт: сармато-алан, чешуя, колпак, вытянутый череп, масштаб |
 | V10 | 🔄 мелкая правка | глаз: клинышек вместо целиком янтарной радужки |

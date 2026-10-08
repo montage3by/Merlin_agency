@@ -152,30 +152,44 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and P
 ---
 
 ## 8 · BAK — Бакатар, богатырь осов (день, финал)
+*Не викинг: сармато-аланский степной великан. Чешуйчатый доспех, кафтан, конический войлочный колпак, бляшки в зверином стиле, вытянутый череп. Реальный масштаб: обычный воин ему по грудь.*
 
 ```
-Character reference sheet of Bakatar, an Alan champion of the 5th-century North Caucasus — a true giant, almost twice the height of a normal man. In one view show a normal-sized warrior standing next to him for scale. Views on one image: front full body, three-quarter full body with the scale figure, and a close-up portrait.
+Character reference sheet of Bakatar, an Alan (Sarmatian) champion of the 5th-century North Caucasus steppe — a true giant, nearly twice the height of a normal man. Views on one image: front full body; three-quarter full body standing next to an ordinary Alan warrior whose head reaches only to the middle of Bakatar's chest, for scale; and a close-up portrait.
 
-Massive heavy frame. Long fair-blond hair, a braided blond beard, pale grey eyes, weathered ruddy skin, old scars across the left cheek. Calm, contemptuous confidence.
+He is an Iranian-speaking steppe nomad, NOT a Viking or Norseman. Massive, heavy-boned, broad as a door. Weathered sun-darkened skin, high cheekbones, a hooked nose, heavy-lidded pale grey-green eyes, a long drooping dark-blond moustache and a full untrimmed beard streaked with grey — no braids in the beard. His skull is visibly elongated and slopes backward from childhood head-binding (Alanic artificial cranial deformation), emphasized by a tall pointed felt cap. Long dark-blond hair tied in a single plain tail at the back. Old scars across the left cheek. Calm, contemptuous, patient.
 
-Costume: long riveted mail shirt over a quilted caftan; a heavy bearskin over the shoulders; wide leather belt with bronze plaques; a typical Alanic narrow-bladed battle axe with a hammer-shaped butt on the belt. In his hands an enormous composite recurve bow of horn, sinew and wood with bone plates, about 2.5 meters long — taller than he is — and a quiver of arrows as long as spears.
+Costume: a knee-length coat of overlapping iron scale armor like fish scales (Sarmatian scale armor) over a long wrap-over wool caftan dyed deep madder red with a woven geometric border; wide trousers tucked into soft high leather boots; a wide leather belt with gold plaques in steppe animal style (stags and griffins) and a bronze tamga clan sign on the buckle; a tall pointed felt cap with ear flaps. A typical Alanic narrow-bladed battle axe with a hammer-shaped butt and a long straight sword hang from the belt. In his hands a colossal asymmetric composite bow of horn, sinew and wood with long bone ear-plates, about 2.5 meters long — clearly taller than he is — and a leather gorytos with arrows as long as spears.
+
+No bearskin, no fur cloak, no braided beard, no horned helmet, no Viking look.
 
 Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
 
-Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers). Realistic skin and fur, worn mail, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD. No stirrups, no fantasy elements.
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers). Realistic skin with pores and scars, worn iron scales and wool, subtle film grain. Historically grounded Late Antique Caucasus and Pontic steppe, 5th century AD. No stirrups, no fantasy elements.
+```
+
+**Если правкой текущей генерации** (по шагам):
+```
+Make him a Sarmatian-Alan steppe warrior, not a Viking: replace the bearskin with a long red wool caftan with a woven geometric border under a coat of iron scale armor, remove the braids from his beard and give him a long drooping moustache, put a tall pointed felt cap on his head.
+```
+```
+Make him a true giant: the warrior standing next to him must reach only to the middle of his chest. Keep his face.
+```
+```
+Replace his bow with a colossal composite bow about 2.5 meters long, taller than he is, with long bone ear-plates at both tips.
 ```
 
 ## 9 · BAK-NIGHT — Бакатар-похититель (ночь набега, кадр 5)
 *Референсы: листы BAK и MIR3. Шесть лет назад: тот же великан, моложе, без шрама на щеке.*
 
 ```
-Using the attached reference sheets, show the SAME giant Bakatar six years younger — no scars on the cheek yet, shorter beard — at night during a raid on a burning town. He rides a huge dark horse without stirrups, a saddle with high front and back arches. In the crook of one arm he holds the small 3-year-old girl from the attached sheet, in her cream linen shift with the tiny bronze cross on her neck; she twists and reaches back over his shoulder. His enormous bow is slung across his back.
+Using the attached reference sheets, show the SAME giant Alan champion Bakatar six years younger — no scars on the cheek yet, shorter beard, the same elongated skull and tall pointed felt cap, the same iron scale coat over the red caftan — at night during a raid on a burning town. He rides a huge dark horse without stirrups, a saddle with high front and back arches. In the crook of one arm he holds the small 3-year-old girl from the attached sheet, in her cream linen shift with the tiny bronze cross on her neck; she twists and reaches back over his arm. His colossal bow is slung across his back.
 
-Two views on one image: a full side view of horse and rider, and a low-angle three-quarter view where he is mostly a dark silhouette against fire, with only firelight catching the mail, the blond beard and the girl's face.
+Two views on one image: a full side view of horse and rider, and a low-angle three-quarter view where he is mostly a dark silhouette against fire — the tall pointed cap and the huge bow making an unmistakable outline — with only firelight catching the iron scales, his moustache and the girl's face.
 
 Lighting: night, only orange firelight from burning houses and torches, deep black shadows, sparks and smoke.
 
-Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War". Subtle film grain, no text, no watermark. Historically grounded Late Antique Caucasus, 5th century AD.
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War". Subtle film grain, no text, no watermark. Historically grounded Late Antique Caucasus, 5th century AD. No Viking look, no bearskin, no braids.
 ```
 
 ---
@@ -258,4 +272,5 @@ Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and L
 | CROSS | ✅ утверждён | эталон крестика |
 | V16 | 🔄 доработка | база — вариант с ламеллярным доспехом; омолодить до 16, заменить крест, глаз (клинышек в левом), убрать шрам на носу |
 | HELM | 🔄 переделка | нужно: целиком голова волка с ушами, лицо видно в открытой пасти |
+| BAK | 🔄 переделка | вышел викинг и не великан — новый промпт: сармато-алан, чешуя, колпак, вытянутый череп, масштаб |
 | V10 | 🔄 мелкая правка | глаз: клинышек вместо целиком янтарной радужки |

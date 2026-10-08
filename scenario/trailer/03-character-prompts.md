@@ -1,193 +1,241 @@
-# «Горгасали» — промпты персонажей для Nano Banana
+# «Горгасали» — промпты персонажей для Nano Banana (готовые к вставке)
 
-Референс-листы персонажей трейлера (`02-shot-list.md`). Задача листов — держать **одинаковые лица и костюмы во всех кадрах раскадровки**.
+Каждый промпт **собран целиком**: стиль, формат листа и защита от анахронизмов уже внутри. Копируйте блок полностью.
 
-## Как работать
+## Порядок генерации
 
-1. **Сначала мастер-листы, потом кадры.** Генерируем лист персонажа: несколько ракурсов на нейтральном фоне. Лучший вариант сохраняем и **подаём его как референс-изображение** во все кадры с этим персонажем.
-2. **Порядок генерации:**
-   1. **V16** (Вахтанг, 16 лет) — главное лицо, мастер-эталон.
-   2. **V10**: подаём лист V16 и просим «тот же мальчик в 10 лет». Так лица совпадут.
-   3. **Шлем**, затем **крестик** (реквизит).
-   4. **MIR9**, затем MIR3 по листу MIR9.
-   5. ART, BAK, массовка.
-3. **Один промпт — одна правка.** Nano Banana хорошо редактирует по шагам («сделай шрам тоньше», «поверни голову на три четверти»). Не переписывайте весь промпт целиком, иначе лицо «уплывёт».
-4. **Пишем по-английски**, полными предложениями (модель лучше понимает описание, чем список тегов).
-5. Формат листов — **16:9**, кадров раскадровки — **21:9** (если доступно), иначе 16:9 с кашетированием.
+| Шаг | Лист | Что подать как референс |
+|---|---|---|
+| 1 | **V16** — Вахтанг, 16 лет (мастер-лицо) | — |
+| 2 | **V10** — Вахтанг, 10 лет | лист V16 |
+| 3 | **HELM** — шлем «волчья голова» | — |
+| 4 | **CROSS** — крестик | — |
+| 5 | **MIR9** — Мирандухт, 9 лет | лист V16 (семейное сходство) |
+| 6 | **MIR3** — Мирандухт, 3 года | листы MIR9 + CROSS |
+| 7 | **ART** — Артаваз | — |
+| 8 | **BAK** — Бакатар | — |
+| 9 | **BAK-NIGHT** — Бакатар-похититель ночью | листы BAK + MIR3 |
+| 10 | **HORSES** — кони Вахтанга и Артаваза | — |
+| 11 | **RAID**, **ARMY**, **NURSE** — массовка и вставка | — |
+
+**Правила:**
+- Лучший вариант каждого листа сохраняйте и **подавайте как референс** во все кадры с этим персонажем.
+- Правьте **по одному изменению за раз** («make the scar thinner», «turn head to three-quarter view»). Если переписать промпт целиком, лицо «уплывёт».
+- Формат листов — **16:9**.
+
+## Якоря (проверять на каждом листе)
+- **Вахтанг:** тёмно-карие глаза, **янтарное пятнышко у зрачка в ЛЕВОМ глазу**, в 16 лет **тонкий шрам над ПРАВОЙ бровью**.
+- **Крестик:** маленький бронзовый, форма болнисского креста.
+- **Шлем:** тёмная сталь, волчья морда, **без золота и без льва**.
+- **Нигде нет стремян, чохи и папахи.**
 
 ---
 
-## Общий стилевой блок
-
-Добавлять в конец **каждого** промпта:
+## 1 · V16 — Вахтанг, 16 лет (мастер-лицо)
 
 ```
-Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"). Physically based rendering, realistic skin with visible pores, fine scars and stubble, worn and dirty fabrics, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD, Kingdom of Iberia (Kartli, eastern Georgia).
-```
+Character reference sheet of Vakhtang, a 16-year-old prince of the 5th-century Kingdom of Iberia (Kartli, eastern Georgia), shown in four views on one image: front full body, three-quarter full body, side profile full body, and a large close-up portrait of the face.
 
-**Добавка для листов персонажей:**
-```
+He is unusually tall and broad-shouldered for his age, athletic, already the size of a grown warrior but with a young face. Olive skin weathered by wind and sun. Dark brown, slightly wavy hair falling to the shoulders. Thick dark eyebrows, straight strong nose, firm jaw, the first sparse dark stubble on the chin and upper lip. Deep-set dark brown eyes; in the LEFT iris a small distinctive amber-gold fleck right next to the pupil, clearly visible in the close-up. A thin fresh scar above the RIGHT eyebrow. Serious, closed, determined expression — grief turned into resolve. He does not smile.
+
+Costume: knee-length riveted iron mail shirt over a quilted padded under-tunic; a lamellar breastplate of small dark steel plates laced with leather over the mail; dark wool trousers tucked into soft leather riding boots; a heavy charcoal wool cloak pinned on the right shoulder with a plain bronze fibula; a broad leather belt with small iron plaques and hanging straps carrying a long straight double-edged sword in a dark scabbard; leather riding gloves. Around his neck, on a new leather cord, a tiny worn bronze cross in the Bolnisi style (equal flared arms inside a small circle) — a child's cross, too small for him. No helmet.
+
 Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
-```
 
-**Анти-анахронизмы** (добавлять в промпты с костюмом и конями):
-```
-Strictly no stirrups, no Georgian chokha with cartridge loops, no papakha, no Gothic plate armor, no fantasy glowing effects.
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"). Physically based rendering, realistic skin with visible pores, fine scars and stubble, worn and dirty fabrics, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD. No Georgian chokha with cartridge loops, no papakha, no Gothic plate armor, no fantasy glow.
 ```
 
 ---
 
-## V16 · Вахтанг, 16 лет (главный эталон)
+## 2 · V10 — Вахтанг, 10 лет
+*Референс: лист V16.*
 
 ```
-Character reference sheet of Vakhtang, a 16-year-old prince of 5th-century Caucasian Iberia, shown in four views: front full body, three-quarter full body, side profile full body, and a large close-up portrait of the face.
+Using the attached reference sheet, create a character reference sheet of the SAME person as a 10-year-old boy. Keep the same face structure, the same deep-set dark brown eyes with the same small amber-gold fleck next to the pupil in the LEFT iris, the same thick dark eyebrows and straight nose — but childlike proportions, a slim small body and soft round cheeks. No scar, no stubble. Dark brown hair a little shorter and tangled.
 
-He is unusually tall and broad-shouldered for his age, athletic, already the size of a grown warrior but with a young face. Olive skin weathered by wind and sun. Dark brown, slightly wavy hair falling to the shoulders. Thick dark eyebrows, straight strong nose, firm jaw, the first sparse dark stubble on the chin and upper lip. Deep-set dark brown eyes; in the left iris, a small distinctive amber-gold fleck right next to the pupil, clearly visible in the close-up. A thin fresh scar above the right eyebrow. Serious, closed, determined expression — grief turned into resolve, he does not smile.
+Views on one image: front full body, three-quarter full body, and a large close-up of the face with a frightened, wide-eyed expression, one hand pressed over his own mouth to stop himself from crying out.
 
-Costume: knee-length riveted iron mail shirt over a quilted padded under-tunic, a lamellar breastplate of small dark steel plates laced with leather over the mail, dark wool trousers tucked into soft leather riding boots. A heavy dark charcoal wool cloak pinned on the right shoulder with a simple bronze fibula. Broad leather belt with small iron plaques and hanging straps carrying a long straight double-edged sword in a plain dark scabbard. Leather riding gloves. Around his neck, on a new leather cord, a tiny worn bronze cross — a child's cross, too small for him.
+Costume: a simple long undyed off-white wool tunic reaching below the knee, belted with a thin leather cord, soft leather shoes. No jewelry. Face, hands and tunic streaked with soot and dust, as if he has been hiding during a night fire.
 
-He holds no helmet in this sheet.
+Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"). Realistic skin with visible pores, worn and dirty fabrics, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD.
 ```
-+ стилевой блок + блок листа + анти-анахронизмы
-
-**Проверка:** янтарное пятнышко в **левом** глазу, шрам над **правой** бровью, детский крестик на шее.
 
 ---
 
-## V10 · Вахтанг, 10 лет
-
-*Подать мастер-лист V16 как референс.*
+## 3 · HELM — шлем «волчья голова»
 
 ```
-Using the attached reference sheet, create a character reference sheet of the SAME person as a 10-year-old boy: same face structure, same deep-set dark brown eyes with the same small amber-gold fleck next to the pupil in the left iris, same thick dark eyebrows and straight nose, but childlike proportions and soft round cheeks. No scar yet, no stubble. Dark brown hair, a bit shorter, tangled.
+Prop reference sheet of a 5th-century Late Antique Caucasian war helmet, shown on one image from the front, three-quarter and side, plus a close-up of the wolf face.
 
-Views: front full body, three-quarter full body, and a large close-up of the face with a frightened, wide-eyed expression, one hand pressed over his own mouth.
+A segmented spangenhelm of dark blackened forged steel with a slightly pointed crown and riveted iron bands. The whole front of the helmet is forged into the snarling head of a wolf: the wolf's brow and snout form the face guard, bared iron fangs frame the lower edge, and two narrow eye slits sit exactly where the wolf's eyes would be, so the wearer looks out through the wolf's eyes. Short pointed wolf ears forged at the top of the brow. A riveted iron mail aventail hangs from the back and sides down to the shoulders.
 
-Costume: a simple long undyed off-white wool tunic reaching below the knee, belted with a thin leather cord, soft leather shoes. No jewelry. His face, hands and tunic are streaked with soot and dust, as if he has been hiding during a night fire.
+Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side, traces of rust around the rivets. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
+
+Prop reference sheet on a neutral mid-grey studio background, soft even light, no text, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures (The Witcher 3 and Assassin's Creed cinematics), physically based rendering of forged steel and iron mail, subtle film grain.
 ```
-+ стилевой блок + блок листа
-
-**Проверка:** тот же глаз с пятнышком, лицо узнаётся как V16 в детстве.
 
 ---
 
-## HELM · Шлем «волчья голова» (реквизит)
+## 4 · CROSS — крестик Мирандухт
 
 ```
-Prop reference sheet of a 5th-century Late Antique Caucasian war helmet, shown from front, three-quarter and side views, plus a close-up of the wolf face.
+Prop reference image of a tiny child's pectoral cross from 5th-century Georgia, about 2 cm tall, cast in bronze, in the shape of the Bolnisi cross: four equal arms flaring outward in curves from a narrow center, enclosed in a thin circle. Worn smooth by touch, a small dent on one arm, hanging on a thin twisted dark linen cord.
 
-A segmented spangenhelm of dark blackened forged steel with a slightly pointed crown and riveted iron bands. The entire front of the helmet is forged into the snarling head of a wolf: the wolf's brow and snout form the face guard, the bared iron fangs frame the lower edge, and two narrow eye slits sit exactly where the wolf's eyes would be, so the wearer looks out through the wolf's eyes. Short pointed wolf ears forged at the top of the brow. A riveted iron mail aventail hangs from the back and sides down to the shoulders.
+Show it twice on one image: on the left, clean and sharp on a neutral grey background; on the right, lying in dark wet mud at night with orange firelight reflecting in the bronze and the torn cord beside it.
 
-Battle-worn and functional, not decorative: hammer marks, scratches, a dent on the left side, traces of rust in the rivets. No gold, no gilding, no lion, no glowing eyes, no fantasy spikes.
+Style: photorealistic macro photography, cinematic lighting, shallow depth of field, subtle film grain. No text, no watermark.
 ```
-+ стилевой блок + `Prop reference sheet on a neutral mid-grey studio background, no text.`
 
 ---
 
-## CROSS · Крестик Мирандухт (реквизит)
+## 5 · MIR9 — Мирандухт, 9 лет
+*Референс: лист V16 (для семейного сходства).*
 
 ```
-Macro prop photograph of a tiny child's pectoral cross from 5th-century Georgia, about 2 cm tall, cast in bronze, in the shape of the Bolnisi cross: four equal arms that flare outward in curves from a narrow center, enclosed in a thin circle. Worn smooth by touch, small dent on one arm, hanging on a thin twisted dark linen cord. Shown twice: once clean on grey background, once lying in dark mud with orange firelight reflecting in the metal.
+Character reference sheet of Mirandukht, a 9-year-old girl, sister of the young man in the attached reference — a princess of 5th-century Iberia who has spent six years as a captive among the Alans of the North Caucasus. She shares her brother's family features: dark brown eyes, thick dark eyebrows, straight nose, olive skin. Long dark brown hair in two thick braids. Thin, watchful, quiet, older than her years; she does not smile.
+
+Views on one image: front full body, three-quarter full body, back view, and a close-up portrait.
+
+Costume: Alanic steppe clothing — a long dark red wool caftan wrapped across the chest, edged with a narrow woven patterned band, a leather belt with small bronze plaques, felt boots, a small round felt cap with a fur rim. Nothing on her neck — no cross, no jewelry.
+
+Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers). Realistic skin, worn fabrics, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD.
 ```
-+ стилевой блок
 
 ---
 
-## MIR9 · Мирандухт, 9 лет
+## 6 · MIR3 — Мирандухт, 3 года
+*Референсы: листы MIR9 и CROSS.*
 
 ```
-Character reference sheet of Mirandukht, a 9-year-old girl, princess of 5th-century Iberia, held for six years as a captive among the Alans of the North Caucasus. Views: front full body, three-quarter full body, back view, and a close-up portrait.
+Using the attached reference sheets, create a character reference sheet of the SAME girl at 3 years old: a chubby toddler face, the same dark brown eyes and thick dark eyebrows, short tousled dark brown hair.
 
-Same family features as her brother: dark brown eyes, thick dark eyebrows, straight nose, olive skin. Long dark brown hair in two thick braids. Thin, watchful, quiet, older than her years.
+Views on one image: front full body, three-quarter full body, and a close-up of the face crying with mouth open, one small arm stretched out toward the viewer as if reaching for someone she is being taken away from.
 
-Costume: Alanic steppe clothing — a long dark red wool caftan wrapping across the chest, edged with a band of woven pattern, belted with a leather belt with small bronze plaques, felt boots, a small round felt cap with a fur rim. Nothing on her neck — no cross.
+Costume: a simple long light cream linen shift with long sleeves, barefoot. Around her neck, on a thin twisted dark linen cord, the tiny bronze Bolnisi-style cross from the attached prop sheet.
+
+Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image. Realistic skin, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD.
 ```
-+ стилевой блок + блок листа
-
-## MIR3 · Мирандухт, 3 года
-
-*Подать лист MIR9 как референс.*
-
-```
-Using the attached reference sheet, create a character reference sheet of the SAME girl at 3 years old: chubby toddler face, same dark brown eyes and thick dark eyebrows, short tousled dark brown hair. Views: front full body, three-quarter full body, close-up face crying with mouth open and one arm stretched out reaching toward the viewer.
-
-Costume: a simple long light cream linen shift with long sleeves, barefoot. Around her neck on a thin twisted dark linen cord, the tiny bronze Bolnisi-style cross from the attached prop sheet.
-```
-+ стилевой блок + блок листа
 
 ---
 
-## ART · Артаваз, молочный брат
+## 7 · ART — Артаваз, молочный брат
 
 ```
-Character reference sheet of Artavaz, a 19-year-old warrior of 5th-century Iberia, foster-brother and closest companion of the young king. Views: front full body, three-quarter full body, side profile, close-up portrait.
+Character reference sheet of Artavaz, a 19-year-old warrior of the 5th-century Kingdom of Iberia, foster-brother and closest companion of the young king. Views on one image: front full body, three-quarter full body, side profile, and a close-up portrait.
 
-Lean, wiry and strong, a little shorter than the king. Sun-darkened skin, short dark beard trimmed close, dark hair tied back at the nape, sharp dark eyes, a broken nose that healed slightly crooked. Calm, loyal, economical in movement — a man who answers with a nod rather than words.
+Lean, wiry and strong, a little shorter than the king. Sun-darkened skin, short dark beard trimmed close, dark hair tied back at the nape, sharp dark eyes, a nose once broken and healed slightly crooked. Calm, loyal, economical in movement — a man who answers with a nod rather than words.
 
-Costume: lamellar armor of small hardened-leather plates laced with rawhide over a quilted tunic, leather vambraces, dark wool trousers, soft riding boots, a short brown wool cloak. A composite recurve bow in a combined leather bow-case and quiver (gorytos) on his left hip, a short sword and a narrow axe on the belt. No helmet.
+Costume: lamellar armor of small hardened-leather plates laced with rawhide over a quilted tunic; leather vambraces; dark wool trousers; soft riding boots; a short brown wool cloak. A composite recurve bow in a combined leather bow-case and quiver (gorytos) on his left hip; a short sword and a narrow axe on the belt. No helmet.
+
+Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers, Love Death + Robots "The Secret War"). Realistic skin with pores and stubble, worn leather, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD. No Georgian chokha, no papakha, no plate armor.
 ```
-+ стилевой блок + блок листа + анти-анахронизмы
 
 ---
 
-## BAK · Бакатар, богатырь осов
+## 8 · BAK — Бакатар, богатырь осов (день, финал)
 
 ```
-Character reference sheet of Bakatar, an Alan champion of the 5th-century North Caucasus — a true giant, almost twice the height of a normal man (show a normal-sized warrior standing next to him for scale in one view). Views: front full body, three-quarter full body with the scale figure, close-up portrait.
+Character reference sheet of Bakatar, an Alan champion of the 5th-century North Caucasus — a true giant, almost twice the height of a normal man. In one view show a normal-sized warrior standing next to him for scale. Views on one image: front full body, three-quarter full body with the scale figure, and a close-up portrait.
 
-Massive heavy frame, long fair-blond hair and a braided blond beard, pale eyes, weathered ruddy skin, old scars across the cheek. Calm, contemptuous confidence.
+Massive heavy frame. Long fair-blond hair, a braided blond beard, pale grey eyes, weathered ruddy skin, old scars across the left cheek. Calm, contemptuous confidence.
 
-Costume: long riveted mail shirt over a quilted caftan, a heavy bearskin over the shoulders, wide leather belt with bronze plaques, a typical Alanic narrow-bladed battle axe with a hammer-shaped butt on the belt. In his hands an enormous composite recurve bow of horn, sinew and wood with bone plates, about 2.5 meters long — taller than he is — and a quiver of arrows as long as spears.
+Costume: long riveted mail shirt over a quilted caftan; a heavy bearskin over the shoulders; wide leather belt with bronze plaques; a typical Alanic narrow-bladed battle axe with a hammer-shaped butt on the belt. In his hands an enormous composite recurve bow of horn, sinew and wood with bone plates, about 2.5 meters long — taller than he is — and a quiver of arrows as long as spears.
+
+Character reference sheet on a neutral mid-grey studio background, soft even key light with gentle rim light, no text, no logos, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics, Assassin's Creed cinematic trailers). Realistic skin and fur, worn mail, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD. No stirrups, no fantasy elements.
 ```
-+ стилевой блок + блок листа
+
+## 9 · BAK-NIGHT — Бакатар-похититель (ночь набега, кадр 5)
+*Референсы: листы BAK и MIR3. Шесть лет назад: тот же великан, моложе, без шрама на щеке.*
+
+```
+Using the attached reference sheets, show the SAME giant Bakatar six years younger — no scars on the cheek yet, shorter beard — at night during a raid on a burning town. He rides a huge dark horse without stirrups, a saddle with high front and back arches. In the crook of one arm he holds the small 3-year-old girl from the attached sheet, in her cream linen shift with the tiny bronze cross on her neck; she twists and reaches back over his shoulder. His enormous bow is slung across his back.
+
+Two views on one image: a full side view of horse and rider, and a low-angle three-quarter view where he is mostly a dark silhouette against fire, with only firelight catching the mail, the blond beard and the girl's face.
+
+Lighting: night, only orange firelight from burning houses and torches, deep black shadows, sparks and smoke.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War". Subtle film grain, no text, no watermark. Historically grounded Late Antique Caucasus, 5th century AD.
+```
 
 ---
 
-## RAID · Налётчики: ос и гунн (массовка)
+## 10 · HORSES — кони
 
 ```
-Character reference sheet of two 5th-century steppe raiders from the North Caucasus, side by side, each in front and three-quarter view.
+Reference sheet of two war horses of the 5th-century Caucasus, each shown in side view and three-quarter view on one image.
 
-Left — an Alan horseman: tall, fair-haired, mail shirt over a wool caftan, fur cap, narrow-bladed axe with hammer butt, long straight sword, composite bow.
+Left: Vakhtang's horse — a tall powerful black stallion with a long thick mane, a small white star on the forehead. Tack: a wooden-framed saddle with high front and back arches covered in dark leather, a dark red wool saddle cloth with a narrow woven border, bronze-studded bridle and breast strap. NO stirrups.
 
-Right — a Hunnic horseman: an artificially elongated, deformed skull sloping backward (Hunnic cranial deformation), shaved head with a small topknot, narrow eyes, weathered face, sheepskin coat over a wool tunic, trousers and soft boots, small gold plaques sewn on the collar, a pear-shaped lamellar helmet held under the arm, a short composite bow and gorytos, a leather riding whip.
+Right: Artavaz's horse — a lean, agile bay (reddish-brown) horse with black mane and legs, a scar on the right shoulder. Simpler tack: plain leather saddle with high arches, brown wool saddle cloth, plain bridle. NO stirrups.
+
+Neutral mid-grey studio background, soft even light, no text, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures (Assassin's Creed and The Witcher 3 cinematics), realistic horse anatomy, coat and muscles, subtle film grain.
+```
+
+---
+
+## 11 · RAID — налётчики: ос и гунн
+
+```
+Character reference sheet of two 5th-century steppe raiders from the North Caucasus, side by side, each in front and three-quarter view on one image.
+
+Left — an Alan horseman: tall, fair-haired, mail shirt over a wool caftan, fur cap, a narrow-bladed axe with a hammer-shaped butt, a long straight sword, a composite bow.
+
+Right — a Hunnic horseman: an artificially elongated skull sloping backward (Hunnic cranial deformation), shaved head with a small topknot, narrow eyes, weathered face; sheepskin coat over a wool tunic, trousers and soft boots; small gold plaques sewn along the collar; a pear-shaped lamellar helmet held under the arm; a short composite bow in a gorytos; a leather riding whip.
 
 Both look dangerous and real, not cartoonish.
+
+Character reference sheet on a neutral mid-grey studio background, soft even key light, no text, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image. Realistic skin, fur and worn leather, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD. No stirrups, no plate armor.
 ```
-+ стилевой блок + блок листа
 
----
-
-## ARMY · Войско Картли (массовка)
-
-```
-Character reference sheet of three soldiers of the 5th-century Iberian (Georgian) army, each in front and three-quarter view:
-
-1) Heavy cavalryman: knee-length mail shirt, lamellar breastplate, segmented spangenhelm with mail aventail covering the lower face, long lance, long sword, bow case; his horse in a quilted horse armor caparison, saddle with high front and back arches, no stirrups.
-
-2) Infantryman: quilted padded coat, leather cap, large wicker shield covered in hide painted with a red Bolnisi cross, spear and short axe.
-
-3) Highland ally from the mountains of Pshavi: rough undyed wool tunic, heavy felt cloak and fur hat, long hair and beard, battle axe and bow, no armor.
-```
-+ стилевой блок + блок листа + анти-анахронизмы
-
----
-
-## NURSE · Рука кормилицы (вставка, кадр 6)
+## 12 · ARMY — войско Картли
 
 ```
-Close-up photorealistic insert shot: a strong weathered woman's hand with a simple worn copper bracelet grips a 10-year-old boy's shoulder (off-white wool tunic streaked with soot) and pulls him back into darkness under a wooden cart. Orange firelight flickers through the cart planks. Her face is not visible.
+Character reference sheet of three soldiers of the 5th-century Iberian (Georgian) army, each in front and three-quarter view on one image:
+
+1) Heavy cavalryman: knee-length mail shirt, lamellar breastplate, segmented spangenhelm with a mail aventail covering the lower face, long lance, long straight sword, bow case. His horse wears a quilted horse-armor caparison; saddle with high front and back arches; no stirrups.
+
+2) Infantryman: quilted padded coat, leather cap, a large wicker shield covered in hide and painted with a red Bolnisi cross (equal flared arms in a circle), a spear and a short axe.
+
+3) Highland ally from the mountains of Pshavi: rough undyed wool tunic, heavy felt cloak and fur hat, long hair and beard, a battle axe and a bow, no armor.
+
+Character reference sheet on a neutral mid-grey studio background, soft even key light, no text, no watermark.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures (Assassin's Creed Revelations, The Witcher 3 cinematics). Worn mail and leather, realistic faces, subtle film grain. Historically grounded Late Antique Caucasus, 5th century AD. No Georgian chokha, no papakha, no Gothic plate armor.
 ```
-+ стилевой блок
+
+## 13 · NURSE — рука кормилицы (вставка, кадр 6)
+*Референс: лист V10.*
+
+```
+Close-up cinematic insert shot: a strong weathered woman's hand with a simple worn copper bracelet grips the shoulder of the boy from the attached reference (off-white wool tunic streaked with soot) and pulls him back into darkness under a wooden cart. Orange firelight flickers through the gaps between the cart planks. Her face is not visible. Anamorphic 2.39:1 framing, shallow depth of field.
+
+Style: photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War". Subtle film grain, no text, no watermark.
+```
 
 ---
 
 ## Чек-лист перед раскадровкой
-- [ ] V16 одобрен как мастер-лицо (глаз, шрам, крестик)
+- [ ] V16 одобрен как мастер-лицо (пятнышко в левом глазу, шрам над правой бровью, детский крестик)
 - [ ] V10 узнаётся как тот же человек
+- [ ] MIR3 и MIR9 похожи друг на друга и на брата
 - [ ] Шлем: волк, тёмная сталь, без золота и без льва
-- [ ] Крестик одинаковый на MIR3, в грязи и на V16
-- [ ] Нигде нет стремян и чохи
-- [ ] Бакатар реально великан (есть масштабная фигура)
+- [ ] Бакатар реально великан (есть масштабная фигура), ночная версия совпадает с дневной
+- [ ] Кони: вороной со звездой и гнедой со шрамом, без стремян
 
-**Следующий шаг после одобрения листов:** промпты на 17 кадров раскадровки, каждый с указанием, какие листы подавать как референс.
+**Следующий шаг:** промпты на 17 кадров раскадровки с указанием референсов для каждого.

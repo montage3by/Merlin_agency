@@ -70,7 +70,7 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Dea
 ### Кадр 5 · 0:12 · Сестру уводят
 **Референсы:** BAK-NIGHT, MIR3, CROSS, LOC-KASPI
 ```
-Point-of-view shot from under a wooden cart: in the blurred foreground the dark planks and a cart wheel frame the image. In sharp focus in the street beyond, the giant Bakatar from the attached sheet rides past on his huge dark horse, almost entirely a black silhouette against a burning house behind him; only firelight catches his iron scale coat and drooping moustache; his tall pointed felt cap and enormous bow slung on his back make an unmistakable outline. In the crook of his arm the 3-year-old girl from the attached sheet twists toward the camera, crying, one small arm stretched out straight toward the viewer, the tiny bronze cross swinging on its cord at her neck, backlit by the fire. 50mm lens.
+Point-of-view shot from under a wooden cart: in the blurred foreground the dark planks and a cart wheel frame the image. In sharp focus in the street beyond, the giant Bakatar from the attached sheet rides past on his huge dark horse, almost entirely a black silhouette against a burning house behind him; only firelight catches his iron scale coat and short beard; his pointed Scythian bashlyk hood and enormous bow slung on his back make an unmistakable outline. In the crook of his arm the 3-year-old girl from the attached sheet twists toward the camera, crying, one small arm stretched out straight toward the viewer, the tiny bronze cross swinging on its cord at her neck, backlit by the fire. 50mm lens.
 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Death + Robots "The Secret War", anamorphic 2.39:1, subtle film grain, soft halation, sparks and smoke. 5th-century Caucasus. No stirrups, no text, no watermark.
 ```
@@ -188,7 +188,7 @@ Photorealistic AAA game CG cinematic in the style of Digic Pictures and Love Dea
 ### Кадр 16b · 0:53 · Бакатар натягивает лук
 **Референсы:** BAK, MIR9, LOC-CAMP
 ```
-Medium-close shot of the giant Alan champion Bakatar from the attached sheet on the rock ledge, drawing his colossal composite bow — taller than he is, about 2.5 meters — the string pulled to his cheek, an arrow as long as a spear on the string, muscles straining, his pale grey-green eyes fixed across the river. Iron scale coat over a red caftan, tall pointed felt cap over his elongated skull, long drooping moustache, cold dawn light on his face. Behind him, out of focus deep in the camp beside a felt tent, stands a thin 9-year-old girl in a dark red Alanic caftan with two long dark braids — her face turned away, nothing on her neck. 135mm lens, shallow depth of field.
+Medium-close shot of the giant Alan champion Bakatar from the attached sheet on the rock ledge, drawing his colossal composite bow — taller than he is, about 2.5 meters — the string pulled to his cheek, an arrow as long as a spear on the string, muscles straining, his pale grey-green eyes fixed across the river. Iron scale coat over a red caftan, pointed Scythian bashlyk hood over his elongated skull, short beard, cold dawn light on his face. Behind him, out of focus deep in the camp beside a felt tent, stands a thin 9-year-old girl in a dark red Alanic caftan with two long dark braids — her face turned away, nothing on her neck. 135mm lens, shallow depth of field.
 
 Photorealistic AAA game CG cinematic in the style of Digic Pictures and Platige Image (The Witcher 3 cinematics), anamorphic 2.39:1, subtle film grain, volumetric fog. No text, no watermark.
 ```

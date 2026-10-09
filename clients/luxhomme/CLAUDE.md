@@ -17,6 +17,7 @@
 | Интервью с покупателями, ЦА и CJM, семантика | `research/README.md` |
 | SEO-аудит сайта (чек-лист доработок) | `seo/seo-audit-2026-10.md` |
 | UI/UX-аудит сайта (чек-лист, скриншоты) | `ux/ux-audit-2026-10.md`, единый PDF: `ux/Luxhomme_UI-UX-audit_2026-10-09.pdf` |
+| Яндекс Директ на сайт: семантика, объявления, UTM, импорт, фид (15 SKU) | `direct/Luxhomme_Yandex-Direct_2026-10.xlsx`, фид: `direct/luxhomme-direct-feed.yml`, тексты правятся в `direct/scripts/content.py` |
 
 ## Правила работы
 

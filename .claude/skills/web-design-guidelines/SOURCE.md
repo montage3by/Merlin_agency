@@ -1,0 +1,1 @@
+Source: https://github.com/vercel-labs/agent-skills (skills/web-design-guidelines) @ 063bee9 + rules from vercel-labs/web-interface-guidelines command.md, fetched 2026-10-09. SKILL.md adapted to read local rules.md. License: MIT (per repo README).

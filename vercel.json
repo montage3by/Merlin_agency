@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "src/app/api/audit/route.ts": {
-      "maxDuration": 60
-    }
-  }
-}

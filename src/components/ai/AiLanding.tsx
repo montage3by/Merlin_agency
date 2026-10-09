@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { CONTENT, type Locale } from "@/lib/content";
+import { CaseSwitcher } from "./CaseSwitcher";
 import { AI_COPY } from "./copy";
+import { GlobalMap } from "./GlobalMap";
 import { Header } from "./Header";
 import { GrowthArt, SearchArt, TargetArt } from "./Illustrations";
 import { Marquee } from "./Marquee";
@@ -11,13 +13,6 @@ const FEATURE_TILES = [
   { bg: "bg-[var(--d-pink)]", ink: "text-[#4a1450]", Art: SearchArt },
   { bg: "bg-[var(--d-lime)]", ink: "text-[#23400a]", Art: GrowthArt },
   { bg: "bg-[var(--d-cyan)]", ink: "text-[#062a55]", Art: TargetArt },
-];
-
-const CASE_TILES = [
-  "bg-[var(--d-blue)] text-white",
-  "bg-[var(--d-pink)] text-[#3a0f40]",
-  "bg-[var(--d-lime)] text-[var(--d-blue)]",
-  "bg-[var(--d-cyan)] text-[#06244a]",
 ];
 
 // Значения для «дашборда» в тёмном блоке: только цифры из кейсов.
@@ -307,60 +302,67 @@ export function AiLanding({ locale }: { locale: Locale }) {
 
         {/* ───── Global ───── */}
         <section className="px-4 py-16 md:px-8 md:py-24">
-          <h2 className="head text-center text-[clamp(38px,6.4vw,76px)]">
-            {t.global.title[0]}
-            <br />
-            {t.global.title[1]}
-          </h2>
-          <div className="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-3 lg:grid-cols-4">
-            {[
-              {
-                value: STATS[0].value,
-                label: `${STATS[0].unit} ${STATS[0].label}`,
-              },
-              {
-                value: STATS[1].value,
-                label: `${STATS[1].unit}, ${STATS[1].label}`,
-              },
-              {
-                value: STATS[2].value,
-                label: `${STATS[2].unit}, ${STATS[2].label}`,
-              },
-              { value: t.global.remote, label: t.global.remoteLabel },
-            ].map((s) => (
-              <div
-                key={s.label}
-                className="flex min-h-[150px] flex-col justify-end rounded-2xl bg-[var(--d-lime)] p-5 text-[var(--d-blue)]"
-              >
-                <p className="text-[clamp(28px,4vw,44px)] font-bold leading-none tracking-[-0.05em]">
-                  {s.value}
-                </p>
-                <p className="mt-2 text-[15px] font-medium leading-tight">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="mx-auto mt-3 max-w-6xl rounded-2xl bg-[var(--d-lav)] p-6 md:p-8">
-            <p className="font-bold text-[var(--d-blue)]">{t.global.geo}</p>
-            <ul className="mt-4 flex flex-wrap gap-2">
+          <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[var(--d-lav)] p-5 md:p-10">
+            <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-10">
+              <h2 className="head text-[clamp(38px,6.4vw,84px)]">
+                {t.global.title[0]}
+                <br />
+                {t.global.title[1]}
+              </h2>
+              <p className="max-w-[36ch] leading-relaxed text-[var(--d-mute)]">
+                {t.map.sub}
+              </p>
+            </div>
+            <Reveal className="-mx-2 mt-8 md:mx-0 md:mt-10">
+              <GlobalMap geo={GEO} hubLabel={t.map.hub} />
+            </Reveal>
+            <ul
+              className="mt-4 flex flex-wrap gap-1.5 md:gap-2"
+              aria-label={t.map.legend}
+            >
               {GEO.map((g) => (
                 <li
                   key={g}
-                  className="flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[15px]"
+                  className="flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm md:text-[15px]"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="size-4 text-[var(--d-blue)]"
-                    fill="currentColor"
-                    aria-hidden
-                  >
-                    <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
-                  </svg>
+                  <span className="size-2 rounded-full bg-[var(--d-blue)]" />
                   {g}
                 </li>
               ))}
             </ul>
+            <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
+              {[
+                {
+                  value: STATS[0].value,
+                  label: `${STATS[0].unit} ${STATS[0].label}`,
+                },
+                {
+                  value: STATS[1].value,
+                  label: `${STATS[1].unit}, ${STATS[1].label}`,
+                },
+                {
+                  value: STATS[2].value,
+                  label: `${STATS[2].unit}, ${STATS[2].label}`,
+                },
+                { value: t.global.remote, label: t.global.remoteLabel },
+              ].map((s, i) => (
+                <div
+                  key={s.label}
+                  className={`flex min-h-[130px] flex-col justify-end rounded-2xl p-5 ${
+                    i === 1
+                      ? "bg-[var(--d-blue)] text-white"
+                      : "bg-white text-[var(--d-blue)]"
+                  }`}
+                >
+                  <p className="text-[clamp(25px,4.4vw,52px)] font-bold leading-none break-words tracking-[-0.05em]">
+                    {s.value}
+                  </p>
+                  <p className="mt-2 text-[15px] font-medium leading-tight">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -369,129 +371,163 @@ export function AiLanding({ locale }: { locale: Locale }) {
           id="cases"
           className="scroll-mt-20 px-4 py-16 md:px-8 md:py-24"
         >
-          <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-7xl">
             <h2 className="head text-[clamp(40px,7vw,80px)]">{t.casesTitle}</h2>
             <p className="mt-3 text-lg text-[var(--d-mute)]">{t.casesSub}</p>
-          </div>
-          <div className="mx-auto mt-10 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {CASES.map((c, i) => (
-              <article
-                key={c.niche}
-                className="flex flex-col overflow-hidden rounded-2xl bg-white"
-              >
-                <div
-                  className={`flex aspect-[16/9] flex-col justify-end p-5 ${CASE_TILES[i % CASE_TILES.length]}`}
-                >
-                  <p className="text-[clamp(40px,5vw,56px)] font-bold leading-none tracking-[-0.05em]">
-                    {c.headline}
-                  </p>
-                  <p className="mt-1 font-medium leading-tight">
-                    {c.headlineLabel}
-                  </p>
-                </div>
-                <div className="flex flex-1 flex-col gap-3 p-5">
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="rounded-md bg-[var(--d-lav)] px-2 py-0.5 text-xs font-bold uppercase text-[var(--d-blue)]">
-                      {c.geo}
-                    </span>
-                    {SHOW_CLIENT_NAMES && c.client && (
-                      <span className="rounded-md bg-[var(--d-lime)] px-2 py-0.5 text-xs font-bold uppercase text-[var(--d-blue)]">
-                        {c.client}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-bold leading-tight tracking-[-0.02em]">
-                    {c.niche}
-                  </h3>
-                  {c.task && (
-                    <p className="text-[15px] leading-snug">
-                      <span className="font-medium text-[var(--d-blue)]">
-                        {t.task}.{" "}
-                      </span>
-                      {c.task}
-                    </p>
-                  )}
-                  {c.done && (
-                    <p className="text-[15px] leading-snug">
-                      <span className="font-medium text-[var(--d-blue)]">
-                        {t.done}.{" "}
-                      </span>
-                      {c.done}
-                    </p>
-                  )}
-                  <ul className="mt-auto flex list-disc flex-col gap-1 pl-5 pt-2 text-[15px] leading-snug">
-                    {c.results.map((r) => (
-                      <li key={r}>{r}</li>
-                    ))}
-                  </ul>
-                  {c.campaign && (
-                    <p className="text-sm text-[var(--d-mute)]">{c.campaign}</p>
-                  )}
-                </div>
-              </article>
-            ))}
+            <div className="mt-10">
+              <CaseSwitcher
+                cases={CASES}
+                showNames={SHOW_CLIENT_NAMES}
+                t={t}
+                contactHref={CONTACTS.telegram.href}
+              />
+            </div>
           </div>
         </section>
 
         {/* ───── Approach ───── */}
         <section
           id="approach"
-          className="scroll-mt-20 px-4 py-16 md:px-8 md:py-24"
+          className="scroll-mt-20 bg-[var(--d-blue)] px-4 py-16 text-white md:px-8 md:py-24"
         >
-          <h2 className="head mx-auto max-w-6xl text-[clamp(40px,7vw,80px)]">
-            {t.approachTitle}
-          </h2>
-          <ol className="mx-auto mt-10 grid max-w-6xl gap-3 md:grid-cols-5">
-            {STEPS.map((s, i) => (
-              <li
-                key={s.title}
-                className="flex flex-col gap-6 rounded-2xl bg-[var(--d-blue)] p-5 text-white md:min-h-[260px] md:justify-between"
-              >
-                <span className="num-badge self-start">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p className="text-2xl font-bold uppercase tracking-[-0.04em]">
-                    {s.title}
-                  </p>
-                  <p className="mt-2 text-[15px] leading-snug text-white/80">
-                    {s.body}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        {/* ───── Audit ───── */}
-        <section id="audit" className="scroll-mt-20 px-4 py-8 md:px-8">
-          <div className="mx-auto grid max-w-6xl gap-8 rounded-3xl bg-[var(--d-lav)] p-6 md:grid-cols-[1fr_1.3fr] md:p-12">
-            <div>
-              <h2 className="head text-[clamp(34px,5vw,56px)]">
-                {t.audit.title}
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-10">
+              <h2 className="text-[clamp(40px,7vw,80px)] font-bold uppercase leading-[0.92] tracking-[-0.045em]">
+                {t.approachTitle}
               </h2>
-              <p className="mt-4 max-w-[44ch] leading-relaxed">
-                {t.audit.text}
+              <p className="max-w-[34ch] leading-relaxed text-white/75">
+                {t.approachSub}
               </p>
-              <Link href="/audit" className="btn-lime mt-6">
-                {t.audit.button}
-              </Link>
             </div>
-            <ol className="grid gap-3 sm:grid-cols-3">
-              {AUDIT_STEPS.map((s, i) => (
-                <li key={s.title} className="rounded-2xl bg-white p-5">
-                  <span className="num-badge">
-                    {String(i + 1).padStart(2, "0")}
+            <ol className="relative mt-12 grid gap-10 md:mt-16 md:grid-cols-5 md:gap-6">
+              <span
+                aria-hidden
+                className="absolute bottom-3 left-[23px] top-3 w-[2px] bg-gradient-to-b from-[var(--d-lime)] to-white/15 md:bottom-auto md:left-6 md:right-6 md:top-[23px] md:h-[2px] md:w-auto md:bg-gradient-to-r"
+              />
+              {STEPS.map((s, i) => (
+                <li
+                  key={s.title}
+                  className="relative pl-[72px] md:pl-0 md:pt-[76px]"
+                >
+                  <span className="absolute left-0 top-0 grid size-12 place-items-center rounded-full bg-[var(--d-lime)] text-lg font-bold text-[var(--d-blue)] ring-8 ring-[var(--d-blue)]">
+                    {i + 1}
                   </span>
-                  <p className="mt-3 font-bold text-[var(--d-blue)]">
-                    {s.title}
-                  </p>
-                  <p className="mt-1 text-[15px] leading-snug text-[var(--d-mute)]">
-                    {s.body}
-                  </p>
+                  <Reveal delay={i * 0.08}>
+                    <p className="text-2xl font-bold uppercase tracking-[-0.04em]">
+                      {s.title}
+                    </p>
+                    <p className="mt-2 leading-snug text-white/75">{s.body}</p>
+                  </Reveal>
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        {/* ───── Audit ───── */}
+        <section
+          id="audit"
+          className="scroll-mt-20 px-4 py-16 md:px-8 md:py-24"
+        >
+          <div className="mx-auto grid max-w-7xl items-center gap-12 overflow-hidden rounded-[28px] bg-[var(--d-lime)] p-6 md:p-12 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="text-[var(--d-blue)]">
+              <h2 className="head text-[clamp(38px,6vw,72px)]">
+                {t.audit.title}
+              </h2>
+              <p className="mt-4 max-w-[46ch] text-lg leading-relaxed">
+                {t.audit.text}
+              </p>
+              <form
+                action="/audit"
+                method="get"
+                className="mt-7 flex flex-col gap-2 rounded-2xl bg-white p-2 shadow-[0_18px_40px_-24px_rgba(6,6,154,0.5)] sm:flex-row"
+              >
+                <label htmlFor="audit-domain" className="sr-only">
+                  {t.auditForm.label}
+                </label>
+                <input
+                  id="audit-domain"
+                  name="domain"
+                  required
+                  inputMode="url"
+                  autoComplete="url"
+                  placeholder={t.auditForm.placeholder}
+                  className="min-w-0 flex-1 rounded-xl px-4 py-3 text-[var(--d-ink)] outline-none placeholder:text-[var(--d-mute)]/70 focus-visible:ring-2 focus-visible:ring-[var(--d-blue)]"
+                />
+                <button
+                  type="submit"
+                  className="rounded-xl bg-[var(--d-blue)] px-5 py-3 font-medium text-white transition-colors hover:bg-[var(--d-blue-deep)]"
+                >
+                  {t.auditForm.submit}
+                </button>
+              </form>
+              <p className="mt-3 text-sm">{t.auditForm.note}</p>
+              <ol className="mt-8 grid gap-4 sm:grid-cols-3">
+                {AUDIT_STEPS.map((s, i) => (
+                  <li key={s.title} className="flex gap-3 sm:block">
+                    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[var(--d-blue)] text-sm font-bold text-[var(--d-lime)]">
+                      {i + 1}
+                    </span>
+                    <span className="sm:mt-3 sm:block">
+                      <span className="block font-bold">{s.title}</span>
+                      <span className="block text-[15px] leading-snug opacity-80">
+                        {s.body}
+                      </span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Превью отчёта: схематичный макет PDF, без выдуманных цифр */}
+            <div
+              aria-hidden
+              className="relative mx-auto w-full max-w-[400px] py-6"
+            >
+              <div className="absolute inset-x-6 inset-y-2 rotate-[-6deg] rounded-2xl bg-[var(--d-blue)]" />
+              <div className="relative rotate-[2deg] overflow-hidden rounded-2xl bg-white shadow-2xl">
+                <div className="bg-[var(--d-blue)] px-6 py-6 text-white">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--d-lime)]">
+                    Merlin Agency
+                  </p>
+                  <p className="mt-2 text-2xl font-bold uppercase tracking-[-0.04em]">
+                    {t.auditForm.previewTitle}
+                  </p>
+                  <p className="mt-1 text-white/70">
+                    {t.auditForm.previewDomain}
+                  </p>
+                </div>
+                <ul className="flex flex-col gap-4 px-6 py-6">
+                  {t.auditForm.previewSections.map((label, i) => (
+                    <li key={label} className="flex items-center gap-3">
+                      <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[var(--d-lime)] text-[var(--d-blue)]">
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="size-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                        >
+                          <path d="m5 12 4 4 10-10" />
+                        </svg>
+                      </span>
+                      <span className="flex-1">
+                        <span className="block text-sm font-bold text-[var(--d-ink)]">
+                          {label}
+                        </span>
+                        <span
+                          className="mt-1.5 block h-1.5 rounded-full bg-[var(--d-lav)]"
+                          style={{ width: `${[88, 64, 72, 56, 80][i]}%` }}
+                        />
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-[var(--d-lav)] px-6 py-3 text-right text-xs font-bold text-[var(--d-mute)]">
+                  PDF
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

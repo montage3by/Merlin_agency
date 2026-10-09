@@ -5,7 +5,7 @@ import { useState, type FormEvent } from "react";
 
 type Status = "idle" | "loading" | "error" | "done";
 
-export function AuditForm() {
+export function AuditForm({ defaultDomain }: { defaultDomain?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -49,7 +49,9 @@ export function AuditForm() {
 
       setStatus("done");
     } catch (error) {
-      setErrorMessage(error instanceof Error ? error.message : "Неизвестная ошибка");
+      setErrorMessage(
+        error instanceof Error ? error.message : "Неизвестная ошибка",
+      );
       setStatus("error");
     }
   }
@@ -67,6 +69,7 @@ export function AuditForm() {
           id="domain"
           name="domain"
           required
+          defaultValue={defaultDomain}
           placeholder="mycompany.com"
           className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
         />
@@ -74,7 +77,10 @@ export function AuditForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="businessName" className="block text-sm text-muted mb-1">
+          <label
+            htmlFor="businessName"
+            className="block text-sm text-muted mb-1"
+          >
             Название бизнеса
           </label>
           <input
@@ -111,7 +117,10 @@ export function AuditForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="contactName" className="block text-sm text-muted mb-1">
+          <label
+            htmlFor="contactName"
+            className="block text-sm text-muted mb-1"
+          >
             Ваше имя
           </label>
           <input
@@ -121,7 +130,10 @@ export function AuditForm() {
           />
         </div>
         <div>
-          <label htmlFor="contactEmail" className="block text-sm text-muted mb-1">
+          <label
+            htmlFor="contactEmail"
+            className="block text-sm text-muted mb-1"
+          >
             Email *
           </label>
           <input
@@ -141,7 +153,9 @@ export function AuditForm() {
         whileTap={{ scale: 0.98 }}
         className="w-full rounded-lg bg-accent px-4 py-3 font-semibold text-accent-ink transition-colors hover:bg-accent/90 disabled:opacity-60"
       >
-        {status === "loading" ? "Собираем данные, 20-40 сек" : "Получить бесплатный аудит"}
+        {status === "loading"
+          ? "Собираем данные, 20-40 сек"
+          : "Получить бесплатный аудит"}
       </motion.button>
 
       {status === "error" && (
@@ -149,7 +163,8 @@ export function AuditForm() {
       )}
       {status === "done" && (
         <p className="text-sm text-accent-soft">
-          Готово. PDF-отчёт скачался автоматически. Команда Merlin Agency свяжется с вами, чтобы обсудить результаты.
+          Готово. PDF-отчёт скачался автоматически. Команда Merlin Agency
+          свяжется с вами, чтобы обсудить результаты.
         </p>
       )}
     </form>

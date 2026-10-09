@@ -29,7 +29,12 @@ const STEPS = [
   },
 ];
 
-export default function Home() {
+export default async function Home({ searchParams }: PageProps<"/audit">) {
+  // Домен может прийти из короткой формы на главной: /audit?domain=site.ru
+  const { domain } = await searchParams;
+  const defaultDomain =
+    typeof domain === "string" ? domain.slice(0, 200) : undefined;
+
   return (
     <div className="flex flex-1 flex-col">
       <SiteHeader />
@@ -44,7 +49,8 @@ export default function Home() {
               Digital-аудит за минуты, не дни
             </h1>
             <p className="mt-5 max-w-[46ch] text-base text-muted md:text-lg">
-              Укажите домен, нишу и город, и получите отчёт по конкурентам, SEO и рекламе с рекомендациями.
+              Укажите домен, нишу и город, и получите отчёт по конкурентам, SEO
+              и рекламе с рекомендациями.
             </p>
             <a
               href="#audit-form"
@@ -75,7 +81,9 @@ export default function Home() {
               </div>
             </div>
             <div className="absolute -bottom-6 -left-6 rounded-xl border border-border bg-panel px-5 py-4 shadow-xl md:-left-10">
-              <p className="text-xs uppercase tracking-[0.15em] text-muted">Пример отчёта</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-muted">
+                Пример отчёта
+              </p>
               <p className="mt-1 font-semibold">SEO · Реклама · Конкуренты</p>
             </div>
           </Reveal>
@@ -83,13 +91,17 @@ export default function Home() {
 
         <section className="border-t border-border py-16 md:py-24">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Как это работает</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+              Как это работает
+            </h2>
           </Reveal>
           <div className="mt-10 divide-y divide-border">
             {STEPS.map((step, i) => (
               <Reveal key={step.number} delay={i * 0.08}>
                 <div className="flex flex-col gap-2 py-6 md:flex-row md:items-baseline md:gap-8 md:py-8">
-                  <span className="font-mono text-sm text-accent-soft md:w-12">{step.number}</span>
+                  <span className="font-mono text-sm text-accent-soft md:w-12">
+                    {step.number}
+                  </span>
                   <h3 className="font-semibold md:w-56">{step.title}</h3>
                   <p className="max-w-[52ch] text-muted">{step.body}</p>
                 </div>
@@ -98,18 +110,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="audit-form" className="border-t border-border py-16 md:py-24">
+        <section
+          id="audit-form"
+          className="border-t border-border py-16 md:py-24"
+        >
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
                 Получите свой аудит
               </h2>
               <p className="mt-4 max-w-[42ch] text-muted">
-                Отчёт собирается из публичных источников: вашего сайта, органической выдачи Google, Google Ads Transparency Center и Meta Ad Library. После этого команда Merlin Agency свяжется с вами, чтобы обсудить результаты.
+                Отчёт собирается из публичных источников: вашего сайта,
+                органической выдачи Google, Google Ads Transparency Center и
+                Meta Ad Library. После этого команда Merlin Agency свяжется с
+                вами, чтобы обсудить результаты.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <AuditForm />
+              <AuditForm defaultDomain={defaultDomain} />
             </Reveal>
           </div>
         </section>

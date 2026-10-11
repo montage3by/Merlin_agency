@@ -58,18 +58,18 @@ export function AiLanding({ locale }: { locale: Locale }) {
           <div className="relative mx-auto max-w-7xl">
             <svg
               viewBox="0 0 1400 300"
-              preserveAspectRatio="none"
+              preserveAspectRatio="xMidYMid slice"
               aria-hidden
-              className="pointer-events-none absolute -inset-x-6 top-1/2 h-[150%] w-[calc(100%+3rem)] -translate-y-1/2"
+              className="pointer-events-none absolute left-1/2 top-1/2 h-[150%] w-screen -translate-x-1/2 -translate-y-1/2 overflow-visible"
             >
               <path
-                className="draw-line"
                 pathLength={1}
-                d="M-30 170 C 90 160 120 40 240 60 S 300 270 410 230 S 500 30 620 70 S 690 290 800 240 S 850 50 960 90 S 1010 270 1110 220 S 1190 30 1290 80 S 1380 140 1440 110"
+                d="M-160 190 C -40 180 120 40 240 60 S 300 270 410 230 S 500 30 620 70 S 690 290 800 240 S 850 50 960 90 S 1010 270 1110 220 S 1190 30 1290 80 S 1440 190 1560 150"
                 fill="none"
                 stroke="var(--d-lime)"
-                strokeWidth="34"
                 strokeLinecap="round"
+                strokeWidth="30"
+                className="draw-line"
               />
             </svg>
             <h1 className="head relative text-center text-[clamp(56px,15vw,210px)] leading-[0.86]">

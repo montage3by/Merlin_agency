@@ -24,11 +24,16 @@ const hero = `<!doctype html><html><head><meta charset="utf-8"><style>${fonts}
 .s{font-family:Gogol;font-size:58px;line-height:.8;color:#e7ae90;margin:6px 0 0 4px}
 .b{position:absolute;left:30px;top:28px;width:118px;height:118px;border-radius:50%;background:#e7ae90;color:#2a2a2a;
    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.b .n{font-size:38px;font-weight:600;line-height:1;letter-spacing:-.02em}.b .m{font-size:11px;line-height:1.25;margin-top:6px}
+.b .n{font-family:Gogol;font-size:54px;line-height:.9;white-space:nowrap}.b .n sup{font-family:SiteInter;font-size:20px;font-weight:500;vertical-align:top;position:relative;top:2px;margin-left:2px}.b .m{font-size:11px;line-height:1.25;margin-top:6px}
 </style></head><body><div class="h"><img src="${f('01-steam-mop.jpg')}"><div class="g"></div>
-<div class="b"><div class="n">−15%</div><div class="m">на всю<br>технику</div></div>
+<div class="b"><div class="n">–15<sup>%</sup></div><div class="m">на всю<br>технику</div></div>
 <div class="t"><div class="k">Только для подписчиков</div><div class="ttl">Закрытая распродажа</div><div class="s">для своих</div></div>
 </div></body></html>`;
+
+const promo = `<!doctype html><html><head><meta charset="utf-8"><style>${fonts} body{width:300px;background:transparent}
+.p{font-family:Gogol;font-size:96px;line-height:1;color:#d99b7a;text-align:center;white-space:nowrap;padding:6px 0 0}
+.p sup{font-family:SiteInter;font-size:34px;font-weight:500;vertical-align:top;position:relative;top:10px;margin-left:4px}</style></head>
+<body><div class="p">–15<sup>%</sup></div></body></html>`;
 
 const logo = `<!doctype html><html><head><meta charset="utf-8"><style>${fonts} body{width:150px;background:transparent} img{display:block;width:150px;height:20px}</style></head>
 <body><img src="${f('logo-group-black.svg')}"></body></html>`;
@@ -44,6 +49,12 @@ const lp = path.join(OUT, '_logo.html'); fs.writeFileSync(lp, logo);
 await p2.goto('file://' + lp, { waitUntil: 'load' });
 await p2.evaluate(() => document.fonts.ready);
 await p2.screenshot({ path: path.join(OUT, 'logo.png'), clip: { x: 0, y: 0, width: 150, height: 20 }, omitBackground: true });
+const p3 = await browser.newPage({ viewport: { width: 300, height: 110 }, deviceScaleFactor: 2 });
+const pp = path.join(OUT, '_promo.html'); fs.writeFileSync(pp, promo);
+await p3.goto('file://' + pp, { waitUntil: 'load' });
+await p3.evaluate(() => document.fonts.ready);
+await p3.screenshot({ path: path.join(OUT, 'promo-15.png'), clip: { x: 0, y: 0, width: 300, height: 110 }, omitBackground: true });
+fs.unlinkSync(pp);
 await browser.close();
 fs.unlinkSync(hp); fs.unlinkSync(lp);
 console.log('ok');

@@ -59,6 +59,7 @@ I = lambda n: f"{IMG_BASE}/{n}"
 
 save_jpg(os.path.join(HERO, "hero.png"), "hero.jpg", (1200, 880))
 Image.open(os.path.join(HERO, "logo.png")).save(os.path.join(OUT, "images", "logo.png"), optimize=True)
+Image.open(os.path.join(HERO, "promo-15.png")).save(os.path.join(OUT, "images", "promo-15.png"), optimize=True)
 SERIES = [("Уборка", "clean", "clean.jpg", C["clean"], (0.62, 0.5)),
           ("Кухня", "kitchen", "kitchen.jpg", C["cook"], (0.5, 0.5)),
           ("Забота", "care", "care.jpg", C["care"], (0.5, 0.5))]
@@ -158,7 +159,8 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
  .wrap{{width:100%!important;}} .px{{padding-left:20px!important;padding-right:20px!important;}}
  .col2,.col3{{display:block!important;width:100%!important;max-width:100%!important;padding:0 0 20px!important;box-sizing:border-box;}}
  .col2 img,.col3 img{{max-width:100%!important;width:100%!important;}}
- .code{{font-size:30px!important;letter-spacing:4px!important;}}
+ .code{{font-size:26px!important;letter-spacing:4px!important;}}
+ .codecol{{display:block!important;padding:0 0 10px!important;}}
  .h1{{font-size:28px!important;line-height:34px!important;}}
 }}
 </style>
@@ -181,7 +183,7 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 
 <!-- вступление -->
 <tr><td class="px" style="padding:40px 48px 8px;">
-<h1 class="h1" style="margin:0 0 18px;font-family:{FONT};font-size:32px;line-height:38px;font-weight:normal;color:{C['text']};">Ждали скидку? Она уже у вас</h1>
+<h1 class="h1" style="margin:0 0 18px;font-family:{FONT};font-size:32px;line-height:38px;font-weight:normal;color:{C['text']};">Скидка, о которой знают только подписчики</h1>
 {P("Здравствуйте!")}
 {P("Мы устроили закрытую распродажу и рассказываем о ней только подписчикам. Ниже ваш промокод: он даёт 15% на любую технику Luxhommè на сайте, будь то моющий пылесос, кофемашина или аэрогриль.")}
 {P("Если что-то давно лежит в закладках или просто в мыслях, сейчас оно обойдётся на 15% дешевле.")}
@@ -190,13 +192,22 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 <!-- промокод -->
 <tr><td class="px" style="padding:16px 48px 8px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{C['card']}" style="background:{C['card']};border-radius:16px;">
-<tr><td align="center" style="padding:30px 24px 32px;">
+<tr><td align="center" style="padding:26px 24px 32px;">
+<img src="{I('promo-15.png')}" width="260" height="95" alt="−15%" style="display:block;margin:0 auto;border:0;max-width:100%;height:auto;">
+<p style="margin:-4px 0 22px;font-family:{FONT};font-size:18px;line-height:24px;color:{C['text']};">на всю технику Luxhommè</p>
 <p style="margin:0 0 12px;font-family:{FONT};font-size:12px;line-height:16px;letter-spacing:3px;text-transform:uppercase;color:{C['grey']};">Ваш промокод</p>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
-<td class="code" align="center" style="padding:14px 28px;border:2px dashed {C['cta']};border-radius:12px;font-family:{FONT};font-size:36px;line-height:42px;font-weight:bold;letter-spacing:6px;color:{C['text']};">{e(PROMO)}</td>
+<td class="codecol" valign="middle" style="padding:0 6px 0 0;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
+<td class="code" align="center" style="padding:12px 22px;border:2px dashed {C['cta']};border-radius:12px;font-family:{FONT};font-size:30px;line-height:36px;font-weight:bold;letter-spacing:5px;color:{C['text']};-webkit-user-select:all;user-select:all;">{e(PROMO)}</td>
+</tr></table></td>
+<td class="codecol" valign="middle" style="padding:0 0 0 6px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
+<td align="center" bgcolor="{C['text']}" style="border-radius:12px;">
+<a href="{link('/catalog?promo=' + PROMO, 'copy_btn')}" target="_blank" style="display:inline-block;padding:20px 20px;font-family:{FONT};font-size:15px;line-height:20px;color:#ffffff;text-decoration:none;border-radius:12px;">Скопировать</a>
+</td></tr></table></td>
 </tr></table>
-<p style="margin:18px 0 4px;font-family:{FONT};font-size:20px;line-height:26px;color:{C['text']};"><strong>−15% на всю технику Luxhommè</strong></p>
-<p style="margin:0 0 24px;font-family:{FONT};font-size:15px;line-height:22px;color:{C['grey']};">Работает на luxhomme.store до 30 октября</p>
+<p style="margin:14px 0 24px;font-family:{FONT};font-size:15px;line-height:22px;color:{C['grey']};">Работает на luxhomme.store до 30 октября</p>
 {btn("Выбрать со скидкой", link('/catalog', 'cta_promo'))}
 </td></tr></table>
 </td></tr>

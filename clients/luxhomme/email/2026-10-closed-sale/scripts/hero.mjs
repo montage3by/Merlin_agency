@@ -22,13 +22,11 @@ const hero = `<!doctype html><html><head><meta charset="utf-8"><style>${fonts}
 .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.9;margin-bottom:14px}
 .ttl{font-size:46px;line-height:1;font-weight:500;letter-spacing:-.01em}
 .s{font-family:Gogol;font-size:58px;line-height:.8;color:#e7ae90;margin:6px 0 0 4px}
-.b{position:absolute;left:30px;top:28px;width:124px;height:124px;border-radius:50%;background:#e7ae90;color:#2a2a2a;
-   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);font-family:Gogol}
-.b .n{font-size:56px;line-height:.85;white-space:nowrap}
-.b .pc{display:inline-block;vertical-align:top;margin:4px 0 0 3px}
-.b .m{font-size:22px;line-height:.95;margin-top:4px}
+.b{position:absolute;left:30px;top:28px;width:118px;height:118px;border-radius:50%;background:#e7ae90;color:#2a2a2a;
+   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.b .n{font-size:38px;font-weight:600;line-height:1;letter-spacing:-.02em}.b .m{font-size:11px;line-height:1.25;margin-top:6px}
 </style></head><body><div class="h"><img src="${f('01-steam-mop.jpg')}"><div class="g"></div>
-<div class="b"><div class="n">–15<svg class="pc" viewBox="0 0 30 40" width="26" height="36" fill="none" stroke="#2a2a2a" stroke-width="2.1" stroke-linecap="round"><path d="M8.5 6.2c-3 .2-4.6 3.4-3.8 6 .7 2.3 3.6 2.6 5.1.8 1.6-2 1.2-5.6-1.3-6.8"/><path d="M24.5 3.5C19 14 13.5 24.5 6.5 37"/><path d="M22 24.6c-3 .3-4.4 3.6-3.5 6.1.8 2.2 3.7 2.4 5.1.6 1.5-2.1 1-5.6-1.6-6.7"/></svg></div><div class="m">на всю<br>технику</div></div>
+<div class="b"><div class="n">−15%</div><div class="m">на всю<br>технику</div></div>
 <div class="t"><div class="k">Только для подписчиков</div><div class="ttl">Закрытая распродажа</div><div class="s">для своих</div></div>
 </div></body></html>`;
 

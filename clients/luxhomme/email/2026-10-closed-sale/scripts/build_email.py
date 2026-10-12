@@ -64,11 +64,11 @@ SERIES = [("Уборка", "clean", "clean.jpg", C["clean"], (0.62, 0.5)),
           ("Забота", "care", "care.jpg", C["care"], (0.5, 0.5))]
 for t, key, f, _, foc in SERIES:
     save_jpg(os.path.join(SRC, f), f"series-{key}.jpg", (360, 440), foc)
-PICKS = [("vertikalnyj-moyushhij-pylesos-aqvion-pro", "Вертикальный моющий пылесос Aqvion Pro", "VMP-stranitsa-tovara-12.png", "aqvion"),
-         ("cremax", "Кофемашина с кофемолкой CremaX", "CremaX-1.1.jpg", "cremax"),
-         ("airgrill-dual-pro", "Аэрогриль AirChef Dual Pro, 2 чаши", "aerogril-14-1.png", "dualpro"),
-         ("vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg", "Виброплатформа uFit 3D Max", "hf_20260601_122621_948b5ac2_1879_4fd6_b191_3dfe3add6664_1_1.png", "ufit3d")]
-for slug, _, f, key in PICKS:
+PICKS = [("vertikalnyj-moyushhij-pylesos-aqvion-pro", "Вертикальный моющий пылесос Aqvion Pro", "VMP-stranitsa-tovara-12.png", "aqvion", "Моет полы, а потом сам себя чистит и сушит на базе."),
+         ("cremax", "Кофемашина с кофемолкой CremaX", "CremaX-1.1.jpg", "cremax", "Мелет зёрна сама, молоко взбивает тоже сама."),
+         ("airgrill-dual-pro", "Аэрогриль AirChef Dual Pro, 2 чаши", "aerogril-14-1.png", "dualpro", "Горячее и гарнир готовятся одновременно, запахи не смешиваются."),
+         ("vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg", "Виброплатформа uFit 3D Max", "hf_20260601_122621_948b5ac2_1879_4fd6_b191_3dfe3add6664_1_1.png", "ufit3d", "Тренажёр для дома: вибрация, EMS и нагрев в одной платформе.")]
+for slug, _, f, key, _ in PICKS:
     save_jpg(os.path.join(SRC, f), f"p-{key}.jpg", (540, 720))
 SOC = [("ВКонтакте", "https://vk.com/luxhomme", "vk-bg.png", "vk"),
        ("Telegram", "https://t.me/Luxhomme", "telegram-bg.png", "tg"),
@@ -100,11 +100,11 @@ def btn(text, href, bg=C["cta"], fg=C["text"], w=260):
 P = lambda s, extra="": f'<p style="margin:0 0 14px;font-family:{FONT};font-size:16px;line-height:24px;color:{C["text"]};{extra}">{s}</p>'
 
 # ── блоки
-pre = f"Персональный промокод −15% на всю технику Luxhommè. Действует до {UNTIL}."
+pre = "Код только для подписчиков. Работает на всю технику до 30 октября."
 
-steps = [("1", "Выберите технику", "в каталоге на luxhomme.store"),
-         ("2", "Введите промокод", f"в корзине, в поле «Промокод»: {PROMO}"),
-         ("3", "Оформите заказ", "скидка 15% применится к сумме товаров")]
+steps = [("1", "Положите технику в корзину", "Одну вещь или сразу несколько, код работает на весь каталог."),
+         ("2", "Введите код", f"В корзине есть поле «Промокод». Впишите туда {PROMO}."),
+         ("3", "Оформите заказ", "Корзина сразу покажет цену со скидкой.")]
 steps_html = "".join(f"""<tr><td valign="top" width="44" style="padding:0 0 18px;">
 <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" valign="middle" width="32" height="32" bgcolor="{C['text']}" style="border-radius:16px;font-family:{FONT};font-size:14px;font-weight:bold;color:#ffffff;">{n}</td></tr></table></td>
 <td valign="top" style="padding:4px 0 18px;font-family:{FONT};font-size:16px;line-height:22px;color:{C['text']};"><strong>{e(t)}</strong><br><span style="color:{C['grey']};font-size:14px;">{e(d)}</span></td></tr>""" for n, t, d in steps)
@@ -117,23 +117,24 @@ series_html = "".join(f"""<td valign="top" width="180" style="padding:0 5px;">
 <td style="padding-left:8px;font-family:{FONT};font-size:16px;line-height:20px;color:{C['text']};">{t}&nbsp;→</td></tr></table></a></td>""" for t, key, _, col, _ in SERIES)
 
 
-def card(slug, title, key):
+def card(slug, title, key, hook):
     d = D[slug]
     price = int(float(d["price"]))
     promo = rub_round(price * (1 - DISCOUNT))
     url = link(f"/products/{slug}", "product_" + key)
     return f"""<td class="col2" valign="top" width="270" style="padding:0 7px 24px;">
 <a href="{url}" target="_blank" style="text-decoration:none;"><img src="{I('p-' + key + '.jpg')}" width="256" height="341" alt="{e(title)}" style="display:block;width:100%;max-width:256px;height:auto;border:0;border-radius:12px;"></a>
-<p style="margin:12px 0 6px;font-family:{FONT};font-size:15px;line-height:20px;color:{C['text']};min-height:40px;">{e(title)}</p>
-<p style="margin:0;font-family:{FONT};font-size:14px;line-height:20px;color:{C['grey']};">Цена на сайте: {money(price)}</p>
-<p style="margin:2px 0 10px;font-family:{FONT};font-size:18px;line-height:24px;color:{C['text']};"><strong>{money(promo)}</strong> <span style="font-size:13px;color:{C['accent']};">с промокодом</span></p>
-<a href="{url}" target="_blank" style="font-family:{FONT};font-size:14px;line-height:20px;color:{C['text']};text-decoration:underline;">Подробнее</a></td>"""
+<p style="margin:12px 0 6px;font-family:{FONT};font-size:15px;line-height:20px;color:{C['text']};"><strong>{e(title)}</strong></p>
+<p style="margin:0 0 10px;font-family:{FONT};font-size:14px;line-height:20px;color:{C['text']};min-height:40px;">{e(hook)}</p>
+<p style="margin:0;font-family:{FONT};font-size:14px;line-height:20px;color:{C['grey']};">На сайте: {money(price)}</p>
+<p style="margin:2px 0 10px;font-family:{FONT};font-size:18px;line-height:24px;color:{C['text']};"><strong>{money(promo)}</strong> <span style="font-size:13px;color:{C['accent']};">с вашим кодом</span></p>
+<a href="{url}" target="_blank" style="font-family:{FONT};font-size:14px;line-height:20px;color:{C['text']};text-decoration:underline;">Посмотреть</a></td>"""
 
 
-cards = [card(s, t, k) for s, t, _, k in PICKS]
+cards = [card(s, t, k, h) for s, t, _, k, h in PICKS]
 cards_html = f"<tr>{cards[0]}{cards[1]}</tr><tr>{cards[2]}{cards[3]}</tr>"
 
-benefits = [("Сервисный центр", "в России"), ("Бесплатный вывоз СДЭК", "при гарантийном случае"), ("Служба заботы", "9:00–21:00 МСК")]
+benefits = [("Свой сервисный центр", "в России"), ("Сломалось по гарантии?", "Заберём бесплатно через СДЭК"), ("Служба заботы", "на связи с 9 до 21 по Москве")]
 ben_html = "".join(f"""<td class="col3" valign="top" width="33%" style="padding:0 8px;font-family:{FONT};font-size:14px;line-height:20px;color:{C['text']};text-align:center;">
 <strong>{e(a)}</strong><br><span style="color:{C['grey']};">{e(b)}</span></td>""" for a, b in benefits)
 
@@ -180,9 +181,10 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 
 <!-- вступление -->
 <tr><td class="px" style="padding:40px 48px 8px;">
-<h1 class="h1" style="margin:0 0 18px;font-family:{FONT};font-size:32px;line-height:38px;font-weight:normal;color:{C['text']};">Закрытая распродажа — только для подписчиков</h1>
+<h1 class="h1" style="margin:0 0 18px;font-family:{FONT};font-size:32px;line-height:38px;font-weight:normal;color:{C['text']};">Ждали скидку? Она уже у вас</h1>
 {P("Здравствуйте!")}
-{P("Мы открываем распродажу только для тех, кто подписан на новости Luxhommè. Ваш персональный промокод даёт скидку 15% на всю технику на сайте — от пылесосов и паровых швабр до кофемашин и аэрогрилей.")}
+{P("Мы устроили закрытую распродажу и рассказываем о ней только подписчикам. Ниже ваш промокод: он даёт 15% на любую технику Luxhommè на сайте, будь то моющий пылесос, кофемашина или аэрогриль.")}
+{P("Если что-то давно лежит в закладках или просто в мыслях, сейчас оно обойдётся на 15% дешевле.")}
 </td></tr>
 
 <!-- промокод -->
@@ -193,33 +195,34 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
 <td class="code" align="center" style="padding:14px 28px;border:2px dashed {C['cta']};border-radius:12px;font-family:{FONT};font-size:36px;line-height:42px;font-weight:bold;letter-spacing:6px;color:{C['text']};">{e(PROMO)}</td>
 </tr></table>
-<p style="margin:18px 0 4px;font-family:{FONT};font-size:20px;line-height:26px;color:{C['text']};"><strong>−15% на всю технику</strong></p>
-<p style="margin:0 0 24px;font-family:{FONT};font-size:15px;line-height:22px;color:{C['grey']};">Действует до {UNTIL} при заказе на luxhomme.store</p>
-{btn("Выбрать технику", link('/catalog', 'cta_promo'))}
+<p style="margin:18px 0 4px;font-family:{FONT};font-size:20px;line-height:26px;color:{C['text']};"><strong>−15% на всю технику Luxhommè</strong></p>
+<p style="margin:0 0 24px;font-family:{FONT};font-size:15px;line-height:22px;color:{C['grey']};">Работает на luxhomme.store до 30 октября</p>
+{btn("Выбрать со скидкой", link('/catalog', 'cta_promo'))}
 </td></tr></table>
 </td></tr>
 
 <!-- как применить -->
 <tr><td class="px" style="padding:36px 48px 10px;">
-<h2 style="margin:0 0 20px;font-family:{FONT};font-size:22px;line-height:28px;font-weight:normal;color:{C['text']};">Как применить промокод</h2>
+<h2 style="margin:0 0 20px;font-family:{FONT};font-size:22px;line-height:28px;font-weight:normal;color:{C['text']};">Как получить скидку</h2>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{steps_html}</table>
 </td></tr>
 
 <!-- серии -->
 <tr><td class="px" style="padding:20px 30px 12px;">
-<h2 style="margin:0 0 20px 18px;font-family:{FONT};font-size:22px;line-height:28px;font-weight:normal;color:{C['text']};">Скидка действует на все серии</h2>
+<h2 style="margin:0 0 20px 18px;font-family:{FONT};font-size:22px;line-height:28px;font-weight:normal;color:{C['text']};">Код подходит ко всему каталогу</h2>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>{series_html}</tr></table>
 </td></tr>
 
 <!-- подборка -->
 <tr><td class="px" style="padding:36px 30px 4px;">
-<h2 style="margin:0 0 20px 18px;font-family:{FONT};font-size:22px;line-height:28px;font-weight:normal;color:{C['text']};">Что выбирают чаще всего</h2>
+<h2 style="margin:0 0 20px 18px;font-family:{FONT};font-size:22px;line-height:28px;font-weight:normal;color:{C['text']};">Если не знаете, с чего начать</h2>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{cards_html}</table>
 </td></tr>
 
 <!-- второй CTA -->
 <tr><td align="center" class="px" style="padding:4px 48px 40px;">
-{btn("Перейти в каталог", link('/catalog', 'cta_bottom'), bg=C['text'], fg='#ffffff')}
+{P("30 октября код перестанет работать. До этого дня он ваш.", "text-align:center;")}
+{btn("Выбрать технику", link('/catalog', 'cta_bottom'), bg=C['text'], fg='#ffffff')}
 </td></tr>
 
 <!-- сервис -->
@@ -235,9 +238,9 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 <a href="tel:88005057130" style="color:{C['text']};text-decoration:none;">8 800 505 71 30</a> ·
 <a href="mailto:care@luxhomme.store" style="color:{C['text']};text-decoration:none;">care@luxhomme.store</a> ·
 <a href="https://t.me/LuxhommeServiceBot" target="_blank" style="color:{C['text']};text-decoration:none;">Служба заботы в Telegram</a></p>
-<p style="margin:0 0 14px;font-family:{FONT};font-size:12px;line-height:18px;color:#4a4a48;">Промокод действует при заказе на сайте luxhomme.store до {UNTIL}.</p>
-<p style="margin:0;font-family:{FONT};font-size:12px;line-height:18px;color:#4a4a48;">Вы получили это письмо, потому что подписаны на новости luxhomme.store.<br>
-<a href="{UNSUB}" style="color:#4a4a48;text-decoration:underline;">Отписаться от рассылки</a><br><br>
+<p style="margin:0 0 14px;font-family:{FONT};font-size:12px;line-height:18px;color:#4a4a48;">Промокод {PROMO} работает при заказе на luxhomme.store до {UNTIL}.</p>
+<p style="margin:0;font-family:{FONT};font-size:12px;line-height:18px;color:#4a4a48;">Это письмо пришло, потому что вы подписаны на новости luxhomme.store.<br>
+<a href="{UNSUB}" style="color:#4a4a48;text-decoration:underline;">Отписаться</a><br><br>
 ООО «САУДАГАР Е-КОМ», ИНН 1686050910<br>420061, Казань, ул. Николая Ершова, д. 62, помещение 10</p>
 </td></tr>
 
@@ -249,6 +252,6 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 open(os.path.join(OUT, "email.html"), "w", encoding="utf-8").write(H)
 tot = sum(os.path.getsize(os.path.join(OUT, "images", f)) for f in os.listdir(os.path.join(OUT, "images")))
 print("ok", len(H.encode()) // 1024, "KB html,", tot // 1024, "KB images")
-for slug, t, _, k in PICKS:
+for slug, t, _, k, _ in PICKS:
     p = int(float(D[slug]["price"]))
     print(t, p, "→", rub_round(p * (1 - DISCOUNT)))

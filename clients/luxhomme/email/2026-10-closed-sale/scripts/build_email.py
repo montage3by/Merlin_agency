@@ -204,8 +204,8 @@ a[x-apple-data-detectors]{{color:inherit!important;text-decoration:none!importan
 <a href="{link('/catalog?promo=' + PROMO, 'copy_btn')}" target="_blank" style="display:inline-block;padding:20px 20px;font-family:{FONT};font-size:15px;line-height:20px;color:#ffffff;text-decoration:none;border-radius:12px;">Скопировать</a>
 </td></tr></table></td>
 </tr></table>
-<p style="margin:18px 0 4px;font-family:{FONT};font-size:20px;line-height:26px;color:{C['text']};"><strong>−15% на всю технику Luxhommè</strong></p>
-<p style="margin:0 0 24px;font-family:{FONT};font-size:15px;line-height:22px;color:{C['grey']};">Работает на luxhomme.store до 30 октября</p>
+<p style="margin:14px 0 0;font-family:{FONT};font-size:16px;line-height:22px;font-weight:bold;color:{C['text']};">Работает на luxhomme.store до&nbsp;30&nbsp;октября</p>
+<p style="margin:16px 0 24px;font-family:{FONT};font-size:20px;line-height:26px;color:{C['text']};"><strong>−15% на всю технику Luxhommè</strong></p>
 {btn("Выбрать со скидкой", link('/catalog', 'cta_promo'))}
 </td></tr></table>
 </td></tr>

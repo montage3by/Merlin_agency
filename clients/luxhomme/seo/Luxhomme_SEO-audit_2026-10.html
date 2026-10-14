@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Luxhommè — SEO-аналитика сайта</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">:root{--bg:#efeeeb;--card:#fff;--text:#2a2a2a;--muted:#6b6b69;--line:#d9d7d2;--accent:#c98a6a}
+@media (prefers-color-scheme: dark){:root{--bg:#1c1c1b;--card:#262625;--text:#ecebe8;--muted:#a6a5a1;--line:#3a3a38;--accent:#e7ae90}}
+body{background:var(--bg);color:var(--text);font:16px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:24px 16px}
+main,#TOC,header{max-width:980px;margin:0 auto}
+header{margin-bottom:8px} h1.title{font-size:30px;margin:0 0 4px} p.subtitle{color:var(--muted);margin:0}
+#TOC{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 20px;margin-bottom:24px;font-size:14px}
+#TOC ul{padding-left:18px;margin:4px 0} #TOC>ul>li{margin:4px 0}
+h1{font-size:26px;margin:40px 0 12px;padding-top:16px;border-top:2px solid var(--line)} h2{font-size:21px;margin:28px 0 10px} h3{font-size:17px}
+a{color:var(--accent)} code{background:rgba(127,127,127,.15);padding:1px 5px;border-radius:4px;font-size:.9em}
+pre{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:8px;overflow:auto}
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto;font-size:14px;margin:12px 0;background:var(--card)}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left} th{background:rgba(127,127,127,.12)}
+blockquote{border-left:3px solid var(--accent);margin:12px 0;padding:4px 14px;color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px} figure{margin:16px 0} figcaption{color:var(--muted);font-size:14px}
+ul.task-list{list-style:none;padding-left:4px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Luxhommè — SEO-аналитика сайта</h1>
+<p class="subtitle">luxhomme.store · аудит 09.10, alt 12.10, мета-теги
+13.10.2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#часть-1-seo-аудит-09102026" id="toc-часть-1-seo-аудит-09102026">Часть 1. SEO-аудит
+(09.10.2026)</a></li>
+<li><a href="#часть-2-alt-у-изображений-12102026" id="toc-часть-2-alt-у-изображений-12102026">Часть 2. Alt у изображений
+(12.10.2026)</a></li>
+<li><a href="#часть-3-мета-теги-13102026" id="toc-часть-3-мета-теги-13102026">Часть 3. Мета-теги
+(13.10.2026)</a></li>
+</ul>
+</nav>
+<h1 id="часть-1-seo-аудит-09102026">Часть 1. SEO-аудит (09.10.2026)</h1>
+<p>Дата: 09.10.2026 · Рынок: Россия (Яндекс + Google) · Сайт: Next.js,
+26 URL в sitemap, ~50 статей в блоге, 14 товаров</p>
+<hr />
+<h3 id="краткий-обзор">Краткий обзор</h3>
+<h3 id="что-хорошо">Что хорошо</h3>
+<ul>
+<li><strong>Техническая база в порядке.</strong> HTTPS с HSTS, http →
+https через 301, gzip, серверный рендеринг: текст страниц сразу в HTML и
+виден роботам.</li>
+<li><strong>robots.txt настроен грамотно.</strong> Корзина, профиль,
+поиск и API закрыты, sitemap указан, AI-боты (GPTBot, ClaudeBot,
+Perplexity) открыты.</li>
+<li><strong>Метатеги заполнены везде.</strong> У всех страниц уникальные
+title и description, есть canonical. URL с utm склеиваются canonical&#39;ом
+с чистым адресом.</li>
+<li><strong>Карточки товаров сильные.</strong> Объёмные страницы (на
+части карточек 1 500–2 500 слов вместе с отзывами), описания,
+характеристики, видео, инструкции, отзывы с маркетплейсов. Есть
+микроразметка Product + Offer (цена, наличие, SKU) и хлебные
+крошки.</li>
+<li><strong>Блог уже есть, и он большой.</strong> Около 50 статей под
+информационные запросы («как выбрать паровую швабру», «аэрогриль или
+духовка» и т.д.) с разметкой Article, FAQ и хлебных крошек.</li>
+<li><strong>Сильные коммерческие факторы для Яндекса.</strong> Есть
+страницы доставки, гарантии, возврата и оферты, контакты с реквизитами
+юрлица, поддержка в Telegram/MAX.</li>
+<li><strong>Картинки отдаются в современных форматах</strong> (WebP/AVIF
+через next/image).</li>
+</ul>
+<h3 id="что-плохо">Что плохо</h3>
+<ul>
+<li><strong>Сайт генерирует бесконечные дубли.</strong> Любой
+несуществующий адрес отдаёт 200 вместо 404, а
+<code>/blog/&lt;что угодно&gt;</code> ещё и открыт к индексации с
+canonical на самого себя.</li>
+<li><strong>Блог не участвует в поиске так, как мог бы:</strong>
+<ul>
+<li>ни одной статьи нет в sitemap;</li>
+<li>на товары ссылаются только 3 статьи из 50;</li>
+<li>6 пар статей дублируют друг друга по теме и конкурируют между собой
+в выдаче.</li>
+</ul></li>
+<li><strong>Нет категорийных страниц под коммерческий спрос.</strong>
+Например, у запроса «вертикальный моющий пылесос» около 190 тыс. показов
+в месяц, но сайту нечего показать по нему, кроме одной карточки.</li>
+<li><strong>Ошибки в структуре заголовков на всех страницах:</strong>
+<ul>
+<li>H1 главной — «— Готовка с радостью»;</li>
+<li>первый H2 на каждой странице — «Сравнение разных категорий
+невозможно» (текст скрытого окна);</li>
+<li>у страницы <code>/blog</code> вместо своего H1 — заголовок одной из
+статей.</li>
+</ul></li>
+<li><strong>Около 90% картинок без alt:</strong> 3 674 из 4 076.</li>
+<li><strong>Тяжёлые карточки товаров.</strong> HTML до 490 КБ, до 275
+картинок грузятся без lazy-load.</li>
+<li><strong>Ошибки в sitemap.</strong> В нём нет блога и товара
+CremaX.</li>
+<li><strong>Сервер периодически обрывает соединение.</strong> В наших
+замерах это 1–2 запроса из 10, на любых страницах, включая главную.</li>
+<li><strong>Нет SSL-сертификата на <a href="http://www.luxhomme.store">www.luxhomme.store</a>.</strong>
+Пользователь, набравший адрес с www, видит ошибку.</li>
+<li><strong>По брендовым товарным запросам сайт не виден:</strong>
+выдачу забирают Яндекс Маркет, М.Видео и карточка в Яндекс Картах.</li>
+</ul>
+<h3 id="что-не-удалось-проверить">Что не удалось проверить</h3>
+<ul>
+<li><strong>Core Web Vitals (скорость).</strong> PageSpeed API упёрся в
+лимит, браузерный замер из этой среды не прошёл. Нужны данные из
+PageSpeed Insights или Яндекс Вебмастера / Search Console.</li>
+<li><strong>Индексация и позиции.</strong> Нужен доступ к Яндекс
+Вебмастеру и Google Search Console.</li>
+<li><strong>Метрика.</strong> Счётчик в исходном HTML не найден.
+Возможно, он грузится после согласия на cookie, но это нужно
+проверить.</li>
+</ul>
+<hr />
+<h3 id="чек-лист">Чек-лист</h3>
+<p>Приоритеты: 🔴 критично (мешает индексации), 🟠 важно (влияет на
+позиции и трафик), 🟡 улучшения.</p>
+<h3 id="-1-индексация-и-дубли">🔴 1. Индексация и дубли</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>Отдавать 404 для
+несуществующих страниц.</strong> Сейчас
+<code>/nonexistent-page-xyz</code> → 200 (index, follow),
+<code>/products/net-takogo</code> → 200 (noindex),
+<code>/blog/net-takoy-stati</code> → 200, index, follow, canonical на
+самого себя.</label>
+<ul>
+<li>Как: в Next.js вызывать <code>notFound()</code> в
+<code>app/blog/[slug]/page.tsx</code>,
+<code>app/products/[slug]/page.tsx</code> и в catch-all роуте, если
+запись не найдена.</li>
+<li>Проверка: <code>curl -I https://luxhomme.store/blog/test123</code> →
+<code>404</code>.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Проверить стабильность
+сервера.</strong> В наших замерах 1–2 запроса из 10 обрывались с ошибкой
+«connection reset» на разных страницах, включая главную и
+<code>/offer</code>. Возможно, это особенность нашей сети, поэтому нужно
+проверить:</label>
+<ul>
+<li>в Яндекс Вебмастере: «Проверка ответа сервера» и «Диагностика»
+(раздел о недоступности);</li>
+<li>в логах Apache и Next.js: обрывы, перезапуски процесса, лимиты
+соединений, работа антибота.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Добавить в sitemap все
+статьи блога (~50 URL) и товар <code>/products/cremax</code>.</strong>
+Сейчас в sitemap только 26 адресов, блога там нет вообще.</label>
+<ul>
+<li><code>lastmod</code> ставить по реальной дате изменения материала.
+Сейчас у всех страниц стоит время генерации sitemap, и поисковики такой
+lastmod игнорируют.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Выпустить SSL-сертификат на
+<code>www.luxhomme.store</code> и настроить 301 →
+<code>https://luxhomme.store/</code>.</strong></label></li>
+<li><label><input type="checkbox"></input><strong>Проверить доступность сайта
+из российских сетей без VPN.</strong> В интервью с покупателем 07.07
+команда Luxhomme не смогла открыть сайт без VPN. В CSP подключена
+проверка Cloudflare (challenges.cloudflare.com). Если она режет
+пользователей или YandexBot из РФ, это прямой удар по индексации в
+Яндексе.</label>
+<ul>
+<li>Проверка: Яндекс Вебмастер → «Проверка ответа сервера», плюс открыть
+сайт с мобильного интернета РФ.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Подтвердить сайт в Яндекс
+Вебмастере и Google Search Console, отправить sitemap.</strong> Если уже
+сделано, выгрузить отчёты по исключённым страницам.</label></li>
+<li><label><input type="checkbox"></input><strong>Добавить в robots.txt
+<code>Clean-param</code> для Яндекса:</strong></label>
+<pre><code>User-Agent: Yandex
+Clean-param: utm_source&amp;utm_medium&amp;utm_campaign&amp;utm_content&amp;utm_term&amp;yclid&amp;gclid&amp;from</code></pre>
+Директиву <code>Host</code> можно убрать: Яндекс игнорирует её с 2018
+года.</li>
+<li><label><input type="checkbox"></input><strong>Проверить, что Яндекс
+Метрика стоит на сайте.</strong> Если она грузится только после согласия
+на cookie, данных о поведении будет мало.</label></li>
+</ul>
+<h3 id="-2-структура-сайта-и-категории">🟠 2. Структура сайта и
+категории</h3>
+<ul class="task-list">
+<li><p><label><input type="checkbox"></input><strong>Создать категорийные
+страницы под коммерческий спрос.</strong> Каждой категории нужны свой
+URL, H1, вводный текст 300–600 слов, список товаров, FAQ и ссылки на
+статьи блога:</label></p>
+<table>
+<thead>
+<tr class="header">
+<th>Категория</th>
+<th>URL (пример)</th>
+<th>Ключевые запросы</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Паровые швабры</td>
+<td><code>/catalog/parovye-shvabry</code></td>
+<td>паровая швабра, паровая швабра для дома, купить паровую швабру</td>
+</tr>
+<tr class="even">
+<td>Моющие пылесосы</td>
+<td><code>/catalog/moyushchie-pylesosy</code></td>
+<td>вертикальный моющий пылесос (~190 тыс./мес), моющий пылесос для
+дома</td>
+</tr>
+<tr class="odd">
+<td>Вертикальные пылесосы</td>
+<td><code>/catalog/vertikalnye-pylesosy</code></td>
+<td>вертикальный пылесос, беспроводной пылесос</td>
+</tr>
+<tr class="even">
+<td>Аэрогрили</td>
+<td><code>/catalog/aerogrili</code></td>
+<td>аэрогриль, аэрогриль с двумя чашами</td>
+</tr>
+<tr class="odd">
+<td>Кофемашины</td>
+<td><code>/catalog/kofemashiny</code></td>
+<td>капсульная кофемашина, кофемашина 4 в 1, рожковая кофемашина</td>
+</tr>
+<tr class="even">
+<td>Виброплатформы</td>
+<td><code>/catalog/vibroplatformy</code></td>
+<td>виброплатформа для похудения, виброплатформа с EMS</td>
+</tr>
+<tr class="odd">
+<td>Мойщики окон</td>
+<td><code>/catalog/moyshchiki-okon</code></td>
+<td>робот мойщик окон</td>
+</tr>
+</tbody>
+</table>
+<p>Частоты нужно уточнить в Wordstat. Для пылесосов есть готовая
+выгрузка в
+<code>research/semantika-vertikalnyj-moyushhij-pylesos.csv</code>.</p></li>
+<li><p><label><input type="checkbox"></input><strong>Отдавать все товары
+каталога в исходном HTML.</strong> Сейчас в HTML <code>/catalog</code>
+ссылки только на 7 товаров из 14, остальные догружаются кнопкой
+«Показать ещё». Нужна пагинация ссылками или вывод всех товаров
+сразу.</label></p></li>
+<li><p><label><input type="checkbox"></input><strong>Хлебные крошки через
+категорию:</strong> Главная → Каталог → Паровые швабры → EcoSteam Pro (и
+в вёрстке, и в BreadcrumbList).</label></p></li>
+<li><p><label><input type="checkbox"></input><strong>Перелинковка блог →
+товары.</strong> Сейчас на товары ссылаются только 3 статьи из 50. В
+каждую статью добавить:</label></p>
+<ul>
+<li>1–2 контекстные ссылки на товар в тексте;</li>
+<li>блок «Товары из статьи» с карточками;</li>
+<li>ссылку на категорию.</li>
+</ul></li>
+<li><p><label><input type="checkbox"></input><strong>Перелинковка товар →
+блог:</strong> на карточке блок «Полезно знать» с 2–3 статьями по товару
+(как выбрать, уход, сравнение).</label></p></li>
+<li><p><label><input type="checkbox"></input><strong>Объединить дубли
+статей</strong> (каннибализация). Из каждой пары оставить одну, более
+полную статью, вторую перенаправить 301-редиректом на неё:</label></p>
+<ul>
+<li><code>aerogril-ili-duhovka</code> ↔︎
+<code>aerogril-ili-duhovka-chto-luchshe-vybrat-dlya-doma</code></li>
+<li><code>kak-vybrat-parovuyu-shvabru</code> ↔︎
+<code>kak-vybrat-parovuyu-shvabru-dlya-kvartiry-i-chastnogo-doma</code></li>
+<li><code>kakoy-obem-aerogrilya-vybrat</code> ↔︎
+<code>aerogril-kakogo-obyoma-vybrat-dlya-semi-iz-2-3-ili-4-chelovek</code></li>
+<li><code>kak-vybrat-kofemashinu-dlya-malenkoj-kuhni</code> ↔︎
+<code>kofemashina-dlya-malenkoy-kuhni</code></li>
+<li><code>parovaya-shvabra-ili-moyushchiy-pylesos</code> ↔︎
+<code>parovaya-shvabra-ili-moyushhij-pylesos-chto-luchshe-vybrat-dlya-doma</code></li>
+<li><code>kakoj-vertikalnyj-pylesos-vybrat-dlya-kvartiry</code> ↔︎
+<code>kakoy-vertikalnyy-pylesos-vybrat</code>, а также
+<code>vertikalnyy-pylesos-dlya-doma-s-zhivotnymi</code> ↔︎
+<code>kakoj-pylesos-luchshe-vybrat-dlya-doma-s-zhivotnymi</code></li>
+</ul></li>
+</ul>
+<h3 id="-3-заголовки-и-метатеги">🟠 3. Заголовки и метатеги</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>H1 главной.</strong> Сейчас
+H1 — «— Готовка с радостью»: это строка анимации, и на старте она
+невидима (opacity:0). Нужен H1 со смыслом, например «Luxhommè — бытовая
+техника для дома: уборка, кухня, забота». Анимацию оставить на
+<code>&lt;p&gt;</code> или <code>&lt;span&gt;</code>.</label></li>
+<li><label><input type="checkbox"></input><strong>Убрать H2 «Сравнение разных
+категорий невозможно» со всех страниц.</strong> Это текст всплывающего
+окна сравнения, и в структуре страницы он стоит первым H2. Заменить тег
+на <code>&lt;p&gt;</code> или <code>&lt;div&gt;</code>.</label></li>
+<li><label><input type="checkbox"></input><strong>H1 на
+<code>/blog</code>.</strong> Сейчас H1 — заголовок одной из статей.
+Нужен «Блог Luxhommè: советы по уборке, кухне и уходу за собой», а
+заголовки статей в списке сделать H2/H3.</label></li>
+<li><label><input type="checkbox"></input><strong>Title товаров укоротить до
+55–65 символов и не дублировать бренд.</strong> Сейчас 11 из 25 title
+длиннее 60 символов, а «Luxhommè» встречается дважды. Шаблон:
+<code>{Тип} {Модель} — купить, цена {X} ₽ | Luxhommè</code>.</label>
+<ul>
+<li>Пример: «Паровая швабра EcoSteam Pro — купить, цена 5 990 ₽ |
+Luxhommè».</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Исправить опечатку в
+карточке виброплатформы:</strong> «виброплатформу <strong>длю
+похудению</strong>» → «для похудения» (в title, description и
+названии).</label></li>
+<li><label><input type="checkbox"></input><strong>Description укоротить до
+140–160 символов.</strong> Сейчас у 14 страниц больше 160. Шаблон: тип +
+2–3 главных преимущества + доставка/гарантия.</label></li>
+<li><label><input type="checkbox"></input><strong>og:image</strong> добавить
+на главную, «О нас», «Контакты», «Мы на маркетплейсах», «Доставка»,
+«Сервис» и правовые страницы. Без него ссылки в мессенджерах и соцсетях
+уходят без картинки.</label></li>
+<li><label><input type="checkbox"></input><strong>Название и URL паровой
+швабры AirSteam Pro не совпадают:</strong> URL
+<code>/products/steamly-pro</code>, а товар называется AirSteam Pro. При
+смене URL обязательно ставить 301 со старого адреса.</label></li>
+<li><label><input type="checkbox"></input><strong>Короткие URL без ключевых
+слов</strong> (<code>/products/coffee</code>, <code>/window</code>,
+<code>/airgrill</code>, <code>/sc-100</code>). Если менять, то только с
+301-редиректами и после того, как появятся категории. Приоритет низкий:
+выигрыш небольшой, риск потерять накопленное есть.</label></li>
+</ul>
+<h3 id="-4-микроразметка-schemaorg">🟠 4. Микроразметка
+(schema.org)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>Product:</strong> добавить
+<code>brand</code> (<code>{&quot;@type&quot;:&quot;Brand&quot;,&quot;name&quot;:&quot;Luxhommè&quot;}</code>),
+<code>aggregateRating</code> и <code>review</code>. Отзывы с
+маркетплейсов уже выводятся на странице, их стоит отразить в разметке,
+указав источник. Добавить <code>gtin13</code> (штрихкод), если он
+есть.</label>
+<ul>
+<li>Это даёт звёзды рейтинга в сниппетах Яндекса и Google.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Organization:</strong></label>
+<ul>
+<li><code>logo</code> в PNG/JPG (сейчас SVG, Google его не
+принимает);</li>
+<li><code>sameAs</code> со ссылками на Telegram, VK, Дзен, YouTube,
+Ozon, WB, ЯМ (сейчас массив пустой);</li>
+<li><code>contactPoint</code> (email, Telegram-бот),
+<code>legalName</code>, <code>address</code>.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>WebSite →
+SearchAction</strong> ведёт на <code>/search</code>, а
+<code>/search</code> закрыт в robots.txt. Либо убрать SearchAction, либо
+открыть страницы поиска с <code>noindex</code>.</label></li>
+<li><label><input type="checkbox"></input><strong>Категорийные страницы (после
+создания):</strong> <code>CollectionPage</code> + <code>ItemList</code>
++ <code>BreadcrumbList</code> + <code>FAQPage</code>.</label></li>
+<li><label><input type="checkbox"></input>Проверить итог в <a href="https://search.google.com/test/rich-results">Rich Results Test</a>
+и в Яндекс Вебмастере («Валидатор микроразметки»).</label></li>
+</ul>
+<h3 id="-5-изображения-и-скорость">🟠 5. Изображения и скорость</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>Прописать alt всем товарным
+фото</strong> (сейчас 3 674 из 4 076 картинок без alt). Шаблон:
+<code>{Название товара} — {что на фото}</code> (вид спереди, в
+комплекте, в работе на кафеле…). Декоративным иконкам — пустой
+<code>alt=&quot;&quot;</code> (так уже сделано).</label></li>
+<li><label><input type="checkbox"></input><strong>Lazy-load для галерей и
+отзывов.</strong> На карточке EcoSteam Pro 275 картинок грузятся сразу.
+Сразу оставить только главное фото (<code>priority</code>), остальным —
+<code>loading=&quot;lazy&quot;</code>, а фото из отзывов подгружать при
+прокрутке.</label></li>
+<li><label><input type="checkbox"></input><strong>Облегчить HTML
+карточек.</strong> Сейчас 160–490 КБ, а самый тяжёлый HTML у страниц с
+большим числом отзывов и картинок. Отзывы выводить порциями (первые 5–10
++ «Показать ещё»), галерею — по требованию.</label></li>
+<li><label><input type="checkbox"></input><strong>Замерить Core Web
+Vitals</strong> в <a href="https://pagespeed.web.dev/">PageSpeed
+Insights</a> для главной, <code>/catalog</code> и 2–3 карточек
+(мобильная версия) и в отчёте Вебмастера «Качество сайта». Цели: LCP
+&lt; 2,5 с, INP &lt; 200 мс, CLS &lt; 0,1.</label></li>
+<li><label><input type="checkbox"></input><strong>TTFB около 0,8–1 с</strong>
+(замер не из РФ). Проверить из России. Если больше 0,6 с, увеличить
+время кэша страниц: сейчас <code>s-maxage=120</code>, для карточек можно
+600–3600 с с ревалидацией.</label></li>
+</ul>
+<h3 id="-6-контент">🟠 6. Контент</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>Тексты на категорийные
+страницы</strong> (см. раздел 2): что это за техника, как выбрать,
+сравнение моделей Luxhommè, FAQ.</label></li>
+<li><label><input type="checkbox"></input><strong>Доработать статьи блога до 1
+200–2 000 слов.</strong> Сейчас у 47 из 50 статей вся страница целиком,
+включая меню и подвал, занимает меньше 800 слов (медиана около 390). По
+запросам вида «как выбрать паровую швабру» в топе обычно материалы на 1
+500+ слов. Добавить:</label>
+<ul>
+<li>таблицы сравнения;</li>
+<li>фото «до/после»;</li>
+<li>блок «Какую модель Luxhommè выбрать»;</li>
+<li>FAQ (уже есть в части статей — сделать во всех).</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Подписать статьи автором или
+экспертом:</strong> имя, роль (технолог, специалист сервиса), дата
+обновления. Это E-E-A-T для Google и доверие для Яндекса.</label></li>
+<li><label><input type="checkbox"></input><strong>Наполнить <code>/buy</code>
+(115 слов) и <code>/contact</code> (180 слов):</strong></label>
+<ul>
+<li>на <code>/buy</code> — где купить каждую модель, почему выгодно на
+сайте (бонусы клуба, гарантия);</li>
+<li>на <code>/contact</code> — телефон, адрес, карта, режим работы.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Новые статьи под пробелы в
+семантике:</strong></label>
+<ul>
+<li>моющий пылесос для мебели и авто;</li>
+<li>чем мыть швы плитки;</li>
+<li>уборка после ремонта;</li>
+<li>капсулы Nespresso / Dolce Gusto — какие подходят;</li>
+<li>кофемашина в подарок;</li>
+<li>рейтинги «лучшие паровые швабры 2026» с моделями Luxhommè.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>В статьях-рейтингах
+указывать конкурентов честно.</strong> Их читают перед покупкой; это
+видно в интервью с покупателями от 29.06 и 07.07.</label></li>
+</ul>
+<h3 id="-7-яндекс-сервисы-и-внешние-сигналы">🟡 7. Яндекс-сервисы и
+внешние сигналы</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>Яндекс Бизнес:</strong>
+привязать сайт к карточке организации (она уже есть в Картах), загрузить
+«Товары и цены». Это даёт товарную галерею в выдаче Яндекса по брендовым
+запросам.</label></li>
+<li><label><input type="checkbox"></input><strong>YML-фид для Яндекса и Google
+Merchant Center.</strong> Сейчас <code>/yml.xml</code> и
+<code>/feed.xml</code> не существуют, вместо них открывается главная.
+Фид даёт бесплатные товарные показы в Google Shopping и Яндекс
+Товарах.</label></li>
+<li><label><input type="checkbox"></input><strong>В Вебмастере указать регион
+«Россия»</strong> (или оставить без региона, раз доставка по всей
+стране) и проверить быстрые ссылки.</label></li>
+<li><label><input type="checkbox"></input><strong>Ссылки на сайт с площадок
+бренда:</strong> описание магазина на Ozon/WB/ЯМ (если площадка
+позволяет), Telegram-канал, VK, Дзен, YouTube. Плюс брендовые упоминания
+в обзорах (контент-завод уже работает с блогерами, просить ссылку на
+luxhomme.store в описании).</label></li>
+<li><label><input type="checkbox"></input><strong>llms.txt</strong> — по
+желанию. Сейчас <code>/llms.txt</code> отдаёт главную. Можно сделать
+файл с описанием бренда, моделей и ссылками на категории: это помогает
+попадать в ответы ChatGPT и Алисы.</label></li>
+</ul>
+<hr />
+<h3 id="как-проверить-результат-через-48-недель">Как проверить результат
+(через 4–8 недель)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Что</th>
+<th>Где</th>
+<th>Ожидаемый результат</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Страницы в индексе</td>
+<td>Вебмастер → «Страницы в поиске», GSC → «Индексирование»</td>
+<td>Статьи блога и категории в индексе, мусорных URL нет</td>
+</tr>
+<tr class="even">
+<td>Ошибки сканирования</td>
+<td>Вебмастер → «Диагностика»</td>
+<td>Нет soft 404 и недоступных страниц</td>
+</tr>
+<tr class="odd">
+<td>Сниппеты</td>
+<td>Выдача по «luxhomme паровая швабра»</td>
+<td>Звёзды рейтинга, цена, наличие</td>
+</tr>
+<tr class="even">
+<td>Небрендовый трафик</td>
+<td>Метрика → «Поисковые системы», фильтр без «luxhomme»</td>
+<td>Рост переходов на статьи и категории</td>
+</tr>
+<tr class="odd">
+<td>Переходы блог → товар</td>
+<td>Метрика → «Карта переходов»</td>
+<td>Доля переходов из статей на карточки</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Как проводился аудит:</em></p>
+<ul>
+<li>обход всех 26 URL из sitemap (метатеги, H1–H2, canonical,
+микроразметка, alt, ссылки);</li>
+<li>по всем 50 статьям блога: объём и ссылки на товары; 4 статьи
+разобраны подробно (метатеги, разметка);</li>
+<li>проверка ответов сервера, robots.txt, редиректов и несуществующих
+URL;</li>
+<li>семантика по пылесосам — из
+<code>research/semantika-vertikalnyj-moyushhij-pylesos.csv</code>.</li>
+</ul>
+<h1 id="часть-2-alt-у-изображений-12102026">Часть 2. Alt у изображений
+(12.10.2026)</h1>
+<p>Дата: 12.10.2026 · Дополнение к пункту 5 SEO-аудита
+(<code>seo-audit-2026-10.md</code>)</p>
+<p>Источники: обход 84 страниц витрины (sitemap + все статьи блога + все
+товары), медиатека WordPress через REST API (только чтение).</p>
+<h3 id="общая-картина">Общая картина</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Показатель</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Страниц обойдено</td>
+<td>84 (15 товаров, 57 статей, <code>/blog</code>, 11 прочих)</td>
+</tr>
+<tr class="even">
+<td>Тегов <code>&lt;img&gt;</code> на страницах</td>
+<td>5 177</td>
+</tr>
+<tr class="odd">
+<td>Из них с пустым alt</td>
+<td>4 261 (82,3%)</td>
+</tr>
+<tr class="even">
+<td>…из них иконки витрины (<code>/icons/*.svg</code>)</td>
+<td>2 985 (из них звёзды рейтинга <code>star-filled.svg</code> — 2
+410)</td>
+</tr>
+<tr class="odd">
+<td>…из них картинки из медиатеки WP</td>
+<td>1 276</td>
+</tr>
+<tr class="even">
+<td>Картинок в медиатеке WP</td>
+<td>1 585</td>
+</tr>
+<tr class="odd">
+<td>…без alt в медиатеке</td>
+<td>1 353</td>
+</tr>
+<tr class="even">
+<td>Картинок медиатеки, которые реально показаны на сайте</td>
+<td>765</td>
+</tr>
+<tr class="odd">
+<td>…без alt в медиатеке</td>
+<td>684 (товары — 666, статьи — 13, прочие — 5)</td>
+</tr>
+</tbody>
+</table>
+<p>Иконки (стрелки, корзина, профиль, звёзды) — декоративные, пустой
+<code>alt=&quot;&quot;</code> для них правильный.</p>
+<h3 id="где-alt-теряется-медиатека-или-код-витрины">Где alt теряется:
+медиатека или код витрины</h3>
+<p>Витрина на Next.js берёт alt из медиатеки WP не везде. В части блоков
+alt пустой, даже если в WP он заполнен; в других витрина подставляет
+свой текст.</p>
+<h3 id="карточки-товаров-15-страниц">Карточки товаров (15 страниц)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Блок витрины</th>
+<th>Вхождений</th>
+<th>Пустой alt на сайте</th>
+<th>Alt есть в WP, на сайте пусто</th>
+<th>Файлов / без alt в WP</th>
+<th>Что делать</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Фото из отзывов (<code>reviewPhotoThumb</code>)</td>
+<td>523</td>
+<td>523</td>
+<td>0</td>
+<td>444 / 444</td>
+<td>Код: шаблон «Фото покупателя — {товар}»</td>
+</tr>
+<tr class="even">
+<td>Слайды описания (<code>descSlideImage</code>)</td>
+<td>222</td>
+<td>222</td>
+<td>45</td>
+<td>73 / 59</td>
+<td>Код: брать <code>alt_text</code> из WP, иначе подставлять название
+слайда. Затем заполнить alt в WP</td>
+</tr>
+<tr class="odd">
+<td>Миниатюры галереи (<code>thumb</code>)</td>
+<td>114</td>
+<td>114</td>
+<td>0</td>
+<td>114 / 114</td>
+<td>Заполнить alt в WP + проверить, что витрина его берёт</td>
+</tr>
+<tr class="even">
+<td>Главное фото галереи (<code>mainImage</code>)</td>
+<td>114</td>
+<td>99</td>
+<td>0</td>
+<td>114 / 114</td>
+<td>Первое фото = название товара, остальные пустые. Заполнить alt в WP
++ проверить</td>
+</tr>
+<tr class="odd">
+<td>Кнопка сравнения (<code>compareButton</code>)</td>
+<td>60</td>
+<td>30</td>
+<td>0</td>
+<td>6 / 6</td>
+<td>Код: дубль картинки рядом с подписью — <code>alt=&quot;&quot;</code>
+допустим</td>
+</tr>
+<tr class="even">
+<td>Похожие товары (<code>relatedGrid</code>)</td>
+<td>30</td>
+<td>15</td>
+<td>0</td>
+<td>4 / 4</td>
+<td>Код: alt = название товара</td>
+</tr>
+<tr class="odd">
+<td>Аксессуары (<code>accessoryImage</code>)</td>
+<td>69</td>
+<td>0</td>
+<td>0</td>
+<td>65 / 58</td>
+<td>Витрина подставляет alt сама</td>
+</tr>
+<tr class="even">
+<td>Обложка видео (<code>poster</code>)</td>
+<td>16</td>
+<td>0</td>
+<td>0</td>
+<td>10 / 10</td>
+<td>Витрина подставляет «Фото товара» — заменить на «{товар} —
+видеообзор»</td>
+</tr>
+<tr class="odd">
+<td>Схема устройства (<code>drawingImage</code>)</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>10 / 9</td>
+<td>Витрина подставляет «Схема устройства» — добавить название
+товара</td>
+</tr>
+</tbody>
+</table>
+<h3 id="блог-57-статей--blog">Блог (57 статей + <code>/blog</code>)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Блок витрины</th>
+<th>Вхождений</th>
+<th>Пустой alt на сайте</th>
+<th>Alt есть в WP, на сайте пусто</th>
+<th>Файлов / без alt в WP</th>
+<th>Что делать</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Картинки в тексте статьи (<code>articleHtml</code>)</td>
+<td>96</td>
+<td>8</td>
+<td>0</td>
+<td>59 / 8</td>
+<td>Alt берётся из WP — дописать 8 файлам в WP</td>
+</tr>
+<tr class="even">
+<td>«Читайте также» (<code>relatedCard</code>)</td>
+<td>171</td>
+<td>171</td>
+<td>171</td>
+<td>4 / 0</td>
+<td>Код: alt игнорируется, брать из WP или заголовок статьи</td>
+</tr>
+<tr class="odd">
+<td>Обложка статьи (<code>heroBannerBg</code>)</td>
+<td>56</td>
+<td>56</td>
+<td>45</td>
+<td>47 / 11</td>
+<td>Код: alt игнорируется</td>
+</tr>
+<tr class="even">
+<td>Большая карточка в <code>/blog</code>
+(<code>cardLargeBg</code>)</td>
+<td>15</td>
+<td>15</td>
+<td>13</td>
+<td>15 / 2</td>
+<td>Код: alt игнорируется</td>
+</tr>
+<tr class="odd">
+<td>Малая карточка в <code>/blog</code>
+(<code>cardSmallImage</code>)</td>
+<td>32</td>
+<td>0</td>
+<td>0</td>
+<td>27 / 2</td>
+<td>В порядке</td>
+</tr>
+<tr class="even">
+<td>Прочие картинки в статьях</td>
+<td>11</td>
+<td>5</td>
+<td>0</td>
+<td>10 / 4</td>
+<td>Заполнить alt в WP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="вывод">Вывод</h3>
+<ol type="1">
+<li>Заполнение alt в медиатеке WP напрямую исправит только тексты
+статей. Для галереи товаров (главное фото + миниатюры, 114 файлов) это
+нужно проверить на одной картинке: сейчас там нет ни одного файла с alt
+в WP, поэтому неизвестно, берёт ли его витрина.</li>
+<li>Самые массовые пустые alt — фото из отзывов (444 файла) и слайды
+описания. Их правильнее закрыть шаблоном в коде витрины, а не
+вручную.</li>
+<li>Пять блоков витрины (слайды описания, «Читайте также», обложка
+статьи, большая карточка блога, похожие товары) игнорируют alt из WP —
+это задача разработчику Next.js.</li>
+</ol>
+<h3 id="план">План</h3>
+<ul class="task-list">
+<li><p><label><input type="checkbox"></input>Тест: прописать alt одному фото
+галереи одного товара в WP → проверить на витрине (с учётом кэша
+<code>s-maxage=120</code>).</label></p></li>
+<li><p><label><input type="checkbox"></input>Заполнить alt 114 фото галереи и
+8 файлам в статьях блога (ещё 4 из 12 найденных — те же файлы, что в
+галереях) — таблица на утверждение: <code>alt-plan-2026-10.xlsx</code>
+(122 файла).</label></p></li>
+<li><p><label><input type="checkbox"></input>Разработчику: брать
+<code>alt_text</code> из WP в <code>descSlideImage</code>,
+<code>relatedCard</code>, <code>heroBannerBg</code>,
+<code>cardLargeBg</code>, <code>relatedGrid</code>; шаблоны для
+<code>reviewPhotoThumb</code>, <code>poster</code>,
+<code>drawingImage</code>.</label></p></li>
+<li><p><label><input type="checkbox"></input>Исправить опечатку в alt
+медиатеки: «Компакстный моющий пылесос Luxhommè» (файл
+5674144).</label></p></li>
+</ul>
+<h1 id="часть-3-мета-теги-13102026">Часть 3. Мета-теги (13.10.2026)</h1>
+<p>Дата: 13.10.2026 · Дополнение к разделу 3 SEO-аудита
+(<code>seo-audit-2026-10.md</code>). Alt — отдельно в
+<code>alt-audit-2026-10.md</code>.</p>
+<p>Источники: обход 84 страниц (sitemap + каталог + блог + 57 статей +
+15 товаров), REST API WordPress (Yoast) — только чтение.</p>
+<h3 id="главное">Главное</h3>
+<p><strong>Витрина не берёт мета-теги из Yoast.</strong> Title и
+description генерирует код Next.js:</p>
+<ul>
+<li>товары: title = «Купить {название} — {цена} | Luxhommè», description
+= та же фраза + начало описания товара, обрезанное по символам;</li>
+<li>статьи: title = заголовок записи + «| Luxhommè», description = анонс
+записи.</li>
+</ul>
+<p>Description в Yoast заполнен у 32 из 57 статей — на сайте не
+совпадает ни один. У товаров то же (проверено на AirChef: в Yoast своё
+описание, на сайте — шаблон). Правка мета-тегов в Yoast на сайт не
+повлияет, пока разработчик не подключит поля Yoast
+(<code>yoast_head_json</code>) к <code>generateMetadata</code> в
+Next.js.</p>
+<h3 id="что-в-порядке">Что в порядке</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Проверка</th>
+<th>Результат</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Title и description на каждой странице</td>
+<td>Есть на всех 84, по одному</td>
+</tr>
+<tr class="even">
+<td>Дубли title</td>
+<td>Нет</td>
+</tr>
+<tr class="odd">
+<td>Canonical</td>
+<td>Один на странице, совпадает с адресом</td>
+</tr>
+<tr class="even">
+<td>robots</td>
+<td>index, follow; лишних noindex нет</td>
+</tr>
+<tr class="odd">
+<td><code>lang</code></td>
+<td>ru на всех страницах</td>
+</tr>
+<tr class="even">
+<td>og:image</td>
+<td>Есть на товарах, статьях, каталоге, блоге</td>
+</tr>
+<tr class="odd">
+<td>Микроразметка</td>
+<td>Товары: Product + Offer + BreadcrumbList; статьи: Article +
+BreadcrumbList (у 5 ещё FAQPage); главная: Organization + WebSite</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ошибки">Ошибки</h3>
+<table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Проблема</th>
+<th>Где</th>
+<th>Сколько</th>
+<th>Что сделать</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>В description виден HTML-код <code>&amp;#8230;</code> вместо «…»,
+текст обрывается на полуслове</td>
+<td>Статьи блога</td>
+<td>34 из 57</td>
+<td>Код: брать description из Yoast, если пусто — анонс с декодированием
+HTML и обрезкой по слову</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Description склеен из заголовков без точки: «Главный враг —
+минеральный налёт Паровая техника…»; одинаковый у двух статей</td>
+<td><code>/blog/uhod-za-parovoy-shvabroy</code>,
+<code>/blog/ochistka-mezhplitochnyh-shvov-parom</code></td>
+<td>2</td>
+<td>Прописать description вручную</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Опечатка «виброплатформу <strong>длю похудению</strong>» в title и
+description</td>
+<td>Виброплатформа 3D</td>
+<td>1</td>
+<td>Исправить название товара в WP</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Title товаров длиннее 65 символов (до 104)</td>
+<td>Товары</td>
+<td>7 из 15</td>
+<td>Шаблон короче (ниже)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Бренд в title дважды: «…Luxhommè Caffio Professional — … |
+Luxhommè»</td>
+<td>8 товаров, 4 статьи</td>
+<td>12</td>
+<td>Убрать бренд из шаблона или из названия</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Description длиннее 160 символов, начинается с повтора title</td>
+<td>Все товары</td>
+<td>15 из 15</td>
+<td>Шаблон короче (ниже)</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>CremaX: в title «автоматическая зерновая», в description «рожковая
+кофемашина … CremaX»</td>
+<td><code>/products/cremax</code></td>
+<td>1</td>
+<td>Уточнить у клиента тип и привести к одному</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>uClean Max: «Робот мойщик» без «окон» в title и H1</td>
+<td><code>/products/window</code></td>
+<td>1</td>
+<td>«Робот-мойщик окон Luxhommè uClean Max»</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Description из Yoast у AirChef с опечаткой «AirChief»</td>
+<td>Yoast, товар 5671041</td>
+<td>1</td>
+<td>Исправить при подключении Yoast</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>H1 главной — «— Готовка с радостью» (строка анимации)</td>
+<td><code>/</code></td>
+<td>1</td>
+<td>Смысловой H1 (см. SEO-аудит, раздел 3)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>H1 на <code>/blog</code> — заголовок одной статьи</td>
+<td><code>/blog</code></td>
+<td>1</td>
+<td>H1 «Блог Luxhommè: …»</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Короткие title без ключевых слов: «О нас | Luxhommè», «Блог |
+Luxhommè», «Каталог товаров | Luxhommè»</td>
+<td>Служебные страницы, блог, каталог</td>
+<td>9</td>
+<td>Дописать (ниже)</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Короткие description (30–55 символов)</td>
+<td><code>/blog</code> и 5 статей о бренде</td>
+<td>6</td>
+<td>Дописать до 120–160</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Нет og:image</td>
+<td>Главная, о нас, контакты, /buy, доставка, сервис, оферта, политика,
+возврат, cookie</td>
+<td>10</td>
+<td>Добавить общий <code>og-default.png</code></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Нет og:url</td>
+<td>Все страницы</td>
+<td>84</td>
+<td>Добавить = canonical</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>og:type пустой у товаров (нужен <code>product</code>) и у главной
+(<code>website</code>)</td>
+<td>Товары, главная</td>
+<td>16</td>
+<td>Код</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td><code>twitter:card</code> = summary на товарах и служебных — превью
+в мессенджерах маленькое</td>
+<td>25 страниц</td>
+<td>25</td>
+<td><code>summary_large_image</code></td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>Несуществующий адрес отдаёт 200 вместо 404</td>
+<td><code>/blog/&lt;любой&gt;</code></td>
+<td>—</td>
+<td>Повтор из SEO-аудита, не исправлено</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>В sitemap нет статей блога</td>
+<td>sitemap.xml (27 URL)</td>
+<td>0 из 57</td>
+<td>Повтор из SEO-аудита, не исправлено</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>Нет meta-тегов подтверждения Яндекс Вебмастера и Google Search
+Console</td>
+<td>Все страницы</td>
+<td>—</td>
+<td>Проверить, подтверждён ли сайт другим способом (DNS, файл)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="шаблоны">Шаблоны</h3>
+<p><strong>Товар</strong></p>
+<ul>
+<li>Title: <code>{Тип} {Модель} — купить, цена {X} ₽ | Luxhommè</code> —
+до 65 символов. Пример: «Паровая швабра EcoSteam Pro — купить, цена 5
+671 ₽ | Luxhommè» (61).</li>
+<li>Description:
+<code>{Тип} {Модель}: {2–3 преимущества}. Доставка по России, гарантия.</code>
+— 140–160 символов, без повтора title.</li>
+</ul>
+<p><strong>Статья</strong></p>
+<ul>
+<li>Title: заголовок статьи до 60 символов + «| Luxhommè»; длинный
+заголовок — укороченная версия в Yoast.</li>
+<li>Description: из Yoast, 120–160 символов, своя для каждой
+статьи.</li>
+</ul>
+<p><strong>Служебные страницы</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Страница</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/catalog</code></td>
+<td>Каталог техники Luxhommè: уборка, кухня, фитнес</td>
+</tr>
+<tr class="even">
+<td><code>/blog</code></td>
+<td>Блог Luxhommè: советы по уборке, кухне и уходу за собой</td>
+</tr>
+<tr class="odd">
+<td><code>/about</code></td>
+<td>О бренде Luxhommè — бытовая техника для дома</td>
+</tr>
+<tr class="even">
+<td><code>/contact</code></td>
+<td>Контакты Luxhommè — служба заботы, адрес, реквизиты</td>
+</tr>
+<tr class="odd">
+<td><code>/delivery</code></td>
+<td>Доставка и оплата техники Luxhommè по России</td>
+</tr>
+<tr class="even">
+<td><code>/service</code></td>
+<td>Сервис и гарантия на технику Luxhommè</td>
+</tr>
+</tbody>
+</table>
+<h3 id="задачи">Задачи</h3>
+<p>Разработчику Next.js:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Брать title и description из Yoast
+(<code>yoast_head_json</code>), шаблон — только если поле
+пустое.</label></li>
+<li><label><input type="checkbox"></input>Декодировать HTML-сущности и
+обрезать description по слову.</label></li>
+<li><label><input type="checkbox"></input>Новые шаблоны товаров (title до 65,
+description 140–160 без повтора title).</label></li>
+<li><label><input type="checkbox"></input>og:url, og:type, og:image по
+умолчанию, <code>summary_large_image</code>.</label></li>
+<li><label><input type="checkbox"></input>H1 главной и
+<code>/blog</code>.</label></li>
+</ul>
+<p>В WordPress (после подключения Yoast — можно делать с роли
+<code>wpseo_editor</code>):</p>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Description для 25 статей без
+описания в Yoast и исправление 2 склеенных.</label></li>
+<li><label><input type="checkbox"></input>Опечатки: «длю похудению»,
+«AirChief».</label></li>
+<li><label><input type="checkbox"></input>CremaX: тип кофемашины — уточнить у
+клиента.</label></li>
+</ul>
+<h3 id="чек-лист-работ-по-мета-тегам">Чек-лист работ по мета-тегам</h3>
+<p>Таблица с текстами: <code>meta-plan-2026-10.xlsx</code> (вкладка на
+каждую задачу).</p>
+<ul>
+<li>☒
+<ol type="1">
+<li>Description для 25 статей без описания в Yoast (128–149 символов) —
+вкладка «Статьи — description».</li>
+</ol></li>
+<li>☒
+<ol start="2" type="1">
+<li>SEO-title 47 статей (45–65 символов вместе с «| Luxhommè», H1 без
+изменений) — вкладка «Статьи — title».</li>
+</ol></li>
+<li>☒
+<ol start="3" type="1">
+<li>Title (≤ 65, шаблон с ценой) и description (140–160) для 15 товаров
+— вкладка «Товары».</li>
+</ol></li>
+<li>☒
+<ol start="4" type="1">
+<li>Title и description 12 страниц: главная, каталог, блог, служебные —
+вкладка «Страницы» (6 страниц редактируются в WordPress, поля seo в
+luxhomme/v1, 6 — в коде витрины).</li>
+</ol></li>
+<li>☐
+<ol start="5" type="1">
+<li>Исправления: «длю похудению», «AirChief», «Робот-мойщик окон» у
+uClean Max, тип CremaX (вопрос клиенту).</li>
+</ol></li>
+<li>☐
+<ol start="6" type="1">
+<li>ТЗ разработчику: мета-теги из Yoast на витрину, декодирование и
+обрезка по слову, og:url / og:type / og:image / twitter:card, H1 главной
+и блога.</li>
+</ol></li>
+<li>☐
+<ol start="7" type="1">
+<li>Внести тексты в WordPress (после разрешения на запись) и проверить
+на сайте.</li>
+</ol></li>
+</ul>
+</body>
+</html>

@@ -19,7 +19,7 @@
 | Alt у изображений: где пусто, что чинить в WP и что в коде витрины | `seo/alt-audit-2026-10.md`, план alt на утверждение: `seo/alt-plan-2026-10.xlsx` |
 | Мета-теги сайта (title, description, OG, H1): ошибки, шаблоны, задачи | `seo/meta-audit-2026-10.md` |
 | UI/UX-аудит сайта (чек-лист, скриншоты) | `ux/ux-audit-2026-10.md`, единый PDF: `ux/Luxhomme_UI-UX-audit_2026-10-09.pdf` |
-| ТЗ по UI/UX для разработчика (24 задачи со скринами) | `ux/Luxhomme_UI-UX-TZ_2026-10.pdf`, HTML: `ux/Luxhomme_UI-UX-TZ_2026-10.html` |
+| ТЗ по UI/UX для разработчика (14 задач со скринами) | `ux/Luxhomme_UI-UX-TZ_2026-10.pdf`, HTML: `ux/Luxhomme_UI-UX-TZ_2026-10.html` |
 | Email «Закрытая распродажа −15%» (Битрикс24) | `email/2026-10-closed-sale/` |
 | Яндекс Директ на сайт: семантика, объявления, UTM, импорт, фид (15 SKU) | `direct/Luxhomme_Yandex-Direct_2026-10.xlsx`, фид: `direct/luxhomme-direct-feed.yml`, тексты правятся в `direct/scripts/content.py` |
 

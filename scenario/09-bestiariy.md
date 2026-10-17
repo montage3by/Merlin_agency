@@ -19,6 +19,14 @@
 
 **Облик.** Косматые рогатые великаны, у которых от трёх до ста голов 🜂. Чем больше голов, тем деви сильнее. На месте отрубленной головы вырастает новая 🜂.
 
+**По Кикнадзе** (горные предания):
+
+- «Лицо человечье, шерстью обросли, одежды нет, **ноги повёрнуты задом наперёд**» 🜂.
+- Деви — **кузнецы**, единственные, кто знает тайну железа. Людям они куют волшебные плуги, а в уплату берут **женщин** 🜂.
+- При этом **сами коснуться железа не могут** 🜂.
+- Отсюда правило: **железо жжёт деви**.
+- И для сюжета: Мирандухт — та самая «плата женщиной».
+
 **Повадки.**
 
 - Живут братьями, по семь–девять 🜂.
@@ -32,6 +40,7 @@
 - Отрубать головы бесполезно. Душа живёт **только в одной голове** ✳️, её надо найти.
 - Увидеть деви может волчий глаз, стая Вахтанга, огонь магов.
 - Мост Шавхани над пропастью пропускает человека, а деви сбрасывает 🜂.
+- **Железо** ранит деви. Деви не смеют войти в святилище-«амбар» своего джвари 🜂.
 
 **Происхождение в нашем мире ✳️.** Деви — исполины из рода Нимрода, павшие вниз, когда рухнула башня до неба. Поэтому они **кровная родня** царей, и Вахтанга тоже.
 
@@ -40,7 +49,7 @@
 
 **Промпт для Nano Banana (концепт-арт):**
 ```
-Creature concept sheet of a Devi, a horned giant from Georgian mythology: about five meters tall, hairy and heavy, three heads growing from one massive neck-and-shoulder mass, each head with long curved ram horns, matted dark hair, heavy brow and tusk-like teeth. Crude bronze cuffs, a belt hung with gold torques and plundered treasure. On one neck a fresh stump where a new small head is budding out of raw flesh. Full body in front and three-quarter view, plus a close-up of the regrowing head, and a human warrior figure for scale. Variant in the corner: the elder Devi Tsalrka, with a single massive horn in the middle of his forehead. Neutral dark grey background.
+Creature concept sheet of a Devi, a horned giant from Georgian mythology: about five meters tall, hairy and heavy, three heads growing from one massive neck-and-shoulder mass, each head with long curved ram horns, matted dark hair, heavy brow and tusk-like teeth, faces disturbingly human under the fur. His feet are turned backwards, heels pointing forward. Crude bronze cuffs, a belt hung with gold torques and plundered treasure. On one neck a fresh stump where a new small head is budding out of raw flesh. Full body in front and three-quarter view, plus a close-up of the regrowing head, and a human warrior figure for scale. Variant in the corner: the elder Devi Tsalrka, with a single massive horn in the middle of his forehead. Neutral dark grey background.
 
 Photorealistic AAA game creature concept art in the style of Digic Pictures and Platige Image (The Witcher 3 bestiary, Love Death + Robots "The Secret War"), 5th-century Caucasus, cinematic rim light, ultra-detailed textures, 16:9. No text, no labels, no watermark.
 ```

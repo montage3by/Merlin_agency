@@ -25,8 +25,8 @@ const ru = {
     cases: "Смотреть кейсы",
     audit: "Бесплатный аудит",
     panels: [
-      "Заявки, сеть клиник 🇷🇺🇦🇪",
-      "CTR, ОАЭ 🇦🇪",
+      "Заявки, сеть клиник 🇦🇪",
+      "CPA, B2B Латвия 🇱🇻",
       "Конверсия в оплату, EdTech 🇬🇪",
       "CPL, недвижимость 🇨🇾",
     ],
@@ -54,6 +54,8 @@ const ru = {
   campaign: "Кампания",
   similar: "Обсудить похожий проект",
   casesNav: "Выберите кейс",
+  readCase: "Читать кейс",
+  caseBack: "Все кейсы",
   approachTitle: "Как работаем",
   approachSub: "Пять шагов от первого созвона до регулярной отчётности.",
   map: {
@@ -125,8 +127,8 @@ const en: AiCopy = {
     cases: "See our cases",
     audit: "Free audit",
     panels: [
-      "Leads, clinic chain 🇷🇺🇦🇪",
-      "CTR, UAE 🇦🇪",
+      "Leads, clinic chain 🇦🇪",
+      "CPA, B2B Latvia 🇱🇻",
       "Lead to payment, EdTech 🇬🇪",
       "CPL, real estate 🇨🇾",
     ],
@@ -154,6 +156,8 @@ const en: AiCopy = {
   campaign: "Campaign",
   similar: "Discuss a similar project",
   casesNav: "Pick a case",
+  readCase: "Read the case",
+  caseBack: "All cases",
   approachTitle: "How we work",
   approachSub: "Five steps from the first call to regular reporting.",
   map: {

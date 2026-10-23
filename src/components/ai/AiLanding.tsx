@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { CONTENT, type Locale } from "@/lib/content";
+import { CONTENT, LOCALE_PATH, type Locale } from "@/lib/content";
 import { CaseSwitcher } from "./CaseSwitcher";
 import { AI_COPY } from "./copy";
 import { GlobalMap } from "./GlobalMap";
@@ -17,12 +17,12 @@ const FEATURE_TILES = [
 
 // Значения для «дашборда» в тёмном блоке: только цифры из кейсов.
 const PANEL_VALUES = {
-  ru: ["+320%", "9,65%", "5% до 20%", "−23%"],
-  en: ["+320%", "9.65%", "5% to 20%", "−23%"],
+  ru: ["+320%", "€24,84", "5% до 20%", "−23%"],
+  en: ["+320%", "€24.84", "5% to 20%", "−23%"],
 };
 const CTA_CHIPS = {
-  ru: ["+320%", "№1", "CTR 9,65%", "CPA $18", "−23% CPL", "в 4 раза"],
-  en: ["+320%", "#1", "CTR 9.65%", "CPA $18", "−23% CPL", "4x"],
+  ru: ["+320%", "№1", "CPA €24,84", "CPA $18", "−23% CPL", "в 4 раза"],
+  en: ["+320%", "#1", "CPA €24.84", "CPA $18", "−23% CPL", "4x"],
 };
 
 export function AiLanding({ locale }: { locale: Locale }) {
@@ -380,6 +380,7 @@ export function AiLanding({ locale }: { locale: Locale }) {
                 showNames={SHOW_CLIENT_NAMES}
                 t={t}
                 contactHref={CONTACTS.telegram.href}
+                locale={locale}
               />
             </div>
           </div>
@@ -627,11 +628,14 @@ export function AiLanding({ locale }: { locale: Locale }) {
             </p>
             <ul className="mt-4 flex flex-col gap-2 text-[15px] text-white/85">
               {CASES.map((c) => (
-                <li key={c.niche}>
-                  <a href="#cases" className="hover:text-[var(--d-lime)]">
+                <li key={c.slug}>
+                  <Link
+                    href={`${LOCALE_PATH[locale] === "/" ? "" : LOCALE_PATH[locale]}/cases/${c.slug}`}
+                    className="hover:text-[var(--d-lime)]"
+                  >
                     <span className="font-bold text-white">{c.headline}</span>{" "}
                     {c.niche}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

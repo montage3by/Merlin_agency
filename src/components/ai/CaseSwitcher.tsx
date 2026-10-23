@@ -1,8 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 import type { Case } from "@/lib/agency-content";
+import { LOCALE_PATH, type Locale } from "@/lib/content";
 import type { AiCopy } from "./copy";
 
 const TILES = [
@@ -21,17 +23,21 @@ export function CaseSwitcher({
   showNames,
   t,
   contactHref,
+  locale,
 }: {
   cases: Case[];
   showNames: boolean;
   t: AiCopy;
   contactHref: string;
+  locale: Locale;
 }) {
   const [active, setActive] = useState(0);
   const reduce = useReducedMotion();
   const c = cases[active];
   const tile = TILES[active % TILES.length];
   const name = (x: Case) => (showNames && x.client ? x.client : x.niche);
+  const prefix = LOCALE_PATH[locale] === "/" ? "" : LOCALE_PATH[locale];
+  const caseHref = (x: Case) => `${prefix}/cases/${x.slug}`;
 
   return (
     <div className="grid gap-4 lg:grid-cols-[300px_1fr] lg:gap-6">
@@ -117,6 +123,23 @@ export function CaseSwitcher({
                 {c.headlineLabel}
               </p>
             </div>
+          </div>
+
+          <div className="p-6 pb-0 md:p-10 md:pb-0">
+            <Link
+              href={caseHref(c)}
+              className="group block rounded-2xl bg-[var(--d-lav)] p-5 transition-colors hover:bg-[var(--d-lime)]"
+            >
+              <p className="text-xl font-bold leading-snug tracking-[-0.02em] text-[var(--d-blue)]">
+                {c.hook}
+              </p>
+              <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold uppercase text-[var(--d-blue)]">
+                {t.readCase}
+                <span aria-hidden className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </span>
+            </Link>
           </div>
 
           <div className="grid gap-6 p-6 md:grid-cols-2 md:p-10">

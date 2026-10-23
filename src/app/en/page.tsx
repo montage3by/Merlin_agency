@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { AgencyLanding } from "@/components/agency/AgencyLanding";
-import { AGENCY_COPY } from "@/components/agency/copy";
+import { AiLanding } from "@/components/ai/AiLanding";
+import { AI_COPY } from "@/components/ai/copy";
 
-const t = AGENCY_COPY.en;
+const t = AI_COPY.en;
 
 export const metadata: Metadata = {
   title: { absolute: t.metaTitle },
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <AgencyLanding locale="en" />;
+  return <AiLanding locale="en" />;
 }

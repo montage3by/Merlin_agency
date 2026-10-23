@@ -32,8 +32,8 @@ function splitFlag(label: string): { text: string; flag: string } {
 }
 
 const CTA_CHIPS = {
-  ru: ["+320%", "№1", "CPA €24,84", "CPA $18", "−23% CPL", "в 4 раза"],
-  en: ["+320%", "#1", "CPA €24.84", "CPA $18", "−23% CPL", "4x"],
+  ru: ["+320%", "5000+", "CPA €24,84", "CPA $18", "−23% CPL", "в 4 раза"],
+  en: ["+320%", "5,000+", "CPA €24.84", "CPA $18", "−23% CPL", "4x"],
 };
 
 export function AiLanding({ locale }: { locale: Locale }) {

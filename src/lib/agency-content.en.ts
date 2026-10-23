@@ -37,7 +37,7 @@ export const STATS = [
   { value: "10+", unit: "niches", label: "from healthcare to B2B manufacturing" },
   { value: "+320%", unit: "", label: "more leads in 3 months for a clinic chain" },
   { value: "4x", unit: "", label: "lead-to-payment conversion growth in EdTech, from 5% to 20%" },
-  { value: "#1", unit: "", label: "in orders among all Dodo Pizza franchises worldwide (Georgia)" },
+  { value: "5,000+", unit: "", label: "new customers from scratch for a Dodo Pizza franchise (Georgia)" },
 ];
 
 export const SERVICES = [
@@ -108,16 +108,16 @@ export const CASES: Case[] = [
     client: "Dodo Pizza",
     niche: "Pizza chain franchise",
     geo: "Georgia",
-    headline: "#1",
-    headlineLabel: "in orders among all franchises of the chain worldwide",
-    hook: "How did a franchise become the #1 Dodo Pizza location worldwide — from scratch?",
+    headline: "5,000+",
+    headlineLabel: "new customers from scratch",
+    hook: "How did a Dodo Pizza franchise in Georgia bring in 5,000+ customers from scratch on Google Ads?",
     slug: "dodo-pizza-georgia",
     task: "Launch and grow the franchise from scratch.",
     done: "Led the marketing department, launched Google Ads.",
-    results: ["5,000+ new customers"],
+    results: ["5,000+ new customers", "Among the fastest-growing franchises in the region by order volume"],
     campaign: "Google Ads in 2 weeks: 343,401 impressions, 1,431 conversions, $2.00 per conversion",
     story:
-      "The Dodo Pizza franchise in Georgia launched with literally nothing to build on: no local brand recognition, no existing marketing, no order history to optimize against. The brief was simple — launch and grow the franchise from scratch — but in practice it meant building the entire marketing function from zero: positioning, channels, analytics.\n\nWe took over leading the franchise's marketing department, not just running ads: launch strategy, local brand positioning, and setting cost-per-order targets. Google Ads was the primary channel — in food delivery, search and performance traffic deliver the fastest, most measurable results, because someone searching \"order pizza\" is ready to buy right now.\n\nThe first two weeks of active campaigns tell the story: 343,401 impressions and 1,431 conversions at $2.00 per conversion. For food delivery, where the average order is small and competition for clicks is fierce, that conversion cost is a campaign that pays for itself from the first orders — not \"eventually.\"\n\nFrom there, new orders became a steady stream: the franchise brought in 5,000+ new customers — and ended up #1 in orders among all Dodo Pizza franchises worldwide. Not within one country — worldwide. Marketing built right from zero outran markets with a much longer brand history.",
+      "The Dodo Pizza franchise in Georgia launched with literally nothing to build on: no local brand recognition, no existing marketing, no order history to optimize against. The brief was simple — launch and grow the franchise from scratch — but in practice it meant building the entire marketing function from zero: positioning, channels, analytics.\n\nWe took over leading the franchise's marketing department, not just running ads: launch strategy, local brand positioning, and setting cost-per-order targets. Google Ads was the primary channel — in food delivery, search and performance traffic deliver the fastest, most measurable results, because someone searching \"order pizza\" is ready to buy right now.\n\nThe first two weeks of active campaigns tell the story: 343,401 impressions and 1,431 conversions at $2.00 per conversion. For food delivery, where the average order is small and competition for clicks is fierce, that conversion cost is a campaign that pays for itself from the first orders — not \"eventually.\"\n\nFrom there, new orders became a steady stream: the franchise brought in 5,000+ new customers — and became one of the fastest-growing franchises in the region by order volume. Marketing built right from zero paid off faster than a brand-new market usually allows.",
   },
   {
     client: "Azri",

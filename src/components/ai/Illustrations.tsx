@@ -1,75 +1,72 @@
-// Плотные заливные иллюстрации для плашек услуг: не тонкие линии, а жирные
-// силуэты с слоями прозрачности — читаются с первого взгляда, не как скетч.
-export function SearchArt({ className = "" }: { className?: string }) {
+// Иллюстрации для плашек услуг: иконки из библиотеки Phosphor (не нарисованы
+// от руки), собранные вместе с реальными тегами услуги — у каждой плашки
+// своя композиция, чтобы они не читались как три одинаковых значка.
+import {
+  ArrowUpRight,
+  ChartLineUp,
+  MagnifyingGlass,
+  Target,
+} from "@phosphor-icons/react/dist/ssr";
+
+type ArtProps = { className?: string; tags: string[] };
+
+function Chip({ children }: { children: string }) {
   return (
-    <svg viewBox="0 0 320 220" aria-hidden className={className}>
-      <circle cx="132" cy="106" r="66" fill="currentColor" opacity={0.16} />
-      <circle
-        cx="132"
-        cy="106"
-        r="52"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={22}
-      />
-      <path
-        d="m172 148 66 66"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={26}
-        strokeLinecap="round"
-      />
-      <circle cx="118" cy="92" r="7" fill="currentColor" />
-      <circle cx="142" cy="106" r="7" fill="currentColor" opacity={0.6} />
-      <circle cx="118" cy="122" r="7" fill="currentColor" opacity={0.35} />
-      <path
-        d="M248 28l12 24 24 12-24 12-12 24-12-24-24-12 24-12z"
-        fill="currentColor"
-      />
-    </svg>
+    <span className="rounded-full border border-current/25 bg-current/10 px-3 py-1 text-xs font-bold uppercase tracking-wide">
+      {children}
+    </span>
   );
 }
 
-export function GrowthArt({ className = "" }: { className?: string }) {
+// Иконка внизу справа, теги столбиком вверху слева.
+export function SearchArt({ className = "", tags }: ArtProps) {
   return (
-    <svg viewBox="0 0 320 220" aria-hidden className={className}>
-      <rect x="40" y="128" width="46" height="58" rx="10" fill="currentColor" opacity={0.3} />
-      <rect x="106" y="96" width="46" height="90" rx="10" fill="currentColor" opacity={0.5} />
-      <rect x="172" y="56" width="46" height="130" rx="10" fill="currentColor" opacity={0.75} />
-      <rect x="238" y="24" width="46" height="162" rx="10" fill="currentColor" />
-      <path
-        d="M60 128 230 36"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={16}
-        strokeLinecap="round"
+    <div className={`${className} flex flex-col justify-between p-2`}>
+      <div className="flex flex-col items-start gap-2">
+        {tags.map((tag) => (
+          <Chip key={tag}>{tag}</Chip>
+        ))}
+      </div>
+      <MagnifyingGlass
+        weight="duotone"
+        className="ml-auto h-[46%] w-auto -rotate-6 opacity-95"
       />
-      <path d="M265 17 258 37 244 13Z" fill="currentColor" />
-    </svg>
+    </div>
   );
 }
 
-export function TargetArt({ className = "" }: { className?: string }) {
+// Иконка вверху слева, теги строкой внизу.
+export function GrowthArt({ className = "", tags }: ArtProps) {
   return (
-    <svg viewBox="0 0 320 220" aria-hidden className={className}>
-      <circle cx="150" cy="110" r="88" fill="currentColor" opacity={0.18} />
-      <circle
-        cx="150"
-        cy="110"
-        r="64"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={22}
-      />
-      <circle cx="150" cy="110" r="22" fill="currentColor" />
-      <path
-        d="M195 65 186 77"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={14}
-        strokeLinecap="round"
-      />
-      <path d="M158 118 165 62 207 92Z" fill="currentColor" />
-    </svg>
+    <div className={`${className} flex flex-col justify-between p-2`}>
+      <div className="flex h-[42%] items-center gap-3">
+        <ChartLineUp weight="duotone" className="h-full w-auto" />
+        <ArrowUpRight weight="bold" className="h-[38%] w-auto self-start opacity-70" />
+      </div>
+      <div className="flex flex-wrap items-end gap-2">
+        {tags.map((tag) => (
+          <Chip key={tag}>{tag}</Chip>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Иконка по центру с мелкими точками-аудиторией вокруг, теги столбиком справа.
+export function TargetArt({ className = "", tags }: ArtProps) {
+  return (
+    <div className={`${className} grid grid-cols-[1fr_auto] items-center gap-3 p-2`}>
+      <div className="relative flex h-full items-center justify-center">
+        <Target weight="duotone" className="h-[62%] w-auto" />
+        <span className="absolute left-[14%] top-[18%] size-2.5 rounded-full bg-current opacity-70" />
+        <span className="absolute right-[16%] top-[30%] size-3.5 rounded-full bg-current opacity-45" />
+        <span className="absolute bottom-[16%] left-[22%] size-2 rounded-full bg-current opacity-55" />
+      </div>
+      <div className="flex flex-col items-end gap-2">
+        {tags.map((tag) => (
+          <Chip key={tag}>{tag}</Chip>
+        ))}
+      </div>
+    </div>
   );
 }

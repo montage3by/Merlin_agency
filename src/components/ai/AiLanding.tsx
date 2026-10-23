@@ -204,11 +204,11 @@ export function AiLanding({ locale }: { locale: Locale }) {
                 <Reveal key={s.title}>
                   <div className="grid items-center gap-6 md:grid-cols-2 md:gap-14">
                     <div
-                      className={`flex aspect-[4/3] items-center justify-center rounded-3xl p-8 ${tile.bg} ${tile.ink} ${
+                      className={`relative aspect-[4/3] overflow-hidden rounded-3xl p-8 ${tile.bg} ${tile.ink} ${
                         i % 2 ? "md:order-2" : ""
                       }`}
                     >
-                      <tile.Art className="w-full max-w-[360px]" />
+                      <tile.Art className="absolute inset-6" tags={s.tags} />
                     </div>
                     <div>
                       <span className="num-badge">

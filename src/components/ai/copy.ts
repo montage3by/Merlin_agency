@@ -14,7 +14,7 @@ const ru = {
   sections: "Разделы",
   toTop: "Merlin Agency, наверх",
   langSwitch: "Switch to English",
-  heroTitle: "Performance-маркетинг под ключ",
+  heroTitle: "Performance‑маркетинг под ключ",
   heroText:
     "Контекстная реклама, SEO, таргет, маркетплейсы и аналитика в одних руках. Больше 10 лет в digital-маркетинге и проекты в 14 странах.",
   results: {
@@ -88,6 +88,7 @@ const ru = {
     title: ["Обсудим", "проект!"],
     text: "Расскажите о бизнесе и задаче в Telegram или WhatsApp. Разберём текущую рекламу и сайт и предложим, с чего начать.",
     button: "Написать в Telegram",
+    whatsapp: "Написать в WhatsApp",
   },
   footer: {
     company: "Агентство",
@@ -190,6 +191,7 @@ const en: AiCopy = {
     title: ["Let's talk", "business!"],
     text: "Tell us about your business and goals on Telegram or WhatsApp. We will review your current ads and website and suggest where to start.",
     button: "Message on Telegram",
+    whatsapp: "Message on WhatsApp",
   },
   footer: {
     company: "Agency",

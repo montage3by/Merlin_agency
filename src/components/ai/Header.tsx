@@ -7,11 +7,21 @@ import { AI_COPY } from "./copy";
 
 const ANCHORS = ["#services", "#cases", "#approach", "#audit"];
 
-export function Header({ locale }: { locale: Locale }) {
+export function Header({
+  locale,
+  onHomePage = true,
+}: {
+  locale: Locale;
+  /** false на внутренних страницах (например, кейса) — якоря ведут на главную. */
+  onHomePage?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const t = AI_COPY[locale];
   const { CONTACTS } = CONTENT[locale];
   const other: Locale = locale === "ru" ? "en" : "ru";
+  const home = LOCALE_PATH[locale];
+  const anchorHref = (a: string) =>
+    onHomePage ? a : `${home === "/" ? "" : home}${a}`;
 
   return (
     <>
@@ -29,7 +39,7 @@ export function Header({ locale }: { locale: Locale }) {
       <header className="sticky top-0 z-50 bg-[var(--d-bg)]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-8">
           <a
-            href="#top"
+            href={onHomePage ? "#top" : home}
             aria-label={t.toTop}
             className="text-xl font-bold uppercase tracking-[-0.05em] text-[var(--d-blue)]"
           >
@@ -42,7 +52,7 @@ export function Header({ locale }: { locale: Locale }) {
             {t.nav.map((label, i) => (
               <a
                 key={label}
-                href={ANCHORS[i]}
+                href={anchorHref(ANCHORS[i])}
                 className="text-[15px] hover:text-[var(--d-blue)]"
               >
                 {label}
@@ -99,7 +109,7 @@ export function Header({ locale }: { locale: Locale }) {
             {t.nav.map((label, i) => (
               <a
                 key={label}
-                href={ANCHORS[i]}
+                href={anchorHref(ANCHORS[i])}
                 onClick={() => setOpen(false)}
                 className="head py-2 text-4xl"
               >

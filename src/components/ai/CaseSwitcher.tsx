@@ -6,17 +6,7 @@ import { useState } from "react";
 import type { Case } from "@/lib/agency-content";
 import { LOCALE_PATH, type Locale } from "@/lib/content";
 import type { AiCopy } from "./copy";
-
-const TILES = [
-  { bg: "bg-[var(--d-blue)]", ink: "text-white", sub: "text-white/75" },
-  { bg: "bg-[var(--d-pink)]", ink: "text-[#2b0a33]", sub: "text-[#2b0a33]/70" },
-  {
-    bg: "bg-[var(--d-lime)]",
-    ink: "text-[var(--d-blue)]",
-    sub: "text-[var(--d-blue)]/70",
-  },
-  { bg: "bg-[var(--d-cyan)]", ink: "text-[#06244a]", sub: "text-[#06244a]/70" },
-];
+import { CASE_TILES as TILES } from "./tiles";
 
 export function CaseSwitcher({
   cases,

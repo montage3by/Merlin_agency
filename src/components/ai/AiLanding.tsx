@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { CONTENT, LOCALE_PATH, type Locale } from "@/lib/content";
+import { CONTENT, type Locale } from "@/lib/content";
+import { AuditPromo } from "./AuditPromo";
 import { CaseSwitcher } from "./CaseSwitcher";
 import { AI_COPY } from "./copy";
 import { GlobalMap } from "./GlobalMap";
 import { Header } from "./Header";
 import { GrowthArt, SearchArt, TargetArt } from "./Illustrations";
 import { Marquee } from "./Marquee";
+import { SiteFooter } from "./SiteFooter";
 
 // Плашки для трёх главных услуг: цвет фона и иллюстрация.
 const FEATURE_TILES = [
@@ -20,6 +22,15 @@ const PANEL_VALUES = {
   ru: ["+320%", "€24,84", "5% до 20%", "−23%"],
   en: ["+320%", "€24.84", "5% to 20%", "−23%"],
 };
+// Регулярные индикаторы флагов (U+1F1E6–U+1F1FF) теряют контраст в приглушённом
+// тексте лейбла, поэтому рендерим их отдельным span без затемнения.
+const FLAG_RE = /([\u{1F1E6}-\u{1F1FF}]{2}(?:\s?[\u{1F1E6}-\u{1F1FF}]{2})*)\s*$/u;
+function splitFlag(label: string): { text: string; flag: string } {
+  const match = label.match(FLAG_RE);
+  if (!match) return { text: label, flag: "" };
+  return { text: label.slice(0, match.index).trimEnd(), flag: match[1] };
+}
+
 const CTA_CHIPS = {
   ru: ["+320%", "№1", "CPA €24,84", "CPA $18", "−23% CPL", "в 4 раза"],
   en: ["+320%", "#1", "CPA €24.84", "CPA $18", "−23% CPL", "4x"],
@@ -27,19 +38,8 @@ const CTA_CHIPS = {
 
 export function AiLanding({ locale }: { locale: Locale }) {
   const t = AI_COPY[locale];
-  const {
-    AUDIT_STEPS,
-    CASES,
-    CONTACTS,
-    GEO,
-    NAV,
-    SERVICES,
-    SHOW_CLIENT_NAMES,
-    STATS,
-    STEPS,
-    TOOLS,
-    TRAITS,
-  } = CONTENT[locale];
+  const { CASES, CONTACTS, GEO, SERVICES, SHOW_CLIENT_NAMES, STATS, STEPS, TOOLS, TRAITS } =
+    CONTENT[locale];
   const panelValues = PANEL_VALUES[locale];
   const featured = SERVICES.slice(0, 3);
   const rest = SERVICES.slice(3);
@@ -146,14 +146,19 @@ export function AiLanding({ locale }: { locale: Locale }) {
             </Reveal>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4">
-              {t.results.panels.map((label, i) => (
+              {t.results.panels.map((label, i) => {
+                const { text, flag } = splitFlag(label);
+                return (
                 <div
                   key={label}
                   className={`rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur md:p-5 ${
                     i % 2 ? "translate-y-6" : ""
                   }`}
                 >
-                  <p className="text-xs text-white/60 md:text-sm">{label}</p>
+                  <p className="text-xs text-white/60 md:text-sm">
+                    {text}
+                    {flag && <span className="text-white/95"> {flag}</span>}
+                  </p>
                   <p className="mt-2 text-2xl font-bold tracking-[-0.04em] md:text-4xl">
                     {panelValues[i]}
                   </p>
@@ -178,7 +183,8 @@ export function AiLanding({ locale }: { locale: Locale }) {
                     ))}
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -354,7 +360,13 @@ export function AiLanding({ locale }: { locale: Locale }) {
                       : "bg-white text-[var(--d-blue)]"
                   }`}
                 >
-                  <p className="text-[clamp(25px,4.4vw,52px)] font-bold leading-none break-words tracking-[-0.05em]">
+                  <p
+                    className={`font-bold leading-none tracking-[-0.05em] ${
+                      i === 3
+                        ? "text-[clamp(22px,3.2vw,34px)]"
+                        : "text-[clamp(25px,4.4vw,52px)]"
+                    }`}
+                  >
                     {s.value}
                   </p>
                   <p className="mt-2 text-[15px] font-medium leading-tight">
@@ -425,112 +437,7 @@ export function AiLanding({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        {/* ───── Audit ───── */}
-        <section
-          id="audit"
-          className="scroll-mt-20 px-4 py-16 md:px-8 md:py-24"
-        >
-          <div className="mx-auto grid max-w-7xl items-center gap-12 overflow-hidden rounded-[28px] bg-[var(--d-lime)] p-6 md:p-12 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="text-[var(--d-blue)]">
-              <h2 className="head text-[clamp(38px,6vw,72px)]">
-                {t.audit.title}
-              </h2>
-              <p className="mt-4 max-w-[46ch] text-lg leading-relaxed">
-                {t.audit.text}
-              </p>
-              <form
-                action="/audit"
-                method="get"
-                className="mt-7 flex flex-col gap-2 rounded-2xl bg-white p-2 shadow-[0_18px_40px_-24px_rgba(6,6,154,0.5)] sm:flex-row"
-              >
-                <label htmlFor="audit-domain" className="sr-only">
-                  {t.auditForm.label}
-                </label>
-                <input
-                  id="audit-domain"
-                  name="domain"
-                  required
-                  inputMode="url"
-                  autoComplete="url"
-                  placeholder={t.auditForm.placeholder}
-                  className="min-w-0 flex-1 rounded-xl px-4 py-3 text-[var(--d-ink)] outline-none placeholder:text-[var(--d-mute)]/70 focus-visible:ring-2 focus-visible:ring-[var(--d-blue)]"
-                />
-                <button
-                  type="submit"
-                  className="rounded-xl bg-[var(--d-blue)] px-5 py-3 font-medium text-white transition-colors hover:bg-[var(--d-blue-deep)]"
-                >
-                  {t.auditForm.submit}
-                </button>
-              </form>
-              <p className="mt-3 text-sm">{t.auditForm.note}</p>
-              <ol className="mt-8 grid gap-4 sm:grid-cols-3">
-                {AUDIT_STEPS.map((s, i) => (
-                  <li key={s.title} className="flex gap-3 sm:block">
-                    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[var(--d-blue)] text-sm font-bold text-[var(--d-lime)]">
-                      {i + 1}
-                    </span>
-                    <span className="sm:mt-3 sm:block">
-                      <span className="block font-bold">{s.title}</span>
-                      <span className="block text-[15px] leading-snug opacity-80">
-                        {s.body}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            {/* Превью отчёта: схематичный макет PDF, без выдуманных цифр */}
-            <div
-              aria-hidden
-              className="relative mx-auto w-full max-w-[400px] py-6"
-            >
-              <div className="absolute inset-x-6 inset-y-2 rotate-[-6deg] rounded-2xl bg-[var(--d-blue)]" />
-              <div className="relative rotate-[2deg] overflow-hidden rounded-2xl bg-white shadow-2xl">
-                <div className="bg-[var(--d-blue)] px-6 py-6 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--d-lime)]">
-                    Merlin Agency
-                  </p>
-                  <p className="mt-2 text-2xl font-bold uppercase tracking-[-0.04em]">
-                    {t.auditForm.previewTitle}
-                  </p>
-                  <p className="mt-1 text-white/70">
-                    {t.auditForm.previewDomain}
-                  </p>
-                </div>
-                <ul className="flex flex-col gap-4 px-6 py-6">
-                  {t.auditForm.previewSections.map((label, i) => (
-                    <li key={label} className="flex items-center gap-3">
-                      <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[var(--d-lime)] text-[var(--d-blue)]">
-                        <svg
-                          viewBox="0 0 24 24"
-                          className="size-3.5"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="3"
-                        >
-                          <path d="m5 12 4 4 10-10" />
-                        </svg>
-                      </span>
-                      <span className="flex-1">
-                        <span className="block text-sm font-bold text-[var(--d-ink)]">
-                          {label}
-                        </span>
-                        <span
-                          className="mt-1.5 block h-1.5 rounded-full bg-[var(--d-lav)]"
-                          style={{ width: `${[88, 64, 72, 56, 80][i]}%` }}
-                        />
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="border-t border-[var(--d-lav)] px-6 py-3 text-right text-xs font-bold text-[var(--d-mute)]">
-                  PDF
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AuditPromo locale={locale} />
 
         {/* ───── CTA ───── */}
         <section
@@ -585,123 +492,14 @@ export function AiLanding({ locale }: { locale: Locale }) {
                 rel="noopener noreferrer"
                 className="btn-line w-full sm:w-auto"
               >
-                WhatsApp {CONTACTS.whatsapp.value}
+                {t.cta.whatsapp}
               </a>
             </div>
           </div>
         </section>
       </main>
 
-      {/* ───── Footer ───── */}
-      <footer className="bg-[var(--d-blue)] px-4 pb-8 pt-14 text-white md:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.3fr_1.2fr]">
-          <div>
-            <p className="inline-block rounded bg-white px-1.5 text-[11px] font-bold uppercase text-[var(--d-blue)]">
-              {t.footer.company}
-            </p>
-            <ul className="mt-4 flex flex-col gap-2.5">
-              {NAV.map((n) => (
-                <li key={n.href}>
-                  <a
-                    href={n.href}
-                    className="font-bold uppercase tracking-[-0.02em] hover:text-[var(--d-lime)]"
-                  >
-                    {n.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="inline-block rounded bg-white px-1.5 text-[11px] font-bold uppercase text-[var(--d-blue)]">
-              {t.footer.services}
-            </p>
-            <ul className="mt-4 flex flex-col gap-2 text-[15px] text-white/85">
-              {SERVICES.map((s) => (
-                <li key={s.title}>{s.title}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="inline-block rounded bg-white px-1.5 text-[11px] font-bold uppercase text-[var(--d-blue)]">
-              {t.footer.cases}
-            </p>
-            <ul className="mt-4 flex flex-col gap-2 text-[15px] text-white/85">
-              {CASES.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    href={`${LOCALE_PATH[locale] === "/" ? "" : LOCALE_PATH[locale]}/cases/${c.slug}`}
-                    className="hover:text-[var(--d-lime)]"
-                  >
-                    <span className="font-bold text-white">{c.headline}</span>{" "}
-                    {c.niche}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="inline-block rounded bg-white px-1.5 text-[11px] font-bold uppercase text-[var(--d-blue)]">
-              {t.footer.contacts}
-            </p>
-            <ul className="mt-4 flex flex-col gap-2 text-[15px]">
-              <li>
-                <a
-                  href={CONTACTS.telegram.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[var(--d-lime)]"
-                >
-                  Telegram {CONTACTS.telegram.value}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={CONTACTS.whatsapp.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[var(--d-lime)]"
-                >
-                  WhatsApp {CONTACTS.whatsapp.value}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={CONTACTS.phone.href}
-                  className="hover:text-[var(--d-lime)]"
-                >
-                  {CONTACTS.phone.value}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={CONTACTS.email.href}
-                  className="hover:text-[var(--d-lime)]"
-                >
-                  {CONTACTS.email.value}
-                </a>
-              </li>
-            </ul>
-            <div className="mt-6 rounded-2xl bg-[var(--d-pink)] p-5 text-[var(--d-blue)]">
-              <p className="font-bold leading-tight">{t.footer.auditCard}</p>
-              <Link
-                href="/audit"
-                className="mt-3 inline-flex rounded-[10px] bg-[var(--d-blue)] px-4 py-2 text-sm font-medium text-white"
-              >
-                {t.footer.auditButton}
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/20 pt-6 sm:flex-row sm:items-end sm:justify-between">
-          <p className="text-3xl font-bold uppercase tracking-[-0.05em]">
-            Merlin<span className="font-light">Agency</span>
-          </p>
-          <p className="text-sm text-white/70">
-            {t.footer.place} · © {new Date().getFullYear()} Merlin Agency
-          </p>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} />
     </div>
   );
 }

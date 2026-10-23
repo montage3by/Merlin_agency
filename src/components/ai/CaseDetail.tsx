@@ -1,48 +1,47 @@
 import Link from "next/link";
 import type { Case } from "@/lib/agency-content";
 import { LOCALE_PATH, type Locale } from "@/lib/content";
+import { AdDashboardArt } from "./AdDashboardArt";
+import { AuditPromo } from "./AuditPromo";
 import { AI_COPY } from "./copy";
+import { Header } from "./Header";
+import { SiteFooter } from "./SiteFooter";
+import { CASE_TILES } from "./tiles";
 
 export function CaseDetail({
   c,
+  index,
   showNames,
   contactHref,
   locale,
 }: {
   c: Case;
+  index: number;
   showNames: boolean;
   contactHref: string;
   locale: Locale;
 }) {
   const t = AI_COPY[locale];
   const home = LOCALE_PATH[locale];
-  const casesHref = `${home === "/" ? "" : home}/#cases`;
+  const casesPrefix = home === "/" ? "" : home;
+  const casesHref = `${casesPrefix}/#cases`;
+  const tile = CASE_TILES[index % CASE_TILES.length];
+  const paragraphs = c.story.split("\n\n");
+  const midpoint = Math.ceil(paragraphs.length / 2);
 
   return (
     <div className="min-h-full bg-[var(--d-bg)] text-[var(--d-blue)]">
-      <header className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-6 md:px-0">
-        <Link
-          href={home}
-          className="text-lg font-bold uppercase tracking-[-0.05em] text-[var(--d-blue)]"
-        >
-          Merlin<span className="font-light">Agency</span>
-        </Link>
-        <a
-          href={contactHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-lime !py-2 text-sm"
-        >
-          {t.contactUs}
-        </a>
-      </header>
+      <Header locale={locale} onHomePage={false} />
 
-      <main className="mx-auto max-w-4xl px-4 pb-24 md:px-0">
+      <main className="mx-auto max-w-4xl px-4 pb-24 pt-8 md:px-0">
         <Link
           href={casesHref}
-          className="inline-flex items-center gap-1.5 text-sm font-bold uppercase text-[var(--d-blue)]/70 hover:text-[var(--d-blue)]"
+          className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[-0.01em] text-[var(--d-blue)]/70 transition-colors hover:text-[var(--d-blue)]"
         >
-          ← {t.caseBack}
+          <span aria-hidden className="text-lg leading-none">
+            ←
+          </span>
+          {t.caseBack}
         </Link>
 
         <div className="mt-6 flex flex-wrap gap-1.5">
@@ -61,17 +60,34 @@ export function CaseDetail({
 
         <h1 className="head mt-4 text-[clamp(32px,6vw,64px)]">{c.hook}</h1>
 
-        <div className="mt-8 flex flex-wrap items-end gap-4 rounded-3xl bg-[var(--d-blue)] p-6 text-white md:p-10">
+        <div
+          className={`mt-8 flex flex-wrap items-end gap-4 rounded-3xl p-6 md:p-10 ${tile.bg} ${tile.ink}`}
+        >
           <p className="text-[clamp(48px,8vw,96px)] font-bold leading-none tracking-[-0.06em]">
             {c.headline}
           </p>
-          <p className="max-w-[28ch] pb-2 text-lg font-medium leading-tight text-white/75">
+          <p
+            className={`max-w-[28ch] pb-2 text-lg font-medium leading-tight ${tile.sub}`}
+          >
             {c.headlineLabel}
           </p>
         </div>
 
-        <article className="prose-case mt-10 flex flex-col gap-5 text-lg leading-relaxed">
-          {c.story.split("\n\n").map((paragraph, i) => (
+        <article className="mt-10 flex flex-col gap-5 text-lg leading-relaxed">
+          {paragraphs.slice(0, midpoint).map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </article>
+
+        <AdDashboardArt
+          accent={
+            tile.bg.includes("d-blue") ? "var(--d-lime)" : "var(--d-blue)"
+          }
+          className="my-10"
+        />
+
+        <article className="flex flex-col gap-5 text-lg leading-relaxed">
+          {paragraphs.slice(midpoint).map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
         </article>
@@ -135,6 +151,9 @@ export function CaseDetail({
           </a>
         </div>
       </main>
+
+      <AuditPromo locale={locale} />
+      <SiteFooter locale={locale} onHomePage={false} />
     </div>
   );
 }

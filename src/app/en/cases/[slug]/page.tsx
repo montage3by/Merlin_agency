@@ -23,12 +23,13 @@ export default async function CasePage({
   params,
 }: PageProps<"/en/cases/[slug]">) {
   const { slug } = await params;
-  const c = CASES.find((x) => x.slug === slug);
-  if (!c) notFound();
+  const index = CASES.findIndex((x) => x.slug === slug);
+  if (index === -1) notFound();
 
   return (
     <CaseDetail
-      c={c}
+      c={CASES[index]}
+      index={index}
       showNames={SHOW_CLIENT_NAMES}
       contactHref={CONTACTS.telegram.href}
       locale="en"

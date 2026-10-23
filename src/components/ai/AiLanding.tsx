@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { CONTENT, type Locale } from "@/lib/content";
@@ -6,15 +7,14 @@ import { CaseSwitcher } from "./CaseSwitcher";
 import { AI_COPY } from "./copy";
 import { GlobalMap } from "./GlobalMap";
 import { Header } from "./Header";
-import { GrowthArt, SearchArt, TargetArt } from "./Illustrations";
 import { Marquee } from "./Marquee";
 import { SiteFooter } from "./SiteFooter";
 
-// Плашки для трёх главных услуг: цвет фона и иллюстрация.
+// Плашки для трёх главных услуг: фотография вместо иконок.
 const FEATURE_TILES = [
-  { bg: "bg-[var(--d-pink)]", ink: "text-[#4a1450]", Art: SearchArt },
-  { bg: "bg-[var(--d-lime)]", ink: "text-[#23400a]", Art: GrowthArt },
-  { bg: "bg-[var(--d-cyan)]", ink: "text-[#062a55]", Art: TargetArt },
+  { src: "/services/context-ads.jpg" },
+  { src: "/services/seo.jpg" },
+  { src: "/services/targeting.jpg" },
 ];
 
 // Значения для «дашборда» в тёмном блоке: только цифры из кейсов.
@@ -204,11 +204,17 @@ export function AiLanding({ locale }: { locale: Locale }) {
                 <Reveal key={s.title}>
                   <div className="grid items-center gap-6 md:grid-cols-2 md:gap-14">
                     <div
-                      className={`relative aspect-[4/3] overflow-hidden rounded-3xl p-8 ${tile.bg} ${tile.ink} ${
+                      className={`relative aspect-[4/3] overflow-hidden rounded-3xl ${
                         i % 2 ? "md:order-2" : ""
                       }`}
                     >
-                      <tile.Art className="absolute inset-6" tags={s.tags} />
+                      <Image
+                        src={tile.src}
+                        alt=""
+                        fill
+                        sizes="(min-width: 768px) 560px, 100vw"
+                        className="object-cover"
+                      />
                     </div>
                     <div>
                       <span className="num-badge">

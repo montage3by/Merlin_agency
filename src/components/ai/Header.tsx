@@ -20,8 +20,7 @@ export function Header({
   const { CONTACTS } = CONTENT[locale];
   const other: Locale = locale === "ru" ? "en" : "ru";
   const home = LOCALE_PATH[locale];
-  const anchorHref = (a: string) =>
-    onHomePage ? a : `${home === "/" ? "" : home}${a}`;
+  const anchorHref = (a: string) => (onHomePage ? a : `${home}${a}`);
 
   return (
     <>

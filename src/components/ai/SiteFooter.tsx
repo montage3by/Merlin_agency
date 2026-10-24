@@ -14,7 +14,7 @@ export function SiteFooter({
   const { CASES, CONTACTS, NAV, SERVICES } = CONTENT[locale];
   const home = LOCALE_PATH[locale];
   const casesPrefix = home === "/" ? "" : home;
-  const anchorHref = (a: string) => (onHomePage ? a : `${casesPrefix}${a}`);
+  const anchorHref = (a: string) => (onHomePage ? a : `${home}${a}`);
 
   return (
     <footer className="bg-[var(--d-blue)] px-4 pb-8 pt-14 text-white md:px-8">

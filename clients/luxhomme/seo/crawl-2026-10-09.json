@@ -1,0 +1,881 @@
+[
+ {
+  "url": "https://luxhomme.store",
+  "code": 200,
+  "ttfb": 1.231143,
+  "size": 137339,
+  "title": "Luxhommè — бытовая техника для жизни",
+  "description": "Luxhommè — премиальная бытовая техника для дома: кухонная техника, техника для уборки, спорт и аксессуары. Доставка по всей России.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store",
+  "og_title": "Luxhommè — бытовая техника для жизни",
+  "og_image": "",
+  "h1": [
+   "— Готовка с радостью"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Исследуйте"
+  ],
+  "words": 420,
+  "imgs": 61,
+  "imgs_no_alt": 34,
+  "internal_links": 25,
+  "jsonld_types": [
+   "EntryPoint",
+   "Organization",
+   "SearchAction",
+   "WebSite"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Luxhommè — бытовая техника для жизни Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Техника, которая превращает будни в приятные ритуалы и помогает проводить больше времени с близкими — Готовка с радостью и б е з у с т а л о с т и Исследуйте наши с"
+ },
+ {
+  "url": "https://luxhomme.store/about",
+  "code": 200,
+  "ttfb": 1.228387,
+  "size": 69879,
+  "title": "О нас | Luxhommè",
+  "description": "Luxhommè — жить легко и красиво каждый день. Наша философия, разработка бытовой техники, линейки Cook, Clean и Care и забота о покупателях.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/about",
+  "og_title": "О нас | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Luxhommè — жить легко и красиво каждый день"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Техника, которая оставляет место для жизни",
+   "Три вещи, в которые мы верим",
+   "Как рождается наша техника",
+   "Три линейки — одна философия",
+   "Забота — на каждом этапе",
+   "Дом, в котором хочется жить"
+  ],
+  "words": 616,
+  "imgs": 14,
+  "imgs_no_alt": 4,
+  "internal_links": 15,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "О нас | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 О бренде Luxhommè — жить легко и красиво каждый день Когда утро начинается спокойно, вечером дома просто хорошо, а время остаётся на близких и себя. Именно ради этого ощущения мы созда"
+ },
+ {
+  "url": "https://luxhomme.store/contact",
+  "code": 200,
+  "ttfb": 0.789612,
+  "size": 49553,
+  "title": "Контакты | Luxhommè",
+  "description": "Контактная информация Luxhommè: адрес, телефон, email, социальные сети.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/contact",
+  "og_title": "Контакты | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Контакты"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно"
+  ],
+  "words": 180,
+  "imgs": 17,
+  "imgs_no_alt": 4,
+  "internal_links": 16,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Контакты | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Контакты Интерактивная карта выключена Адрес указан рядом. Чтобы загрузить Яндекс Карты, разрешите функциональные cookie. Настройки cookie Адрес \"АРТ центр\", улица Николая Ершова, 6"
+ },
+ {
+  "url": "https://luxhomme.store/buy",
+  "code": 200,
+  "ttfb": 0.947635,
+  "size": 47274,
+  "title": "Мы на маркетплейсах | Luxhommè",
+  "description": "Покупайте продукцию Luxhommè на OZON, Wildberries, Яндекс Маркет и других маркетплейсах.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/buy",
+  "og_title": "Мы на маркетплейсах | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Мы на маркетплейсах:"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно"
+  ],
+  "words": 115,
+  "imgs": 25,
+  "imgs_no_alt": 11,
+  "internal_links": 15,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Мы на маркетплейсах | Luxhommè Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Мы на маркетплейсах: О нас Связаться с нами Мы на Маркетплейсах Политика конфиденциальности Оферта Клиентский сервис Доставка и оплата Сервис и гарантия Правила возврата Email : care@luxhomme.store Служба заботы в Telegram : t.me/LuxhommeServiceBot Служба заботы в MAX "
+ },
+ {
+  "url": "https://luxhomme.store/delivery",
+  "code": 200,
+  "ttfb": 1.01108,
+  "size": 58355,
+  "title": "Доставка и оплата | Luxhommè",
+  "description": "Доставка Luxhommè через Ozon до двери или в ПВЗ: доступность и сроки по адресу, способы оплаты и документы.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/delivery",
+  "og_title": "Доставка и оплата | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Доставка и оплата"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Доставка",
+   "Способы оплаты",
+   "Если доставка задерживается"
+  ],
+  "words": 455,
+  "imgs": 11,
+  "imgs_no_alt": 4,
+  "internal_links": 16,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Доставка и оплата | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы О нас Связаться с нами Мы на Маркетплейсах Политика конфиденциальности Оферта Клиентский сервис Доставка и оплата Сервис и гарантия Правила возврата Email : care@luxhomme.store Служба заботы в Telegram : t.me/LuxhommeServiceBot Служба заботы в MAX : https://max.ru/id16860"
+ },
+ {
+  "url": "https://luxhomme.store/service",
+  "code": 200,
+  "ttfb": 0.76878,
+  "size": 84000,
+  "title": "Сервис и гарантия | Luxhommè",
+  "description": "Гарантийное обслуживание, возврат и обмен товаров Luxhommè. Условия, контакты сервисной службы.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/service",
+  "og_title": "Сервис и гарантия | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Сервис и гарантия"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Возврат",
+   "Обмен и возврат"
+  ],
+  "words": 842,
+  "imgs": 14,
+  "imgs_no_alt": 7,
+  "internal_links": 16,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Сервис и гарантия | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Сервис и гарантия Как воспользоваться гарантией? Пошаговая инструкция 1 Не паникуйте и не ремонтируйте сами! Самостоятельное вскрытие лишает права на гарантию. 2 Назовите н"
+ },
+ {
+  "url": "https://luxhomme.store/offer",
+  "code": 0,
+  "ttfb": 0.0,
+  "size": 0,
+  "title": "",
+  "description": "",
+  "robots": "",
+  "canonical": "",
+  "og_title": "",
+  "og_image": "",
+  "h1": [],
+  "h2": [],
+  "words": 0,
+  "imgs": 0,
+  "imgs_no_alt": 0,
+  "internal_links": 0,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "",
+  "text_sample": ""
+ },
+ {
+  "url": "https://luxhomme.store/privacy",
+  "code": 200,
+  "ttfb": 0.976614,
+  "size": 72037,
+  "title": "Политика конфиденциальности | Luxhommè",
+  "description": "Политика в отношении обработки персональных данных пользователей интернет-магазина Luxhommè.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/privacy",
+  "og_title": "Политика конфиденциальности | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Политика конфиденциальности"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "0 . Оператор персональных данных",
+   "1 . Общие положения",
+   "2 . Какие персональные данные мы собираем",
+   "3 . Цели обработки персональных данных",
+   "4 . Правовые основания обработки",
+   "5 . Как долго мы храним персональные данные",
+   "6 . Как мы передаём персональные данные",
+   "7 . Как мы защищаем персональные данные",
+   "8 . Ваши права",
+   "9 . Изменение Политики конфиденциальности",
+   "10 . Контакты"
+  ],
+  "words": 876,
+  "imgs": 11,
+  "imgs_no_alt": 4,
+  "internal_links": 15,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Политика конфиденциальности | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Политика конфиденциальности Политика в отношении обработки персональных данных пользователей интернет-магазина https://luxhomme.store 0 . Оператор персональных да"
+ },
+ {
+  "url": "https://luxhomme.store/returns",
+  "code": 200,
+  "ttfb": 1.080115,
+  "size": 71604,
+  "title": "Правила возврата товара | Luxhommè",
+  "description": "Условия и порядок возврата товара надлежащего и ненадлежащего качества в интернет-магазине Luxhommè.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/returns",
+  "og_title": "Правила возврата товара | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Правила возврата товара"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "0 . Продавец",
+   "1 . Возврат товара надлежащего качества",
+   "2 . Возврат товара ненадлежащего качества (брак)",
+   "3 . Порядок возврата товара",
+   "4 . Адрес для возврата товара",
+   "5 . Обмен товара",
+   "6 . Отказ от заказа до получения",
+   "7 . Сроки возврата денег",
+   "8 . Контакты для обращений"
+  ],
+  "words": 959,
+  "imgs": 11,
+  "imgs_no_alt": 4,
+  "internal_links": 15,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Правила возврата товара | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Правила возврата товара Условия и порядок возврата товара в интернет-магазине https://luxhomme.store. 0 . Продавец Индивидуальный предприниматель Ахунзянов Марат Асха"
+ },
+ {
+  "url": "https://luxhomme.store/cookie",
+  "code": 200,
+  "ttfb": 0.635415,
+  "size": 88052,
+  "title": "Политика использования файлов cookie | Luxhommè",
+  "description": "Какие cookie использует сайт Luxhommè, как ими управлять и какие данные через них собираются.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/cookie",
+  "og_title": "Политика использования файлов cookie | Luxhommè",
+  "og_image": "",
+  "h1": [
+   "Политика использования файлов cookie"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "0 . Оператор",
+   "1 . Что такое cookie?",
+   "2 . Какие cookie использует наш сайт",
+   "3 . Какие данные собираются через cookie",
+   "4 . Правовые основания обработки",
+   "5 . Как управлять cookie",
+   "6 . Передача данных третьим лицам",
+   "7 . Сроки хранения",
+   "8 . Защита данных",
+   "9 . Изменение Cookie-политики",
+   "10 . Контакты"
+  ],
+  "words": 1469,
+  "imgs": 11,
+  "imgs_no_alt": 4,
+  "internal_links": 15,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Политика использования файлов cookie | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Политика использования файлов cookie Редакция от 9 сентября 2026 года. Cookie и локальное хранилище на сайте luxhomme.store. 0 . Оператор Индивидуальный "
+ },
+ {
+  "url": "https://luxhomme.store/blog",
+  "code": 200,
+  "ttfb": 0.981609,
+  "size": 228114,
+  "title": "Блог | Luxhommè",
+  "description": "Статьи, новости и полезные материалы от Luxhommè.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/blog",
+  "og_title": "Блог | Luxhommè",
+  "og_image": "https://luxhomme.store/og-default.png",
+  "h1": [
+   "Вертикальный, моющий и компактный пылесос: в чём разница и как выбрать"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно"
+  ],
+  "words": 1309,
+  "imgs": 61,
+  "imgs_no_alt": 22,
+  "internal_links": 65,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Блог | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Новая статья Вертикальный, моющий и компактный пылесос: в чём разница и как выбрать Три типа вертикальных пылесосов, которые часто путают между собой — обычный вертикальный для сухой&#8"
+ },
+ {
+  "url": "https://luxhomme.store/catalog",
+  "code": 200,
+  "ttfb": 0.546146,
+  "size": 78587,
+  "title": "Каталог товаров | Luxhommè",
+  "description": "Бытовая техника Luxhommè — паровые швабры, кухонная техника, спорт и аксессуары.",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/catalog",
+  "og_title": "Каталог товаров | Luxhommè",
+  "og_image": "https://luxhomme.store/og-default.png",
+  "h1": [
+   "Каталог товаров"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно"
+  ],
+  "words": 226,
+  "imgs": 25,
+  "imgs_no_alt": 12,
+  "internal_links": 21,
+  "jsonld_types": [],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Каталог товаров | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Каталог товаров Luxhommè / Каталог Все Забота Кухня Чистота Все товары +480 бонусов Кухня Кофемашина автоматическая зерновая с капучинатором и кофемолкой CremaX 47 990 ₽ ⇆ Ср"
+ },
+ {
+  "url": "https://luxhomme.store/products/caffio-professional",
+  "code": 200,
+  "ttfb": 0.754973,
+  "size": 164759,
+  "title": "Купить кофемашину рожковую Luxhommè Caffio Professional — 17 990 ₽ | Luxhommè",
+  "description": "Купить кофемашину рожковую Luxhommè Caffio Professional — 17 990 ₽. Кофемашина рожковая Luxhommè Caffio Professional объединяет четыре формата приготовления кофе и помогает выбрать подходя",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/caffio-professional",
+  "og_title": "Купить кофемашину рожковую Luxhommè Caffio Professional — 17 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/caffio-professional/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Кофемашина рожковая Luxhommè Caffio Professional"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Характеристики",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 726,
+  "imgs": 90,
+  "imgs_no_alt": 78,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить кофемашину рожковую Luxhommè Caffio Professional — 17 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Кофемашина рожковая Luxhommè Caffio Professional О товаре Больше характеристик Модель Caffio Professional Заводская модель "
+ },
+ {
+  "url": "https://luxhomme.store/products/vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg",
+  "code": 200,
+  "ttfb": 0.7129,
+  "size": 255518,
+  "title": "Купить виброплатформу длю похудению 3D c EMS токами и нагревом, нагрузка до 150 кг — 16 990 ₽ | Luxhommè",
+  "description": "Купить виброплатформу длю похудению 3D c EMS токами и нагревом, нагрузка до 150 кг — 16 990 ₽. Виброплатформа 3D с EMS-токами и функцией нагрева — многофункциональный тренажёр для домашних тренировок. Она сочетает в",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg",
+  "og_title": "Купить виброплатформу длю похудению 3D c EMS токами и нагревом, нагрузка до 150 кг — 16 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Виброплатформа для похудения 3D c EMS токами и нагревом, нагрузка до 150 кг"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1038,
+  "imgs": 201,
+  "imgs_no_alt": 188,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить виброплатформу длю похудению 3D c EMS токами и нагревом, нагрузка до 150 кг — 16 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Виброплатформа для похудения 3D c EMS токами и нагревом, нагрузка до 150 кг О товаре Больше хара"
+ },
+ {
+  "url": "https://luxhomme.store/products/airgrill-dual-pro",
+  "code": 200,
+  "ttfb": 0.953024,
+  "size": 166830,
+  "title": "Купить аэрогриль Luxhommè AirChef Dual Pro (2 чаши) — 16 990 ₽ | Luxhommè",
+  "description": "Купить аэрогриль Luxhommè AirChef Dual Pro (2 чаши) — 16 990 ₽. Аэрогриль Luxhommè AirChef Dual Pro — это две независимые камеры в одном корпусе. Верхняя чаша на 7 литров и нижняя на 5",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/airgrill-dual-pro",
+  "og_title": "Купить аэрогриль Luxhommè AirChef Dual Pro (2 чаши) — 16 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/airgrill-dual-pro/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Аэрогриль Luxhommè AirChef Dual Pro (2 чаши)"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 794,
+  "imgs": 88,
+  "imgs_no_alt": 71,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить аэрогриль Luxhommè AirChef Dual Pro (2 чаши) — 16 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Аэрогриль Luxhommè AirChef Dual Pro (2 чаши) О товаре Больше характеристик Цвет чёрный с белым Модель AirChef Dual Pro Объем 7 "
+ },
+ {
+  "url": "https://luxhomme.store/products/vertikalnyj-suhoj-pylesos-aerlyn",
+  "code": 200,
+  "ttfb": 0.61875,
+  "size": 248236,
+  "title": "Купить вертикальный сухой пылесос Aerlyn — 15 990 ₽ | Luxhommè",
+  "description": "Купить вертикальный сухой пылесос Aerlyn — 15 990 ₽. Aerlyn берёт на себя и сухую, и влажную уборку. Один беспроводной вертикальный пылесос заменяет обычный пылесос, турбощё",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/vertikalnyj-suhoj-pylesos-aerlyn",
+  "og_title": "Купить вертикальный сухой пылесос Aerlyn — 15 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/vertikalnyj-suhoj-pylesos-aerlyn/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Вертикальный сухой пылесос Aerlyn"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1375,
+  "imgs": 227,
+  "imgs_no_alt": 214,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить вертикальный сухой пылесос Aerlyn — 15 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Вертикальный сухой пылесос Aerlyn О товаре Больше характеристик Модель Aerlyn Тип прибора Вертикальный пылесос 2 в 1 Наименование Вертикал"
+ },
+ {
+  "url": "https://luxhomme.store/products/vertikalnyj-moyushhij-pylesos-aqvion-pro",
+  "code": 200,
+  "ttfb": 0.736336,
+  "size": 159838,
+  "title": "Купить вертикальный моющий пылесос Aqvion Pro — 19 990 ₽ | Luxhommè",
+  "description": "Купить вертикальный моющий пылесос Aqvion Pro — 19 990 ₽. Aqvion Pro моет и пылесосит за один проход. Этот беспроводной моющий пылесос закрывает работу сразу трёх приборов — пыле",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/vertikalnyj-moyushhij-pylesos-aqvion-pro",
+  "og_title": "Купить вертикальный моющий пылесос Aqvion Pro — 19 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/vertikalnyj-moyushhij-pylesos-aqvion-pro/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Вертикальный моющий пылесос Aqvion Pro"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 558,
+  "imgs": 59,
+  "imgs_no_alt": 46,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить вертикальный моющий пылесос Aqvion Pro — 19 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Вертикальный моющий пылесос Aqvion Pro О товаре Больше характеристик Модель Aqvion Pro Тип прибора Вертикальный моющий пылесос Гарант"
+ },
+ {
+  "url": "https://luxhomme.store/products/kompaktnyj-moyushhij-pylesos-cleneo-pro",
+  "code": 200,
+  "ttfb": 0.7946,
+  "size": 186455,
+  "title": "Купить компактный моющий пылесос Cleneo Pro — 16 990 ₽ | Luxhommè",
+  "description": "Купить компактный моющий пылесос Cleneo Pro — 16 990 ₽. Cleneo Pro — компактный моющий пылесос для дома и автомобиля. Один прибор наводит порядок на полах, коврах и мебели, а з",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/kompaktnyj-moyushhij-pylesos-cleneo-pro",
+  "og_title": "Купить компактный моющий пылесос Cleneo Pro — 16 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/kompaktnyj-moyushhij-pylesos-cleneo-pro/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Компактный моющий пылесос Cleneo Pro"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 710,
+  "imgs": 101,
+  "imgs_no_alt": 87,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить компактный моющий пылесос Cleneo Pro — 16 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Компактный моющий пылесос Cleneo Pro О товаре Больше характеристик Модель Cleneo Pro Тип прибора Компактный моющий пылесос Гарантийный "
+ },
+ {
+  "url": "https://luxhomme.store/products/steamly-pro",
+  "code": 200,
+  "ttfb": 0.930335,
+  "size": 368995,
+  "title": "Купить паровую швабру Luxhommè AirSteam Pro — 10 990 ₽ | Luxhommè",
+  "description": "Купить паровую швабру Luxhommè AirSteam Pro — 10 990 ₽. Паровая швабра AirSteam Pro убирает горячим паром, а не химией: вода превращается в пар, который снимает грязь и жир с п",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/steamly-pro",
+  "og_title": "Купить паровую швабру Luxhommè AirSteam Pro — 10 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/steamly-pro/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Паровая швабра Luxhommè AirSteam Pro"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 2581,
+  "imgs": 355,
+  "imgs_no_alt": 326,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить паровую швабру Luxhommè AirSteam Pro — 10 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Паровая швабра Luxhommè AirSteam Pro О товаре Больше характеристик Цвет белый, серебряный Модель AirSteam Pro Гарантийный срок 3 года П"
+ },
+ {
+  "url": "https://luxhomme.store/products/ufit-2d-ems",
+  "code": 200,
+  "ttfb": 0.63208,
+  "size": 377129,
+  "title": "Купить виброплатформу uFit 2D Pro с EMS токами — 7 490 ₽ | Luxhommè",
+  "description": "Купить виброплатформу uFit 2D Pro с EMS токами — 7 490 ₽. Виброплатформа uFit 2D Pro — домашний тренажёр с вибрацией, функцией EMS и подогревом поверхности. Она рассчитана на кор",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/ufit-2d-ems",
+  "og_title": "Купить виброплатформу uFit 2D Pro с EMS токами — 7 490 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/ufit-2d-ems/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Виброплатформа uFit 2D Pro с EMS токами"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1775,
+  "imgs": 365,
+  "imgs_no_alt": 350,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить виброплатформу uFit 2D Pro с EMS токами — 7 490 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Виброплатформа uFit 2D Pro с EMS токами О товаре Больше характеристик Модель uFit 2D Pro Тип устройства Виброплатформа Гарантийный ср"
+ },
+ {
+  "url": "https://luxhomme.store/products/sc-100",
+  "code": 200,
+  "ttfb": 0.701001,
+  "size": 490532,
+  "title": "Купить паровую швабру Luxhommè SC-100 Max — 7 990 ₽ | Luxhommè",
+  "description": "Купить паровую швабру Luxhommè SC-100 Max — 7 990 ₽. Паровая швабра SC-100 Max наводит порядок во всём доме силой горячего пара. Меняешь насадку — меняется и интенсивность п",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/sc-100",
+  "og_title": "Купить паровую швабру Luxhommè SC-100 Max — 7 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/sc-100/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Паровая швабра Luxhommè SC-100 Max"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 2158,
+  "imgs": 407,
+  "imgs_no_alt": 384,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить паровую швабру Luxhommè SC-100 Max — 7 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Паровая швабра Luxhommè SC-100 Max О товаре Больше характеристик Цвет черный, белый Модель SC-100 Max Гарантийный срок 3 года Питание от с"
+ },
+ {
+  "url": "https://luxhomme.store/products/ufit-2d",
+  "code": 200,
+  "ttfb": 0.698092,
+  "size": 345198,
+  "title": "Купить виброплатформу uFit 2D Standard — 6 190 ₽ | Luxhommè",
+  "description": "Купить виброплатформу uFit 2D Standard — 6 190 ₽. Виброплатформа uFit 2D Standard — компактный домашний тренажёр для тех, кто хочет держать себя в тонусе без похода в зал",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/ufit-2d",
+  "og_title": "Купить виброплатформу uFit 2D Standard — 6 190 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/ufit-2d/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Виброплатформа uFit 2D Standard"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1762,
+  "imgs": 351,
+  "imgs_no_alt": 336,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить виброплатформу uFit 2D Standard — 6 190 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Виброплатформа uFit 2D Standard О товаре Больше характеристик Модель uFit Standard Тип устройства виброплатформа Цвет черный, белый Гарантийн"
+ },
+ {
+  "url": "https://luxhomme.store/products/ecosteam-pro",
+  "code": 200,
+  "ttfb": 0.978586,
+  "size": 502801,
+  "title": "Купить паровую швабру Luxhommè EcoSteam Pro — 5 990 ₽ | Luxhommè",
+  "description": "Купить паровую швабру Luxhommè EcoSteam Pro — 5 990 ₽. Паровая швабра EcoSteam Pro убирает горячим паром аккуратно и экономно. Парогенератор доводит воду до пара всего за 30 с",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/ecosteam-pro",
+  "og_title": "Купить паровую швабру Luxhommè EcoSteam Pro — 5 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/ecosteam-pro/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Паровая швабра Luxhommè EcoSteam Pro"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1903,
+  "imgs": 414,
+  "imgs_no_alt": 383,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить паровую швабру Luxhommè EcoSteam Pro — 5 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Паровая швабра Luxhommè EcoSteam Pro О товаре Больше характеристик Модель EcoSteam Pro Тип прибора Паровая швабра Гарантийный срок 12 ме"
+ },
+ {
+  "url": "https://luxhomme.store/products/coffee",
+  "code": 200,
+  "ttfb": 0.703784,
+  "size": 456021,
+  "title": "Купить кофемашину Luxhommè CoffeeMaker Classic — 9 990 ₽ | Luxhommè",
+  "description": "Купить кофемашину Luxhommè CoffeeMaker Classic — 9 990 ₽. Капсульная кофемашина Luxhommè Classic готовит насыщенный кофе дома нажатием кнопки. Помпа с давлением 19 бар как следуе",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/coffee",
+  "og_title": "Купить кофемашину Luxhommè CoffeeMaker Classic — 9 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/coffee/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Кофемашина Luxhommè CoffeeMaker Classic"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1851,
+  "imgs": 398,
+  "imgs_no_alt": 379,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить кофемашину Luxhommè CoffeeMaker Classic — 9 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Кофемашина Luxhommè CoffeeMaker Classic О товаре Больше характеристик Цвет черный, серо-черный, сталь Модель CoffeeMaker Classic Гара"
+ },
+ {
+  "url": "https://luxhomme.store/products/airgrill",
+  "code": 200,
+  "ttfb": 0.794108,
+  "size": 502788,
+  "title": "Купить аэрогриль Luxhommè AirChef — 5 990 ₽ | Luxhommè",
+  "description": "Купить аэрогриль Luxhommè AirChef — 5 990 ₽. Аэрогриль Luxhommè AirChef готовит на горячем воздухе и заменяет на кухне до десяти приборов сразу — от духовки до фритю",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/airgrill",
+  "og_title": "Купить аэрогриль Luxhommè AirChef — 5 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/airgrill/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Аэрогриль Luxhommè AirChef"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 1683,
+  "imgs": 420,
+  "imgs_no_alt": 402,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить аэрогриль Luxhommè AirChef — 5 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Аэрогриль Luxhommè AirChef О товаре Больше характеристик Цвет белый Модель AirChef Объем 5.5 л Количество программ 12 шт. +60 бонусов 5 990 ₽ ⇆ Ср"
+ },
+ {
+  "url": "https://luxhomme.store/products/window",
+  "code": 200,
+  "ttfb": 0.743282,
+  "size": 321352,
+  "title": "Купить робот мойщик Luxhommè uClean Max — 9 990 ₽ | Luxhommè",
+  "description": "Купить робот мойщик Luxhommè uClean Max — 9 990 ₽. Робот мойщик окон с двойным распылением от бренда LUXHOMME – чистота без усилий! Забудьте про утомительную мойку окон! У",
+  "robots": "index, follow",
+  "canonical": "https://luxhomme.store/products/window",
+  "og_title": "Купить робот мойщик Luxhommè uClean Max — 9 990 ₽ | Luxhommè",
+  "og_image": "https://luxhomme.store/products/window/opengraph-image-16g1u1?a389ce0f638f6942",
+  "h1": [
+   "Робот мойщик Luxhommè uClean Max"
+  ],
+  "h2": [
+   "Сравнение разных категорий невозможно",
+   "Описание",
+   "Видео",
+   "Характеристики",
+   "Аксессуары",
+   "Инструкция",
+   "Отзывы с маркетплейсов",
+   "Другие товары"
+  ],
+  "words": 2271,
+  "imgs": 339,
+  "imgs_no_alt": 320,
+  "internal_links": 19,
+  "jsonld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "Offer",
+   "Product"
+  ],
+  "hreflang": [],
+  "lang": "ru",
+  "text_sample": "Купить робот мойщик Luxhommè uClean Max — 9 990 ₽ | Luxhommè Сравнение разных категорий невозможно Оставить текущий список Начать новое сравнение Служба заботы Каталог О нас Блог Покупателям Мы на Маркетплейсах Сервис и гарантия Доставка и оплата Контакты ⇆ 0 Робот мойщик Luxhommè uClean Max О товаре Больше характеристик Модель uClean Max Тип прибора Робот-мойщик окон Гарантийный срок 3 года Мощно"
+ }
+]

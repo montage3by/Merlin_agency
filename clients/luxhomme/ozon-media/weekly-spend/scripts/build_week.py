@@ -5,7 +5,7 @@ days.csv — дата;каб1;каб2 (расход за день по кажд�
 Выгрузки «Статистика по кампаниям» за ту же неделю — для сверки итога (необязательно).
 
 Паттерн (см. README.md): дневной расход обоих кабинетов ÷ 5 → одинаковая сумма на каждый из 5 артикулов,
-копейки отбрасываются (как в общей таблице), по блоку строк на артикул.
+сумма с копейками (итого дня ÷ 5), по блоку строк на артикул.
 """
 import csv, datetime, sys, os
 sys.path.insert(0, os.environ.get("PYLIB", ""))
@@ -69,13 +69,14 @@ m.append(["Артикул", "Дата рекламы", "Затраты на ре
 r = 3
 for art in ARTICLES:
     for i, (dt, k1, k2) in enumerate(days):
-        m.append([art, dt, int((k1 + k2) / 5), f'=IF(F{r}= "директ", C{r}/1.22, C{r})', "Озон", "Медийная реклама",
+        m.append([art, dt, round((k1 + k2) / 5, 2), f'=IF(F{r}= "директ", C{r}/1.22, C{r})', "Озон", "Медийная реклама",
                   f"=ISOWEEKNUM(B{r})", f"=MONTH(B{r})"])
         r += 1
 for c in m[2]:
     c.font = B; c.fill = HDR; c.alignment = Alignment(wrap_text=True, vertical="top")
 for row in m.iter_rows(min_row=3):
     row[1].number_format = "DD.MM.YYYY"
+    row[2].number_format = row[3].number_format = "# ##0.00"
 for col, w in zip("ABCDEFGH", (18, 13, 14, 14, 12, 18, 8, 8)):
     m.column_dimensions[col].width = w
 m.freeze_panes = "A3"
@@ -83,4 +84,4 @@ wb.active = 1
 wb.save(OUT)
 tot_days = sum(k1 + k2 for _, k1, k2 in days)
 print("ok", OUT, "дней", len(days), "итого", round(tot_days, 2), "÷5", round(tot_days / 5, 2),
-      "строк", n, "сумма строк", sum(int((k1 + k2) / 5) for _, k1, k2 in days) * len(ARTICLES))
+      "строк", n, "сумма строк", sum(round((k1 + k2) / 5, 2) for _, k1, k2 in days) * len(ARTICLES))

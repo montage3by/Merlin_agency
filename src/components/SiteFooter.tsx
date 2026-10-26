@@ -13,7 +13,7 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-border">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-muted md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="font-semibold text-foreground">Merlin Studio</p>
+          <p className="font-semibold text-foreground">Merlin Agency</p>
           <p className="mt-1">Связки, которые продают.</p>
           <a
             href="mailto:merlin_studio@gmail.com"

@@ -23,8 +23,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Бесплатный digital-аудит от Merlin Studio",
-    template: "%s · Merlin Studio",
+    default: "Бесплатный digital-аудит от Merlin Agency",
+    template: "%s · Merlin Agency",
   },
   description:
     "Автоматический аудит сайта и конкурентов: SEO, контекстная и таргетированная реклама. Готовый отчёт с рекомендациями за пару минут.",

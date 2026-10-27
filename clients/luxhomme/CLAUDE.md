@@ -25,7 +25,7 @@
 | UI/UX-аудит сайта (чек-лист, скриншоты) | `ux/ux-audit-2026-10.md`, единый PDF: `ux/Luxhomme_UI-UX-audit_2026-10-09.pdf` |
 | ТЗ по UI/UX для разработчика (14 задач со скринами) | `ux/Luxhomme_UI-UX-TZ_2026-10.pdf`, HTML: `ux/Luxhomme_UI-UX-TZ_2026-10.html` |
 | Email «Закрытая распродажа −15%» (Битрикс24) | `email/2026-10-closed-sale/` |
-| План email-рассылок окт–ноя, Чёрная пятница 13–30.11 | `email/plan-2026-10-11.md`; письмо «Сезон мокрых следов» — `email/2026-10-wet-floors/` |
+| План email-рассылок окт–ноя, Чёрная пятница 13–30.11 | `email/plan-2026-10-11.md`; письмо «Сезон мокрых следов» — `email/2026-10-wet-floors/`; «Осень, лапы и шерсть» (питомцы) — `email/2026-10-pets/` |
 | Яндекс Директ на сайт: семантика, объявления, UTM, импорт, фид (15 SKU) | `direct/Luxhomme_Yandex-Direct_2026-10.xlsx`, фид: `direct/luxhomme-direct-feed.yml`, тексты правятся в `direct/scripts/content.py` |
 
 ## Правила работы

@@ -16,7 +16,7 @@ const sc = V.h ? V.h / (p.ph * ih) : Math.max(W / iw, H / ih);
 const w = iw * sc, h = ih * sc;
 const left = V.h ? V.tx - p.fx * w : Math.min(0, Math.max(W - w, V.tx - p.fx * w));
 const top = V.h ? V.ty - p.fy * h : Math.min(0, Math.max(H - h, V.ty - p.fy * h));
-const fv = 110, mask = V.h ? `-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 ${fv}px,#000 calc(100% - ${fv}px),transparent 100%);` : '';
+const fv = 110, fh = 220, mask = V.h ? `-webkit-mask-image:linear-gradient(to right,transparent 0,#000 ${fh}px,#000 calc(100% - ${fh}px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 ${fv}px,#000 calc(100% - ${fv}px),transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect;` : '';
 const lines = p.lines || [p.title];
 
 const html = `<!doctype html><html><head><meta charset="utf-8"><style>

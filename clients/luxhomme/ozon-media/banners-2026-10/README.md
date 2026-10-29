@@ -37,9 +37,9 @@ python3 scripts/compress.py <png_out> jpg
 ```
 Логотип — `scripts/logo-white.svg` (у файла с сайта `preserveAspectRatio="none"`, из-за него логотип сплющивался; здесь заданы размеры 165×20,6). В `<src>`: рендеры (mop.png, air.png, vibro.png, coffee.png, aerlyn.png, aqvion.png, cleneo.png), sizes.json ({файл: [ширина, высота]}), logo.svg с сайта, шрифты Onest и Gogol с сайта.
 
-## Видеобаннер с анимацией текста (пример: аэрогриль)
+## Видеобаннеры с анимацией текста (все 7 товаров)
 Движение Ozon допускает только в формате «Видеобаннер» (16:9, MP4 H.264, до 30 с). Баннеры 2832×600, 1080×450 и нативные — только статичные.
-`video/02_aerogril_video_1920x1080.mp4` — 1920×1080, 8 с, 30 к/с, без звука. Сборка: `scripts/anim.cjs` (кадры) → ffmpeg:
+`video/` — 7 роликов 1920×1080, 8 с, 30 к/с, без звука, 1,3–4 МБ; архив `Luxhomme_Ozon-video_2026-10.zip`. Положение товара в кадре — `o.video` в `scripts/banners.json`, строки заголовка — `lines`. Сборка: `scripts/anim.cjs` (кадры) → ffmpeg:
 ```
 PW_PATH=$(npm root -g)/playwright node scripts/anim.cjs <src> scripts/banners.json 02_aerogril <frames>
 ffmpeg -framerate 30 -i <frames>/f%04d.png -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart video.mp4

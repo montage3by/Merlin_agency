@@ -35,4 +35,4 @@
 PW_PATH=$(npm root -g)/playwright node scripts/render.cjs <src> scripts/banners.json <png_out>
 python3 scripts/compress.py <png_out> jpg
 ```
-В `<src>`: рендеры (mop.png, air.png, vibro.png, coffee.png, aerlyn.png, aqvion.png, cleneo.png), sizes.json ({файл: [ширина, высота]}), logo.svg с сайта, шрифты Onest и Gogol с сайта.
+Логотип — `scripts/logo-white.svg` (у файла с сайта `preserveAspectRatio="none"`, из-за него логотип сплющивался; здесь заданы размеры 165×20,6). В `<src>`: рендеры (mop.png, air.png, vibro.png, coffee.png, aerlyn.png, aqvion.png, cleneo.png), sizes.json ({файл: [ширина, высота]}), logo.svg с сайта, шрифты Onest и Gogol с сайта.

@@ -1,0 +1,139 @@
+{
+ "products": [
+  {
+   "id": "01_shvabra",
+   "img": "mop.png",
+   "fx": 0.45,
+   "fy": 0.55,
+   "ph": 0.54,
+   "title": "Кухня будет новой годами.",
+   "script": "Просто мой паром",
+   "product": "Паровая швабра EcoSteam Pro",
+   "o": {
+    "desktop": {
+     "h": 500,
+     "ty": 310
+    },
+    "mobile": {
+     "h": 300,
+     "ty": 290,
+     "tx": 700
+    }
+   }
+  },
+  {
+   "id": "02_aerogril",
+   "img": "air.png",
+   "fx": 0.43,
+   "fy": 0.42,
+   "ph": 0.49,
+   "title": "Наггетсы и картошка фри, как любят дети,",
+   "script": "почти без масла",
+   "product": "Аэрогриль Luxhommè AirChef",
+   "o": {
+    "mobile": {
+     "h": 250,
+     "ty": 295,
+     "tx": 760
+    },
+    "native": {
+     "h": 330,
+     "ty": 330,
+     "fit": 1
+    }
+   }
+  },
+  {
+   "id": "03_vibroplatforma",
+   "img": "vibro.png",
+   "fx": 0.5,
+   "fy": 0.57,
+   "ph": 0.3,
+   "title": "Тонус и бодрость",
+   "script": "дома, без зала",
+   "product": "Виброплатформа uFit 2D",
+   "o": {
+    "mobile": {
+     "h": 200,
+     "ty": 300,
+     "tx": 760
+    }
+   }
+  },
+  {
+   "id": "04_kofemashina",
+   "img": "coffee.png",
+   "fx": 0.53,
+   "fy": 0.475,
+   "ph": 0.41,
+   "title": "Капсулы и молотый кофе",
+   "script": "в одной машине",
+   "product": "Капсульная кофемашина CoffeeMaker Classic 4 в 1",
+   "o": {}
+  },
+  {
+   "id": "05_pylesos_aerlyn",
+   "img": "aerlyn.png",
+   "fx": 0.45,
+   "fy": 0.45,
+   "ph": 0.75,
+   "title": "Шерсть за 5 минут:",
+   "script": "пол, ковры, мебель",
+   "product": "Беспроводной пылесос Aerlyn",
+   "o": {
+    "desktop": {
+     "h": 555,
+     "ty": 320
+    },
+    "mobile": {
+     "h": 380,
+     "ty": 248,
+     "tx": 760
+    },
+    "nplate": "top"
+   }
+  },
+  {
+   "id": "06_pylesos_aqvion",
+   "img": "aqvion.png",
+   "fx": 0.53,
+   "fy": 0.48,
+   "ph": 0.72,
+   "title": "Чистота без царапин",
+   "script": "и разводов",
+   "product": "Моющий пылесос Aqvion Pro",
+   "o": {
+    "desktop": {
+     "h": 560
+    },
+    "mobile": {
+     "h": 340,
+     "ty": 270,
+     "tx": 740
+    }
+   }
+  },
+  {
+   "id": "07_pylesos_cleneo",
+   "img": "cleneo.png",
+   "fx": 0.5,
+   "fy": 0.55,
+   "ph": 0.85,
+   "title": "Химчистка салона авто",
+   "script": "и дивана дома",
+   "product": "Компактный моющий пылесос Cleneo Pro",
+   "o": {
+    "desktop": {
+     "h": 900,
+     "ty": 150
+    },
+    "mobile": {
+     "h": 575,
+     "ty": 150
+    },
+    "nplate": "top"
+   }
+  }
+ ],
+ "badge": "Выгода до 50%"
+}

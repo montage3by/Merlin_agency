@@ -15,6 +15,7 @@
 | Факт август | `data/2026-08.md` |
 | План и факт сентябрь, медийка Ozon, артикулы | `data/2026-09.md` |
 | Октябрь: медийка Ozon по дням, LAL-кампании | `data/2026-10.md` |
+| Ноябрь: медийка Ozon по дням | `data/2026-11.md` |
 | Медийка Ozon: анализ LAL-кампаний и креативов (PDF с миниатюрами) | `ozon-media/lal-2026-10/Luxhomme_Ozon-LAL_2026-10.pdf` |
 | Медийка Ozon: требования к форматам, портрет покупателя, смежные категории (выжимка) | `ozon-media/guide/README.md`, исходник `ozon-media/guide/ozon-media-guide-2026-10-26.xlsx`; 1 смежная на товар — `ozon-media/guide/Luxhomme_Ozon-media_1-smezhnaya-na-tovar.xlsx` |
 | Баннеры медийки Ozon по 1 смежной аудитории на товар (7 товаров × 3 формата, JPG) | `ozon-media/banners-2026-10/README.md`, архив `ozon-media/banners-2026-10/Luxhomme_Ozon-banners_2026-10.zip` |

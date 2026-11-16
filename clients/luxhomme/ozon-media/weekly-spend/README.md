@@ -26,3 +26,4 @@ PYLIB=<путь к openpyxl> python3 -I scripts/build_week.py days.csv Luxhomme_
 | Неделя | Выгрузки | Итог по выгрузкам | Файл |
 |---|---|---|---|
 | 19–25.10.2026 | `raw/2026-10-19_25/` (скрины по дням: `kab1_screens.py`, `kab2_screens.py`, `days.csv`) | 58 972,58 ₽ по скринам (каб 1 — 23 307,06; каб 2 — 35 665,52) | `Luxhomme_Ozon-media_2026-10-19_25.xlsx` |
+| 19.10–15.11.2026 | `raw/2026-10-19_11-15/` (скрины по дням: `kabA_screens.py` — каб 1, `kabB_screens.py` — каб 2, `days.csv`) | 290 665,40 ₽ по скринам (каб 1 — 171 041,94; каб 2 — 119 623,46) | `Luxhomme_Ozon-media_2026-10-19_11-15.xlsx` |

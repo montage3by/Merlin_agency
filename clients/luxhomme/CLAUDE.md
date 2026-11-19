@@ -21,6 +21,7 @@
 | Медийка Ozon: требования к форматам, портрет покупателя, смежные категории (выжимка) | `ozon-media/guide/README.md`, исходник `ozon-media/guide/ozon-media-guide-2026-10-26.xlsx`; 1 смежная на товар — `ozon-media/guide/Luxhomme_Ozon-media_1-smezhnaya-na-tovar.xlsx` |
 | Баннеры медийки Ozon по 1 смежной аудитории на товар (7 товаров × 3 формата, JPG) | `ozon-media/banners-2026-10/README.md`, архив `ozon-media/banners-2026-10/Luxhomme_Ozon-banners_2026-10.zip` |
 | Медийка Ozon: видео к Чёрной пятнице — 5 смежных аудиторий и настройки кампаний | `ozon-media/black-friday-2026/README.md` |
+| Медийка Ozon: объединённая статистика 2 кабинетов (выгрузка 19.11), сегменты и артикулы | `ozon-media/stat-2026-11/README.md`, таблица `ozon-media/stat-2026-11/Luxhomme_Ozon-media_stat_2026-11.xlsx` |
 | **Еженедельно:** медийка Ozon (2 кабинета) → строки в общую таблицу затрат, расход дня ÷5 на 5 артикулов | `ozon-media/weekly-spend/README.md`, скрипт `ozon-media/weekly-spend/scripts/build_week.py` |
 | Открытые вопросы и расхождения в данных | `open-questions.md` |
 | Интервью с покупателями, ЦА и CJM, семантика | `research/README.md` |

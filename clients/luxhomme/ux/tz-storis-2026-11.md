@@ -123,6 +123,14 @@
 
 ## 12. Примеры
 
+Картинки в папке `storis-primery/`:
+- `1_goldapple_lenta-na-glavnoj.png`: «Золотое Яблоко», лента кружков-сторис под главным баннером;
+- `2_goldapple_pleer.png`: плеер на компьютере, по бокам соседние сторис, снизу кнопка «Используемые товары»;
+- `3_goldapple_tovary-iz-storis.png`: товары из ролика с ценой и скидкой, клик ведёт в карточку;
+- `4_luxhomme_maket.jpg`: макет для Luxhommè на телефоне (лента, плеер с плашкой товара, добавление в корзину без выхода из плеера).
+
+Кадры «Золотого Яблока» взяты из демо-видео в кейсе агентства ONY: https://ony.ru/work/goldapple
+
 - «Сторси» (российский сервис): вертикальные видео на страницах каталога и в карточках; товары отмечаются в видео, в плеере всплывает карточка с кнопкой «Купить» или «В корзину». https://onbd.ru/blog/storsy-ecommerce-stories
 - Tolstoy: формат сторис (как в Instagram) и ленты (как в TikTok) с товарами в видео; примеры магазинов по отраслям. https://www.gotolstoy.com/blog/what-is-a-shoppable-video-with-examples и https://www.gotolstoy.com/post/the-best-shoppable-video-examples-through-different-industries
 - Videowise: настройка виджета сторис на сайте, форматы (сторис, карусель, видео в карточке). https://help.videowise.com/video-widgets/6vD2MbeBhPyh8aCK9uZcEf/how-to-create-a-stories-widget/6xqT6tdk4S8sZuMkSMp4KH

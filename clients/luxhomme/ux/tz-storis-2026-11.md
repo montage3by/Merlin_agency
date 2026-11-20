@@ -136,14 +136,6 @@
 
 ![Товары из ролика с ценой и скидкой, клик ведёт в карточку товара](storis-primery/3_goldapple_tovary-iz-storis.png){width=16cm}
 
-Другие сервисы и материалы:
-
-- «Сторси» (российский сервис): вертикальные видео на страницах каталога и в карточках; товары отмечаются в видео, в плеере всплывает карточка с кнопкой «Купить» или «В корзину». https://onbd.ru/blog/storsy-ecommerce-stories
-- Tolstoy: формат сторис (как в Instagram) и ленты (как в TikTok) с товарами в видео; примеры магазинов по отраслям. https://www.gotolstoy.com/blog/what-is-a-shoppable-video-with-examples и https://www.gotolstoy.com/post/the-best-shoppable-video-examples-through-different-industries
-- Videowise: настройка виджета сторис на сайте, форматы (сторис, карусель, видео в карточке). https://help.videowise.com/video-widgets/6vD2MbeBhPyh8aCK9uZcEf/how-to-create-a-stories-widget/6xqT6tdk4S8sZuMkSMp4KH
-- Spectrum: форматы виджетов (кружки сторис, лента-карусель, сетка, видео в карточке, плавающий кружок). https://getspectrum.ai/apps/shoppable-videos
-- Frisbuy: сторис на сайте со ссылками на товары. https://www.retail.ru/rbc/pressreleases/frisbuy-ru-stories-iz-instagram-na-sayte-i-v-prilozhenii-zachem-kak-i-primery/
-
 ## 13. Контент на старт (от Merlin и Luxhommè)
 
 6 групп по 2–4 ролика: виброплатформы uFit, паровые швабры, аэрогрили, кофемашины, пылесосы, акция месяца. Источник: видео для медийки Ozon и соцсетей, перемонтированные в 9:16 с плашками в безопасных зонах.

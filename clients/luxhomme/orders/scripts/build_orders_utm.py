@@ -1,7 +1,8 @@
 """Заказы Ozon FBO и FBS 01.08–31.10.2026 + источники из отчёта «Внешний трафик» (UTM).
 В отчёте трафика нет номеров заказов, поэтому заказы сопоставляются по:
   цене (предельная цена = сумма в отчёте / кол-во), дате (сессия или 30 дней после неё), артикулу.
-usage: PYLIB=<openpyxl> python3 -I build_orders_utm.py out.xlsx traffic.xlsx orders1.csv [orders2.csv ...]"""
+usage: PYLIB=<openpyxl> python3 -I build_orders_utm.py out.xlsx traffic.xlsx [Кабинет=]orders1.csv [Кабинет 2=orders2.csv ...]
+Без метки файл относится к «Кабинет 1». Отчёт трафика выгружен из кабинета 1, поэтому UTM ищутся только в его заказах."""
 import csv, os, sys, collections, datetime as dt
 sys.path.insert(0, os.environ.get("PYLIB", ""))
 import openpyxl
@@ -10,15 +11,18 @@ from openpyxl.utils import get_column_letter
 
 OUT, TRAFFIC, FILES = sys.argv[1], sys.argv[2], sys.argv[3:]
 MON = {"08": "Август", "09": "Сентябрь", "10": "Октябрь"}
-PLACE = {"Ozon": "ОЗ", "Шопинг в Т-Банке": "ОЗ", "ВТБ Шопинг": "ОЗ", "Luxhommè": "Сайт"}
+PLACE = {"Ozon": "ОЗ", "Шопинг в Т-Банке": "ОЗ", "ВТБ Шопинг": "ОЗ", "Luxhommè": "Сайт", "Luxhommè store": "Сайт"}
+TRAFFIC_CAB = "Кабинет 1"
 D = lambda s: dt.date.fromisoformat(s[:10])
 
 # ---------- заказы
 orders = {}
 for f in FILES:
+    cab, f = f.split("=", 1) if "=" in f else ("Кабинет 1", f)
     for r in csv.DictReader(open(f, encoding="utf-8-sig"), delimiter=";"):
         r["_scheme"] = "FBS" if "Код этикетки" in r else "FBO"
-        orders[(r["Номер отправления"], r["SKU"])] = r
+        r["_cab"] = cab
+        orders[(cab, r["Номер отправления"], r["SKU"])] = r
 O = sorted((r for r in orders.values() if "2026-08-01" <= r["Принят в обработку"][:10] <= "2026-10-31"),
            key=lambda r: (r["Принят в обработку"], r["Номер отправления"]))
 for i, r in enumerate(O):
@@ -69,7 +73,8 @@ for t in T:
 
 # ---------- сопоставление: сначала заказы в рамках сессии (та же дата), потом окно 30 дней
 by_price = collections.defaultdict(list)
-for r in O: by_price[r["_p"]].append(r)
+for r in O:
+    if r["_cab"] == TRAFFIC_CAB: by_price[r["_p"]].append(r)
 for phase in ("session", "window"):
     for u in units:
         if "order" in u or (phase == "session" and not u["in_session"]): continue
@@ -87,7 +92,7 @@ ws = wb.active; ws.title = "Заказы"
 HD = ["Месяц", "Дата заказа", "Номер заказа", "Номер отправления", "Площадка продаж (ВБ/ОЗ/Сайт)", "Откуда заказ (поле Ozon)",
       "Источник: соц. сеть", "Источник данных (ЮТМ/ВК/ОРГ/АТР/WW)", "Артикул", "Товар", "Статус заказа",
       "Предельная цена, ₽ (сколько упало на счёт)", "UTM source/medium", "UTM campaign", "Тип кампании Директа",
-      "UTM content", "Дата клика (сессии)", "Как сопоставлено", "Схема (FBO/FBS)", "Количество"]
+      "UTM content", "Дата клика (сессии)", "Как сопоставлено", "Схема (FBO/FBS)", "Количество", "Кабинет Ozon"]
 ws.append(HD)
 for r in O:
     d = r["Принят в обработку"]; u = r["_m"]
@@ -97,22 +102,22 @@ for r in O:
                "ЮТМ" if u else "нет UTM",
                r["Артикул"], r["Название товара"], r["Статус"], r["_sum"],
                u["src"] if u else "", u["camp"] if u else "", ctype(u["camp"]) if u else "",
-               u["content"] if u else "", u["date"].strftime("%d.%m.%Y") if u else "", u["how"] if u else "", r["_scheme"], r["_q"]])
+               u["content"] if u else "", u["date"].strftime("%d.%m.%Y") if u else "", u["how"] if u else "", r["_scheme"], r["_q"], r["_cab"]])
 n = len(O) + 1
 rng = lambda c: f"Заказы!${c}$2:${c}${n}"
 
 # сводка по месяцам и площадкам
 s = wb.create_sheet("Сводка")
-s.append(["Месяц", "Площадка", "Схема", "Заказов", "Доставлено", "Отменено", "Предельная цена по доставленным, ₽",
+s.append(["Месяц", "Кабинет Ozon", "Площадка", "Схема", "Заказов", "Доставлено", "Отменено", "Предельная цена по доставленным, ₽",
           "Из них с UTM: заказов", "С UTM: доставлено", "С UTM: предельная цена по доставленным, ₽"])
-keys = sorted({(r["Принят в обработку"][5:7], PLACE.get(r["Откуда заказ"]), r["_scheme"]) for r in O})
-for i, (m, p, sc) in enumerate(keys, 2):
-    a = f'{rng("A")},A{i},{rng("E")},B{i},{rng("S")},C{i}'
-    s.append([MON[m], p, sc, f"=COUNTIFS({a})", f'=COUNTIFS({a},{rng("K")},"Доставлен")', f'=COUNTIFS({a},{rng("K")},"Отменён")',
+keys = sorted({(r["Принят в обработку"][5:7], r["_cab"], PLACE.get(r["Откуда заказ"]), r["_scheme"]) for r in O})
+for i, (m, cb, p, sc) in enumerate(keys, 2):
+    a = f'{rng("A")},A{i},{rng("U")},B{i},{rng("E")},C{i},{rng("S")},D{i}'
+    s.append([MON[m], cb, p, sc, f"=COUNTIFS({a})", f'=COUNTIFS({a},{rng("K")},"Доставлен")', f'=COUNTIFS({a},{rng("K")},"Отменён")',
               f'=SUMIFS({rng("L")},{a},{rng("K")},"Доставлен")', f'=COUNTIFS({a},{rng("H")},"ЮТМ")',
               f'=COUNTIFS({a},{rng("H")},"ЮТМ",{rng("K")},"Доставлен")', f'=SUMIFS({rng("L")},{a},{rng("H")},"ЮТМ",{rng("K")},"Доставлен")'])
 last = len(keys) + 1
-s.append(["Итого", "", ""] + [f"=SUM({get_column_letter(c)}2:{get_column_letter(c)}{last})" for c in range(4, 11)])
+s.append(["Итого", "", "", ""] + [f"=SUM({get_column_letter(c)}2:{get_column_letter(c)}{last})" for c in range(5, 12)])
 
 # сводка по источникам UTM
 u2 = wb.create_sheet("UTM по источникам")
@@ -162,16 +167,16 @@ for sh in wb.worksheets:
     if sh.cell(sh.max_row, 1).value == "Итого":
         for c in sh[sh.max_row]: c.font = Font(bold=True)
     sh.freeze_panes = "A2"
-for col, w in zip("ABCDEFGHIJKLMNOPQRST", (10, 12, 16, 19, 12, 18, 18, 16, 18, 45, 12, 16, 18, 48, 16, 30, 12, 22, 10, 10)):
+for col, w in zip("ABCDEFGHIJKLMNOPQRSTU", (10, 12, 16, 19, 12, 18, 18, 16, 18, 45, 12, 16, 18, 48, 16, 30, 12, 22, 10, 10, 12)):
     ws.column_dimensions[col].width = w
-ws.auto_filter.ref = f"A1:T{n}"
+ws.auto_filter.ref = f"A1:U{n}"
 for sh in (s, u2, nm, sv):
-    for col in "ABCDEFGHIJ": sh.column_dimensions[col].width = 18
+    for col in "ABCDEFGHIJK": sh.column_dimensions[col].width = 18
 wb.save(OUT)
 
 # контроль
 mt = [u for u in units if "order" in u]
-print("заказов", len(O), "| единиц в отчёте трафика", len(units), "сумма", sum(u["price"] for u in units),
+print("заказов", len(O), collections.Counter((r["_cab"], r["_scheme"]) for r in O), "| единиц в отчёте трафика", len(units), "сумма", sum(u["price"] for u in units),
       "| сопоставлено", len(mt), "сумма", sum(u["price"] for u in mt))
 print(collections.Counter(u["how"] for u in mt))
 print(collections.Counter(social(u["src"], u["camp"], u["content"]) for u in mt))

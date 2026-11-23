@@ -10,7 +10,7 @@
 | Сводный контекст проекта одним файлом | `PROJECT-CONTEXT.md` |
 | **Стратегия Чёрной пятницы 17–30.11** (Директ, медийка Ozon, email, сайт и SEO) | `strategy/black-friday-2026-11.md`, PDF: `strategy/Luxhomme_Black-Friday_strategiya_2026-11.pdf` |
 | Постмит 20.11: SEO/GEO, конверсия сайта, медийка Ozon (расхождение), Директ | `meetings/2026-11-20-postmit.md` |
-| Заказы по площадкам 01.08–31.10 (Ozon FBO, статус, артикул, предельная цена) | `orders/README.md`, таблица `orders/Luxhomme_zakazy_2026-08-10.xlsx` |
+| Заказы по площадкам 01.08–31.10 с источниками UTM (Ozon FBO + внешний трафик) | `orders/README.md`, таблица `orders/Luxhomme_zakazy_UTM_2026-08-10.xlsx` |
 | Клиент, каналы продаж, рекламные кабинеты | `context.md` |
 | Формулы метрик, карта таблицы «Меморандум 1 млрд» | `metrics.md` |
 | Продукты, артикулы, цены | `products.md` |

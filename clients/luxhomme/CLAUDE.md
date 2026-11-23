@@ -26,6 +26,7 @@
 | **Еженедельно:** медийка Ozon (2 кабинета) → строки в общую таблицу затрат, расход дня ÷5 на 5 артикулов | `ozon-media/weekly-spend/README.md`, скрипт `ozon-media/weekly-spend/scripts/build_week.py` |
 | Открытые вопросы и расхождения в данных | `open-questions.md` |
 | Интервью с покупателями, ЦА и CJM, семантика | `research/README.md` |
+| План SEO-статей блога: День матери и Новый год, вт и чт 24.11–28.01 (20 статей) | `seo/blog-plan/README.md`, таблица `seo/blog-plan/Luxhomme_plan-statej-blog_2026-11.xlsx` |
 | SEO-аудит сайта (чек-лист доработок) | `seo/seo-audit-2026-10.md` |
 | Alt у изображений: где пусто, что чинить в WP и что в коде витрины | `seo/alt-audit-2026-10.md`, план alt на утверждение: `seo/alt-plan-2026-10.xlsx` |
 | Презентация SEO и GEO (данные, гипотезы, выводы, план) | `seo/prezentaciya-seo-geo-2026-11/README.md` |

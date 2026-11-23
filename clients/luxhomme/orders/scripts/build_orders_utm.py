@@ -133,6 +133,22 @@ for u in units:
         nm.append([u["date"].strftime("%d.%m.%Y"), u["src"], u["camp"], u["content"], u["art"], u["price"],
                    "нет заказа с такой предельной ценой в 30 дней после клика"])
 
+# сверка с отчётом внешнего трафика (по месяцу клика)
+sv = wb.create_sheet("Сверка с отчётом", 1)
+sv.append(["Месяц клика", "Группа", "Отчёт Ozon: заказано, шт (окно атрибуции)", "Отчёт Ozon: сумма, ₽",
+           "Найдено в заказах, шт", "Найдено в заказах: сумма, ₽", "Не найдено, шт", "Не найдено, ₽"])
+grp = lambda u: "Яндекс Директ" if social(u["src"], u["camp"], u["content"]) == "Яндекс Директ" else "Прочие UTM"
+agg = collections.defaultdict(lambda: [0, 0, 0, 0])
+for u in units:
+    a = agg[(u["date"].strftime("%m"), grp(u))]
+    a[0] += 1; a[1] += u["price"]
+    if "order" in u: a[2] += 1; a[3] += u["price"]
+for i, (m, g) in enumerate(sorted(agg), 2):
+    a = agg[(m, g)]
+    sv.append([MON[m], g, a[0], a[1], a[2], a[3], f"=C{i}-E{i}", f"=D{i}-F{i}"])
+last = len(agg) + 1
+sv.append(["Итого", ""] + [f"=SUM({get_column_letter(c)}2:{get_column_letter(c)}{last})" for c in range(3, 9)])
+
 # оформление
 fill = PatternFill("solid", fgColor="DDD7C1")
 for sh in wb.worksheets:
@@ -147,7 +163,7 @@ for sh in wb.worksheets:
 for col, w in zip("ABCDEFGHIJKLMNOPQR", (10, 12, 16, 19, 12, 18, 18, 16, 18, 45, 12, 16, 18, 48, 16, 30, 12, 22)):
     ws.column_dimensions[col].width = w
 ws.auto_filter.ref = f"A1:R{n}"
-for sh in (s, u2, nm):
+for sh in (s, u2, nm, sv):
     for col in "ABCDEFGHI": sh.column_dimensions[col].width = 18
 wb.save(OUT)
 

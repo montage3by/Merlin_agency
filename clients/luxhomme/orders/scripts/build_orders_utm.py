@@ -139,6 +139,9 @@ for tier in ("day_art", "day", "window_art", "window"):
             u["price"] = pr
 
 # ---------- xlsx
+ALL_N = len(O)
+if os.environ.get("UTM_ONLY"):          # только заказы с UTM-метками
+    O = [r for r in O if r["_m"]]
 wb = openpyxl.Workbook()
 ws = wb.active; ws.title = "Заказы"
 HD = ["Месяц", "Дата заказа", "Номер заказа", "Номер отправления", "Площадка продаж (ВБ/ОЗ/Сайт)", "Откуда заказ (поле Ozon)",
@@ -224,6 +227,7 @@ for col, w in zip("ABCDEFGHIJKLMNOPQRSTU", (10, 12, 16, 19, 12, 18, 18, 16, 18, 
 ws.auto_filter.ref = f"A1:U{n}"
 for sh in (s, u2, nm, sv):
     for col in "ABCDEFGHIJK": sh.column_dimensions[col].width = 18
+if os.environ.get("UTM_ONLY"): s.delete_cols(9, 3)   # столбцы «с UTM» дублируют основные
 wb.save(OUT)
 
 # контроль

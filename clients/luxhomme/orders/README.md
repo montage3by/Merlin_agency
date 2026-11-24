@@ -1,5 +1,7 @@
 # Заказы по площадкам с источниками, 01.08–31.10.2026
 
+**Только заказы с UTM (2 кабинета): `Luxhomme_zakazy_tolko-UTM_2-kabineta_2026-08-10.xlsx`**, в Google: https://docs.google.com/spreadsheets/d/1LE4ZYlJI4qB4QWZsXB-A-fH4E6SgpxildHLppRAaj30/edit (493 заказа, 411 доставлено, 6 637 948 ₽ по доставленным). Сборка той же командой, что ниже, с переменной `UTM_ONLY=1`.
+
 **Финальный файл (2 кабинета Ozon, UTM обоих): `Luxhomme_zakazy_UTM_2-kabineta_2026-08-10.xlsx`**, в Google: https://docs.google.com/spreadsheets/d/19qFyOVfDQPmQmiadeFOeNe62jCXZ3xI1OII0Dz7EBXs/edit (18 064 заказа: кабинет 1 — 9 491, кабинет 2 — 8 573; 493 с UTM: кабинет 1 — 131, кабинет 2 — 362). Столбец U «Кабинет Ozon»; на листах «Сводка», «Сверка с отчётом», «UTM по источникам», «Не сопоставлено» есть разрез по кабинету.
 
 Внешний трафик: кабинет 1 (ID продавца 2621643) — `raw/ozon-vneshnij-trafik-2026-08-10.xlsx`, 136 товаров; кабинет 2 (ID 253615) — `raw/ozon-kab2-vneshnij-trafik-2026-08-10.xlsx`, 362 товара. Каждый отчёт сопоставляется только с заказами своего кабинета. Сопоставлено 131 из 136 и 362 из 362.

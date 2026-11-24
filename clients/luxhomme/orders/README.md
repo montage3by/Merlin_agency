@@ -1,12 +1,16 @@
 # Заказы по площадкам с источниками, 01.08–31.10.2026
 
-**Финальный файл (2 кабинета Ozon): `Luxhomme_zakazy_UTM_2-kabineta_2026-08-10.xlsx`**, в Google: https://docs.google.com/spreadsheets/d/1Bhw1V0FAJe88rbrm5nlxucpiZAbXFWhwHPvYUcQT2rw/edit (18 064 заказа: кабинет 1 — 9 491, кабинет 2 — 8 573; 126 с UTM). Столбец U «Кабинет Ozon», в «Сводке» разбивка месяц × кабинет × площадка × схема.
+**Финальный файл (2 кабинета Ozon, UTM обоих): `Luxhomme_zakazy_UTM_2-kabineta_2026-08-10.xlsx`**, в Google: https://docs.google.com/spreadsheets/d/19qFyOVfDQPmQmiadeFOeNe62jCXZ3xI1OII0Dz7EBXs/edit (18 064 заказа: кабинет 1 — 9 491, кабинет 2 — 8 573; 493 с UTM: кабинет 1 — 131, кабинет 2 — 362). Столбец U «Кабинет Ozon»; на листах «Сводка», «Сверка с отчётом», «UTM по источникам», «Не сопоставлено» есть разрез по кабинету.
 
-Кабинет 2 (`raw/ozon-kab2-*.csv`): FBO 01.08–31.10 и FBS (только доставленные, как и в кабинете 1). Отчёт «Внешний трафик» есть только из кабинета 1, поэтому UTM в кабинете 2 не сопоставлялись: все его заказы «нет UTM». Нужна выгрузка «Внешний трафик» из кабинета 2. «Luxhommè store» в поле «Откуда заказ» = площадка «Сайт».
+Внешний трафик: кабинет 1 (ID продавца 2621643) — `raw/ozon-vneshnij-trafik-2026-08-10.xlsx`, 136 товаров; кабинет 2 (ID 253615) — `raw/ozon-kab2-vneshnij-trafik-2026-08-10.xlsx`, 362 товара. Каждый отчёт сопоставляется только с заказами своего кабинета. Сопоставлено 131 из 136 и 362 из 362.
+
+Подбор по сумме строки: если в строке отчёта несколько товаров с разными ценами (сумма не делится на количество поровну), ищутся неразмеченные заказы того же кабинета, чьи предельные цены в сумме точно дают сумму строки: сначала в день клика и того же артикула, затем в день клика, затем в 30 дней. Такие заказы помечены «подбор по сумме строки» (36 шт.).
+
+Заказы кабинета 2 (`raw/ozon-kab2-*.csv`): FBO 01.08–31.10 и FBS (только доставленные, как и в кабинете 1). «Luxhommè store» в поле «Откуда заказ» = площадка «Сайт».
 
 Сборка:
 ```
-python3 scripts/build_orders_utm.py Luxhomme_zakazy_UTM_2-kabineta_2026-08-10.xlsx raw/ozon-vneshnij-trafik-2026-08-10.xlsx raw/ozon-fbo-2026-08-09.csv raw/ozon-fbo-2026-10.csv raw/ozon-fbs-2026-08-10.csv "Кабинет 2=raw/ozon-kab2-fbo-2026-08-09.csv" "Кабинет 2=raw/ozon-kab2-fbo-2026-10.csv" "Кабинет 2=raw/ozon-kab2-fbs-2026-08-10.csv"
+python3 scripts/build_orders_utm.py Luxhomme_zakazy_UTM_2-kabineta_2026-08-10.xlsx "raw/ozon-vneshnij-trafik-2026-08-10.xlsx,Кабинет 2=raw/ozon-kab2-vneshnij-trafik-2026-08-10.xlsx" raw/ozon-fbo-2026-08-09.csv raw/ozon-fbo-2026-10.csv raw/ozon-fbs-2026-08-10.csv "Кабинет 2=raw/ozon-kab2-fbo-2026-08-09.csv" "Кабинет 2=raw/ozon-kab2-fbo-2026-10.csv" "Кабинет 2=raw/ozon-kab2-fbs-2026-08-10.csv"
 ```
 
 Предыдущая версия (только кабинет 1, FBO + FBS, 9 491 заказ, 126 с UTM): `Luxhomme_zakazy_UTM_FBO-FBS_2026-08-10.xlsx`. Предыдущие версии: `Luxhomme_zakazy_UTM_2026-08-10.xlsx` (только FBO).

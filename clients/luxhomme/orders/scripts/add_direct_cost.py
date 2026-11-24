@@ -15,7 +15,8 @@ FIX = {"VACCLCOMPAC": "VACCLCOMPACT", "ViPLATB": "VIPLATB"}
 # ---------- статистика Директа
 ws = openpyxl.load_workbook(STAT, data_only=True).worksheets[0]
 period = next((r[0] for r in ws.iter_rows(max_row=5, values_only=True) if r[0] and str(r[0]).startswith("Период")), "")
-camp = {}
+camp = {}; daily = []
+MON = {"08": "Август", "09": "Сентябрь", "10": "Октябрь", "11": "Ноябрь", "12": "Декабрь"}
 for r in ws.iter_rows(min_row=7, values_only=True):
     if not r[0] or r[0] == "Итого": continue
     name = r[0].strip(); cid = str(r[1])
@@ -23,6 +24,7 @@ for r in ws.iter_rows(min_row=7, values_only=True):
     c = camp.setdefault(cid, {"name": name, "spend": 0.0, "ozon": ozon,
                               "art": re.split(r"\s+[|l]\s+", name)[-1].strip() if ozon else ""})
     c["spend"] += r[5] or 0
+    daily.append((r[2], name, cid, r[5] or 0))
 
 # ---------- заказы
 wb = openpyxl.load_workbook(IN)
@@ -64,7 +66,9 @@ s.append(["№ кампании", "Название", "Артикул", "Рас�
 top = s.max_row + 1
 assert top == len(arts) + 6
 for cid, c in sorted(camp.items(), key=lambda x: (not x[1]["ozon"], -x[1]["spend"])):
-    s.append([cid, c["name"], c["art"], round(c["spend"], 2), "да" if c["ozon"] else "нет (сайт / бренд / MAX)"])
+    k = s.max_row + 1
+    s.append([cid, c["name"], c["art"], f"=SUMIFS('Расход Директ'!$G:$G,'Расход Директ'!$D:$D,A{k})",
+              "да" if c["ozon"] else "нет (сайт / бренд / MAX)"])
 s.append(["Итого", "", "", f"=SUM(D{top}:D{s.max_row})", ""])
 
 fill = PatternFill("solid", fgColor="DDD7C1")
@@ -79,6 +83,20 @@ for row in s.iter_rows(min_row=2):
 for col, w in zip("ABCDE", (18, 60, 20, 14, 16)): s.column_dimensions[col].width = w
 z.column_dimensions[L(cA)].width = 18; z.column_dimensions[L(cW)].width = 14
 z.auto_filter.ref = f"A1:{L(cW)}{n}"
+# ---------- лист «Расход Директ»: только расход по дням из статистики
+rd = wb.create_sheet("Расход Директ", 2)
+rd.append(["Месяц", "Дата", "Кампания", "№ кампании", "Артикул", "Распределяется на заказы Ozon", "Расход, ₽"])
+for d, name, cid, v in sorted(daily, key=lambda x: (x[0][6:] + x[0][3:5] + x[0][:2], x[1])):
+    c = camp[cid]
+    rd.append([MON[d[3:5]], d, name, cid, c["art"], "да" if c["ozon"] else "нет", round(v, 2)])
+rd.append(["Итого", "", "", "", "", "", f"=SUM(G2:G{rd.max_row})"])
+for c in rd[1]:
+    c.font = Font(bold=True); c.fill = fill; c.alignment = Alignment(wrap_text=True, vertical="top")
+for c in rd[rd.max_row]: c.font = Font(bold=True)
+for row in rd.iter_rows(min_row=2, min_col=7, max_col=7):
+    row[0].number_format = "# ##0.00"
+for col, w in zip("ABCDEFG", (10, 12, 44, 13, 18, 14, 12)): rd.column_dimensions[col].width = w
+rd.freeze_panes = "A2"; rd.auto_filter.ref = f"A1:G{rd.max_row - 1}"
 wb.save(OUT)
 
 oz = sum(c["spend"] for c in camp.values() if c["ozon"]); al = sum(c["spend"] for c in camp.values())

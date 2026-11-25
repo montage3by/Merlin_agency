@@ -5,7 +5,8 @@
       "args": ["-y", "mcp-yandex-direct@1.14.0"],
       "env": {
         "YANDEX_DIRECT_TOKEN": "proxy-injected-placeholder",
-        "ASKADS_TELEMETRY": "0"
+        "ASKADS_TELEMETRY": "0",
+        "NODE_USE_ENV_PROXY": "1"
       }
     }
   }

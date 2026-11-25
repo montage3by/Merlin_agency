@@ -42,6 +42,7 @@
 | Email «Закрытая распродажа −15%» (Битрикс24) | `email/2026-10-closed-sale/`; догрев «Остался 1 день» — `email/2026-10-closed-sale-reminder/` |
 | Автописьма: сайт (WordPress/WooCommerce) → Битрикс24 (заказ, статусы, промокод) | `email/bitrix24-avtopisma/instrukciya.md`, код для разработчика: `email/bitrix24-avtopisma/luxhomme-b24.php` |
 | План email-рассылок окт–ноя, Чёрная пятница 13–30.11 | `email/plan-2026-10-11.md`; письмо «Сезон мокрых следов» — `email/2026-10-wet-floors/`; «Осень, лапы и шерсть» (питомцы) — `email/2026-10-pets/` |
+| **Директ: кампании 25.11 (бренд широкие 716703308, товарная фид ЧП 716703431)**, черновики, что сделать перед запуском | `direct/campaigns-2026-11-25.md`, фид из каталога сайта: `direct/scripts/build_feed_from_store.py` |
 | Яндекс Директ: весь контекст одним файлом (история, ноябрь на сайт, бюджеты, Алиса, задачи) | `direct/DIRECT-CONTEXT.md` |
 | Яндекс Директ на сайт: семантика, объявления, UTM, импорт, фид (15 SKU) | `direct/Luxhomme_Yandex-Direct_2026-10.xlsx`, фид: `direct/luxhomme-direct-feed.yml`, тексты правятся в `direct/scripts/content.py` |
 

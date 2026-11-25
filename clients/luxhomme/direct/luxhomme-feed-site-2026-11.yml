@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-11-25 11:04">
+<shop>
+<name>Luxhommè</name>
+<company>ООО «САУДАГАР Е-КОМ»</company>
+<url>https://luxhomme.store</url>
+<currencies><currency id="RUR" rate="1"/></currencies>
+<categories>
+<category id="1">Техника для уборки</category>
+<category id="2">Техника для кухни</category>
+<category id="3">Техника для занятий спортом</category>
+</categories>
+<offers>
+<offer id="5682901" available="true">
+<url>https://luxhomme.store/products/cremax</url>
+<price>29095</price>
+<currencyId>RUR</currencyId>
+<categoryId>2</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/10/CremaX-1.1.jpg</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/10/CremaX-2.jpg</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/10/CremaX-3.jpg</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/10/CremaX-4.jpg</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/10/CremaX-6.jpg</picture>
+<name>Зерновая кофемашина с кофемолкой Luxhommè CremaX</name>
+<vendor>Luxhommè</vendor>
+<model>CremaX</model>
+<typePrefix>Зерновая кофемашина с кофемолкой</typePrefix>
+<description>Рожковая кофемашина LUXHOMME CremaX со встроенной кофемолкой — кофе как в кофейне, но у вас дома. Одна машина заменяет кофемолку, капсульную кофеварку и капучинатор: варит кофе из зёрен, из молотого кофе, из капсул Nespresso и Dolce Gusto и из чалдов ESE pod. Сенсорная панель, 10 автоматических программ, два капучинатора и режим холодного кофе: от утреннего эспрессо до айс-латте одним касанием. ГЛАВНОЕ • 5 в 1: зерновой кофе, молотый кофе, капсулы Nespresso, капсулы Dolce Gusto, чалды ESE pod. Все портафильтры и адаптеры для этого уже лежат в коробке, докупать ничего не нужно. • Итальянская по</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>COFMASHPOMOL</vendorCode>
+</offer>
+<offer id="5678441" available="true">
+<url>https://luxhomme.store/products/caffio-professional</url>
+<price>14978</price>
+<oldprice>20125</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>2</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/09/Caffio-Professional-1.7.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/09/Caffio-Professional-1.9.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/09/Caffio-Professional-23.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/09/Caffio-Professional-22.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/09/Caffio-Professional-21.png</picture>
+<name>Рожковая кофемашина Luxhommè Caffio Professional</name>
+<vendor>Luxhommè</vendor>
+<model>Caffio Professional</model>
+<typePrefix>Рожковая кофемашина</typePrefix>
+<description>Кофемашина рожковая Luxhommè Caffio Professional объединяет четыре формата приготовления кофе и помогает выбрать подходящий напиток для любого времени дня. Работает с молотым кофе, капсулами Nespresso и Dolce Gusto, а также ESE-pods. Автоматический съёмный капучинатор позволяет регулировать плотность молочной пенки. Система Thermoblock обеспечивает быстрый нагрев — от 10 секунд. Итальянская помпа ULKA помогает раскрыть вкус и аромат кофе. Поддерживает горячий и холодный режимы и приготовление двойных порций. Подогрев чашек помогает сохранить температуру готового напитка. Съёмные резервуары для</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>COFMASHROZH</vendorCode>
+</offer>
+<offer id="5676371" available="true">
+<url>https://luxhomme.store/products/vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg</url>
+<price>16370</price>
+<oldprice>18454</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>3</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/hf_20260601_122621_948b5ac2_1879_4fd6_b191_3dfe3add6664_1_1.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/hf_20260529_125122_5f1d133d-7ba7-433d-a55f-16946538752a-3.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/Sloj-5-kopiya-3.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/Sloj-2-kopiya-13.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/panel-4.png</picture>
+<name>Виброплатформа 3D с EMS и нагревом Luxhommè uFit 3D Max</name>
+<vendor>Luxhommè</vendor>
+<model>uFit 3D Max</model>
+<typePrefix>Виброплатформа 3D с EMS и нагревом</typePrefix>
+<description>Виброплатформа 3D с EMS-токами и функцией нагрева — многофункциональный тренажёр для домашних тренировок. Она сочетает вибрацию, электростимуляцию мышц и прогрев, помогая сделать занятия более эффективными, укреплять мышцы и поддерживать тонус тела. Мощность 400 Вт и максимальная нагрузка до 150 кг позволяют использовать платформу для разных уровней подготовки. 3D-вибрация создаёт разнонаправленные движения, помогая задействовать мышцы ног, ягодиц, пресса, спины, рук и груди. EMS-функция дополнительно стимулирует мышцы во время тренировки. Функция нагрева делает занятия более комфортными и пом</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg</vendorCode>
+</offer>
+<offer id="5676356" available="true">
+<url>https://luxhomme.store/products/airgrill-dual-pro</url>
+<price>13559</price>
+<oldprice>16990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>2</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/aerogril-14-1.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/aerogril-12.3-1.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/aerogril-14-3.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/oblozhka-3-5.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/07/Sloj-2-kopiya-2-3.png</picture>
+<name>Аэрогриль с двумя чашами Luxhommè AirChef Dual Pro</name>
+<vendor>Luxhommè</vendor>
+<model>AirChef Dual Pro</model>
+<typePrefix>Аэрогриль с двумя чашами</typePrefix>
+<description>Аэрогриль Luxhommè AirChef Dual Pro — это две независимые камеры в одном корпусе. Верхняя чаша на 7 литров и нижняя на 5 работают как отдельные приборы: у каждой свой нагреватель, своя программа и своя температура. Готовьте мясо и гарнир, горячее и выпечку одновременно, без смешивания запахов и вкусов. Мощность 3200 Вт (два ТЭНа по 1600 Вт) и циркуляция горячего воздуха Rapid Air — корочка снаружи, сочность внутри, почти без масла. Две чаши: 7 л сверху и 5 л снизу, независимое управление каждой. 18 автоматических программ: картофель фри, крылышки, рёбрышки, стейки, рыба, овощи, выпечка, йогурт</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>AEROGRIL2CHASHI</vendorCode>
+</offer>
+<offer id="5676179" available="true">
+<url>https://luxhomme.store/products/vertikalnyj-suhoj-pylesos-aerlyn</url>
+<price>12875</price>
+<oldprice>15990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>1</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/06/VMP-stranitsa-tovara-98.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/06/VMP-stranitsa-tovara-104.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/06/VMP-stranitsa-tovara-103.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/06/VMP-stranitsa-tovara-102.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/06/VMP-stranitsa-tovara-101.png</picture>
+<name>Вертикальный беспроводной пылесос Luxhommè Aerlyn</name>
+<vendor>Luxhommè</vendor>
+<model>Aerlyn</model>
+<typePrefix>Вертикальный беспроводной пылесос</typePrefix>
+<description>Aerlyn берёт на себя и сухую, и влажную уборку. Один беспроводной вертикальный пылесос заменяет обычный пылесос, турбощётку и швабру: прошёлся по комнате — и полы чистые, без разводов и лишних движений. Мотор 420 Вт и аккумулятор на 2200 мАч дают уверенную тягу на плитке, ламинате и коврах. Четыре режима мощности (ECO, FLOOR, CARPET, TURBO) плюс интеллектуальный авторежим, который сам подстраивается под покрытие. Турбощётка с электроприводом вычёсывает волосы, шерсть питомцев и въевшуюся пыль. Съёмный резервуар для воды на 0,8 литра для влажной уборки. LED-дисплей показывает остаток заряда, ре</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>VACCLDRY</vendorCode>
+</offer>
+<offer id="5674156" available="true">
+<url>https://luxhomme.store/products/vertikalnyj-moyushhij-pylesos-aqvion-pro</url>
+<price>17656</price>
+<oldprice>19790</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>1</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-12.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-13.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-14.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-15.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-16.png</picture>
+<name>Вертикальный моющий пылесос Luxhommè Aqvion Pro</name>
+<vendor>Luxhommè</vendor>
+<model>Aqvion Pro</model>
+<typePrefix>Вертикальный моющий пылесос</typePrefix>
+<description>Aqvion Pro моет и пылесосит за один проход. Этот беспроводной моющий пылесос закрывает работу сразу трёх приборов — пылесоса, швабры и пароочистителя, так что влажную и сухую уборку делаешь без пересадки с одного устройства на другое. Технология электролизной воды очищает поверхности из обычной чистой воды, без бытовой химии. Раздельные резервуары для чистой и грязной воды: грязь не размазывается по полу, а собирается отдельно. Несколько режимов мощности под разную степень загрязнения, показания выведены на LED-дисплей. Насадка с подсветкой достаёт до тёмных углов и пространства под мебелью. А</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>VACCLWASH</vendorCode>
+</offer>
+<offer id="5674126" available="true">
+<url>https://luxhomme.store/products/kompaktnyj-moyushhij-pylesos-cleneo-pro</url>
+<price>13724</price>
+<oldprice>16990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>1</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-1-2.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-79.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-83.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-86.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/05/VMP-stranitsa-tovara-87.png</picture>
+<name>Компактный моющий пылесос Luxhommè Cleneo Pro</name>
+<vendor>Luxhommè</vendor>
+<model>Cleneo Pro</model>
+<typePrefix>Компактный моющий пылесос</typePrefix>
+<description>Cleneo Pro — компактный моющий пылесос для дома и автомобиля. Один прибор наводит порядок на полах, коврах и мебели, а заодно чистит салон машины, так что отдельная автомойка пылесосом уже не нужна. Два режима на выбор: пар для глубокой очистки и дезинфекции или распыление воды для обычной влажной уборки. Отдельные баки для чистой и грязной воды, чтобы чистое не смешивалось с грязным. Лёгкий гибкий шланг дотягивается до сидений, щелей и труднодоступных мест. Удобная ручка держится уверенно даже при долгой уборке. Блок для хранения шнура, чтобы провод не путался под ногами. Работает и по твёрды</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>VACCLCOMPACT</vendorCode>
+</offer>
+<offer id="5673457" available="true">
+<url>https://luxhomme.store/products/ufit-2d-ems</url>
+<price>7898</price>
+<currencyId>RUR</currencyId>
+<categoryId>3</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2026/01/VMP-stranitsa-tovara-89.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/01/VMP-stranitsa-tovara-92.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/01/VMP-stranitsa-tovara-95.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/01/VMP-stranitsa-tovara-96.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2026/01/VMP-stranitsa-tovara-93.png</picture>
+<name>Виброплатформа с EMS Luxhommè uFit 2D Pro</name>
+<vendor>Luxhommè</vendor>
+<model>uFit 2D Pro</model>
+<typePrefix>Виброплатформа с EMS</typePrefix>
+<description>Виброплатформа uFit 2D Pro — домашний тренажёр с вибрацией, функцией EMS и подогревом поверхности. Она рассчитана на короткие занятия дома: встаёшь на платформу, выбираешь программу и работаешь над тонусом мышц, не выходя из квартиры. Вибрация воздействует на всё тело и помогает включать в работу мышцы ног, спины, пресса и ягодиц. Функция EMS и вибромассаж добавляют занятиям разнообразия. Подогрев поверхности приятно расслабляет мышцы после тренировки. Регулировка интенсивности и целевые программы — от спокойного режима до более активного. Антискользящая поверхность держит стопы устойчиво. Выд</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>VIPLATEL2D</vendorCode>
+</offer>
+<offer id="5671691" available="true">
+<url>https://luxhomme.store/products/sc-100</url>
+<price>7306</price>
+<oldprice>7990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>1</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2025/09/VMP-stranitsa-tovara-29.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/09/VMP-stranitsa-tovara-61.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/09/VMP-stranitsa-tovara-60.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/09/VMP-stranitsa-tovara-59.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/09/VMP-stranitsa-tovara-58.png</picture>
+<name>Паровая швабра 7 в 1 Luxhommè SC-100 Max</name>
+<vendor>Luxhommè</vendor>
+<model>SC-100 Max</model>
+<typePrefix>Паровая швабра 7 в 1</typePrefix>
+<description>Паровая швабра SC-100 Max наводит порядок во всём доме силой горячего пара. Меняешь насадку — меняется и интенсивность пара, поэтому под каждую поверхность подбирается свой режим, от бережного до более напористого. Мощный парогенератор снимает грязь и способствует устранению бактерий без бытовой химии. Разная подача пара под насадку: деликатно для нежных поверхностей, сильнее для стойких загрязнений. Моет разные типы полов — линолеум, ламинат, паркет, кварцвинил. Справляется не только с полом, но и с окнами и кухней. Уборка паром вместо тряпки и моющих средств. Проста в использовании: включил,</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>SHVPAR7V1CH</vendorCode>
+</offer>
+<offer id="5671245" available="true">
+<url>https://luxhomme.store/products/ufit-2d</url>
+<price>4813</price>
+<oldprice>6190</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>3</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2025/06/VMP-stranitsa-tovara-26-2-.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/06/VMP-stranitsa-tovara-55.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/06/VMP-stranitsa-tovara-54.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/06/VMP-stranitsa-tovara-53.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2025/06/VMP-stranitsa-tovara-52.png</picture>
+<name>Виброплатформа Luxhommè uFit 2D Standard</name>
+<vendor>Luxhommè</vendor>
+<model>uFit 2D Standard</model>
+<typePrefix>Виброплатформа</typePrefix>
+<description>Виброплатформа uFit 2D Standard — компактный домашний тренажёр для тех, кто хочет держать себя в тонусе без похода в зал. Встаёшь на платформу, включаешь программу и занимаешься дома в удобное время. Вибрации разной частоты создают эффект вибромассажа и помогают поддерживать тонус мышц. Нагрузка распределяется на ноги, бёдра, пресс, спину и руки. 5 автоматических программ и 180 скоростей — от мягкого режима до активного. Режимы бега и спортивной ходьбы для более динамичных занятий. Удобно совмещать с приседаниями, растяжкой, йогой и пилатесом. Рельефная поверхность держит стопы устойчиво. Выде</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>VIPLATB</vendorCode>
+</offer>
+<offer id="5671043" available="true">
+<url>https://luxhomme.store/products/ecosteam-pro</url>
+<price>5256</price>
+<oldprice>5990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>1</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/SHvabra-EcoSteam-Pro-1a.jpg</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-75.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-74.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-73.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-72.png</picture>
+<name>Паровая швабра Luxhommè EcoSteam Pro</name>
+<vendor>Luxhommè</vendor>
+<model>EcoSteam Pro</model>
+<typePrefix>Паровая швабра</typePrefix>
+<description>Паровая швабра EcoSteam Pro убирает горячим паром аккуратно и экономно. Парогенератор доводит воду до пара всего за 30 секунд, поэтому долго ждать перед уборкой не нужно. Подача пара 30 г/мин при температуре до 120 °C: грязь размягчается и легко снимается. Поворотная головка 270° заходит под мебель и в углы без лишних наклонов. 22 насадки в комплекте под разные задачи по дому. Отдельные насадки для ковров и элементы из нержавеющей стали. Узкий уголок достаёт до труднодоступных мест. Скребок для окон и зеркал оставляет стекло без разводов. Шнур длиной 5 метров позволяет убрать комнату без посто</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>SHVPAREKCHB2</vendorCode>
+</offer>
+<offer id="5671042" available="true">
+<url>https://luxhomme.store/products/coffee</url>
+<price>9290</price>
+<oldprice>9990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>2</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-19.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-25.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-24.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-23.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-22.png</picture>
+<name>Капсульная кофемашина 4 в 1 Luxhommè CoffeeMaker Classic</name>
+<vendor>Luxhommè</vendor>
+<model>CoffeeMaker Classic</model>
+<typePrefix>Капсульная кофемашина 4 в 1</typePrefix>
+<description>Капсульная кофемашина Luxhommè Classic готовит насыщенный кофе дома нажатием кнопки. Помпа с давлением 19 бар как следует раскрывает вкус и аромат, а плотная крема появляется прямо в чашке. Работает с популярными форматами капсул, а также с чалдами и молотым кофе. Встроенный капучинатор для латте, капучино и кофе с молоком. Готовит и горячие, и холодные напитки. Четыре режима работы с электронным кнопочным управлением. Индикация готовности и выбранного режима: видно, когда машина прогрелась. Автоотключение, если кофемашину оставили без дела. Подсветка зоны пролива и корпус из стали и пластика.</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>COFMASHCAP4V1</vendorCode>
+</offer>
+<offer id="5671041" available="true">
+<url>https://luxhomme.store/products/airgrill</url>
+<price>5437</price>
+<oldprice>5990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>2</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-62.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-67.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-65.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-66.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-64.png</picture>
+<name>Аэрогриль Luxhommè AirChef 5,5 л</name>
+<vendor>Luxhommè</vendor>
+<model>AirChef 5,5 л</model>
+<typePrefix>Аэрогриль</typePrefix>
+<description>Аэрогриль Luxhommè AirChef готовит на горячем воздухе и заменяет на кухне до десяти приборов сразу — от духовки до фритюрницы. Воздух циркулирует вокруг продуктов на 360°, поэтому блюда получаются с румяной корочкой при минимуме масла. Готовит без предварительного нагрева, многие блюда выходят примерно за 15 минут. 12 автоматических программ: курица, рыба, мясо, картофель, овощи. Ручная настройка: время от 1 до 60 минут и температура от 35 до 200 °C. Режим сушки для овощей, фруктов и орехов. Чаша на 5,5 литра рассчитана на 2–4 человека. Прозрачные окна и внутренняя подсветка: готовность видно,</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>AEROGRIL55L2</vendorCode>
+</offer>
+<offer id="5671040" available="true">
+<url>https://luxhomme.store/products/window</url>
+<price>9892</price>
+<oldprice>9990</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>1</categoryId>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-40.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-45.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-46.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-44.png</picture>
+<picture>https://luxhomme.store/wp-content/uploads/2017/10/VMP-stranitsa-tovara-41.png</picture>
+<name>Робот-мойщик окон Luxhommè uClean Max</name>
+<vendor>Luxhommè</vendor>
+<model>uClean Max</model>
+<typePrefix>Робот-мойщик окон</typePrefix>
+<description>Робот мойщик окон с двойным распылением от бренда LUXHOMME – чистота без усилий! Забудьте про утомительную мойку окон! Ультрасовременное устройство оснащёно двойным распылителем воды и мощным вакуумным мотором для надёжной фиксации на стекле. Приспособление самостоятельно отмоет грязь и пыль со всех типов стеклянных поверхностей внутри и снаружи. Ультратонкий квадратный корпус позволяет легко проникать в труднодоступные зоны, очистит окна даже в углах. Выбирайте автоматический или ручной режим — умный окномойщик подстраивается под ваши задачи. А с удобным управлением через смартфон вы можете к</description>
+<sales_notes>Скидка 20% по промокоду BLACK20</sales_notes>
+<delivery>true</delivery>
+<vendorCode>ROBOTOKONKVADR</vendorCode>
+</offer>
+</offers>
+</shop>
+</yml_catalog>

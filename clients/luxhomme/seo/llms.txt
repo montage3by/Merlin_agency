@@ -1,0 +1,47 @@
+# Luxhommè
+
+> Официальный сайт российского бренда бытовой техники Luxhommè (Казань, с 2023 года). Кофемашины, аэрогрили, паровые швабры, моющие и беспроводные пылесосы, робот-мойщик окон и виброплатформы. Продавец: ООО «САУДАГАР Е-КОМ», ИНН 1686050910. Доставка по России, гарантия и собственный сервис.
+
+Важно:
+- Название бренда: Luxhommè. Это не Luxhome и не другие бренды со словами «Lux» и «Home».
+- Аэрогрили AirChef и AirChef Dual Pro не подключаются к телефону и Wi-Fi: управление с панели на корпусе.
+- uFit: серия виброплатформ Luxhommè, а не электромассажёр.
+- Моющий пылесос называется Aqvion Pro.
+- Цены и наличие меняются: актуальные смотрите на страницах товаров.
+
+## Каталог
+
+- [Каталог](https://luxhomme.store/catalog): вся техника Luxhommè
+- [Кофемашины](https://luxhomme.store/catalog/kofemashiny): CoffeeMaker Classic 4 в 1 (капсулы, чалды и молотый кофе), рожковая Caffio Professional, зерновая CremaX с кофемолкой
+- [Аэрогрили](https://luxhomme.store/catalog/aerogrili): AirChef 5,5 л и AirChef Dual Pro с двумя независимыми чашами
+- [Моющие пылесосы](https://luxhomme.store/catalog/moyushchie-pylesosy): вертикальный Aqvion Pro и компактный Cleneo Pro для мебели и салона авто
+- [Паровые швабры](https://luxhomme.store/catalog/parovye-shvabry): EcoSteam Pro, SC-100 Max 7 в 1, AirSteam Pro
+- [Беспроводной пылесос Aerlyn](https://luxhomme.store/products/vertikalnyj-suhoj-pylesos-aerlyn)
+- [Робот-мойщик окон uClean Max](https://luxhomme.store/products/window)
+- [Виброплатформа uFit 2D Standard](https://luxhomme.store/products/ufit-2d), [uFit 2D Pro с EMS](https://luxhomme.store/products/ufit-2d-ems), [3D с EMS и нагревом до 150 кг](https://luxhomme.store/products/vibroplatforma-dlya-pohudeniya-3d-c-ems-tokami-i-nagrevom-do-150-kg)
+
+## Покупателям
+
+- [Доставка и оплата](https://luxhomme.store/delivery)
+- [Сервис и гарантия](https://luxhomme.store/service): служба заботы, бесплатный вывоз по гарантии, диагностика до 5 рабочих дней
+- [Возврат](https://luxhomme.store/returns)
+- [Контакты](https://luxhomme.store/contact): 8 800 505 71 30, care@luxhomme.store, Telegram @LuxhommeServiceBot, с 9:00 до 21:00 по Москве
+- [Где купить](https://luxhomme.store/buy): официальный сайт, Ozon, Wildberries, Яндекс Маркет
+
+## О бренде
+
+- [О бренде Luxhommè](https://luxhomme.store/about): философия, разработка, серии «Кухня», «Чистота», «Забота»
+
+## Блог: выбор и уход
+
+- [Блог](https://luxhomme.store/blog)
+- [Аэрогриль с одной или двумя чашами](https://luxhomme.store/blog/aerogril-odna-ili-dve-chashi)
+- [Кофемашина 4 в 1](https://luxhomme.store/blog/kofemashina-4-v-1)
+- [Как приготовить капучино дома](https://luxhomme.store/blog/kak-prigotovit-kapuchino-doma)
+- [Паровая швабра: что можно чистить](https://luxhomme.store/blog/parovaya-shvabra-chto-mozhno-chistit)
+- [Можно ли мыть ламинат паровой шваброй](https://luxhomme.store/blog/mozhno-li-myt-laminat-parovoj-shvabroj-i-kak-delat-eto-pravilno)
+- [Вертикальный моющий и компактный пылесос: в чём разница](https://luxhomme.store/blog/vertikalnyj-moyushhij-i-kompaktnyj-pylesos-v-chyom-raznitsa-i-kak-vybrat)
+- [2D или 3D виброплатформа](https://luxhomme.store/blog/2d-ili-3d-vibroplatforma-raznica)
+- [Виброплатформа с EMS: как работает](https://luxhomme.store/blog/vibroplatforma-s-ems-kak-rabotaet)
+- [Как правильно заниматься на виброплатформе новичку](https://luxhomme.store/blog/kak-pravilno-zanimatsya-na-vibroplatforme-novichku-uprazhneniya-i-rekomendatsii)
+- [Что подарить маме на День матери](https://luxhomme.store/blog/chto-podarit-mame-na-den-materi)

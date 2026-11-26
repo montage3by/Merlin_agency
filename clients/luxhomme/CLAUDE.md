@@ -8,6 +8,7 @@
 | Что нужно | Файл |
 |---|---|
 | Сводный контекст проекта одним файлом | `PROJECT-CONTEXT.md` |
+| **Полная выгрузка проекта на 26.11 со всеми подключениями и доступами** (самая свежая) | `PROJECT-EXPORT-2026-11-26.md` |
 | **Полная выжимка проекта на 25.11** (всё по разделам, цифры, открытые вопросы, ссылки) | `VYZHIMKA-2026-11-25.html`, Google Doc: https://docs.google.com/document/d/1r72bxhIGkq-kMoURiMDq27yy1R8J1eIjap6Wrl4ABJk/edit (папка Drive «Claude» → «Luxhommè: выжимка проекта (25.11.2026)») |
 | **Стратегия Чёрной пятницы 17–30.11** (Директ, медийка Ozon, email, сайт и SEO) | `strategy/black-friday-2026-11.md`, PDF: `strategy/Luxhomme_Black-Friday_strategiya_2026-11.pdf` |
 | Постмит 20.11: SEO/GEO, конверсия сайта, медийка Ozon (расхождение), Директ | `meetings/2026-11-20-postmit.md` |

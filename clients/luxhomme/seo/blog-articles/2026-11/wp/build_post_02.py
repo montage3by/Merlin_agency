@@ -1,5 +1,5 @@
 """Статья «Подарок маме по бюджету» (план: 26.11.2026). Цены и группы по бюджету берутся из каталога при сборке.
-usage: python3 -I build_post_02.py [--draft]   без --draft только собирает post_02.json, с --draft создаёт/обновляет черновик в WP"""
+usage: python3 -I build_post_02.py [--draft]   без --draft только собирает post_02.json, с --draft обновляет запись в WP (статус и дата сохраняются)"""
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lux_blog import Doc, P, S, MUTED, DIES, catalog, rub, link, save_draft, check

@@ -175,16 +175,33 @@ def link(path, text):
 
 
 def save_draft(state_file, title, slug, content, excerpt, featured_media):
-    """Создаёт черновик или обновляет созданный ранее (id хранится в state_file). Никогда не публикует."""
+    """Создаёт черновик или обновляет созданную ранее запись (id в state_file). Статус и дату существующей записи
+    не трогает: запланированная (future) остаётся запланированной. Никогда не публикует."""
     import os
-    body = {"title": title, "slug": slug, "content": content, "excerpt": excerpt, "status": "draft",
+    body = {"title": title, "slug": slug, "content": content, "excerpt": excerpt,
             "categories": [CAT_BLOG], "featured_media": featured_media}
     pid = json.load(open(state_file))["id"] if os.path.exists(state_file) else None
+    if pid:
+        cur = json.load(urllib.request.urlopen(f"{API}/wp/v2/posts/{pid}?context=edit&_fields=status", timeout=60))["status"]
+        assert cur in ("draft", "future"), f"запись {pid} уже {cur}: пересборку опубликованной статьи делать вручную"
+    else:
+        body["status"] = "draft"
     url = f"{API}/wp/v2/posts/{pid}" if pid else f"{API}/wp/v2/posts"
     req = urllib.request.Request(url, method="POST", data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
     r = json.load(urllib.request.urlopen(req, timeout=120))
-    assert r["status"] == "draft", r["status"]
-    json.dump({"id": r["id"], "slug": r["slug"], "status": r["status"]}, open(state_file, "w"))
+    assert r["status"] in ("draft", "future"), r["status"]
+    json.dump({"id": r["id"], "slug": r["slug"], "status": r["status"], "date": r["date"]}, open(state_file, "w"))
+    return r
+
+
+def schedule(state_file, date_msk):
+    """Ставит черновик в отложенную публикацию: date_msk вида 2026-11-26T18:00:00 (время сайта, Москва)."""
+    pid = json.load(open(state_file))["id"]
+    req = urllib.request.Request(f"{API}/wp/v2/posts/{pid}", method="POST",
+                                 data=json.dumps({"status": "future", "date": date_msk}).encode(), headers={"Content-Type": "application/json"})
+    r = json.load(urllib.request.urlopen(req, timeout=60))
+    assert r["status"] == "future", r["status"]
+    json.dump({"id": r["id"], "slug": r["slug"], "status": r["status"], "date": r["date"]}, open(state_file, "w"))
     return r
 
 

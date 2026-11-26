@@ -31,6 +31,7 @@
 | Интервью с покупателями, ЦА и CJM, семантика | `research/README.md` |
 | План SEO-статей блога: День матери и Новый год, вт и чт 24.11–28.01 (20 статей) | `seo/blog-plan/README.md`, таблица `seo/blog-plan/Luxhomme_plan-statej-blog_2026-11.xlsx` |
 | **ТЗ разработчику по техническому SEO/GEO (25.11, 16 задач с приёмкой)**, SEO-тексты (мета-теги, H1, сниппеты бренда, «О бренде»), llms.txt | `seo/tz-seo-razrabotchik-2026-11.md`, `seo/seo-teksty-2026-11.md`, `seo/llms.txt`; Google Drive: папка «Claude» → «Luxhommè: SEO и GEO (ноябрь 2026)» |
+| **SEO и GEO-чек живого сайта 26.11**: статус 16 задач ТЗ, новые находки, план для позиций и видимости в ИИ | `seo/seo-geo-check-2026-11-26.md` |
 | SEO-аудит сайта (чек-лист доработок) | `seo/seo-audit-2026-10.md` |
 | Alt у изображений: где пусто, что чинить в WP и что в коде витрины | `seo/alt-audit-2026-10.md`, план alt на утверждение: `seo/alt-plan-2026-10.xlsx` |
 | Презентация SEO и GEO (данные, гипотезы, выводы, план) | `seo/prezentaciya-seo-geo-2026-11/README.md` |

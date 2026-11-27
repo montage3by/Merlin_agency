@@ -11,6 +11,7 @@
 | **Полная выгрузка проекта на 26.11 со всеми подключениями и доступами** (самая свежая) | `PROJECT-EXPORT-2026-11-26.md` |
 | **Полная выжимка проекта на 25.11** (всё по разделам, цифры, открытые вопросы, ссылки) | `VYZHIMKA-2026-11-25.html`, Google Doc: https://docs.google.com/document/d/1r72bxhIGkq-kMoURiMDq27yy1R8J1eIjap6Wrl4ABJk/edit (папка Drive «Claude» → «Luxhommè: выжимка проекта (25.11.2026)») |
 | **Стратегия Чёрной пятницы 17–30.11** (Директ, медийка Ozon, email, сайт и SEO) | `strategy/black-friday-2026-11.md`, PDF: `strategy/Luxhomme_Black-Friday_strategiya_2026-11.pdf` |
+| **Брендовый спрос на сайт: план дек–фев** (12 000 брендовых запросов, 2 000 визитов; недоучёт Метрики из-за cookie; 5 направлений) | `strategy/brand-search-to-site-2026-12.md` |
 | Постмит 20.11: SEO/GEO, конверсия сайта, медийка Ozon (расхождение), Директ | `meetings/2026-11-20-postmit.md` |
 | Заказы по площадкам 01.08–31.10 с источниками UTM (Ozon, 2 кабинета, FBO + FBS + внешний трафик) | `orders/README.md`, финальная таблица `orders/Luxhomme_zakazy_UTM_2-kabineta_2026-08-10.xlsx`, только с UTM: `orders/Luxhomme_zakazy_tolko-UTM_2-kabineta_2026-08-10.xlsx`, с затратами Директа по заказам: `orders/Luxhomme_zakazy_UTM_zatraty-Direct_2026-08-10.xlsx` |
 | Клиент, каналы продаж, рекламные кабинеты | `context.md` |

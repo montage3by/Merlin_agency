@@ -38,6 +38,7 @@
 | Презентация SEO и GEO (данные, гипотезы, выводы, план) | `seo/prezentaciya-seo-geo-2026-11/README.md` |
 | **Аудит Яндекс Вебмастера 19.11** (запросы, индекс, техошибки, Алиса AI, стратегия SEO/GEO дек–фев) | `seo/webmaster-audit-2026-11-19.md` |
 | Видимость сайта в ответах Алисы AI (Вебмастер), выводы и план SEO/GEO | `seo/alisa-ai-vidimost-2026-11.md` |
+| Google Search Console: промпт для Claude в браузере (сбор данных, sitemap, запрос индексирования) | `seo/gsc-prompt-claude-browser.md` |
 | Мета-теги сайта (title, description, OG, H1): ошибки, шаблоны, задачи | `seo/meta-audit-2026-10.md` |
 | UI/UX-аудит сайта (чек-лист, скриншоты) | `ux/ux-audit-2026-10.md`, единый PDF: `ux/Luxhomme_UI-UX-audit_2026-10-09.pdf` |
 | ТЗ: лента видео-сторис на сайте с переходом в товар | `ux/tz-storis-2026-11.md` |

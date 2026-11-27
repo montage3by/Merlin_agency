@@ -1,0 +1,68 @@
+---
+name: wbs
+description: "Construct a PMBOK-shaped Work Breakdown Structure from the project's epic-and-story hierarchy. Invoke when the team needs a deliverable-oriented decomposition of project scope into manageable work packages before building a schedule or assigning resources."
+---
+
+> Originally authored for Agentic PM Kit (MIT).
+
+## When to use
+
+Use this skill after the epics-and-stories backlog has been reviewed and the team needs a deliverable-oriented view of scope rather than a feature-oriented one. Typical triggers include:
+
+- The project sponsor or steering committee requires a formal WBS for contract or governance purposes.
+- The schedule-planning step needs a list of work packages with duration estimates before a Gantt diagram can be built.
+- The resource plan requires a deliverable hierarchy to assign ownership and accountability at the work-package level.
+- A scope change has been approved and the WBS must be updated to reflect the new or removed deliverables.
+
+Do not invoke this skill to generate the epics-and-stories backlog (use the `epics-and-stories` skill instead — the WBS consumes that output). Do not use the WBS as a substitute for the schedule; the WBS defines scope, not time sequence. Use the `schedule-gantt` skill to add the time dimension after the WBS is complete.
+
+## Summon the SME
+
+Before constructing the WBS, load the canonical reference on Work Breakdown Structures to ground the hierarchy in PMBOK-aligned practice.
+
+**Reading the config.** Check `.pm-kit.config.json` for the `sourcesMode` field:
+
+- If `sourcesMode` is `"online"` (opt-in): fetch the URL stored at key `sources.wbs` in `vendor/pm-kit/sources-index.json` using your available web-fetch capability. Do not name a specific tool — use whatever your runtime provides. Ground the facilitation in what you read. Do not fabricate quotations or page numbers.
+- If `sourcesMode` is `"offline"` or the field is absent (the default): rely on your general knowledge of the Work Breakdown Structure as defined by PMBOK-aligned project-management practice — a deliverable-oriented hierarchical decomposition of the total scope of work into components that can be scheduled, cost-estimated, monitored, and controlled. Cite the canonical URL from `vendor/pm-kit/sources-index.json` at key `sources.wbs` in the output. Do not fabricate quotations or page numbers.
+
+In both cases, the URL to cite is `https://en.wikipedia.org/wiki/Work_breakdown_structure`.
+
+## Facilitation script
+
+Walk the user through these steps in sequence. Do not skip steps or combine them.
+
+**Step 1 — Gather inputs.** Ask the user to supply (or confirm the location of) the epics-and-stories artifact. Identify the project name, the project phases (if already determined), and the user responsible for each major deliverable area. Confirm the inputs are present before proceeding.
+
+**Step 2 — Define Level 1 (project phases or major deliverables).** Working from the project charter and the epic groupings, propose Level 1 nodes — the top-level decomposition. These are typically project phases (e.g., "1.0 Research", "2.0 Design", "3.0 Development") or major deliverables. Present the proposal to the user and revise until confirmed.
+
+**Step 3 — Define Level 2 (sub-deliverables).** For each Level 1 node, propose sub-deliverables that together constitute the parent. Use the epic list as a primary input. Present and revise until the user confirms.
+
+**Step 4 — Define Level 3 work packages.** For each Level 2 node, propose work packages — discrete, assignable units of work approximately 40 hours or one sprint in duration. Map stories to work packages where the correspondence is clear. Each work package must be independently completable and verifiable.
+
+**Step 5 — Draft the Mermaid visualization.** Produce a `graph TD` diagram showing Level 1 and Level 2 nodes plus a representative sample of Level 3 leaves (no more than six leaves total). Do not include every work package — the diagram illustrates hierarchy, not exhaustive scope.
+
+**Step 6 — Complete the work-package details table.** For each work package, record: WBS code, deliverable name, owner, estimated duration in days, and dependencies on other work packages (by WBS code).
+
+**Step 7 — Write the WBS dictionary entries.** For the five to ten most critical or ambiguous work packages, write a one-to-three sentence narrative describing exactly what is in scope for that package and what is not. Skip straightforward packages.
+
+**Step 8 — Save the artifact.** Save the filled artifact to `docs/pm-kit/outputs/wbs/<short-slug>.md`. `<short-slug>` is a kebab-case ASCII slug (max 40 chars) derived from the project name (e.g., `bookswap-campus`). Confirm the final path with the user before writing. If the file exists, ask: overwrite, append a date suffix (e.g., `-2026-04-20`), or pick a new slug. The artifact begins with the three-line provenance header below (HTML comments, do not render):
+
+```
+<!-- Generated by agentic-pm-kit:wbs on YYYY-MM-DD -->
+<!-- Languages: communication=<value>, output=<value> -->
+<!-- Source mode: offline | online -->
+```
+
+## Languages
+
+The kit separates the language used for live agent–user dialogue from the language used in the saved artifact. Both values live in `.pm-kit.config.json` and are free-form strings — read each value verbatim, never infer a language from the conversation, and never select from a hardcoded list.
+
+**Facilitation dialogue.** Speak to the user during facilitation in the language at `language.communication`. Use the string verbatim.
+
+**Filled artifact (saved TEMPLATE.md output).** Produce the written artifact in the language at `language.output`. If `language.output` is absent or empty, fall back to `language.communication`.
+
+Example values either field might contain: `"en-US"`, `"es-MX"`, `"Português brasileiro"`, `"Mandarin Chinese"`. Accept any string as given.
+
+## Acceptance gate
+
+When the WBS is complete, point the user to `CHECKLIST.md` (sibling file) and ask them to verify each item. Remind them that the output must be marked **PASS** or **FAIL**. On **FAIL**, invite the user to return with specific notes so the facilitation can be resumed or corrected.

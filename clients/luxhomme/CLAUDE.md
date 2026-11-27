@@ -27,6 +27,7 @@
 | Медийка Ozon: видео к Чёрной пятнице — 5 смежных аудиторий и настройки кампаний | `ozon-media/black-friday-2026/README.md` |
 | Медийка Ozon: объединённая статистика 2 кабинетов (выгрузка 19.11), сегменты и артикулы | `ozon-media/stat-2026-11/README.md`, таблица `ozon-media/stat-2026-11/Luxhomme_Ozon-media_stat_2026-11.xlsx` |
 | **Еженедельно:** медийка Ozon (2 кабинета) → строки в общую таблицу затрат, расход дня ÷5 на 5 артикулов | `ozon-media/weekly-spend/README.md`, скрипт `ozon-media/weekly-spend/scripts/build_week.py` |
+| **Яндекс Метрика: цели main (корзина, заказ создан, заказ оплачен), старые цели, ограничения** | `metrika/README.md` |
 | Открытые вопросы и расхождения в данных | `open-questions.md` |
 | Интервью с покупателями, ЦА и CJM, семантика | `research/README.md` |
 | План SEO-статей блога: День матери и Новый год, вт и чт 24.11–28.01 (20 статей) | `seo/blog-plan/README.md`, таблица `seo/blog-plan/Luxhomme_plan-statej-blog_2026-11.xlsx` |
